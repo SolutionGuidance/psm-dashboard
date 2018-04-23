@@ -1,5 +1,5 @@
-features: {
-  feature1: {
+features: [
+  {
     description: String,
     status: String ['Complete', 'InProgress', 'NotStarted'],
     startDate: String[Date],
@@ -10,7 +10,10 @@ features: {
       ...
     ]
   },
-  feature2: {
+  {
+    ...
+  },
+  {
     ...
   }
 }
