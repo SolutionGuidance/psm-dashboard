@@ -1,0 +1,51 @@
+features: {
+  feature1: {
+    description: String,
+    status: String ['Complete', 'InProgress', 'NotStarted'],
+    startDate: String[Date],
+    completedDate: String[Date],
+    requirements: [
+      'psm-FR-8.2', 
+      'psm-FR-8.3', 
+      ...
+    ]
+  },
+  feature2: {
+    ...
+  }
+}
+
+
+requirements: {
+  'psm-FR-8.2': {
+    description: String,
+    status: String ['Complete', 'InProgress', 'NotStarted'],
+    startDate: String[Date],
+    completedDate: String[Date],
+    issues: [
+      123,
+      456,
+      789,
+      ...
+    ]
+  },
+  'psm-FR-8.3': {
+    ...
+  },
+  ...
+}
+
+issues : {
+  123: {
+    title: String,
+    description: String,
+    url: String,
+    status: String ['Complete', 'InProgress', 'NotStarted'],
+    startDate: String[Date],
+    completedDate: String[Date],
+  },
+  456: {
+    ...
+  },
+  ...
+}
