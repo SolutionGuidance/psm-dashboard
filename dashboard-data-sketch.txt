@@ -1,5 +1,5 @@
-features: [
-  {
+features: {
+  "psm-feature-000": {
     description: String,
     status: String ['Complete', 'InProgress', 'NotStarted'],
     startDate: String[Date],
@@ -10,10 +10,7 @@ features: [
       ...
     ]
   },
-  {
-    ...
-  },
-  {
+  "psm-feature-001": {
     ...
   }
 }
