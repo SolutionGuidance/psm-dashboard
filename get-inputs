@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+#
+# Collect input data from various sources and hand it to the PSM dashboard.
+#
+# Copyright 2018 Open Tech Strategies, LLC
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# 
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# This script grew gradually from 'google-sheets-api-example.py' in
+# github.com/OpenTechStrategies/ots-tools/blob/master/google-sheets-client/;
+# see there for Google Sheets API resources etc.
+
+"""Get data from various sources and feed it to the PSM dashboard.
+
+Usage:
+
+  $ cp google-api-config.json.tmpl google-api-config.json
+
+  $ your-favorite-editor google-api-config.json
+
+    ### Update with the appropriate values.  Getting those values may be
+    ### a bit of work: see https://gist.github.com/burnash/6771295 and
+    ### https://developers.google.com/sheets/api/quickstart/python. 
+    ### 
+    ### Note that you will need to have a Google account, and that
+    ### account must have access to the spreadsheet whose ID you're
+    ### using as your "sheet_id."
+
+  $ ./get-inputs
+
+Installation prerequisites:
+
+  $ sudo pip install -U google-api-python-client python-gflags oauth2client
+"""
+
+from apiclient.discovery import build
+from httplib2 import Http
+from oauth2client import file, client, tools
+import json
+
+# Grant read-only access
+SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
+
+# TODO: Would be civilized to check access perms on the file here and
+# warn if they're too open
+config = json.load(open('google-api-config.json'))
+
+# TODO: Similarly, make sure this file is user-readable only.
+creds_store = file.Storage('credentials.json')
+
+creds = creds_store.get()
+
+if not creds or creds.invalid:
+    # Interactively prompt for access creds in the browser.
+    flow = client.OAuth2WebServerFlow(client_id=config['client_id'],
+                                      client_secret=config['client_secret'],
+                                      scope=SCOPES,
+                                      redirect_uri='TBD')
+    creds = tools.run_flow(flow, creds_store)
+
+service = build('sheets', 'v4', http=creds.authorize(Http()))
+
+# Point Sheets API at the specified sheet.
+SPREADSHEET_ID = config['sheet_id']
+
+# Range must be given in "A1" notation, which is described in
+# https://developers.google.com/sheets/api/guides/concepts.
+RANGE_NAME = config['range']
+result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
+                                             range=RANGE_NAME).execute()
+values = result.get('values', [])
+if not values:
+    print('No data found.')
+else:
+    # We'll do more here soon.  For now, just print the sheet's data.
+    for row in values:
+        print(row)
