@@ -118,7 +118,7 @@ def main():
     for f in os.listdir(csv_dir):
         if f.endswith(".csv"):
             csv_files.append(os.path.join(csv_dir, f))
-    reqs = psm_reqs.PSMRequirements(*csv_files).reqs
+    reqs = psm_reqs.get_reqs(*csv_files)
 
     ##### Just print out results for now. #####
     if features_sheet_values is not None:
