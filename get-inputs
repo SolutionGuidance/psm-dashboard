@@ -152,6 +152,14 @@ class PSMIssue:
 # already.  We obtain instances of it from psm_reqs.get_reqs().
 
 
+def to_dict(obj):
+    """Return a dict representation of this object suitable for JSON."""
+    d = {}
+    for key, value in obj.__dict__.items():
+        d[key] = value
+    return d       
+
+
 def main():
     # TODO: It would be nice to check access perms on the file
     # here and warn if they're too open.
@@ -204,7 +212,7 @@ def main():
             if row[0].startswith("psm-feature-"):
                 feature_id = row[0]
                 if feature_id in features:
-                    sys.stderr.write("ERROR: Found feature '%s' twice." \
+                    sys.stderr.write("ERROR: Found feature '%s' twice."
                                      % feature_id)
                     sys.exit(1)
                 description = row[1]
@@ -218,8 +226,8 @@ def main():
                                           start_date, completed_date, 
                                           requirements)
                 features[feature_id] = this_feature
-            elif ((feature_id is not None) \
-                  and (len(row) == 3) \
+            elif ((this_feature is not None)
+                  and (len(row) == 3)
                   and (row[0] == '')
                   and (row[1] == '')):
                 subfeature = row[2]
@@ -254,11 +262,17 @@ def main():
     except github.UnknownObjectException as e:
         github_owner = github_api.get_user(github_owner_name)
     github_repos = github_owner.get_repo(github_repos_name)
-    # DEBUGGING TOGGLE
-    # github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
-    github_issues_raw = []
-    psm_issues = []
+    github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
+    psm_issues = {}
+    sys.stderr.write("DEBUG: Issues take a long time to fetch, so these\n")
+    sys.stderr.write("       debugging prints will be our progress meter\n")
+    sys.stderr.write("       for now.\n")
+    sys.stderr.write("\n")
     for raw_issue in github_issues_raw:
+        if raw_issue.number in psm_issues:
+            sys.stderr.write("ERROR: Found issue %d twice." 
+                             % raw_issue.number)
+            sys.exit(1)
         if raw_issue.pull_request is None:
             labels = []
             for label in raw_issue.labels:
@@ -277,29 +291,43 @@ def main():
             # we'll want some kind of progress meter.  For now, use this
             # debugging statement to know that things are moving along:
             sys.stderr.write("DEBUG: fetched issue %d\n" % issue.number)
-            psm_issues.append(issue)
+            psm_issues[issue.number] = issue
 
-    ##### Just print out results for now. #####
-    print("")
-    print("*** Features Spreadsheet ***")
-    print("")
-    for feature in features.values():
-        print(feature)
+    ##### Print out raw results. #####
+    # print("")
+    # print("*** Features Spreadsheet ***")
+    # print("")
+    # for feature in features.values():
+    #     print(feature)
+    # 
+    # print("")
+    # print("*** PSM Requirements ***")
+    # print("")
+    # for req in reqs.values():
+    #     print("%s" % req)
+    #     print("===================================")
+    # 
+    # print("")
+    # print("*** PSM issues ***")
+    # print("")
+    # for issue in psm_issues:
+    #     print("%s" % issue)
+    #     print("===================================")
 
-    print("")
-    print("*** PSM Requirements ***")
-    print("")
-    for req in reqs.values():
-        print("%s" % req)
-        print("===================================")
+    # The top-level dict that will printed as JSON.
+    output = {}
+    # This code could be a little D.R.Y.-er, hmm.
+    output["features"] = {}
+    for feature_id, feature in features.items():
+        output["features"][feature_id] = to_dict(feature)
+    output["requirements"] = {}
+    for req_id, req in reqs.items():
+        output["requirements"][req_id] = to_dict(req)
+    output["issues"] = {}
+    for issue_number, issue in psm_issues.items():
+        output["requirements"][issue_number] = to_dict(issue)
 
-    print("")
-    print("*** PSM issues ***")
-    print("")
-    for issue in psm_issues:
-        print("%s" % issue)
-        print("===================================")
-
+    print("%s" % json.dumps(output, indent=4))
 
 if __name__ == '__main__':
     main()
