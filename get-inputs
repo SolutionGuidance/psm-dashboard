@@ -25,46 +25,48 @@
 
 Prerequisites:
 
-  $ sudo pip install -U google-api-python-client python-gflags oauth2client
+  $ sudo pip3 install -U google-api-python-client
+  $ sudo pip3 install -U python-gflags 
+  $ sudo pip3 install -U oauth2client
+  $ sudo pip3 install -U PyGithub
 
+  ## Edit the config file as needed.  Getting some values may be
+  ## a bit of work: see https://gist.github.com/burnash/6771295 and
+  ## https://developers.google.com/sheets/api/quickstart/python. 
+  ## Note that you will need to have a Google account, and that
+  ## account must have access to the spreadsheet whose ID you're
+  ## using as your "google_sheet_id."
   $ cp psm-dashboard-config.json.tmpl psm-dashboard-config.json
-
   $ your-favorite-editor psm-dashboard-config.json
 
-    ### Edit the config file as needed.  Getting some values may be
-    ### a bit of work: see https://gist.github.com/burnash/6771295 and
-    ### https://developers.google.com/sheets/api/quickstart/python. 
-    ### Note that you will need to have a Google account, and that
-    ### account must have access to the spreadsheet whose ID you're
-    ### using as your "google_sheet_id."
-
+  ## This puts psm_reqs.py in your Python import path by putting it in
+  ## the current directory.
   $ ln -s somewhere/psm/requirements/psm_reqs.py ./psm_reqs.py
-
-    ### In other words, this imports psm_reqs.py, so you'd better have
-    ### it available in your Python import path.  The easiest way to
-    ### do that is to just have it in the current directory, but you
-    ### could make other arrangements too.
 
 Usage:
 
   $ ./get-inputs
 """
 
-import apiclient
 import httplib2
+import apiclient
 import oauth2client
 import os
+import sys
 import json
 import psm_reqs
+import github
+import github.GithubException
 
 
 class PSMFeature:
     """Class representing one PSM high-level feature."""
     def __init__(self, feature_id, description, subfeatures, requirements):
-        """Create a new feature named FEATURE_ID.
-        DESCRIPTION is a string describing the feature.
-        SUBFEATURES is a list of strings, each one describing a subfeature.
-        REQUIREMENTS is a list of PSMRequirement instances."""
+        """Create a new feature named .
+        FEATURE_ID (string): The identifying name for this feature.
+        DESCRIPTION (string): Description of this feature.
+        SUBFEATURES (list of strings): Subfeature descriptions.
+        REQUIREMENTS (list of PSMRequirement instances): 'Nuff said"""
         # Alas, the @dataclass decorator is new in Python 3.7,
         # so we can't really depend on it being available here.
         # www.python.org/dev/peps/pep-0557
@@ -73,10 +75,69 @@ class PSMFeature:
         self.description = description
         self.subfeatures = subfeatures
         self.requirements = requirements
+    def __str__(self):
+        return """\
+        PSM Feature:
+          ID:           "%s"
+          Description:  "%s"
+          Subfeatures:  "%s"
+          Requirements: "%s"\n""" \
+              % (self.feature_id.replace('"', '\\"'),
+                 self.description.replace('"', '\\"'),
+                 [sub.replace('"', '\\"') for sub in self.subfeatures],
+                 [req.req_id for req in self.requirements])
+
+
+class PSMIssue:
+    """Class representing one PSM non-PR GitHub issue ticket."""
+    def __init__(self, owner, repos, number, title, description, 
+                 status, start_date, completed_date, labels):
+        """
+        OWNER (string): The repository owner (GitHub user or organization).
+        REPOS (string): The repository name (under OWNER at GitHub).
+        NUMBER (integer): The issue number.
+        TITLE (string): Issue title, a.k.a. summary.
+        DESCRIPTION (string): First comment, a.k.a. body.
+        STATUS (string): "Complete", "InProgress", or "NotStarted".
+        START_DATE (string): An ISO-8601 date (YYYY-MM-DD HH:MM:SS)
+        COMPLETED_DATE (string): An ISO-8601 date (YYYY-MM-DD HH:MM:SS)
+        LABELS (list of strings): All the labels attached to this issue.
+        """
+        # Again, wish we had the new Python 3.7 @dataclass decorator.
+        self.owner = owner
+        self.repos = repos
+        self.number = number
+        self.title = title
+        self.description = description
+        self.status = status
+        # TODO: Could validate status and the two date fields.
+        # TODO: Should the dates be DateTime type, not string?
+        self.start_date = start_date
+        self.completed_date = completed_date
+        self.labels = labels
+    def __str__(self):
+        return """PSM Issue:
+          Number:         %d
+          URL:            %s
+          Title:          "%s"
+          Description:    "%s"
+          Status:         %s
+          Start date:     %s
+          Completed date: %s
+          Labels:         %s\n""" \
+              % (self.number,
+                 "https://github.com/%s/%s/issues/%d" % \
+                 (self.owner, self.repos, self.number),
+                 self.title.replace('"', '\\"'),
+                 self.description.replace('"', '\\"'),
+                 self.status,
+                 self.start_date,
+                 self.completed_date,
+                 self.labels)
 
 
 def main():
-    ##### Accessing the Google Spreadsheet. #####
+    ##### Get PSM features from the Google spreadsheet. #####
     # Grant read-only access
     google_api_scopes = 'https://www.googleapis.com/auth/spreadsheets.readonly'
     
@@ -112,13 +173,50 @@ def main():
     if features_sheet_values is None:
         sys.stderr.write('No data found.')
 
-    ##### Accessing the PSM requirements. #####
+    ##### Get PSM requirements from the CSV files. #####
     csv_dir = config['psm_csv_dir']
     csv_files = []
     for f in os.listdir(csv_dir):
         if f.endswith(".csv"):
             csv_files.append(os.path.join(csv_dir, f))
     reqs = psm_reqs.get_reqs(*csv_files)
+
+    ##### Get the issue<->req mapping from GitHub. #####
+    github_owner_name = config['github_owner']
+    github_repos_name = config['github_repository']
+    github_auth_token = config['github_auth_token_secret']
+    github_api = github.Github(github_auth_token)
+    # Using lazy polymorphism here: either "organization/repository"
+    # or "username/repository" would work, and all the methods we
+    # need exist in both types.
+    try:
+        github_owner = github_api.get_organization(github_owner_name)
+    except github.UnknownObjectException as e:
+        github_owner = github_api.get_user(github_owner_name)
+    github_repos = github_owner.get_repo(github_repos_name)
+    github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
+    psm_issues = []
+    for raw_issue in github_issues_raw:
+        if raw_issue.pull_request is None:
+            labels = []
+            for label in raw_issue.labels:
+                labels.append(label.name)
+            issue = PSMIssue(
+                github_owner_name,
+                github_repos_name,
+                raw_issue.number,
+                raw_issue.title,
+                raw_issue.body,
+                raw_issue.state,
+                str(raw_issue.created_at),
+                str(raw_issue.closed_at),
+                labels)
+            # Because it takes a long time to paginate through the issues,
+            # we'll want some kind of progress meter.  For now, use this
+            # debugging statement to know that things are moving along:
+            #
+            # sys.stderr.write("DEBUG: %s\n" % issue)
+            psm_issues.append(issue)
 
     ##### Just print out results for now. #####
     if features_sheet_values is not None:
@@ -134,6 +232,13 @@ def main():
     print("")
     for req in reqs.values():
         print("%s" % req)
+        print("===================================")
+
+    print("")
+    print("*** PSM issues ***")
+    print("")
+    for issue in psm_issues:
+        print("%s" % issue)
         print("===================================")
 
 
