@@ -23,66 +23,119 @@
 
 """Get data from various sources and feed it to the PSM dashboard.
 
-Usage:
-
-  $ cp google-api-config.json.tmpl google-api-config.json
-
-  $ your-favorite-editor google-api-config.json
-
-    ### Update with the appropriate values.  Getting those values may be
-    ### a bit of work: see https://gist.github.com/burnash/6771295 and
-    ### https://developers.google.com/sheets/api/quickstart/python. 
-    ### 
-    ### Note that you will need to have a Google account, and that
-    ### account must have access to the spreadsheet whose ID you're
-    ### using as your "sheet_id."
-
-  $ ./get-inputs
-
-Installation prerequisites:
+Prerequisites:
 
   $ sudo pip install -U google-api-python-client python-gflags oauth2client
+
+  $ cp psm-dashboard-config.json.tmpl psm-dashboard-config.json
+
+  $ your-favorite-editor psm-dashboard-config.json
+
+    ### Edit the config file as needed.  Getting some values may be
+    ### a bit of work: see https://gist.github.com/burnash/6771295 and
+    ### https://developers.google.com/sheets/api/quickstart/python. 
+    ### Note that you will need to have a Google account, and that
+    ### account must have access to the spreadsheet whose ID you're
+    ### using as your "gsheet_id."
+
+  $ ln -s somewhere/psm/requirements/psm_reqs.py ./psm_reqs.py
+
+    ### In other words, this imports psm_reqs.py, so you'd better have
+    ### it available in your Python import path.  The easiest way to
+    ### do that is to just have it in the current directory, but you
+    ### could make other arrangements too.
+
+Usage:
+
+  $ ./get-inputs
 """
 
-from apiclient.discovery import build
-from httplib2 import Http
-from oauth2client import file, client, tools
+import apiclient
+import httplib2
+import oauth2client
+import os
 import json
+import psm_reqs
 
-# Grant read-only access
-SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
 
-# TODO: Would be civilized to check access perms on the file here and
-# warn if they're too open
-config = json.load(open('google-api-config.json'))
+class PSMFeature:
+    """Class representing one PSM high-level feature."""
+    def __init__(self, feature_id, description, subfeatures, requirements):
+        """Create a new feature named FEATURE_ID.
+        DESCRIPTION is a string describing the feature.
+        SUBFEATURES is a list of strings, each one describing a subfeature.
+        REQUIREMENTS is a list of PSMRequirement instances."""
+        # Alas, the @dataclass decorator is new in Python 3.7,
+        # so we can't really depend on it being available here.
+        # www.python.org/dev/peps/pep-0557
+        # hackernoon.com/a-brief-tour-of-python-3-7-data-classes-22ee5e046517
+        self.feature_id = feature_id
+        self.description = description
+        self.subfeatures = subfeatures
+        self.requirements = requirements
 
-# TODO: Similarly, make sure this file is user-readable only.
-creds_store = file.Storage('credentials.json')
 
-creds = creds_store.get()
+def main():
+    ##### Accessing the Google Spreadsheet. #####
+    # Grant read-only access
+    SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
+    
+    # TODO: It would be civilized to check access perms on the file
+    # here and warn if they're too open.
+    config = json.load(open('psm-dashboard-config.json'))
+    
+    # TODO: Similarly, make sure this file is user-readable only.
+    g_creds_store = oauth2client.file.Storage('google-credentials.json')
+    
+    g_creds = g_creds_store.get()
+    
+    if not g_creds or g_creds.invalid:
+        # Interactively prompt for access creds in the browser.
+        flow = oauth2client.client.OAuth2WebServerFlow(
+            client_id=config['gsheet_client_id'],
+            client_secret=config['gsheet_client_secret'],
+            scope=SCOPES,
+            redirect_uri='TBD')
+        g_creds = oauth2client.tools.run_flow(flow, g_creds_store)
+    
+    service = apiclient.discovery.build('sheets', 'v4', http=g_creds.authorize(httplib2.Http()))
+    
+    # Point Sheets API at the specified sheet.
+    SPREADSHEET_ID = config['gsheet_id']
+    
+    # Range must be given in "A1" notation, which is described in
+    # https://developers.google.com/sheets/api/guides/concepts.
+    RANGE_NAME = config['gsheet_range']
+    result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
+                                                 range=RANGE_NAME).execute()
+    features_sheet_values = result.get('values', None)
+    if features_sheet_values is None:
+        sys.stderr.write('No data found.')
 
-if not creds or creds.invalid:
-    # Interactively prompt for access creds in the browser.
-    flow = client.OAuth2WebServerFlow(client_id=config['client_id'],
-                                      client_secret=config['client_secret'],
-                                      scope=SCOPES,
-                                      redirect_uri='TBD')
-    creds = tools.run_flow(flow, creds_store)
+    ##### Accessing the PSM requirements. #####
+    csv_dir = config['psm_csv_dir']
+    csv_files = []
+    for f in os.listdir(csv_dir):
+        if f.endswith(".csv"):
+            csv_files.append(os.path.join(csv_dir, f))
+    reqs = psm_reqs.PSMRequirements(*csv_files).reqs
 
-service = build('sheets', 'v4', http=creds.authorize(Http()))
+    ##### Just print out results for now. #####
+    if features_sheet_values is not None:
+        # We'll do more here soon.  For now, just print the sheet's data.
+        print("")
+        print("*** Features Spreadsheet ***")
+        print("")
+        for feature_sheet_row in features_sheet_values:
+            print(feature_sheet_row)
 
-# Point Sheets API at the specified sheet.
-SPREADSHEET_ID = config['sheet_id']
+    print("")
+    print("*** PSM Requirements ***")
+    print("")
+    for req in reqs.values():
+        print("%s" % req)
+        print("===================================")
 
-# Range must be given in "A1" notation, which is described in
-# https://developers.google.com/sheets/api/guides/concepts.
-RANGE_NAME = config['range']
-result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
-                                             range=RANGE_NAME).execute()
-values = result.get('values', [])
-if not values:
-    print('No data found.')
-else:
-    # We'll do more here soon.  For now, just print the sheet's data.
-    for row in values:
-        print(row)
+
+if __name__ == '__main__':
+    main()
