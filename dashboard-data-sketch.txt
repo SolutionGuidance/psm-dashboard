@@ -24,12 +24,12 @@ Here is the full example of the shape of the data:
 "features": {
   "psm-feature-000": {
     "description": String,
-    "status": String ['Complete', 'InProgress', 'NotStarted'],
+    "status": String ["Complete", "InProgress", "NotStarted"],
     "startDate": String[Date] or null,
     "completedDate": String[Date] or null,
     "requirements": [
-      'psm-FR-8.2', 
-      'psm-FR-8.3', 
+      "psm-FR-8.2", 
+      "psm-FR-8.3", 
       ...
     ]
   },
@@ -40,9 +40,9 @@ Here is the full example of the shape of the data:
 
 
 "requirements": {
-  'psm-FR-8.2': {
+  "psm-FR-8.2": {
     "description": String,
-    "status": String ['Complete', 'InProgress', 'NotStarted'],
+    "status": String ["Complete", "InProgress", "NotStarted"],
     "startDate": String[Date] or null,
     "completedDate": String[Date] or null,
     "issues": [
@@ -52,7 +52,7 @@ Here is the full example of the shape of the data:
       ...
     ]
   },
-  'psm-FR-8.3': {
+  "psm-FR-8.3": {
     ...
   },
   ...
@@ -63,7 +63,7 @@ Here is the full example of the shape of the data:
     "title": String,
     "description": String,
     "url": String,
-    "status": String ['Complete', 'InProgress', 'NotStarted'],
+    "status": String ["Complete", "InProgress", "NotStarted"],
     "startDate": String[Date] or null,
     "completedDate": String[Date] or null,
   },
