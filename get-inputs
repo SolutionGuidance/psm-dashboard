@@ -70,7 +70,7 @@ class PSMFeature:
         SUBFEATURES (list of strings): Subfeature descriptions.
         START_DATE (string): ISO-8601 date (YYYY-MM-DD HH:MM:SS) or None
         COMPLETED_DATE (string): ISO-8601 date (YYYY-MM-DD HH:MM:SS) or None
-        REQUIREMENTS (list of PSMRequirement instances): 'Nuff said"""
+        REQUIREMENTS (list of strings): List of requirement IDs."""
         # Alas, the @dataclass decorator is new in Python 3.7,
         # so we can't really depend on it being available here.
         # www.python.org/dev/peps/pep-0557
@@ -144,6 +144,12 @@ class PSMIssue:
                  self.start_date,
                  self.completed_date,
                  self.labels)
+
+
+# Where is "class PSMRequirement", you ask?
+#
+# The class 'PSMRequirement' is defined in the psm_reqs.py module
+# already.  We obtain instances of it from psm_reqs.get_reqs().
 
 
 def main():
