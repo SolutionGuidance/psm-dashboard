@@ -59,7 +59,7 @@ Here is the full example of the shape of the data:
 }
 
 "issues": {
-  123: {
+  "123": {
     "title": String,
     "description": String,
     "url": String,
@@ -67,7 +67,7 @@ Here is the full example of the shape of the data:
     "startDate": String[Date] or null,
     "completedDate": String[Date] or null,
   },
-  456: {
+  "456": {
     ...
   },
   ...
