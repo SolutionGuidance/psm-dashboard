@@ -36,7 +36,7 @@ Prerequisites:
     ### https://developers.google.com/sheets/api/quickstart/python. 
     ### Note that you will need to have a Google account, and that
     ### account must have access to the spreadsheet whose ID you're
-    ### using as your "gsheet_id."
+    ### using as your "google_sheet_id."
 
   $ ln -s somewhere/psm/requirements/psm_reqs.py ./psm_reqs.py
 
@@ -78,36 +78,36 @@ class PSMFeature:
 def main():
     ##### Accessing the Google Spreadsheet. #####
     # Grant read-only access
-    SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
+    google_api_scopes = 'https://www.googleapis.com/auth/spreadsheets.readonly'
     
     # TODO: It would be civilized to check access perms on the file
     # here and warn if they're too open.
     config = json.load(open('psm-dashboard-config.json'))
     
     # TODO: Similarly, make sure this file is user-readable only.
-    g_creds_store = oauth2client.file.Storage('google-credentials.json')
+    google_creds_store = oauth2client.file.Storage('google-credentials.json')
     
-    g_creds = g_creds_store.get()
+    google_creds = google_creds_store.get()
     
-    if not g_creds or g_creds.invalid:
+    if not google_creds or google_creds.invalid:
         # Interactively prompt for access creds in the browser.
         flow = oauth2client.client.OAuth2WebServerFlow(
-            client_id=config['gsheet_client_id'],
-            client_secret=config['gsheet_client_secret'],
-            scope=SCOPES,
+            client_id=config['google_sheet_client_id'],
+            client_secret=config['google_sheet_client_secret'],
+            scope=google_api_scopes,
             redirect_uri='TBD')
-        g_creds = oauth2client.tools.run_flow(flow, g_creds_store)
+        google_creds = oauth2client.tools.run_flow(flow, google_creds_store)
     
-    service = apiclient.discovery.build('sheets', 'v4', http=g_creds.authorize(httplib2.Http()))
+    service = apiclient.discovery.build('sheets', 'v4', http=google_creds.authorize(httplib2.Http()))
     
     # Point Sheets API at the specified sheet.
-    SPREADSHEET_ID = config['gsheet_id']
+    google_sheet_id = config['google_sheet_id']
     
     # Range must be given in "A1" notation, which is described in
     # https://developers.google.com/sheets/api/guides/concepts.
-    RANGE_NAME = config['gsheet_range']
-    result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID,
-                                                 range=RANGE_NAME).execute()
+    google_sheet_range = config['google_sheet_range']
+    result = service.spreadsheets().values().get(spreadsheetId=google_sheet_id,
+                                                 range=google_sheet_range).execute()
     features_sheet_values = result.get('values', None)
     if features_sheet_values is None:
         sys.stderr.write('No data found.')
