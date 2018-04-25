@@ -53,6 +53,7 @@ import apiclient
 import oauth2client
 import os
 import sys
+import re
 import json
 import psm_reqs
 import github
@@ -61,11 +62,14 @@ import github.GithubException
 
 class PSMFeature:
     """Class representing one PSM high-level feature."""
-    def __init__(self, feature_id, description, subfeatures, requirements):
+    def __init__(self, feature_id, description, subfeatures, 
+                 start_date, completed_date, requirements):
         """Create a new feature named .
         FEATURE_ID (string): The identifying name for this feature.
         DESCRIPTION (string): Description of this feature.
         SUBFEATURES (list of strings): Subfeature descriptions.
+        START_DATE (string): ISO-8601 date (YYYY-MM-DD HH:MM:SS) or None
+        COMPLETED_DATE (string): ISO-8601 date (YYYY-MM-DD HH:MM:SS) or None
         REQUIREMENTS (list of PSMRequirement instances): 'Nuff said"""
         # Alas, the @dataclass decorator is new in Python 3.7,
         # so we can't really depend on it being available here.
@@ -74,18 +78,24 @@ class PSMFeature:
         self.feature_id = feature_id
         self.description = description
         self.subfeatures = subfeatures
+        self.start_date = start_date
+        self.completed_date = completed_date
         self.requirements = requirements
     def __str__(self):
         return """\
         PSM Feature:
-          ID:           "%s"
-          Description:  "%s"
-          Subfeatures:  "%s"
-          Requirements: "%s"\n""" \
+          ID:             "%s"
+          Description:    "%s"
+          Subfeatures:    "%s"
+          Start date:     "%s"
+          Completed date: "%s"
+          Requirements:   "%s"\n""" \
               % (self.feature_id.replace('"', '\\"'),
                  self.description.replace('"', '\\"'),
                  [sub.replace('"', '\\"') for sub in self.subfeatures],
-                 [req.req_id for req in self.requirements])
+                 self.start_date, 
+                 self.completed_date,
+                 [req_id for req_id in self.requirements])
 
 
 class PSMIssue:
@@ -174,6 +184,49 @@ def main():
                          % google_sheet_id)
         sys.exit(1)
 
+    features = {}
+    this_feature = None
+    reqs_list_re = re.compile("\((psm-[A-Z][A-Z]-[0-9]+\\.[0-9]+(,\\s-*)?)+\)")
+    for row in features_sheet_values:
+        feature_id = None
+        description = None
+        subfeatures = []
+        start_date = None
+        completed_date = None
+        requirements = []
+        if len(row) > 0:
+            if row[0].startswith("psm-feature-"):
+                feature_id = row[0]
+                if feature_id in features:
+                    sys.stderr.write("ERROR: Found feature '%s' twice." \
+                                     % feature_id)
+                    sys.exit(1)
+                description = row[1]
+                m = reqs_list_re.search(description)
+                if m is not None:
+                    lst = m.group(0)
+                    lst = lst.replace("(", "").replace(")", "").replace(" ", "")
+                    requirements = lst.split(",")
+                this_feature = PSMFeature(feature_id, description, 
+                                          subfeatures,
+                                          start_date, completed_date, 
+                                          requirements)
+                features[feature_id] = this_feature
+            elif ((feature_id is not None) \
+                  and (len(row) == 3) \
+                  and (row[0] == '')
+                  and (row[1] == '')):
+                subfeature = row[2]
+                if subfeature.startswith("- "):
+                    subfeature = subfeature[2:]
+                this_feature.subfeatures.append(subfeature)
+            else:
+                # Any other kind of non-empty row ends this feature
+                this_feature = None
+        else:
+            # Any empty row ends this feature
+            this_feature = None
+
     ##### Get PSM requirements from the CSV files. #####
     csv_dir = config['psm_csv_dir']
     csv_files = []
@@ -195,7 +248,9 @@ def main():
     except github.UnknownObjectException as e:
         github_owner = github_api.get_user(github_owner_name)
     github_repos = github_owner.get_repo(github_repos_name)
-    github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
+    # DEBUGGING TOGGLE
+    # github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
+    github_issues_raw = []
     psm_issues = []
     for raw_issue in github_issues_raw:
         if raw_issue.pull_request is None:
@@ -215,18 +270,15 @@ def main():
             # Because it takes a long time to paginate through the issues,
             # we'll want some kind of progress meter.  For now, use this
             # debugging statement to know that things are moving along:
-            #
-            # sys.stderr.write("DEBUG: %s\n" % issue)
+            sys.stderr.write("DEBUG: fetched issue %d\n" % issue.number)
             psm_issues.append(issue)
 
     ##### Just print out results for now. #####
-    if features_sheet_values is not None:
-        # We'll do more here soon.  For now, just print the sheet's data.
-        print("")
-        print("*** Features Spreadsheet ***")
-        print("")
-        for feature_sheet_row in features_sheet_values:
-            print(feature_sheet_row)
+    print("")
+    print("*** Features Spreadsheet ***")
+    print("")
+    for feature in features.values():
+        print(feature)
 
     print("")
     print("*** PSM Requirements ***")
