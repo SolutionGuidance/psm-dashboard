@@ -1,0 +1,162 @@
+<!-- This is currently a WIP draft based on an online tutorial. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Burn Down Chart</title>
+  <style>
+    svg {
+      border: 1px solid black;
+      background: white;
+    }
+
+    .axis .domain, .axis .tick {
+      stroke: #000;
+      fill: none;
+    }
+
+    .title {
+      fill: #666;
+      font-family: Helvetica, sans-serif; 
+      text-anchor: middle;
+      font-size: 24px;
+    }
+
+    .bar {
+      fill: #fcc;
+      stroke: #444;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chart"></div>
+  <div id="chart2"></div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script>
+  (function(d3) {
+  "use strict";
+
+  var width = 600;
+  var height = 100;
+  var root = d3
+    .select("#chart")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("border", "1px solid black");
+
+  var evenNumbers = [0, 2, 4, 6, 8, 10];
+  var maxDataValue = d3.max(evenNumbers);
+  var barHeight = height / evenNumbers.length;
+  var barWidth = function(datum) {
+    return datum * (width / maxDataValue);
+  };
+  var barX = 0;
+  var barY = function(datum, index) {
+    return index * barHeight;
+  };
+  root
+    .selectAll("rect.number")
+    .data(evenNumbers)
+    .enter()
+    .append("rect")
+    .attr("class", "number")
+    .attr("x", barX)
+    .attr("y", barY)
+    .attr("width", barWidth)
+    .attr("height", barHeight)
+    .attr("fill", "#dff")
+    .attr("stroke", "#444");
+})(window.d3);
+</script>
+<script>
+(function(d3) {
+  "use strict";
+  var width = 640;
+  var height = 480;
+  var root = d3
+    .select("#chart2")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  // Render the title.
+  var titleHeight = 50;
+  root
+    .append("text")
+    .attr("class", "title")
+    .attr("x", width / 2)
+    .attr("y", titleHeight / 2)
+    .text("Title Here");
+
+  // Simulate 500 rolls of the axe.
+  var rollDie = function(numSides) {
+    return 1 + Math.floor(Math.random() * numSides);
+  };
+
+  var MAX_ROLL = 4 + 4 + 6 + 6;
+  var rollHisto = d3.range(MAX_ROLL + 1).map(function() {
+    return 0;
+  });
+  for (var i = 0; i < 500; i++) {
+    var rolled = rollDie(4) + rollDie(4) + rollDie(6) + rollDie(6);
+    rollHisto[rolled]++;
+  }
+
+  var yAxisWidth = 50;
+  var xAxisHeight = 50;
+
+  // Define the root g element.
+  var histoWidth = width - yAxisWidth;
+  var histoHeight = height - xAxisHeight - titleHeight;
+  var histoG = root
+    .append("g")
+    .attr("class", "histo")
+    .attr("transform", "translate(" + yAxisWidth + ", " + titleHeight + ")");
+
+  // Render our axis.
+  var xScale = d3
+    .scaleLinear()
+    .domain([0, rollHisto.length])
+    .range([0, histoWidth]);
+  var yScale = d3
+    .scaleLinear()
+    .domain([0, d3.max(rollHisto) * 1.2])
+    .range([histoHeight, 0]);
+
+  var xAxis = d3.axisBottom().scale(xScale);
+  histoG
+    .append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0, " + histoHeight + ")")
+    .call(xAxis);
+
+  // var yAxis = d3.axisLeft().scale(yScale);
+  // histoG
+  //   .append("g")
+  //   .attr("class", "y axis")
+  //   .call(yAxis);
+
+  // Render the dice bars.
+  histoG
+    .selectAll("rect.bar")
+    .data(rollHisto)
+    .enter()
+    .append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d, i) {
+      return xScale(i - 0.5);
+    })
+    .attr("width", xScale(1) - xScale(0))
+    .attr("y", yScale)
+    .attr("height", function(d) {
+      return yScale(0) - yScale(d);
+    });
+})(window.d3);
+</script>
+
+</body>
+
+</html>
