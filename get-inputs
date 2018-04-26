@@ -285,12 +285,12 @@ def main():
     sys.stderr.write("       for now.\n")
     sys.stderr.write("\n")
     for raw_issue in github_issues_raw:
-        # TODO: For development, loop over only a subset of issues,
-        #       because running the whole loop and waiting for the
-        #       GitHub API's just-in-time fetching is too slow.
-        #       Remove this check once in production, of course.
-        if raw_issue.number < 700 or raw_issue.number > 740:
-            continue
+        # For development, uncomment this conditional to loop over
+        # only a subset of issues, since waiting for the GitHub API's
+        # just-in-time fetching can be slow.
+        #
+        # if raw_issue.number < 700 or raw_issue.number > 740)
+        #     continue
         if raw_issue.number in issues:
             sys.stderr.write("ERROR: Found issue %d twice." 
                              % raw_issue.number)
