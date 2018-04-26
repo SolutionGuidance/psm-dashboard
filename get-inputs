@@ -82,6 +82,12 @@ class PSMFeature:
         # but since the spec requests "camelCase", we do that instead.
         self.startDate = start_date
         self.completedDate = completed_date
+        self.status = "NotStarted"
+        if self.startDate is not None:
+            if self.completedDate is None:
+                self.status = "InProgress"
+            else:
+                self.status = "Completed"
         self.requirements = requirements
     def __str__(self):
         return """\
@@ -123,7 +129,12 @@ class PSMIssue:
             % (self.owner, self.repos, self.number)
         self.title = title
         self.description = description
-        self.status = status
+        self.status = "NotStarted"
+        # The status logic will get more sophisticated.  If there's
+        # been meaningful activity on an issue, e.g., like a pull
+        # request attached, then self.status could be "InProgress".
+        if status == "closed":
+            self.status = "Completed"
         # Again, use "camelCase" because that's what the spec wants
         # for dates.
         # Could validate status and the two date fields here.
@@ -329,14 +340,15 @@ def main():
 
     ##### Set start dates and completed dates. #####
 
-    # For now, the start dates and completed dates are mostly
-    # placeholders; eventually we'll need to calculate them (though at
-    # least in PSMIssue we already have the information trivially from
-    # GitHub).  Also, since PSMRequirement doesn't natively have the
-    # fields at all, we add them here, albeit still as placeholders.
+    # Some of the statuses, start dates, and completed dates are still
+    # placeholders -- we'll need to calculate them.  (Though at least
+    # in PSMIssue we already have the dates trivially from GitHub).
+    # Also, since PSMRequirement doesn't natively have these fields,
+    # we add them here, albeit still as placeholders.
     for req in reqs.values():
         setattr(req, "startDate", None)
         setattr(req, "completedDate", None)
+        setattr(req, "status", "NotStarted")
 
     ##### Output, finally. #####
 
