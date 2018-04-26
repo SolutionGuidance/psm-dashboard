@@ -54,8 +54,8 @@
     // features data in array form, add id to each feature object
     var featuresArray = Object.keys(data.features)
       .map(function(key) {
-        var feature = data.features[key];
-        return randomizeFeature(feature);
+        var feature = randomizeFeature(data.features[key]);
+        return feature;
       })
       .sort(function(a, b) {
         return a.completedDate > b.completedDate;
@@ -77,11 +77,15 @@
 
     var barHeight = chartHeight / featuresArray.length;
 
-    var barWidth = function(feature) {
+    var barWidthNotStarted = function(feature) {
+      var end = xScale(new Date(feature.startDate));
+      var start = xScale(globalStartDate);
+      return end - start;
+    };
+    var barWidthInProgress = function(feature) {
       var end = xScale(new Date(feature.completedDate));
-      // var start = xScale(new Date(feature.startDate));
-      var gStart = xScale(globalStartDate);
-      return end - gStart;
+      var start = xScale(new Date(feature.startDate));
+      return end - start;
     };
     var barX = 0;
     var barY = function(datum, index) {
@@ -102,13 +106,24 @@
 
     // Render the bars.
     chartG
-      .selectAll("rect.bar")
+      .selectAll("rect.barNotStarted")
       .data(featuresArray)
       .enter()
       .append("rect")
-      .attr("class", barClass)
+      .attr("class", "bar barNotStarted")
       .attr("x", barX)
-      .attr("width", barWidth)
+      .attr("width", barWidthNotStarted)
+      .attr("y", barY)
+      .attr("height", barHeight);
+
+    chartG
+      .selectAll("rect.barInProgress")
+      .data(featuresArray)
+      .enter()
+      .append("rect")
+      .attr("class", "bar barInProgress")
+      .attr("x", function(d) { return xScale(new Date(d.startDate)) })
+      .attr("width", barWidthInProgress)
       .attr("y", barY)
       .attr("height", barHeight);
   }
