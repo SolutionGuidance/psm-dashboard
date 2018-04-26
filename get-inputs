@@ -78,8 +78,10 @@ class PSMFeature:
         self.feature_id = feature_id
         self.description = description
         self.subfeatures = subfeatures
-        self.start_date = start_date
-        self.completed_date = completed_date
+        # Normally we'd use "foo_bar"-style field names for the dates,
+        # but since the spec requests "camelCase", we do that instead.
+        self.startDate = start_date
+        self.completedDate = completed_date
         self.requirements = requirements
     def __str__(self):
         return """\
@@ -93,8 +95,8 @@ class PSMFeature:
               % (self.feature_id.replace('"', '\\"'),
                  self.description.replace('"', '\\"'),
                  [sub.replace('"', '\\"') for sub in self.subfeatures],
-                 self.start_date, 
-                 self.completed_date,
+                 self.startDate,
+                 self.completedDate,
                  [req_id for req_id in self.requirements])
 
 
@@ -122,10 +124,12 @@ class PSMIssue:
         self.title = title
         self.description = description
         self.status = status
+        # Again, use "camelCase" because that's what the spec wants
+        # for dates.
         # Could validate status and the two date fields here.
         # And should the dates be DateTime type, not string?
-        self.start_date = start_date
-        self.completed_date = completed_date
+        self.startDate = start_date
+        self.completedDate = completed_date
         self.labels = labels
     def __str__(self):
         return """PSM Issue:
@@ -270,13 +274,12 @@ def main():
     sys.stderr.write("       for now.\n")
     sys.stderr.write("\n")
     for raw_issue in github_issues_raw:
-        # TODO: For development, take an early out at issue 700,
+        # TODO: For development, loop over only a subset of issues,
         #       because running the whole loop and waiting for the
         #       GitHub API's just-in-time fetching is too slow.
         #       Remove this check once in production, of course.
-        if raw_issue.number < 700:
-            sys.stderr.write("DEBUG: early out during development\n")
-            break
+        if raw_issue.number < 700 or raw_issue.number > 740:
+            continue
         if raw_issue.number in issues:
             sys.stderr.write("ERROR: Found issue %d twice." 
                              % raw_issue.number)
@@ -285,6 +288,12 @@ def main():
             labels = []
             for label in raw_issue.labels:
                 labels.append(label.name)
+            start_date = None
+            completed_date = None
+            if raw_issue.created_at is not None:
+                start_date = str(raw_issue.created_at)[:10]
+            if raw_issue.closed_at is not None:
+                completed_date = str(raw_issue.closed_at)[:10]
             issue = PSMIssue(
                 github_owner_name,
                 github_repos_name,
@@ -292,14 +301,44 @@ def main():
                 raw_issue.title,
                 raw_issue.body,
                 raw_issue.state,
-                str(raw_issue.created_at),
-                str(raw_issue.closed_at),
+                start_date,
+                completed_date,
                 labels)
             # Because it takes a long time to paginate through the issues,
             # we'll want some kind of progress meter.  For now, use this
             # debugging statement to know that things are moving along:
             sys.stderr.write("DEBUG: fetched issue %d\n" % issue.number)
             issues[issue.number] = issue
+
+    ###### Link issues into requirements. #####
+
+    # Dictionary mapping req IDs to subdictionaries; each 
+    # subdictionary maps issue numbers (ints) to True.
+    reqs_to_issues = {}
+    for issue in issues.values():
+        sys.stderr.write("DEBUG: checking issue %d'\n" % issue.number)
+        for label in issue.labels:
+            sys.stderr.write("DEBUG: checking label '%s'\n" % label)
+            if label.startswith("Z-REQ-PSM-"):
+                req_id = "psm-" + label[10:]
+                sys.stderr.write("DEBUG: yes -- found req '%s'\n" % req_id)
+                reqs_to_issues.setdefault(req_id, {})[issue.number] = True
+    for req in reqs.values():
+        # Just shoehorn it on in there.  Thanks, Python.
+        setattr(req, "issues", list(reqs_to_issues.setdefault(req.req_id, {}).keys()))
+
+    ##### Set start dates and completed dates. #####
+
+    # For now, the start dates and completed dates are mostly
+    # placeholders; eventually we'll need to calculate them (though at
+    # least in PSMIssue we already have the information trivially from
+    # GitHub).  Also, since PSMRequirement doesn't natively have the
+    # fields at all, we add them here, albeit still as placeholders.
+    for req in reqs.values():
+        setattr(req, "startDate", None)
+        setattr(req, "completedDate", None)
+
+    ##### Output, finally. #####
 
     # TODO: The output below doesn't yet match the specification
     #       given in dashboard-data-sketch.txt, but it soon will.
