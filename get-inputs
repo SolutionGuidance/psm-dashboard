@@ -21,7 +21,7 @@
 # github.com/OpenTechStrategies/ots-tools/blob/master/google-sheets-client/;
 # see there for Google Sheets API resources etc.
 
-"""Get data from various sources and feed it to the PSM dashboard.
+"""Make JSON input for the PSM dashboard, using data from various sources.
 
 Prerequisites:
 
@@ -45,12 +45,18 @@ Prerequisites:
 
 Usage:
 
-  $ ./get-inputs
+  $ ./get-inputs [--featureless-reqs]
+
+Normal output is JSON formatted as per 'dashboard-data-sketch.txt'.
+However, if the '--featureless-reqs' option is passed, instead show a
+list of requirements (from the RTM) that are not associated with any
+high-level feature.  To just see usage, run with '-h' or '--help'.
 """
 
 import httplib2
 import apiclient
 import oauth2client
+import getopt
 import os
 import sys
 import re
@@ -177,6 +183,24 @@ def to_dict(obj):
 
 
 def main():
+    list_featureless_reqs = False
+
+    try:
+        (opts, args) = getopt.getopt(
+            sys.argv[1:], "h?", 
+            ["help", "usage", "featureless-reqs",])
+    except getopt.GetoptError as err:
+        sys.stderr.write(str(err))
+        sys.stderr.write("\n")
+        sys.exit(1)
+
+    for opt, optarg in opts:
+        if opt in ("-h", "-?", "--help", "--usage",):
+            print(__doc__)
+            sys.exit(0)
+        elif opt in ("--featureless-reqs",):
+            list_featureless_reqs = True
+        
     # TODO: It would be nice to check access perms on the file
     # here and warn if they're too open.
     config = json.load(open('psm-dashboard-config.json'))
@@ -352,23 +376,48 @@ def main():
 
     ##### Output, finally. #####
 
-    # TODO: The output below doesn't yet match the specification
-    #       given in dashboard-data-sketch.txt, but it soon will.
+    if list_featureless_reqs:
+        # Maps req IDs to subdictionaries; each subdict maps feature
+        # IDs to True.  Thus, the overall map tells you which features
+        # are associated with a given requirement.
+        sys.stderr.write("DEBUG: Listing featureless requirements\n")
+        req_ids_to_features = {}
+        for feature in features.values():
+            sys.stderr.write("DEBUG: probing feature '%s'\n" % feature.feature_id)
+            for req_id in feature.requirements:
+                sys.stderr.write("DEBUG: registering req '%s'\n" % req_id)
+                req_ids_to_features.setdefault(req_id, {})[feature.feature_id] = True
+        # But then we don't actually use all the data we've gathered.
+        # We just ask the boolean question "Does a given requirement
+        # have any features associated with it?".  However, later if
+        # we want to show *which* features are associated with a given
+        # requirement, for those reqs that have features at all, we
+        # will easily be able to do so.
+        for req_id in reqs:
+            if req_id not in req_ids_to_features:
+                req = reqs[req_id]
+                print("* No associated features for requirement '%s':" % req_id)
+                print("")
+                print("  %s" % req.description)
+                if req.comment is not None and req.comment != "":
+                    print("")
+                    print("  %s" % req.comment)
+                print("")
+    else:
+        # The top-level dict that will printed as JSON.
+        output = {}
+        # This code could be a little D.R.Y.-er, hmm.
+        output["features"] = {}
+        for feature_id, feature in features.items():
+            output["features"][feature_id] = to_dict(feature)
+        output["requirements"] = {}
+        for req_id, req in reqs.items():
+            output["requirements"][req_id] = to_dict(req)
+        output["issues"] = {}
+        for issue_number, issue in issues.items():
+            output["issues"][issue_number] = to_dict(issue)
+        print("%s" % json.dumps(output, indent=4))
 
-    # The top-level dict that will printed as JSON.
-    output = {}
-    # This code could be a little D.R.Y.-er, hmm.
-    output["features"] = {}
-    for feature_id, feature in features.items():
-        output["features"][feature_id] = to_dict(feature)
-    output["requirements"] = {}
-    for req_id, req in reqs.items():
-        output["requirements"][req_id] = to_dict(req)
-    output["issues"] = {}
-    for issue_number, issue in issues.items():
-        output["issues"][issue_number] = to_dict(issue)
-
-    print("%s" % json.dumps(output, indent=4))
 
 if __name__ == '__main__':
     main()
