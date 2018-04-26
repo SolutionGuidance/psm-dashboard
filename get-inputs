@@ -264,7 +264,7 @@ def main():
         github_owner = github_api.get_user(github_owner_name)
     github_repos = github_owner.get_repo(github_repos_name)
     github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
-    psm_issues = {}
+    issues = {}
     sys.stderr.write("DEBUG: Issues take a long time to fetch, so these\n")
     sys.stderr.write("       debugging prints will be our progress meter\n")
     sys.stderr.write("       for now.\n")
@@ -277,7 +277,7 @@ def main():
         if raw_issue.number < 700:
             sys.stderr.write("DEBUG: early out during development\n")
             break
-        if raw_issue.number in psm_issues:
+        if raw_issue.number in issues:
             sys.stderr.write("ERROR: Found issue %d twice." 
                              % raw_issue.number)
             sys.exit(1)
@@ -299,7 +299,7 @@ def main():
             # we'll want some kind of progress meter.  For now, use this
             # debugging statement to know that things are moving along:
             sys.stderr.write("DEBUG: fetched issue %d\n" % issue.number)
-            psm_issues[issue.number] = issue
+            issues[issue.number] = issue
 
     # TODO: The output below doesn't yet match the specification
     #       given in dashboard-data-sketch.txt, but it soon will.
@@ -314,7 +314,7 @@ def main():
     for req_id, req in reqs.items():
         output["requirements"][req_id] = to_dict(req)
     output["issues"] = {}
-    for issue_number, issue in psm_issues.items():
+    for issue_number, issue in issues.items():
         output["issues"][issue_number] = to_dict(issue)
 
     print("%s" % json.dumps(output, indent=4))
