@@ -52,21 +52,20 @@
     var featuresArray = Object.keys(data.features)
       .map(function(key) {
         var feature = randomizeFeature(data.features[key]);
-        if (feature.completedDate === null) {
-          feature.completedDate = todayString;
-        }
-        if (feature.startDate === null) {
-          feature.startDate = todayString;
-        }
         return feature;
       })
       .sort(function(a, b) {
-        if (a.status === "NotStarted" && b.status !== "NotStarted") {
+        if (a.status === b.status) {
+          return a.completedDate > b.completedDate;
+        } else if (a.status === "NotStarted") {
           return true;
-        } else if (a.status !== "NotStarted" && b.status === "NotStarted") {
+        } else if (b.status === "NotStarted") {
+          return false;
+        } else if (a.status === "InProgress") {
+          return true;
+        } else if (b.status === "InProgress") {
           return false;
         }
-        return a.completedDate > b.completedDate;
       });
 
     // Render the axis.
@@ -86,13 +85,13 @@
     var barHeight = chartHeight / featuresArray.length;
 
     var barWidthNotStarted = function(feature) {
-      var end = xScale(new Date(feature.startDate));
+      var end = xScale(new Date(feature.startDate || todayString));
       var start = xScale(globalStartDate);
       return end - start;
     };
 
     var barWidthInProgress = function(feature) {
-      var end = xScale(new Date(feature.completedDate));
+      var end = xScale(new Date(feature.completedDate || todayString));
       var start = xScale(new Date(feature.startDate));
       return end - start;
     };
