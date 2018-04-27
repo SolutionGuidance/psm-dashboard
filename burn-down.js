@@ -5,11 +5,20 @@
     var random = Math.random() * 3;
     if (random < 1) {
       feature.status = "Completed";
-      feature.startDate = "2018-02-01";
-      feature.completedDate = "2018-03-01";
+      if (random < 0.5) {
+        feature.startDate = "2018-02-01"
+        feature.completedDate = "2018-04-01";
+      } else {
+        feature.startDate = "2018-03-01";
+        feature.completedDate = "2018-04-01"
+      }
     } else if (random > 2) {
       feature.status = "InProgress";
-      feature.startDate = "2018-03-01";
+      if (random < 2.5) {
+        feature.startDate = "2018-03-01";
+      } else {
+        feature.startDate = "2018-04-01"
+      }
     }
     return feature;
   }
@@ -63,7 +72,11 @@
       })
       .sort(function(a, b) {
         if (a.status === b.status) {
-          return a.completedDate > b.completedDate;
+          if (a.completedDate === b.completedDate) {
+            return a.startDate > b.startDate;
+          } else {
+            return a.completedDate > b.completedDate;
+          }
         } else if (a.status === "NotStarted") {
           return true;
         } else if (b.status === "NotStarted") {
