@@ -347,8 +347,7 @@ def main():
 
     ###### Link issues into requirements. #####
 
-    # Dictionary mapping req IDs to subdictionaries; each 
-    # subdictionary maps issue numbers (ints) to True.
+    # Dictionary mapping req IDs to sets of issue numbers (ints).
     reqs_to_issues = {}
     for issue in issues.values():
         sys.stderr.write("DEBUG: checking issue %d'\n" % issue.number)
@@ -357,10 +356,10 @@ def main():
             if label.startswith("Z-REQ-PSM-"):
                 req_id = "psm-" + label[10:]
                 sys.stderr.write("DEBUG: yes -- found req '%s'\n" % req_id)
-                reqs_to_issues.setdefault(req_id, {})[issue.number] = True
+                reqs_to_issues.setdefault(req_id, set()).add(issue.number)
     for req in reqs.values():
         # Just shoehorn it on in there.  Thanks, Python.
-        setattr(req, "issues", list(reqs_to_issues.setdefault(req.req_id, {}).keys()))
+        setattr(req, "issues", list(reqs_to_issues.setdefault(req.req_id, set())))
 
     ##### Set start dates and completed dates. #####
 
@@ -377,16 +376,15 @@ def main():
     ##### Output, finally. #####
 
     if list_featureless_reqs:
-        # Maps req IDs to subdictionaries; each subdict maps feature
-        # IDs to True.  Thus, the overall map tells you which features
-        # are associated with a given requirement.
+        # Maps req IDs to sets of feature IDs.  This tells you
+        # which features are associated with a given requirement.
         sys.stderr.write("DEBUG: Listing featureless requirements\n")
         req_ids_to_features = {}
         for feature in features.values():
             sys.stderr.write("DEBUG: probing feature '%s'\n" % feature.feature_id)
             for req_id in feature.requirements:
                 sys.stderr.write("DEBUG: registering req '%s'\n" % req_id)
-                req_ids_to_features.setdefault(req_id, {})[feature.feature_id] = True
+                req_ids_to_features.setdefault(req_id, set()).add(feature.feature_id)
         # But then we don't actually use all the data we've gathered.
         # We just ask the boolean question "Does a given requirement
         # have any features associated with it?".  However, later if
