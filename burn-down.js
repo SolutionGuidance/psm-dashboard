@@ -90,11 +90,13 @@
       var start = xScale(globalStartDate);
       return end - start;
     };
+
     var barWidthInProgress = function(feature) {
       var end = xScale(new Date(feature.completedDate));
       var start = xScale(new Date(feature.startDate));
       return end - start;
     };
+
     var barX = 0;
     var barY = function(datum, index) {
       return index * barHeight;
@@ -130,7 +132,9 @@
       .enter()
       .append("rect")
       .attr("class", "bar barInProgress")
-      .attr("x", function(d) { return xScale(new Date(d.startDate)) })
+      .attr("x", function(d) {
+        return xScale(new Date(d.startDate));
+      })
       .attr("width", barWidthInProgress)
       .attr("y", barY)
       .attr("height", barHeight);
