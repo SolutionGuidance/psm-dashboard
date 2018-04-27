@@ -128,7 +128,9 @@
 
     chartG
       .selectAll("rect.barInProgress")
-      .data(featuresArray)
+      .data(featuresArray.filter(function(f) {
+        return f.status !== "NotStarted";
+      }))
       .enter()
       .append("rect")
       .attr("class", "bar barInProgress")
