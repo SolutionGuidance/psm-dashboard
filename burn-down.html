@@ -6,6 +6,9 @@
   <meta charset="utf-8">
   <title>Burn Down Chart</title>
   <style>
+    body {
+      font-family: Verdana, sans-serif;
+    }
     svg {
       border: 1px solid black;
       background: white;
@@ -18,7 +21,6 @@
 
     .title {
       fill: #666;
-      font-family: Verdana, sans-serif;
       text-anchor: middle;
       font-size: 24px;
     }
@@ -26,6 +28,7 @@
     .bar {
       fill: #fcc;
       stroke: #444;
+      cursor: pointer;
     }
 
     .barNotStarted {

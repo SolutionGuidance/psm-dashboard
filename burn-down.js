@@ -6,18 +6,18 @@
     if (random < 1) {
       feature.status = "Completed";
       if (random < 0.5) {
-        feature.startDate = "2018-02-01"
+        feature.startDate = "2018-02-01";
         feature.completedDate = "2018-04-01";
       } else {
         feature.startDate = "2018-03-01";
-        feature.completedDate = "2018-04-01"
+        feature.completedDate = "2018-04-01";
       }
     } else if (random > 2) {
       feature.status = "InProgress";
       if (random < 2.5) {
         feature.startDate = "2018-03-01";
       } else {
-        feature.startDate = "2018-04-01"
+        feature.startDate = "2018-04-01";
       }
     }
     return feature;
@@ -57,7 +57,7 @@
       .attr("class", "histo")
       .attr("transform", "translate(" + yAxisWidth + ", " + titleHeight + ")");
 
-    // features data in array form, add id to each feature object
+    // features data in array form
     var featuresArray = Object.keys(data.features)
       .map(function(key) {
         var feature = randomizeFeature(data.features[key]);
@@ -122,15 +122,12 @@
     };
 
     function barClass(d) {
-      if (d.status === "NotStarted") {
-        return "bar barNotStarted";
-      } else if (d.status === "InProgress") {
-        return "bar barInProgress";
-      } else if (d.status === "Completed") {
-        return "bar barCompleted";
-      } else {
-        return "bar";
-      }
+      var statusClass = {
+        NotStarted: " barNotStarted",
+        InProgress: " barInProgress",
+        Completed: " barCompleted"
+      }[d.status];
+      return "bar" + (statusClass || "");
     }
 
     // Render the bars.
