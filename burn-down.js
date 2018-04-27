@@ -10,10 +10,6 @@
     } else if (random > 2) {
       feature.status = "InProgress";
       feature.startDate = "2018-03-01";
-      feature.completedDate = "2018-05-01";
-    } else {
-      feature.startDate = "2018-06-01";
-      feature.completedDate = "2018-06-01";
     }
     return feature;
   }
@@ -22,6 +18,7 @@
     var globalStartDate = new Date("2018-01-01");
     var globalEndDate = new Date("2018-12-31");
     var todayDate = new Date();
+    var todayString = todayDate.toISOString();
 
     var rootWidth = 700;
     var rootHeight = 700;
@@ -55,9 +52,20 @@
     var featuresArray = Object.keys(data.features)
       .map(function(key) {
         var feature = randomizeFeature(data.features[key]);
+        if (feature.completedDate === null) {
+          feature.completedDate = todayString;
+        }
+        if (feature.startDate === null) {
+          feature.startDate = todayString;
+        }
         return feature;
       })
       .sort(function(a, b) {
+        if (a.status === "NotStarted" && b.status !== "NotStarted") {
+          return true;
+        } else if (a.status !== "NotStarted" && b.status === "NotStarted") {
+          return false;
+        }
         return a.completedDate > b.completedDate;
       });
 
