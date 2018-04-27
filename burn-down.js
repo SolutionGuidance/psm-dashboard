@@ -52,6 +52,13 @@
     var featuresArray = Object.keys(data.features)
       .map(function(key) {
         var feature = randomizeFeature(data.features[key]);
+        // TODO: calculate 'in progress' percent done
+        feature.percentDone =
+          {
+            NotStarted: "0",
+            Completed: "100"
+          }[feature.status] || "50";
+
         return feature;
       })
       .sort(function(a, b) {
@@ -139,6 +146,32 @@
       .attr("width", barWidthInProgress)
       .attr("y", barY)
       .attr("height", barHeight);
+
+    // Tooltips.
+
+    var tooltip = d3
+      .select("#burn-down-chart")
+      .append("div")
+      .attr("class", "tooltip");
+
+    tooltip.append("div").attr("class", "description");
+    tooltip.append("div").attr("class", "percentDone");
+
+    chartG
+      .selectAll(["rect.barInProgress", "rect.barNotStarted"])
+      .on("mouseover", function(d) {
+        tooltip.select(".description").html(d.description);
+        tooltip.select(".percentDone").html(d.percentDone + "% done");
+        tooltip.style("display", "block");
+      })
+      .on("mouseout", function(d) {
+        tooltip.style("display", "none");
+      })
+      .on("mousemove", function(d) {
+        tooltip
+          .style("top", d3.event.layerY + 10 + "px")
+          .style("left", d3.event.layerX + 10 + "px");
+      });
   }
 
   function readJsonFile(file, callback) {
