@@ -58,6 +58,80 @@
       margin-top: 0.5rem;
     }
 
+    .darkBackground {
+      position: absolute;
+      display: none;
+      background: rgba(100,100,100,50%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: absolute;
+      background: #eee;
+      box-shadow: 0 0 5px #999999;
+      color: #333;
+      display: block;
+      font-size: 12px;
+      top: 5%;
+      left: 5%;
+      height: 84%;
+      width: 84%;
+      z-index: 20;
+      padding: 2%;
+      overflow: scroll;
+      cursor: default;
+    }
+
+    .overlayFeatureDescription {
+      /*border: 1px #000 solid;*/
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .requirementsTable {
+      border-top: 1px solid #999;
+      border-collapse: collapse;
+    }
+
+    .requirementsTableCell {
+      border-bottom: 1px solid #999;
+      margin: 0;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    .reqIdCell,
+    .statusCell {
+      white-space: nowrap;
+    }
+
+    .issueLink {
+      text-decoration: none;
+    }
+
+    .completedIssueLink {
+      text-decoration: line-through;
+      color: #4949ef;
+    }
+
+    .overlayCloseButton {
+      border: 1px solid #999;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 10px;
+    }
+
   </style>
 </head>
 

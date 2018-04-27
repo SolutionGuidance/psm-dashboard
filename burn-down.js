@@ -23,6 +23,117 @@
     return feature;
   }
 
+  function makeFeatureTable(targetSelector, reqsData, issuesData) {
+    var table = d3
+      .select(targetSelector)
+      .append("table")
+      .attr("class", "requirementsTable");
+    var thead = table.append("thead");
+    var tbody = table.append("tbody");
+
+    var columns = [
+      { label: "ID", key: "req_id" },
+      { label: "Description", key: "description" },
+      { label: "Status", key: "status" },
+      { label: "Issues", key: "issues" }
+    ];
+
+    // Header row.
+    thead
+      .append("tr")
+      .selectAll("th")
+      .data(
+        columns.map(function(c) {
+          return c.label;
+        })
+      )
+      .enter()
+      .append("th")
+      .attr("class", "requirementsTableCell")
+      .text(function(column) {
+        return column;
+      });
+
+    // Data rows.
+    var rows = tbody
+      .selectAll("tr")
+      .data(reqsData)
+      .enter()
+      .append("tr");
+
+    // Cells.
+    function plainValue(d) {
+      return d.value;
+    }
+
+    function formatStatus(d) {
+      return {
+        NotStarted: "Not Started",
+        InProgress: "In Progress",
+        Completed: "Completed"
+      }[d.value];
+    }
+
+    function formatIssues(d) {
+      d.value.sort(function(a, b) {
+        return a > b;
+      });
+      var links = d.value.map(function(issueNumber) {
+        var issue = issuesData[issueNumber];
+        var classes =
+          issue.status === "Completed" ? "completedIssueLink" : "issueLink";
+
+        return (
+          '<a href="' +
+          issue.url +
+          '" title="' +
+          issue.title +
+          '" class="' +
+          classes +
+          '" >' +
+          issueNumber +
+          "</a>"
+        );
+      });
+      return links.join(", ");
+    }
+
+    function cellClass(d) {
+      return (
+        "requirementsTableCell " +
+        {
+          req_id: "reqIdCell",
+          description: "descriptionCell",
+          status: "statusCell",
+          issues: "issuesCell"
+        }[d.key]
+      );
+    }
+
+    var cells = rows
+      .selectAll("td")
+      .data(function(row) {
+        return columns.map(function(column) {
+          return { key: column.key, value: row[column.key] };
+        });
+      })
+      .enter()
+      .append("td")
+      .attr("class", cellClass)
+      .html(function(d) {
+        var formatter = {
+          req_id: plainValue,
+          description: plainValue,
+          status: formatStatus,
+          issues: formatIssues
+        }[d.key];
+
+        return formatter(d);
+      });
+
+    return table;
+  }
+
   function drawBurnDownChart(data, d3) {
     var globalStartDate = new Date("2018-01-01");
     var globalEndDate = new Date("2018-12-31");
@@ -169,6 +280,50 @@
     tooltip.append("div").attr("class", "description");
     tooltip.append("div").attr("class", "percentDone");
 
+    function hideDarkBackground() {
+      darkBackground.style("display", "none");
+    }
+
+    var darkBackground = d3
+      .select("#burn-down-chart")
+      .append("div")
+      .attr("class", "darkBackground")
+      .on("click", hideDarkBackground);
+
+    var overlay = darkBackground
+      .append("div")
+      .attr("class", "overlay")
+      .on("click", function(e) {
+        d3.event.stopPropagation();
+      });
+
+    function loadFeatureOverlay(d, i) {
+      overlay.html("");
+
+      overlay
+        .append("div")
+        .attr("class", "overlayCloseButton")
+        .text("Close")
+        .on("click", hideDarkBackground);
+
+      overlay.append("h2").text("Feature");
+
+      overlay
+        .append("div")
+        .attr("class", "overlayFeatureDescription")
+        .text(d.description);
+
+      overlay.append("h3").text("Requirements");
+
+      var reqs = d.requirements.map(function(reqId) {
+        return data.requirements[reqId];
+      });
+
+      var table = makeFeatureTable(".overlay", reqs, data.issues);
+
+      darkBackground.style("display", "block");
+    }
+
     chartG
       .selectAll(["rect.barInProgress", "rect.barNotStarted"])
       .on("mouseover", function(d) {
@@ -183,7 +338,8 @@
         tooltip
           .style("top", d3.event.layerY + 10 + "px")
           .style("left", d3.event.layerX + 10 + "px");
-      });
+      })
+      .on("click", loadFeatureOverlay);
   }
 
   function readJsonFile(file, callback) {
