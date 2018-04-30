@@ -313,7 +313,7 @@ def main():
         # only a subset of issues, since waiting for the GitHub API's
         # just-in-time fetching can be slow.
         #
-        # if raw_issue.number < 700 or raw_issue.number > 740)
+        # if raw_issue.number < 700 or raw_issue.number > 740:
         #     continue
         if raw_issue.number in issues:
             sys.stderr.write("ERROR: Found issue %d twice." 
