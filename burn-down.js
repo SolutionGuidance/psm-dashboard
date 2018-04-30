@@ -312,8 +312,9 @@
       .append("div")
       .attr("class", "tooltip");
 
-    tooltip.append("div").attr("class", "description");
-    tooltip.append("div").attr("class", "percentDone");
+    tooltip.append("div").attr("class", "tooltipDescription");
+    tooltip.append("div").attr("class", "tooltipRequirements");
+    tooltip.append("div").attr("class", "tooltipPercentDone");
 
     function hideDarkBackground() {
       darkBackground.style("display", "none");
@@ -362,8 +363,9 @@
     chartG
       .selectAll(["rect.barInProgress", "rect.barNotStarted"])
       .on("mouseover", function(d) {
-        tooltip.select(".description").html(d.description);
-        tooltip.select(".percentDone").html(d.percentDone + "% done");
+        tooltip.select(".tooltipDescription").html(d.description);
+        tooltip.select(".tooltipRequirements").html(d.requirements.join(", "));
+        tooltip.select(".tooltipPercentDone").html(d.percentDone + "% done");
         tooltip.style("display", "block");
       })
       .on("mouseout", function(d) {
