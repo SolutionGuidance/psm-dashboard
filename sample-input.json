@@ -11,33 +11,33 @@
         },
         "psm-feature-001": {
             "feature_id": "psm-feature-001",
-            "description": "Send messages and support non-delivery. (psm-II-2.2, psm-II-3.2, psm-FR-8.2, psm-FR-3.11)",
+            "description": "Send messages and support non-delivery.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-II-2.2",
-                "psm-II-3.2",
+                "psm-FR-3.11",
                 "psm-FR-8.2",
-                "psm-FR-3.11"
+                "psm-II-2.2",
+                "psm-II-3.2"
             ]
         },
         "psm-feature-002": {
             "feature_id": "psm-feature-002",
-            "description": "Documentation updates and help-text integration (psm-FR-7.2, psm-FR-7.15)",
+            "description": "Documentation updates and help-text integration",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-FR-7.2",
-                "psm-FR-7.15"
+                "psm-FR-7.15",
+                "psm-FR-7.2"
             ]
         },
         "psm-feature-003": {
             "feature_id": "psm-feature-003",
-            "description": "Include embedded help text on fields. (psm-FR-7.1)",
+            "description": "Include embedded help text on fields.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -48,7 +48,7 @@
         },
         "psm-feature-004": {
             "feature_id": "psm-feature-004",
-            "description": "Automate accessibility tests and creating enrollments; show test results (psm-SQ-1.2, psm-SQ-1.4)",
+            "description": "Automate accessibility tests and creating enrollments; show test results",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -60,7 +60,7 @@
         },
         "psm-feature-005": {
             "feature_id": "psm-feature-005",
-            "description": "UI fixes based on QA feedback (psm-AD-2.1, psm-FR-7.14)",
+            "description": "UI fixes based on QA feedback",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -72,7 +72,7 @@
         },
         "psm-feature-006": {
             "feature_id": "psm-feature-006",
-            "description": "Offer an API to verify provider eligibility for other systems. (psm-FR-9.4, psm-II-4.4, psm-FR-9.5, psm-SC-4.4)",
+            "description": "Offer an API to verify provider eligibility for other systems.",
             "subfeatures": [
                 "Return searchable list of providers from PSM."
             ],
@@ -81,14 +81,14 @@
             "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.4",
-                "psm-II-4.4",
                 "psm-FR-9.5",
+                "psm-II-4.4",
                 "psm-SC-4.4"
             ]
         },
         "psm-feature-007": {
             "feature_id": "psm-feature-007",
-            "description": "API: Return full information about providers via API (psm-FR-9.4, psm-II-4.4, psm-FR-9.5, psm-SC-4.4, psm-IA-3.1)",
+            "description": "API: Return full information about providers via API",
             "subfeatures": [
                 "Determine REST groupings and pagination policy",
                 "Coordinate API access with authorization policies",
@@ -100,15 +100,15 @@
             "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.4",
-                "psm-II-4.4",
                 "psm-FR-9.5",
-                "psm-SC-4.4",
-                "psm-IA-3.1"
+                "psm-IA-3.1",
+                "psm-II-4.4",
+                "psm-SC-4.4"
             ]
         },
         "psm-feature-008": {
             "feature_id": "psm-feature-008",
-            "description": "External sources: Gain access to and link PSM to another federal source (likely: Death Master File or PECOS) (psm-FR-3.23, psm-FR-3.13, psm-FR-3.14)",
+            "description": "External sources: Gain access to and link PSM to another federal source (likely: Death Master File or PECOS)",
             "subfeatures": [
                 "Determine best source",
                 "Understand source\u2019s regulatory requirements and resultant technical implications for PSM (e.g., data retention policies, usage policies, etc)",
@@ -122,14 +122,14 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-FR-3.23",
                 "psm-FR-3.13",
-                "psm-FR-3.14"
+                "psm-FR-3.14",
+                "psm-FR-3.23"
             ]
         },
         "psm-feature-009": {
             "feature_id": "psm-feature-009",
-            "description": "UI: Improve UI/UX of results pages for external sources (psm-AD-2.3, psm-FR-7.14)",
+            "description": "UI: Improve UI/UX of results pages for external sources",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -141,7 +141,7 @@
         },
         "psm-feature-010": {
             "feature_id": "psm-feature-010",
-            "description": "Reports: Choose and develop initial reports, add top-level reporting UI (psm-AD-3.3, psm-AD-3.4, psm-FR-6.5, psm-AD-1.3)",
+            "description": "Reports: Choose and develop initial reports, add top-level reporting UI",
             "subfeatures": [
                 "Discussion with states, CMS, and other stakeholders to determine most useful reports",
                 "Determine pre-existing official or de facto standard formats for common reports",
@@ -157,15 +157,15 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-AD-1.3",
                 "psm-AD-3.3",
                 "psm-AD-3.4",
-                "psm-FR-6.5",
-                "psm-AD-1.3"
+                "psm-FR-6.5"
             ]
         },
         "psm-feature-011": {
             "feature_id": "psm-feature-011",
-            "description": "Screening: Automatically re-screen providers on configurable timescale (psm-FR-4.7, psm-FR-7.3)",
+            "description": "Screening: Automatically re-screen providers on configurable timescale",
             "subfeatures": [
                 "Determine authorization policies for configurability",
                 "Add UI for controlling re-screening intervals",
@@ -182,7 +182,7 @@
         },
         "psm-feature-012": {
             "feature_id": "psm-feature-012",
-            "description": "UI: Add interface to display results of automated re-screening (psm-FR-7.14)",
+            "description": "UI: Add interface to display results of automated re-screening",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -193,7 +193,7 @@
         },
         "psm-feature-013": {
             "feature_id": "psm-feature-013",
-            "description": "Business rules: Upgrade separate business rules server (#385) (psm-SC-4.2, psm-IU-3.1, psm-IU-3.2)",
+            "description": "Business rules: Upgrade separate business rules server (#385)",
             "subfeatures": [
                 "Upgrade third-party dependencies as needed to accommodate new Drools version",
                 "Upgrade secondary dependencies because of above",
@@ -204,14 +204,14 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-SC-4.2",
                 "psm-IU-3.1",
-                "psm-IU-3.2"
+                "psm-IU-3.2",
+                "psm-SC-4.2"
             ]
         },
         "psm-feature-014": {
             "feature_id": "psm-feature-014",
-            "description": "Check applications against federally-required databases. (psm-FR-3.13, psm-FR-3.14, psm-FR-3.23) ",
+            "description": "Check applications against federally-required databases.",
             "subfeatures": [
                 "Gain data access to SSA Death Master File",
                 "Link to SSA Death Master File",
@@ -233,7 +233,7 @@
         },
         "psm-feature-015": {
             "feature_id": "psm-feature-015",
-            "description": "Verify NPI with NPPES. (psm-IA-3.5, psm-FR-3.13)",
+            "description": "Verify NPI with NPPES.",
             "subfeatures": [
                 "Research NPPES current search process and NPI assignment",
                 "Gain data access to NPPES",
@@ -244,13 +244,13 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-IA-3.5",
-                "psm-FR-3.13"
+                "psm-FR-3.13",
+                "psm-IA-3.5"
             ]
         },
         "psm-feature-016": {
             "feature_id": "psm-feature-016",
-            "description": "Offer an API to verify provider eligibility for other systems. (psm-II-4.1, psm-II-4.4, psm-FR-9.4)",
+            "description": "Offer an API to verify provider eligibility for other systems.",
             "subfeatures": [
                 "Update schema in order to link enrollments to providers",
                 "Return full (more detailed) information about providers from PSM."
@@ -259,14 +259,14 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-FR-9.4",
                 "psm-II-4.1",
-                "psm-II-4.4",
-                "psm-FR-9.4"
+                "psm-II-4.4"
             ]
         },
         "psm-feature-017": {
             "feature_id": "psm-feature-017",
-            "description": "Follow state rules in screening applications, including NPIs and licenses. (psm-FR-3.13, psm-FR-3.14, psm-FR-9.1, psm-SC-4.2, psm-FR-5.5, psm-FR-3.5) ",
+            "description": "Follow state rules in screening applications, including NPIs and licenses.",
             "subfeatures": [
                 "Determine list of state external sources (licensing boards, exclusion lists, non-standard federal sources)",
                 "Research data sharing practices of state licensing board 1",
@@ -282,15 +282,15 @@
             "requirements": [
                 "psm-FR-3.13",
                 "psm-FR-3.14",
-                "psm-FR-9.1",
-                "psm-SC-4.2",
+                "psm-FR-3.5",
                 "psm-FR-5.5",
-                "psm-FR-3.5"
+                "psm-FR-9.1",
+                "psm-SC-4.2"
             ]
         },
         "psm-feature-018": {
             "feature_id": "psm-feature-018",
-            "description": "Provider-initiated updates & re-screening: allow provider to update and/or add additional information and initiate re-screening of their enrollment. (psm-FR-4.3, psm-FR-2.16, psm-FR-3.11, psm-FR-5.6, psm-FR-5.7)",
+            "description": "Provider-initiated updates & re-screening: allow provider to update and/or add additional information and initiate re-screening of their enrollment.",
             "subfeatures": [
                 "Determine rules for application updates",
                 "Add new workflow for a provider to edit and re-submit an existing application.",
@@ -302,30 +302,30 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-FR-4.3",
                 "psm-FR-2.16",
                 "psm-FR-3.11",
+                "psm-FR-4.3",
                 "psm-FR-5.6",
                 "psm-FR-5.7"
             ]
         },
         "psm-feature-019": {
             "feature_id": "psm-feature-019",
-            "description": "Automate revalidation (psm-FR-3.11, psm-FR-5.6, psm-FR-7.3, psm-FR-4.7)",
+            "description": "Automate revalidation",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.11",
+                "psm-FR-4.7",
                 "psm-FR-5.6",
-                "psm-FR-7.3",
-                "psm-FR-4.7"
+                "psm-FR-7.3"
             ]
         },
         "psm-feature-020": {
             "feature_id": "psm-feature-020",
-            "description": "Basic escalated screening: provide space for enhanced screening of providers in higher-risk categories (psm-FR-1.5, psm-FR-3.4, psm-FR-3.6, psm-FR-4.4)",
+            "description": "Basic escalated screening: provide space for enhanced screening of providers in higher-risk categories",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -339,7 +339,7 @@
         },
         "psm-feature-021": {
             "feature_id": "psm-feature-021",
-            "description": "Full-text search - Search strings examine all fields that the logged-in user has access to. (psm-IU-2.5, psm-FR-2.14, psm-FR-7.13, psm-IU-2.5)",
+            "description": "Full-text search - Search strings examine all fields that the logged-in user has access to.",
             "subfeatures": [
                 "Improve quick search (case insensitive, search all fields)",
                 "Update advanced search to retrieve correct results based on logged-in user"
@@ -348,15 +348,15 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-IU-2.5",
                 "psm-FR-2.14",
                 "psm-FR-7.13",
+                "psm-IU-2.5",
                 "psm-IU-2.5"
             ]
         },
         "psm-feature-022": {
             "feature_id": "psm-feature-022",
-            "description": "Import / export functionality detailed in issue #236. Includes bulk enrollment of providers, via flat-file import or API. (psm-FR-6.1, psm-IA-3.2)",
+            "description": "Import / export functionality detailed in issue #236. Includes bulk enrollment of providers, via flat-file import or API.",
             "subfeatures": [
                 "Export individual provider applications",
                 "Add license files to exports",
@@ -376,7 +376,7 @@
         },
         "psm-feature-023": {
             "feature_id": "psm-feature-023",
-            "description": "Make reporting data available as a CSV for authorized users. (psm-FR-6.1, psm-FR-6.5, psm-AD-3.3, psm-AD-1.2, psm-AD-1.3)",
+            "description": "Make reporting data available as a CSV for authorized users.",
             "subfeatures": [
                 "Determine which reports are highest-priority for states.",
                 "Add UI for reports",
@@ -387,16 +387,16 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-FR-6.1",
-                "psm-FR-6.5",
-                "psm-AD-3.3",
                 "psm-AD-1.2",
-                "psm-AD-1.3"
+                "psm-AD-1.3",
+                "psm-AD-3.3",
+                "psm-FR-6.1",
+                "psm-FR-6.5"
             ]
         },
         "psm-feature-024": {
             "feature_id": "psm-feature-024",
-            "description": "Advanced escalated screening: Support background checks and site visits for higher risk providers. (psm-FR-3.6, psm-FR-8.3, psm-FR-1.5, psm-FR-2.18, psm-FR-3.2, psm-FR-3.4, psm-FR-4.4)",
+            "description": "Advanced escalated screening: Support background checks and site visits for higher risk providers.",
             "subfeatures": [
                 "Add UI for background checks",
                 "Determine best background check provider",
@@ -409,18 +409,18 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-FR-3.6",
-                "psm-FR-8.3",
                 "psm-FR-1.5",
                 "psm-FR-2.18",
                 "psm-FR-3.2",
                 "psm-FR-3.4",
-                "psm-FR-4.4"
+                "psm-FR-3.6",
+                "psm-FR-4.4",
+                "psm-FR-8.3"
             ]
         },
         "psm-feature-025": {
             "feature_id": "psm-feature-025",
-            "description": "Advanced risk scoring: Flag providers as high risk based on history of fraud and other risk factors. (psm-FR-2.18, psm-FR-2.19, psm-FR-3.2, psm-FR-3.5, psm-FR-3.7, psm-FR-3.19, psm-FR-3.9, psm-FR-3.18)",
+            "description": "Advanced risk scoring: Flag providers as high risk based on history of fraud and other risk factors.",
             "subfeatures": [
                 "Track historical LEIE data",
                 "Research how states would like us to determine risk.",
@@ -434,17 +434,17 @@
             "requirements": [
                 "psm-FR-2.18",
                 "psm-FR-2.19",
+                "psm-FR-3.18",
+                "psm-FR-3.19",
                 "psm-FR-3.2",
                 "psm-FR-3.5",
                 "psm-FR-3.7",
-                "psm-FR-3.19",
-                "psm-FR-3.9",
-                "psm-FR-3.18"
+                "psm-FR-3.9"
             ]
         },
         "psm-feature-026": {
             "feature_id": "psm-feature-026",
-            "description": "Provide the ability for users to make reports from simple queries, including moving from summary data to greater detail. (psm-AD-1.3, psm-AD-3.4, psm-AD-3.5, psm-AD-3.6)",
+            "description": "Provide the ability for users to make reports from simple queries, including moving from summary data to greater detail.",
             "subfeatures": [
                 "Add top-level reporting UI",
                 "Add querying to reports",
@@ -462,7 +462,7 @@
         },
         "psm-feature-027": {
             "feature_id": "psm-feature-027",
-            "description": "Completion of separate, user-configurable business rules engine (psm-IU-3.2, psm-IU-3.1, psm-FR-9.1, psm-SC-4.0, psm-SC-4.2)",
+            "description": "Completion of separate, user-configurable business rules engine",
             "subfeatures": [
                 "Upgrade business rules dependencies (#385)",
                 "(Tech debt) Remove jBPM dependency",
@@ -478,16 +478,16 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-IU-3.2",
-                "psm-IU-3.1",
                 "psm-FR-9.1",
+                "psm-IU-3.1",
+                "psm-IU-3.2",
                 "psm-SC-4.0",
                 "psm-SC-4.2"
             ]
         },
         "psm-feature-028": {
             "feature_id": "psm-feature-028",
-            "description": "Ensure that access to sensitive information is adequately safeguarded. (psm-AD-1.4, psm-AD-5.1, psm-AD-5.2, psm-AD-5.4, psm-AD-5.7, psm-AD-5.12, psm-AD-5.13, psm-AD-5.18)",
+            "description": "Ensure that access to sensitive information is adequately safeguarded.",
             "subfeatures": [
                 "Create superuser role to edit rules, etc",
                 "Reorganize account creation and passwords",
@@ -499,36 +499,36 @@
             "requirements": [
                 "psm-AD-1.4",
                 "psm-AD-5.1",
-                "psm-AD-5.2",
-                "psm-AD-5.4",
-                "psm-AD-5.7",
                 "psm-AD-5.12",
                 "psm-AD-5.13",
-                "psm-AD-5.18"
+                "psm-AD-5.18",
+                "psm-AD-5.2",
+                "psm-AD-5.4",
+                "psm-AD-5.7"
             ]
         },
         "psm-feature-029": {
             "feature_id": "psm-feature-029",
-            "description": "Document standard data models, message formats, and code sets to interoperate with other modules. (psm-FR-9.5, psm-II-2.2, psm-II-2.3, psm-II-2.4, psm-II-2.5, psm-II-4.2, psm-II-4.4, psm-IA-3.9, psm-IU-2.3)",
+            "description": "Document standard data models, message formats, and code sets to interoperate with other modules.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.5",
+                "psm-IA-3.9",
                 "psm-II-2.2",
                 "psm-II-2.3",
                 "psm-II-2.4",
                 "psm-II-2.5",
                 "psm-II-4.2",
                 "psm-II-4.4",
-                "psm-IA-3.9",
                 "psm-IU-2.3"
             ]
         },
         "psm-feature-030": {
             "feature_id": "psm-feature-030",
-            "description": "Monitor the system and alert users when unusual conditions occur. (psm-II-2.1, psm-AD-5.6)",
+            "description": "Monitor the system and alert users when unusual conditions occur.",
             "subfeatures": [
                 "Add configurable alert emails / phones",
                 "Add basic up/down monitoring",
@@ -542,13 +542,13 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-II-2.1",
-                "psm-AD-5.6"
+                "psm-AD-5.6",
+                "psm-II-2.1"
             ]
         },
         "psm-feature-031": {
             "feature_id": "psm-feature-031",
-            "description": "Develop standard data models, message formats, and code sets to interoperate with other modules. (psm-IA-1.1, psm-IA-3.1, psm-IA-3.9, psm-IA-4.1, psm-FR-9.5, psm-II-2.2, psm-II-2.3, psm-II-2.4, psm-II-2.5, psm-SC-3.1, psm-SC-4.4, psm-IU-2.2, psm-IU-4.2)",
+            "description": "Develop standard data models, message formats, and code sets to interoperate with other modules.",
             "subfeatures": [
                 "Research standard data models in use in states",
                 "Document expected intrastate data exchange",
@@ -559,24 +559,24 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-FR-9.5",
                 "psm-IA-1.1",
                 "psm-IA-3.1",
                 "psm-IA-3.9",
                 "psm-IA-4.1",
-                "psm-FR-9.5",
                 "psm-II-2.2",
                 "psm-II-2.3",
                 "psm-II-2.4",
                 "psm-II-2.5",
-                "psm-SC-3.1",
-                "psm-SC-4.4",
                 "psm-IU-2.2",
-                "psm-IU-4.2"
+                "psm-IU-4.2",
+                "psm-SC-3.1",
+                "psm-SC-4.4"
             ]
         },
         "psm-feature-032": {
             "feature_id": "psm-feature-032",
-            "description": "Log/audit provider screening actions, enrollment data, and other system activity. (psm-FR-6.3, psm-FR-6.4, psm-FR-6.6, psm-FR-6.7, psm-PH-1.2, psm-PH-1.3, psm-AD-5.8, psm-AD-5.9)",
+            "description": "Log/audit provider screening actions, enrollment data, and other system activity.",
             "subfeatures": [
                 "Research auditing requirements in beta state(s)",
                 "Set up backup system for PSM",
@@ -589,19 +589,19 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-AD-5.8",
+                "psm-AD-5.9",
                 "psm-FR-6.3",
                 "psm-FR-6.4",
                 "psm-FR-6.6",
                 "psm-FR-6.7",
                 "psm-PH-1.2",
-                "psm-PH-1.3",
-                "psm-AD-5.8",
-                "psm-AD-5.9"
+                "psm-PH-1.3"
             ]
         },
         "psm-feature-033": {
             "feature_id": "psm-feature-033",
-            "description": "Display results of audits to users. (psm-FR-6.8, psm-FR-7.10, psm-AD-5.9, psm-IU-2.5, psm-IU-4.1, psm-FR-7.13)",
+            "description": "Display results of audits to users.",
             "subfeatures": [
                 "Provide UI for list of all changes",
                 "Make audit UI searchable"
@@ -610,17 +610,17 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-AD-5.9",
                 "psm-FR-6.8",
                 "psm-FR-7.10",
-                "psm-AD-5.9",
+                "psm-FR-7.13",
                 "psm-IU-2.5",
-                "psm-IU-4.1",
-                "psm-FR-7.13"
+                "psm-IU-4.1"
             ]
         },
         "psm-feature-034": {
             "feature_id": "psm-feature-034",
-            "description": "Record, monitor, and display performance measures. (psm-AD-4.1, psm-AD-4.2, psm-AD-5.9)",
+            "description": "Record, monitor, and display performance measures.",
             "subfeatures": [
                 "Track performance of the PSM as a whole",
                 "Add UI for basic performance tracking",
@@ -639,20 +639,20 @@
         },
         "psm-feature-035": {
             "feature_id": "psm-feature-035",
-            "description": "Enforce configurable policies for passwords and login limits. (psm-AD-5.3, psm-AD-5.14, psm-II-4.5)",
+            "description": "Enforce configurable policies for passwords and login limits.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-AD-5.3",
                 "psm-AD-5.14",
+                "psm-AD-5.3",
                 "psm-II-4.5"
             ]
         },
         "psm-feature-036": {
             "feature_id": "psm-feature-036",
-            "description": "Write tests to demonstrate interfaces and document data entity definitions. (psm-SC-4.5, psm-IA-2.1, psm-SQ-1.2, psm-SQ-1.4)",
+            "description": "Write tests to demonstrate interfaces and document data entity definitions.",
             "subfeatures": [
                 "Test API endpoints",
                 "Document data entity definitions",
@@ -662,15 +662,15 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
-                "psm-SC-4.5",
                 "psm-IA-2.1",
+                "psm-SC-4.5",
                 "psm-SQ-1.2",
                 "psm-SQ-1.4"
             ]
         },
         "psm-feature-037": {
             "feature_id": "psm-feature-037",
-            "description": "Complete compliance with ADA Section 508. Add titles for easier navigation. (psm-AD-2.1, psm-AD-2.4)",
+            "description": "Complete compliance with ADA Section 508. Add titles for easier navigation.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -682,7 +682,7 @@
         },
         "psm-feature-038": {
             "feature_id": "psm-feature-038",
-            "description": "Reduce time and and cost of screening by providing an automated system. (psm-FR-3.15, psm-FR-3.17, psm-FR-3.18, psm-FR-3.21, psm-FR-3.22, psm-FR-3.23, psm-FR-4.7, psm-FR-7.3, psm-FR-8.3, psm-II-1.1, psm-SQ-1.4)",
+            "description": "Reduce time and and cost of screening by providing an automated system.",
             "subfeatures": [
                 "Implement multi-tenant hosting option for the PSM",
                 "Document a multi-tenant hosting option for the PSM",
@@ -707,7 +707,7 @@
         },
         "psm-feature-039": {
             "feature_id": "psm-feature-039",
-            "description": "Research and enable cross-walks between state Medicare ID and NPI. (psm-FR-2.3, psm-FR-3.3, psm-IA-3.7)",
+            "description": "Research and enable cross-walks between state Medicare ID and NPI.",
             "subfeatures": [
                 "Research how different states handle IDs for non-medical providers",
                 "Make state Medicaid ID configurable",
@@ -726,7 +726,7 @@
         },
         "psm-feature-040": {
             "feature_id": "psm-feature-040",
-            "description": "Add new fields for specific requirements relating to bordering-state providers, care settings, help, etc. (psm-FR-1.1, psm-FR-2.11, psm-FR-2.13, psm-FR-2.14, psm-FR-2.8, psm-FR-3.1, psm-FR-3.20, psm-FR-4.1, psm-FR-4.2, psm-FR-6.2, psm-IA-3.6, psm-IA-4.2, psm-PH-1.4, psm-FR-7.2, psm-FR-7.15)",
+            "description": "Add new fields for specific requirements relating to bordering-state providers, care settings, help, etc.",
             "subfeatures": [
                 "Detect bordering-state providers",
                 "Ask specific questions of bordering-state providers",
@@ -751,16 +751,16 @@
                 "psm-FR-4.1",
                 "psm-FR-4.2",
                 "psm-FR-6.2",
+                "psm-FR-7.15",
+                "psm-FR-7.2",
                 "psm-IA-3.6",
                 "psm-IA-4.2",
-                "psm-PH-1.4",
-                "psm-FR-7.2",
-                "psm-FR-7.15"
+                "psm-PH-1.4"
             ]
         },
         "psm-feature-041": {
             "feature_id": "psm-feature-041",
-            "description": "Link individual providers to group practices; begin the process of handling rendering/billing providers correctly. (psm-FR-2.12, psm-IA-4.2)",
+            "description": "Link individual providers to group practices; begin the process of handling rendering/billing providers correctly.",
             "subfeatures": [
                 "Research state models for linking individual/group providers",
                 "Allow individual provider to initiate link to a group",
@@ -779,7 +779,7 @@
         },
         "psm-feature-042": {
             "feature_id": "psm-feature-042",
-            "description": "Research and implement the necessary fields to issue a state Medicaid ID to a newly screened provider. (psm-FR-5.1)",
+            "description": "Research and implement the necessary fields to issue a state Medicaid ID to a newly screened provider.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -790,7 +790,7 @@
         },
         "psm-feature-043": {
             "feature_id": "psm-feature-043",
-            "description": "Research and handle required information for managed care plan screening. (psm-FR-1.3, psm-FR-2.10, psm-IA-4.2)",
+            "description": "Research and handle required information for managed care plan screening.",
             "subfeatures": [
                 "Research how states use managed care plans.",
                 "Add managed care option to PSM workflow.",
@@ -811,7 +811,7 @@
         },
         "psm-feature-044": {
             "feature_id": "psm-feature-044",
-            "description": "Miscellaneous fields: Save CLIA and DEA numbers. (psm-FR-2.7, psm-FR-2.8, psm-FR-2.17)",
+            "description": "Miscellaneous fields: Save CLIA and DEA numbers.",
             "subfeatures": [
                 "Research DEA numbers: source, uniqueness, etc",
                 "Implement intake of DEA and CLIA numbers",
@@ -823,14 +823,14 @@
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-FR-2.17",
                 "psm-FR-2.7",
-                "psm-FR-2.8",
-                "psm-FR-2.17"
+                "psm-FR-2.8"
             ]
         },
         "psm-feature-045": {
             "feature_id": "psm-feature-045",
-            "description": "If a draft application are not updated for a configurable period of time, mark it as stale [TBD: and require the applicant to confirm that information is still correct]. (psm-FR-7.12, psm-II-4.5)",
+            "description": "If a draft application are not updated for a configurable period of time, mark it as stale [TBD: and require the applicant to confirm that information is still correct].",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -842,22 +842,22 @@
         },
         "psm-feature-046": {
             "feature_id": "psm-feature-046",
-            "description": "Add a configurable attestation, verify that required fields are present, and validate HIPAA taxonomy codes as necessary (psm-FR-2.7, psm-FR-7.4, psm-FR-8.5, psm-FR-10.1, psm-PH-1.1)",
+            "description": "Add a configurable attestation, verify that required fields are present, and validate HIPAA taxonomy codes as necessary",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted",
             "requirements": [
+                "psm-FR-10.1",
                 "psm-FR-2.7",
                 "psm-FR-7.4",
                 "psm-FR-8.5",
-                "psm-FR-10.1",
                 "psm-PH-1.1"
             ]
         },
         "psm-feature-047": {
             "feature_id": "psm-feature-047",
-            "description": "Allow providers to appeal a rejection from the PSM. (psm-FR-9.3)",
+            "description": "Allow providers to appeal a rejection from the PSM.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -868,7 +868,7 @@
         },
         "psm-feature-048": {
             "feature_id": "psm-feature-048",
-            "description": "Send formal notices (sometimes letters) to applicants giving the status of their application. (psm-FR-2.10, psm-FR-3.10, psm-FR-3.11, psm-FR-8.1, psm-FR-8.2, psm-FR-8.4)",
+            "description": "Send formal notices (sometimes letters) to applicants giving the status of their application.",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -884,7 +884,7 @@
         },
         "psm-feature-049": {
             "feature_id": "psm-feature-049",
-            "description": "Miscellaneous improvements: rejection reason (psm-FR-3.1, psm-FR-5.8, psm-FR-6.4), care settings (psm-FR-2.8, psm-FR-4.1, psm-FR-4.2), improved date validation (psm-PH-1.4)",
+            "description": "Miscellaneous improvements: rejection reason , care settings (psm-FR-2.8, psm-FR-4.1, psm-FR-4.2), improved date validation (psm-PH-1.4)",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -897,7 +897,7 @@
         },
         "psm-feature-050": {
             "feature_id": "psm-feature-050",
-            "description": "Add greater configurability to provider-initiated termination, including recording reasons and placing greater restrictions on certain provider types (psm-FR-5.2, psm-FR-5.3, psm-FR-5.4, psm-FR-5.7, psm-FR-5.8, psm-II-4.5)",
+            "description": "Add greater configurability to provider-initiated termination, including recording reasons and placing greater restrictions on certain provider types",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -913,7 +913,7 @@
         },
         "psm-feature-051": {
             "feature_id": "psm-feature-051",
-            "description": "Completion of UI templating (began in MVP-Sept) (psm-SQ-1.1, psm-SQ-1.5)",
+            "description": "Completion of UI templating (began in MVP-Sept)",
             "subfeatures": [],
             "startDate": null,
             "completedDate": null,
@@ -925,7 +925,7 @@
         },
         "psm-feature-052": {
             "feature_id": "psm-feature-052",
-            "description": "Add task assignment and queuing to state reviewer workflow (psm-FR-3.25)",
+            "description": "Add task assignment and queuing to state reviewer workflow",
             "subfeatures": [
                 "Research task assignment and queueing with states",
                 "Automatically assign new applications to a state reviewer",
@@ -980,8 +980,8 @@
             "acceptance_test_ref": "",
             "comment": "Log file and screen alert to the operator (e.g. lost connectivity to external system/database)",
             "issues": [
-                91,
-                88
+                88,
+                91
             ],
             "startDate": null,
             "completedDate": null,
@@ -1001,9 +1001,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                236,
+                21,
                 224,
-                21
+                236
             ],
             "startDate": null,
             "completedDate": null,
@@ -1023,9 +1023,9 @@
             "acceptance_test_ref": "",
             "comment": "Currently using FHIR protocol ",
             "issues": [
-                236,
+                21,
                 224,
-                21
+                236
             ],
             "startDate": null,
             "completedDate": null,
@@ -1045,10 +1045,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                236,
-                224,
+                21,
                 223,
-                21
+                224,
+                236
             ],
             "startDate": null,
             "completedDate": null,
@@ -1128,8 +1128,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                236,
-                224
+                224,
+                236
             ],
             "startDate": null,
             "completedDate": null,
@@ -1149,8 +1149,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                466,
-                30
+                30,
+                466
             ],
             "startDate": null,
             "completedDate": null,
@@ -1190,10 +1190,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                466,
-                446,
+                29,
                 30,
-                29
+                446,
+                466
             ],
             "startDate": null,
             "completedDate": null,
@@ -1213,20 +1213,20 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                655,
-                571,
-                425,
-                404,
-                396,
-                389,
-                386,
-                215,
-                177,
-                172,
-                61,
-                41,
+                29,
                 39,
-                29
+                41,
+                61,
+                172,
+                177,
+                215,
+                386,
+                389,
+                396,
+                404,
+                425,
+                571,
+                655
             ],
             "startDate": null,
             "completedDate": null,
@@ -1246,35 +1246,35 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                703,
-                563,
-                559,
-                482,
-                472,
-                458,
-                456,
-                395,
-                374,
-                351,
-                350,
-                343,
-                312,
-                300,
-                280,
-                255,
-                254,
-                250,
-                189,
-                186,
-                111,
-                92,
-                56,
-                51,
-                45,
-                29,
-                19,
+                5,
                 6,
-                5
+                19,
+                29,
+                45,
+                51,
+                56,
+                92,
+                111,
+                186,
+                189,
+                250,
+                254,
+                255,
+                280,
+                300,
+                312,
+                343,
+                350,
+                351,
+                374,
+                395,
+                456,
+                458,
+                472,
+                482,
+                559,
+                563,
+                703
             ],
             "startDate": null,
             "completedDate": null,
@@ -1294,30 +1294,30 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                709,
-                687,
-                647,
-                638,
-                629,
-                604,
-                555,
-                533,
-                518,
-                438,
-                351,
-                333,
-                304,
-                266,
-                250,
-                248,
-                222,
-                218,
-                210,
-                206,
-                204,
-                194,
+                150,
                 189,
-                150
+                194,
+                204,
+                206,
+                210,
+                218,
+                222,
+                248,
+                250,
+                266,
+                304,
+                333,
+                351,
+                438,
+                518,
+                533,
+                555,
+                604,
+                629,
+                638,
+                647,
+                687,
+                709
             ],
             "startDate": null,
             "completedDate": null,
@@ -1337,28 +1337,28 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                626,
-                616,
-                613,
-                582,
-                520,
-                392,
-                385,
-                320,
-                252,
-                242,
-                219,
-                214,
-                157,
-                113,
-                87,
-                78,
-                36,
-                31,
-                16,
-                12,
+                2,
                 6,
-                2
+                12,
+                16,
+                31,
+                36,
+                78,
+                87,
+                113,
+                157,
+                214,
+                219,
+                242,
+                252,
+                320,
+                385,
+                392,
+                520,
+                582,
+                613,
+                616,
+                626
             ],
             "startDate": null,
             "completedDate": null,
@@ -1378,28 +1378,28 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                600,
-                482,
-                472,
-                458,
-                452,
-                439,
-                421,
-                386,
-                381,
-                370,
-                280,
-                254,
-                248,
-                229,
-                188,
-                148,
-                129,
-                124,
-                73,
-                28,
+                5,
                 7,
-                5
+                28,
+                73,
+                124,
+                129,
+                148,
+                188,
+                229,
+                248,
+                254,
+                280,
+                370,
+                381,
+                386,
+                421,
+                439,
+                452,
+                458,
+                472,
+                482,
+                600
             ],
             "startDate": null,
             "completedDate": null,
@@ -1419,30 +1419,31 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                721,
-                699,
-                655,
-                653,
-                596,
-                495,
-                485,
-                468,
-                399,
-                343,
-                238,
-                208,
-                205,
-                165,
-                139,
-                125,
-                103,
-                101,
-                79,
-                57,
-                26,
-                12,
+                4,
                 8,
-                4
+                12,
+                26,
+                57,
+                79,
+                101,
+                103,
+                125,
+                139,
+                165,
+                205,
+                208,
+                238,
+                343,
+                399,
+                468,
+                485,
+                495,
+                596,
+                653,
+                655,
+                699,
+                721,
+                799
             ],
             "startDate": null,
             "completedDate": null,
@@ -1462,9 +1463,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                588,
+                255,
                 421,
-                255
+                588
             ],
             "startDate": null,
             "completedDate": null,
@@ -1544,13 +1545,13 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                728,
-                691,
-                614,
-                523,
-                498,
+                10,
                 468,
-                10
+                498,
+                523,
+                614,
+                691,
+                728
             ],
             "startDate": null,
             "completedDate": null,
@@ -1624,28 +1625,28 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                709,
-                700,
-                687,
-                672,
-                613,
-                565,
-                554,
-                553,
-                518,
-                517,
-                516,
-                514,
-                513,
-                512,
-                511,
-                510,
-                509,
-                508,
-                507,
-                467,
+                65,
                 415,
-                65
+                467,
+                507,
+                508,
+                509,
+                510,
+                511,
+                512,
+                513,
+                514,
+                516,
+                517,
+                518,
+                553,
+                554,
+                565,
+                613,
+                672,
+                687,
+                700,
+                709
             ],
             "startDate": null,
             "completedDate": null,
@@ -1665,8 +1666,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                638,
-                298
+                298,
+                638
             ],
             "startDate": null,
             "completedDate": null,
@@ -1686,9 +1687,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739,
+                61,
                 62,
-                61
+                739
             ],
             "startDate": null,
             "completedDate": null,
@@ -1728,10 +1729,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                566,
-                476,
+                168,
                 417,
-                168
+                476,
+                566
             ],
             "startDate": null,
             "completedDate": null,
@@ -1751,8 +1752,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739,
-                476
+                476,
+                739
             ],
             "startDate": null,
             "completedDate": null,
@@ -1852,12 +1853,12 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                614,
-                523,
-                476,
-                468,
+                10,
                 104,
-                10
+                468,
+                476,
+                523,
+                614
             ],
             "startDate": null,
             "completedDate": null,
@@ -1877,9 +1878,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                468,
+                181,
                 420,
-                181
+                468
             ],
             "startDate": null,
             "completedDate": null,
@@ -1899,9 +1900,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                497,
+                34,
                 175,
-                34
+                497
             ],
             "startDate": null,
             "completedDate": null,
@@ -1921,13 +1922,13 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                398,
-                326,
-                175,
-                171,
-                149,
+                10,
                 33,
-                10
+                149,
+                171,
+                175,
+                326,
+                398
             ],
             "startDate": null,
             "completedDate": null,
@@ -1985,9 +1986,9 @@
             "acceptance_test_ref": "",
             "comment": "N/A",
             "issues": [
-                468,
+                181,
                 420,
-                181
+                468
             ],
             "startDate": null,
             "completedDate": null,
@@ -2007,8 +2008,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                335,
-                305
+                305,
+                335
             ],
             "startDate": null,
             "completedDate": null,
@@ -2066,8 +2067,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                414,
-                32
+                32,
+                414
             ],
             "startDate": null,
             "completedDate": null,
@@ -2087,15 +2088,15 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                599,
-                528,
-                523,
-                398,
-                326,
-                305,
-                149,
+                10,
                 39,
-                10
+                149,
+                305,
+                326,
+                398,
+                523,
+                528,
+                599
             ],
             "startDate": null,
             "completedDate": null,
@@ -2115,16 +2116,16 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                728,
-                691,
-                614,
-                523,
-                498,
-                398,
-                305,
-                171,
+                10,
                 149,
-                10
+                171,
+                305,
+                398,
+                498,
+                523,
+                614,
+                691,
+                728
             ],
             "startDate": null,
             "completedDate": null,
@@ -2184,10 +2185,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                528,
-                468,
+                34,
                 181,
-                34
+                468,
+                528
             ],
             "startDate": null,
             "completedDate": null,
@@ -2207,10 +2208,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                614,
-                465,
+                34,
                 104,
-                34
+                465,
+                614
             ],
             "startDate": null,
             "completedDate": null,
@@ -2230,10 +2231,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                476,
-                468,
+                34,
                 92,
-                34
+                468,
+                476
             ],
             "startDate": null,
             "completedDate": null,
@@ -2533,17 +2534,17 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                738,
-                641,
-                623,
-                378,
-                349,
-                289,
-                273,
-                236,
-                224,
+                21,
                 223,
-                21
+                224,
+                236,
+                273,
+                289,
+                349,
+                378,
+                623,
+                641,
+                738
             ],
             "startDate": null,
             "completedDate": null,
@@ -2563,15 +2564,15 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                738,
-                641,
-                623,
-                349,
-                289,
-                273,
-                236,
+                223,
                 224,
-                223
+                236,
+                273,
+                289,
+                349,
+                623,
+                641,
+                738
             ],
             "startDate": null,
             "completedDate": null,
@@ -2609,11 +2610,11 @@
             "acceptance_test_ref": "",
             "comment": "This is requested by Anshuman during the 8/10/17 PSM status meeting",
             "issues": [
-                691,
-                618,
-                612,
+                174,
                 496,
-                174
+                612,
+                618,
+                691
             ],
             "startDate": null,
             "completedDate": null,
@@ -2633,14 +2634,14 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                572,
-                571,
-                546,
-                386,
-                274,
-                262,
+                79,
                 260,
-                79
+                262,
+                274,
+                386,
+                546,
+                571,
+                572
             ],
             "startDate": null,
             "completedDate": null,
@@ -2660,10 +2661,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                274,
-                262,
+                79,
                 260,
-                79
+                262,
+                274
             ],
             "startDate": null,
             "completedDate": null,
@@ -2683,8 +2684,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                335,
-                305
+                305,
+                335
             ],
             "startDate": null,
             "completedDate": null,
@@ -2704,8 +2705,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                224,
-                223
+                223,
+                224
             ],
             "startDate": null,
             "completedDate": null,
@@ -2765,13 +2766,13 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                738,
-                641,
-                623,
-                349,
-                289,
+                224,
                 236,
-                224
+                289,
+                349,
+                623,
+                641,
+                738
             ],
             "startDate": null,
             "completedDate": null,
@@ -2829,12 +2830,12 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                738,
-                641,
-                623,
-                236,
+                223,
                 224,
-                223
+                236,
+                623,
+                641,
+                738
             ],
             "startDate": null,
             "completedDate": null,
@@ -2854,9 +2855,9 @@
             "acceptance_test_ref": "",
             "comment": "Evidence: demonstrated by interfacing with LEIE data",
             "issues": [
-                738,
+                17,
                 192,
-                17
+                738
             ],
             "startDate": null,
             "completedDate": null,
@@ -2986,14 +2987,14 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                738,
-                641,
-                623,
-                349,
-                236,
-                224,
+                21,
                 223,
-                21
+                224,
+                236,
+                349,
+                623,
+                641,
+                738
             ],
             "startDate": null,
             "completedDate": null,
@@ -3033,16 +3034,16 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                734,
-                564,
-                432,
-                327,
-                305,
-                282,
-                254,
-                104,
+                21,
                 57,
-                21
+                104,
+                254,
+                282,
+                305,
+                327,
+                432,
+                564,
+                734
             ],
             "startDate": null,
             "completedDate": null,
@@ -3062,9 +3063,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                369,
+                328,
                 336,
-                328
+                369
             ],
             "startDate": null,
             "completedDate": null,
@@ -3084,8 +3085,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                328,
-                309
+                309,
+                328
             ],
             "startDate": null,
             "completedDate": null,
@@ -3125,9 +3126,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                635,
+                291,
                 412,
-                291
+                635
             ],
             "startDate": null,
             "completedDate": null,
@@ -3287,9 +3288,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                291,
+                158,
                 263,
-                158
+                291
             ],
             "startDate": null,
             "completedDate": null,
@@ -3309,8 +3310,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                292,
-                291
+                291,
+                292
             ],
             "startDate": null,
             "completedDate": null,
@@ -3330,10 +3331,10 @@
             "acceptance_test_ref": "",
             "comment": "Will the PSM identify whether the provider is a rendering (eligible to directly bill) or an ordering/referring/prescribing (eligible to enroll but not directly bill state Medicaid agency)?  Not currently plan for PSM functionality",
             "issues": [
-                342,
-                292,
+                61,
                 62,
-                61
+                292,
+                342
             ],
             "startDate": null,
             "completedDate": null,
@@ -3353,12 +3354,12 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                307,
-                299,
-                293,
-                259,
+                146,
                 233,
-                146
+                259,
+                293,
+                299,
+                307
             ],
             "startDate": null,
             "completedDate": null,
@@ -3378,8 +3379,8 @@
             "acceptance_test_ref": "",
             "comment": "Dos this include SSN for owners and others with >5% ownership? Yes!",
             "issues": [
-                564,
-                292
+                292,
+                564
             ],
             "startDate": null,
             "completedDate": null,
@@ -3399,9 +3400,9 @@
             "acceptance_test_ref": "",
             "comment": "To clarify: Applicant is person completing the application, not necessarily provider.  Correct!  Will contact person info differentiate between  contact for billing vs practice locations.  Yes, under Alternative Mailing Addresses.",
             "issues": [
-                347,
+                291,
                 346,
-                291
+                347
             ],
             "startDate": null,
             "completedDate": null,
@@ -3541,14 +3542,14 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                675,
-                620,
-                426,
-                424,
-                423,
-                420,
+                408,
                 416,
-                408
+                420,
+                423,
+                424,
+                426,
+                620,
+                675
             ],
             "startDate": null,
             "completedDate": null,
@@ -3588,8 +3589,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                53,
-                9
+                9,
+                53
             ],
             "startDate": null,
             "completedDate": null,
@@ -3609,8 +3610,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                528,
-                166
+                166,
+                528
             ],
             "startDate": null,
             "completedDate": null,
@@ -3630,9 +3631,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                454,
+                166,
                 192,
-                166
+                454
             ],
             "startDate": null,
             "completedDate": null,
@@ -3672,8 +3673,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                53,
-                9
+                9,
+                53
             ],
             "startDate": null,
             "completedDate": null,
@@ -3713,9 +3714,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                291,
+                9,
                 53,
-                9
+                291
             ],
             "startDate": null,
             "completedDate": null,
@@ -3735,11 +3736,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                454,
-                289,
-                192,
+                17,
                 127,
-                17
+                192,
+                289,
+                454
             ],
             "startDate": null,
             "completedDate": null,
@@ -3779,8 +3780,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                17,
-                9
+                9,
+                17
             ],
             "startDate": null,
             "completedDate": null,
@@ -3900,15 +3901,15 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                546,
-                446,
-                416,
-                356,
-                289,
-                273,
-                177,
+                17,
                 166,
-                17
+                177,
+                273,
+                289,
+                356,
+                416,
+                446,
+                546
             ],
             "startDate": null,
             "completedDate": null,
@@ -3928,8 +3929,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                192,
-                17
+                17,
+                192
             ],
             "startDate": null,
             "completedDate": null,
@@ -3969,13 +3970,13 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                675,
-                635,
-                420,
-                369,
-                336,
+                192,
                 328,
-                192
+                336,
+                369,
+                420,
+                635,
+                675
             ],
             "startDate": null,
             "completedDate": null,
@@ -4093,8 +4094,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                454,
-                401
+                401,
+                454
             ],
             "startDate": null,
             "completedDate": null,
@@ -4114,9 +4115,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                546,
+                11,
                 378,
-                11
+                546
             ],
             "startDate": null,
             "completedDate": null,
@@ -4214,11 +4215,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                620,
-                564,
-                416,
+                408,
                 412,
-                408
+                416,
+                564,
+                620
             ],
             "startDate": null,
             "completedDate": null,
@@ -4258,8 +4259,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695,
-                426
+                426,
+                695
             ],
             "startDate": null,
             "completedDate": null,
@@ -4299,9 +4300,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                740,
+                127,
                 170,
-                127
+                740
             ],
             "startDate": null,
             "completedDate": null,
@@ -4321,11 +4322,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                528,
-                497,
-                425,
+                305,
                 331,
-                305
+                425,
+                497,
+                528
             ],
             "startDate": null,
             "completedDate": null,
@@ -4605,8 +4606,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                355,
-                335
+                335,
+                355
             ],
             "startDate": null,
             "completedDate": null,
@@ -4666,16 +4667,16 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                458,
-                424,
-                422,
-                406,
-                405,
-                396,
-                356,
-                265,
+                155,
                 195,
-                155
+                265,
+                356,
+                396,
+                405,
+                406,
+                422,
+                424,
+                458
             ],
             "startDate": null,
             "completedDate": null,
@@ -4695,24 +4696,24 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                699,
-                681,
-                607,
-                459,
-                458,
-                439,
-                424,
-                405,
-                404,
-                396,
-                395,
-                394,
-                389,
-                359,
-                338,
-                298,
+                154,
                 172,
-                154
+                298,
+                338,
+                359,
+                389,
+                394,
+                395,
+                396,
+                404,
+                405,
+                424,
+                439,
+                458,
+                459,
+                607,
+                681,
+                699
             ],
             "startDate": null,
             "completedDate": null,
@@ -4752,8 +4753,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                167,
-                161
+                161,
+                167
             ],
             "startDate": null,
             "completedDate": null,
@@ -4773,8 +4774,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                432,
-                291
+                291,
+                432
             ],
             "startDate": null,
             "completedDate": null,
@@ -4794,9 +4795,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                566,
+                168,
                 291,
-                168
+                566
             ],
             "startDate": null,
             "completedDate": null,
@@ -4816,9 +4817,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                701,
+                291,
                 423,
-                291
+                701
             ],
             "startDate": null,
             "completedDate": null,
@@ -4898,10 +4899,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                675,
-                420,
+                291,
                 378,
-                291
+                420,
+                675
             ],
             "startDate": null,
             "completedDate": null,
@@ -4959,95 +4960,95 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                734,
-                722,
-                708,
-                701,
-                692,
-                672,
-                668,
-                666,
-                659,
-                653,
-                635,
-                622,
-                620,
-                619,
-                618,
-                612,
-                607,
-                586,
-                569,
-                566,
-                556,
-                546,
-                539,
-                521,
-                519,
-                504,
-                499,
-                485,
-                455,
-                454,
-                440,
-                432,
-                431,
-                420,
-                419,
-                399,
-                396,
-                389,
-                378,
-                376,
-                375,
-                362,
-                360,
-                355,
-                354,
-                342,
-                340,
-                337,
-                336,
-                335,
-                328,
-                321,
-                319,
-                309,
-                308,
-                307,
-                301,
-                299,
-                293,
-                283,
-                282,
-                265,
-                263,
-                261,
-                259,
-                238,
-                233,
-                213,
-                195,
-                194,
-                185,
-                184,
-                176,
-                169,
-                167,
-                163,
-                162,
-                161,
-                159,
-                158,
-                156,
-                155,
-                154,
-                152,
-                146,
-                108,
-                106,
+                34,
                 74,
-                34
+                106,
+                108,
+                146,
+                152,
+                154,
+                155,
+                156,
+                158,
+                159,
+                161,
+                162,
+                163,
+                167,
+                169,
+                176,
+                184,
+                185,
+                194,
+                195,
+                213,
+                233,
+                238,
+                259,
+                261,
+                263,
+                265,
+                282,
+                283,
+                293,
+                299,
+                301,
+                307,
+                308,
+                309,
+                319,
+                321,
+                328,
+                335,
+                336,
+                337,
+                340,
+                342,
+                354,
+                355,
+                360,
+                362,
+                375,
+                376,
+                378,
+                389,
+                396,
+                399,
+                419,
+                420,
+                431,
+                432,
+                440,
+                454,
+                455,
+                485,
+                499,
+                504,
+                519,
+                521,
+                539,
+                546,
+                556,
+                566,
+                569,
+                586,
+                607,
+                612,
+                618,
+                619,
+                620,
+                622,
+                635,
+                653,
+                659,
+                666,
+                668,
+                672,
+                692,
+                701,
+                708,
+                722,
+                734
             ],
             "startDate": null,
             "completedDate": null,
@@ -5187,10 +5188,10 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                672,
-                666,
+                79,
                 260,
-                79
+                666,
+                672
             ],
             "startDate": null,
             "completedDate": null,
@@ -5250,8 +5251,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                641,
-                623
+                623,
+                641
             ],
             "startDate": null,
             "completedDate": null,
@@ -5271,11 +5272,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                147,
-                35,
-                3,
+                1,
                 2,
-                1
+                3,
+                35,
+                147
             ],
             "startDate": null,
             "completedDate": null,
@@ -5321,6 +5322,21 @@
         }
     },
     "issues": {
+        "799": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 799,
+            "url": "https://github.com/solutionguidance/psm/issues/799",
+            "title": "Requirements CSV files are versioned even though generated from RTM.xlsx spreadsheet.",
+            "description": "Right now, we keep an easily-parseable version of the PSM's requirements in CSV files in `requirements/csv-exports/`, and there is code (`psm_reqs.py`) that reads the requirements from those CSV files.\r\n\r\nHowever, it's poor form and fragile to version generated files.  `RTM.xlsx` is the master source of requirements truth.  Ideally, we should be automatically extracting the requirements from there directly, instead of going through CSV files.  Since we haven't learned how to do that yet, for now we're versioning the CSV files, which we keep manually updated (changes to requirements are rare, fortunately).  In the meantime, this issue is just to remind us that we'd rather not be versioning those generated CSV files.",
+            "status": "NotStarted",
+            "startDate": "2018-04-26",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-SQ-1.5",
+                "tech-debt"
+            ]
+        },
         "797": {
             "owner": "solutionguidance",
             "repos": "psm",
