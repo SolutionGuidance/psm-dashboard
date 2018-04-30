@@ -209,7 +209,7 @@
     var xAxis = d3.axisBottom().scale(xScale);
     chartG
       .append("g")
-      .attr("class", "x axis")
+      .attr("class", "x-axis")
       .attr("transform", "translate(0, " + chartHeight + ")")
       .call(xAxis);
 
