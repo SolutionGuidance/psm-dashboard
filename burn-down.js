@@ -1,27 +1,5 @@
-(function(d3) {
+(function() {
   "use strict";
-
-  function randomizeFeature(feature) {
-    var random = Math.random() * 3;
-    if (random < 1) {
-      feature.status = "Completed";
-      if (random < 0.5) {
-        feature.startDate = "2018-02-01";
-        feature.completedDate = "2018-04-01";
-      } else {
-        feature.startDate = "2018-03-01";
-        feature.completedDate = "2018-04-01";
-      }
-    } else if (random > 2) {
-      feature.status = "InProgress";
-      if (random < 2.5) {
-        feature.startDate = "2018-03-01";
-      } else {
-        feature.startDate = "2018-04-01";
-      }
-    }
-    return feature;
-  }
 
   function makeFeatureTable(targetSelector, reqsData, issuesData) {
     var table = d3
@@ -134,7 +112,7 @@
     return table;
   }
 
-  function drawBurnDownChart(data, d3) {
+  window.drawFeaturesBurnDownChart = function(data, d3) {
     var globalStartDate = new Date("2017-04-01");
     var globalEndDate = new Date("2018-12-31");
     var todayDate = new Date();
@@ -171,7 +149,7 @@
     // features data in array form
     var featuresArray = Object.keys(data.features)
       .map(function(key) {
-        var feature = randomizeFeature(data.features[key]);
+        var feature = data.features[key];
         // TODO: calculate 'in progress' percent done
         feature.percentDone =
           {
@@ -391,22 +369,5 @@
           .style("left", d3.event.layerX + 10 + "px");
       })
       .on("click", loadFeatureOverlay);
-  }
-
-  function readJsonFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-      if (rawFile.readyState === 4 && rawFile.status == "200") {
-        callback(rawFile.responseText);
-      }
-    };
-    rawFile.send(null);
-  }
-
-  readJsonFile("sample-input.json", function(text) {
-    var data = JSON.parse(text);
-    drawBurnDownChart(data, d3);
-  });
-})(window.d3);
+  };
+})();
