@@ -199,7 +199,7 @@
         }
       });
 
-    // Render the axis.
+    // Render the X axis.
 
     var xScale = d3
       .scaleTime()
@@ -223,6 +223,21 @@
       .attr("dx", "-0.8em")
       .attr("dy", "0.15em")
       .attr("transform", "rotate(-60)");
+
+    // Render the Y axis. Due to the 90 degree rotation, the x and y attributes
+    // have the opposite effect from what you'd expect.
+    root
+      .append("text")
+      .attr("class", "y-axis-label")
+      .attr("font-size", "12px")
+      .attr("text-anchor", "middle")
+      .attr("y", 20)
+      .attr("dy", "0.75em")
+      .attr("x", -(titleHeight + (chartHeight / 2)))
+      .attr("transform", "rotate(-90)")
+      .text("Features");
+
+    // Render the bars.
 
     var barHeight = chartHeight / featuresArray.length;
 
@@ -252,7 +267,6 @@
       return "bar" + (statusClass || "");
     }
 
-    // Render the bars.
     chartG
       .selectAll("rect.barNotStarted")
       .data(featuresArray)
