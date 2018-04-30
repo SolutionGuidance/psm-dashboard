@@ -135,13 +135,13 @@
   }
 
   function drawBurnDownChart(data, d3) {
-    var globalStartDate = new Date("2018-01-01");
+    var globalStartDate = new Date("2017-04-01");
     var globalEndDate = new Date("2018-12-31");
     var todayDate = new Date();
     var todayString = todayDate.toISOString();
 
     var rootWidth = 700;
-    var rootHeight = 700;
+    var rootHeight = 750;
     var root = d3
       .select("#burn-down-chart")
       .append("svg")
@@ -158,7 +158,7 @@
       .text("PSM Features Progress");
 
     var yAxisWidth = 50;
-    var xAxisHeight = 50;
+    var xAxisHeight = 90;
 
     // Define the root g element.
     var chartWidth = rootWidth - yAxisWidth;
@@ -206,12 +206,23 @@
       .domain([globalStartDate, globalEndDate])
       .range([0, 600]);
 
-    var xAxis = d3.axisBottom().scale(xScale);
-    chartG
+    var xAxis = d3
+      .axisBottom()
+      .scale(xScale)
+      .ticks(18, "%b %Y");
+
+    var xAxisGroup = chartG
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0, " + chartHeight + ")")
       .call(xAxis);
+
+    xAxisGroup
+      .selectAll("text")
+      .style("text-anchor", "end")
+      .attr("dx", "-0.8em")
+      .attr("dy", "0.15em")
+      .attr("transform", "rotate(-60)");
 
     var barHeight = chartHeight / featuresArray.length;
 
@@ -274,20 +285,21 @@
 
     var todayLineColor = "orange";
     var xScaledToday = xScale(todayDate);
+    var todayLineExtension = 65;
 
     chartG
       .append("line")
       .attr("x1", xScaledToday)
       .attr("x2", xScaledToday)
       .attr("y1", 0)
-      .attr("y2", chartHeight + 25)
+      .attr("y2", chartHeight + todayLineExtension)
       .attr("stroke-width", 2)
       .attr("stroke", todayLineColor);
 
     chartG
       .append("text")
       .attr("x", xScaledToday)
-      .attr("y", chartHeight + 40)
+      .attr("y", chartHeight + todayLineExtension + 15)
       .attr("font-size", "11px")
       .attr("fill", todayLineColor)
       .attr("text-anchor", "middle")
