@@ -261,6 +261,9 @@ def main():
                     lst = m.group(0)
                     lst = lst.replace("(", "").replace(")", "").replace(" ", "")
                     requirements = lst.split(",")
+                    # Lop the requirements parenthetical off the description.
+                    description = description[:m.start()] + description[m.end():]
+                    description = description.rstrip()
                 this_feature = PSMFeature(feature_id, description, 
                                           subfeatures,
                                           start_date, completed_date, 
