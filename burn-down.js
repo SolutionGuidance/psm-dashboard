@@ -270,6 +270,29 @@
       .attr("y", barY)
       .attr("height", barHeight);
 
+    // Render today line.
+
+    var todayLineColor = "orange";
+    var xScaledToday = xScale(todayDate);
+
+    chartG
+      .append("line")
+      .attr("x1", xScaledToday)
+      .attr("x2", xScaledToday)
+      .attr("y1", 0)
+      .attr("y2", chartHeight + 25)
+      .attr("stroke-width", 2)
+      .attr("stroke", todayLineColor);
+
+    chartG
+      .append("text")
+      .attr("x", xScaledToday)
+      .attr("y", chartHeight + 40)
+      .attr("font-size", "11px")
+      .attr("fill", todayLineColor)
+      .attr("text-anchor", "middle")
+      .text("Today");
+
     // Tooltips.
 
     var tooltip = d3
