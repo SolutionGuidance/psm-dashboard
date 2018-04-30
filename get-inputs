@@ -260,7 +260,7 @@ def main():
                 if m is not None:
                     lst = m.group(0)
                     lst = lst.replace("(", "").replace(")", "").replace(" ", "")
-                    requirements = lst.split(",")
+                    requirements = sorted(lst.split(","))
                     # Lop the requirements parenthetical off the description.
                     description = description[:m.start()] + description[m.end():]
                     description = description.rstrip()
@@ -341,7 +341,7 @@ def main():
                 raw_issue.state,
                 start_date,
                 completed_date,
-                labels)
+                sorted(labels))
             # Because it takes a long time to paginate through the issues,
             # we'll want some kind of progress meter.  For now, use this
             # debugging statement to know that things are moving along:
@@ -362,7 +362,7 @@ def main():
                 reqs_to_issues.setdefault(req_id, set()).add(issue.number)
     for req in reqs.values():
         # Just shoehorn it on in there.  Thanks, Python.
-        setattr(req, "issues", list(reqs_to_issues.setdefault(req.req_id, set())))
+        setattr(req, "issues", sorted(list(reqs_to_issues.setdefault(req.req_id, set()))))
 
     ##### Set start dates and completed dates. #####
 
