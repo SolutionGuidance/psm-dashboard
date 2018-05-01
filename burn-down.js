@@ -211,7 +211,7 @@
       .attr("text-anchor", "middle")
       .attr("y", 20)
       .attr("dy", "0.75em")
-      .attr("x", -(titleHeight + (chartHeight / 2)))
+      .attr("x", -(titleHeight + chartHeight / 2))
       .attr("transform", "rotate(-90)")
       .text("Features");
 

@@ -33,7 +33,7 @@
     var height = 360;
     var radius = Math.min(width, height) / 2;
 
-    var color = d3.scaleOrdinal().range(["#5c2484", "#ddb138", "#2a8424"]);
+    var color = d3.scaleOrdinal().range(["#5c2484", "#2a8424", "#99a0d5"]);
 
     var svg = d3
       .select("#features-pie-chart")
@@ -48,12 +48,14 @@
       .innerRadius(0)
       .outerRadius(radius);
 
+    // Passing null to .sort and .sortValues puts pie slices in input order.
     var pie = d3
       .pie()
       .value(function(d) {
         return d.count;
       })
-      .sort(null);
+      .sort(null)
+      .sortValues(null);
 
     var path = svg
       .selectAll("path")
@@ -98,7 +100,7 @@
       });
 
     var tooltip = d3
-      .select("#chart")
+      .select("#features-pie-chart")
       .append("div")
       .attr("class", "tooltip");
 
