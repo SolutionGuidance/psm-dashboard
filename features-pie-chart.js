@@ -1,22 +1,34 @@
 (function() {
   "use strict";
 
-  window.drawFeaturesPieChart = function(data, d3) {
-    var dataset = [
+  function extractData(data) {
+    var features = data.features;
+    var featureIds = Object.keys(features);
+
+    function getFeatureCount(status, featureIds, features) {
+      return featureIds.filter(function(id) {
+        return features[id].status === status;
+      }).length;
+    }
+
+    return [
       {
         label: "Completed",
-        count: 150
+        count: getFeatureCount("Completed", featureIds, features)
+      },
+      {
+        label: "In Progress",
+        count: getFeatureCount("InProgress", featureIds, features)
       },
       {
         label: "Not Started",
-        count: 222
-      },
-      {
-        label: "In Process",
-        count: 300
+        count: getFeatureCount("NotStarted", featureIds, features)
       }
     ];
+  }
 
+  window.drawFeaturesPieChart = function(data, d3) {
+    var dataset = extractData(data);
     var width = 800;
     var height = 360;
     var radius = Math.min(width, height) / 2;
