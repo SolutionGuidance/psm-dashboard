@@ -276,7 +276,6 @@ def main():
                                           requirements)
                 features[feature_id] = this_feature
             elif ((this_feature is not None)
-                  and (len(row) == 3)
                   and (row[0] == '')
                   and (row[1] == '')):
                 subfeature = row[2]
