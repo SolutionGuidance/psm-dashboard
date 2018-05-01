@@ -1,5 +1,58 @@
 {
     "features": {
+        "psm-feature-100": {
+            "feature_id": "psm-feature-100",
+            "description": "Receive and store information from provider users",
+            "subfeatures": [],
+            "startDate": "2017-04-01",
+            "completedDate": "2017-09-30",
+            "status": "Completed",
+            "requirements": [
+                "psm-FR-1.4",
+                "psm-FR-1.6",
+                "psm-FR-2.1",
+                "psm-FR-2.15",
+                "psm-FR-2.6",
+                "psm-FR-2.9",
+                "psm-FR-7.5",
+                "psm-FR-7.6",
+                "psm-FR-7.7",
+                "psm-FR-7.8",
+                "psm-IA-3.3",
+                "psm-IA-3.4"
+            ]
+        },
+        "psm-feature-101": {
+            "feature_id": "psm-feature-101",
+            "description": "Validate/verify provider-entered information as possible.",
+            "subfeatures": [],
+            "startDate": "2017-04-01",
+            "completedDate": "2017-09-30",
+            "status": "Completed",
+            "requirements": [
+                "psm-FR-1.2",
+                "psm-FR-3.12",
+                "psm-FR-3.16",
+                "psm-FR-3.24",
+                "psm-FR-7.11",
+                "psm-FR-7.9",
+                "psm-IA-4.3",
+                "psm-IA-4.4"
+            ]
+        },
+        "psm-feature-102": {
+            "feature_id": "psm-feature-102",
+            "description": "Accept and store uploaded license information",
+            "subfeatures": [],
+            "startDate": "2017-04-01",
+            "completedDate": "2017-09-30",
+            "status": "Completed",
+            "requirements": [
+                "psm-FR-2.20",
+                "psm-FR-2.4",
+                "psm-FR-2.5"
+            ]
+        },
         "psm-feature-000": {
             "feature_id": "psm-feature-000",
             "description": "Continue state+CMS information-gathering and iterative feedback (Research for, e.g., psm-FR-1.3, psm-FR-2.10, psm-FR-2.12, psm-FR-5.1)",
@@ -454,10 +507,14 @@
             "completedDate": null,
             "status": "InProgress",
             "requirements": [
+                "psm-AD-1.1",
                 "psm-AD-1.3",
+                "psm-AD-3.1",
+                "psm-AD-3.2",
                 "psm-AD-3.4",
                 "psm-AD-3.5",
-                "psm-AD-3.6"
+                "psm-AD-3.6",
+                "psm-IU-2.1"
             ]
         },
         "psm-feature-027": {
@@ -491,7 +548,8 @@
             "subfeatures": [
                 "Create superuser role to edit rules, etc",
                 "Reorganize account creation and passwords",
-                "Prepare for SSO integration"
+                "Prepare for SSO integration",
+                "Use appropriate levels of encryption"
             ],
             "startDate": "2017-04-01",
             "completedDate": null,
@@ -499,12 +557,19 @@
             "requirements": [
                 "psm-AD-1.4",
                 "psm-AD-5.1",
+                "psm-AD-5.10",
+                "psm-AD-5.11",
                 "psm-AD-5.12",
                 "psm-AD-5.13",
+                "psm-AD-5.15",
+                "psm-AD-5.16",
+                "psm-AD-5.17",
                 "psm-AD-5.18",
                 "psm-AD-5.2",
                 "psm-AD-5.4",
-                "psm-AD-5.7"
+                "psm-AD-5.5",
+                "psm-AD-5.7",
+                "psm-FR-4.8"
             ]
         },
         "psm-feature-029": {
@@ -523,7 +588,9 @@
                 "psm-II-2.5",
                 "psm-II-4.2",
                 "psm-II-4.4",
-                "psm-IU-2.3"
+                "psm-IU-2.3",
+                "psm-IU-4.3",
+                "psm-SC-4.3"
             ]
         },
         "psm-feature-030": {
@@ -543,6 +610,7 @@
             "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.6",
+                "psm-FR-3.8",
                 "psm-II-2.1"
             ]
         },
@@ -604,7 +672,8 @@
             "description": "Display results of audits to users.",
             "subfeatures": [
                 "Provide UI for list of all changes",
-                "Make audit UI searchable"
+                "Make audit UI searchable",
+                "Create sample of data for audit"
             ],
             "startDate": null,
             "completedDate": null,
@@ -614,6 +683,7 @@
                 "psm-FR-6.8",
                 "psm-FR-7.10",
                 "psm-FR-7.13",
+                "psm-IA-3.8",
                 "psm-IU-2.5",
                 "psm-IU-4.1"
             ]
@@ -634,7 +704,8 @@
             "requirements": [
                 "psm-AD-4.1",
                 "psm-AD-4.2",
-                "psm-AD-5.9"
+                "psm-AD-5.9",
+                "psm-SQ-1.6"
             ]
         },
         "psm-feature-035": {
@@ -677,7 +748,8 @@
             "status": "InProgress",
             "requirements": [
                 "psm-AD-2.1",
-                "psm-AD-2.4"
+                "psm-AD-2.4",
+                "psm-FR-10.2"
             ]
         },
         "psm-feature-038": {
@@ -774,6 +846,7 @@
             "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.12",
+                "psm-FR-2.2",
                 "psm-IA-4.2"
             ]
         },
@@ -942,6 +1015,79 @@
             "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.25"
+            ]
+        },
+        "psm-feature-053": {
+            "feature_id": "psm-feature-053",
+            "description": "Run the project and deliver open source software",
+            "subfeatures": [],
+            "startDate": "2018-04-01",
+            "completedDate": null,
+            "status": "InProgress",
+            "requirements": [
+                "psm-SQ-1.3"
+            ]
+        },
+        "psm-feature-054": {
+            "feature_id": "psm-feature-054",
+            "description": "Accommodate user communication preferences",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-AD-2.2",
+                "psm-SC-1.1"
+            ]
+        },
+        "psm-feature-055": {
+            "feature_id": "psm-feature-055",
+            "description": "Update external references",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-IA-2.2"
+            ]
+        },
+        "psm-feature-056": {
+            "feature_id": "psm-feature-056",
+            "description": "Allow states to set limits on provider types",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-FR-4.6"
+            ]
+        },
+        "psm-feature-057": {
+            "feature_id": "psm-feature-057",
+            "description": "Be a modular system independent of changes to external inputs",
+            "subfeatures": [],
+            "startDate": "2018-04-01",
+            "completedDate": null,
+            "status": "InProgress",
+            "requirements": [
+                "psm-AD-2.5",
+                "psm-II-4.3",
+                "psm-IU-1.1",
+                "psm-SC-4.1"
+            ]
+        },
+        "psm-feature-058": {
+            "feature_id": "psm-feature-058",
+            "description": "Follow standard technical behavior of the Medicaid Enterprise",
+            "subfeatures": [],
+            "startDate": "2018-04-01",
+            "completedDate": null,
+            "status": "InProgress",
+            "requirements": [
+                "psm-FR-4.5",
+                "psm-IA-1.2",
+                "psm-IA-1.2",
+                "psm-II-3.1"
             ]
         }
     },
