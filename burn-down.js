@@ -114,7 +114,7 @@
 
   window.drawFeaturesBurnDownChart = function(data, d3) {
     var globalStartDate = new Date("2017-04-01");
-    var globalEndDate = new Date("2018-12-31");
+    var globalEndDate = new Date("2019-09-30");
     var todayDate = new Date();
     var todayString = todayDate.toISOString();
 
@@ -207,7 +207,7 @@
     root
       .append("text")
       .attr("class", "y-axis-label")
-      .attr("font-size", "12px")
+      .attr("font-size", "20px")
       .attr("text-anchor", "middle")
       .attr("y", 20)
       .attr("dy", "0.75em")
@@ -292,7 +292,7 @@
       .append("text")
       .attr("x", xScaledToday)
       .attr("y", chartHeight + todayLineExtension + 15)
-      .attr("font-size", "11px")
+      .attr("font-size", "16px")
       .attr("fill", todayLineColor)
       .attr("text-anchor", "middle")
       .text("Today");
@@ -305,8 +305,6 @@
       .attr("class", "tooltip");
 
     tooltip.append("div").attr("class", "tooltipDescription");
-    tooltip.append("div").attr("class", "tooltipRequirements");
-    tooltip.append("div").attr("class", "tooltipPercentDone");
 
     function hideDarkBackground() {
       darkBackground.style("display", "none");
