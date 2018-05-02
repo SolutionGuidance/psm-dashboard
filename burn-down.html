@@ -133,12 +133,20 @@
       font-size: 10px;
     }
 
+    .leftChart {
+      float: left;
+    }
+
+    .rightChart {
+      float: right;
+    }
+
   </style>
 </head>
 
 <body>
-  <div id="features-pie-chart"></div>
-  <div id="burn-down-chart"></div>
+  <div class="leftChart" id="burn-down-chart"></div>
+  <div class="rightChart" id="features-pie-chart"></div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="burn-down.js"></script>
   <script src="features-pie-chart.js"></script>
