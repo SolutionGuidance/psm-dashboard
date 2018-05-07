@@ -1,2 +1,10 @@
 google-credentials.json
 psm-dashboard-config.json
+pip-selfcheck.json
+sample-output.json
+bin/
+include/
+lib/
+share/
+psm_reqs.py
+__pycache__/
