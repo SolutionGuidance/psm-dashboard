@@ -1,0 +1,53 @@
+#!/bin/sh
+
+if [ "`which xlsx2csv`"x = "x" ]; then
+  echo "ERROR: You need to have xlsx2csv installed."
+  echo "       You can do 'pip3 install xlsx2csv' or get it"
+  echo "       from https://github.com/dilshod/xlsx2csv."
+  # Some other choices for XLSX-to-CSV conversion are:
+  # 
+  #   - github.com/staale/py-xlsx
+  #   - github.com/leegao/pyXLSX
+  #   - https://bitbucket.org/ericgazoni/openpyxl/ 
+  # 
+  # (For that last one, note that BitBucket now apparently requires
+  # you to log in to access even public projects, so use the clone
+  # repository at https://github.com/ericgazoni/openpyxl instead.)
+  exit 1
+fi
+
+if [ ! -f psm-dashboard-config.json ]; then
+  echo "ERROR: You have no 'psm-dashboard-config.json' file."
+  echo "       Please copy 'psm-dashboard-config.json' to that"
+  echo "       name, make the necessary edits, and try again."
+  exit 1
+fi
+
+# Bit of a hack: we "parse" the JSON config file here
+# in shell using, uh, grep and friends to get the value.
+RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs": +//g' | sed -E 's/"//g' | sed -E 's/, *$//'`
+
+echo ""
+echo "Converting requirements to CSV format..."
+/usr/bin/xlsx2csv -s 0 ${RTM_XLSX} > RTM.csv
+echo "Done."
+echo ""
+
+echo ""
+echo "Fetching and combining data (this can take a long time)..."
+./get-inputs > dashboard-input.json
+echo "Done."
+echo ""
+
+echo "Results placed in 'dashboard-input.json'."
+
+# You could view the reqs by running this any time:
+#
+#   $ ./reqs2any --output=human RTM.csv
+#
+# If you need to load them into Emacs (with `psm-load-reqs' 
+# from psm-reqs.el), then do something like this:
+#
+#   $ ./reqs2any --output=elisp RTM.csv > RTM.el
+#
+# Then you can invoke `psm-load-reqs' on RTM.el.

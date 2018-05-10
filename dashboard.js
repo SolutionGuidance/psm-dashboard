@@ -13,7 +13,7 @@
     rawFile.send(null);
   }
 
-  readJsonFile("sample-input.json", function(text) {
+  readJsonFile("dashboard-input.json", function(text) {
     var data = JSON.parse(text);
     window.drawFeaturesPieChart(data, d3);
     window.drawFeaturesBurnDownChart(data, d3);
