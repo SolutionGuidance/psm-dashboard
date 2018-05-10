@@ -2,10 +2,39 @@
 
 Dashboard code for displaying [PSM](http://projectpsm.org/) project status.
 
-Like the PSM itself, this dashboard is [open source](LICENSE) software.
+Like the PSM itself, the PSM Dashboard is [open source](LICENSE)
+software.  The Dashboard displays PSM development status, showing
+which features have been completed, which are in progress, and which
+have yet to be started.
 
-Much of this depends on the [PSM requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements]),
-so take a look there if you're missing context for things here.
+The code here combines information in the [PSM Features - RTM
+Map](https://docs.google.com/spreadsheets/d/1avMeCIiayaCcx8fDzldo3KEiRHyM2qjjBuCXWKRwyao/edit?usp=sharing)
+spreadsheet, the [PSM
+requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements]),
+and the [PSM issue
+tracker](https://github.com/SolutionGuidance/psm/issues/) to produce
+progress charts that show both high-level and detailed views of the
+PSM's feature progress.
+
+* `burn-down.html`, `index.html`
+  Browser entry points to the dashboard.
+  TBD: It looks like `burn-down.html` is the real entry point
+       and that `index.html` is obsolete or outdated, but it
+       would be great to get confirmation or denial of that.
+
+* `burn-down.js`, `dashboard.js`, `features-pie-chart.js`
+  JavaScript code used by the dashboard pages.
+
+* `refresh-dashboard`
+   Script to orchestrate everything: gather and combine the
+   features/RTM mapping, requirements, and issue labels so as to
+   produce `dashboard-input.json`
+
+* `dashboard-input.json`
+  The result of one run of `refresh-dashboard`.  This is a generated
+  file and therefore in theory we shouldn't version it here.  But in
+  practice: it's rather expensive to generate, so once we have a new
+  version we like to keep it until the next time we regenerate.
 
 * `get-inputs`
   Script that gathers data from various PSM project sources
@@ -13,9 +42,14 @@ so take a look there if you're missing context for things here.
   turns it into JSON which is then used as input to the dashboard
   display code.
 
-* `sample-input.json`
-  Sample input for the dashboard display code (i.e., output from a
-  single run of `get-inputs`).
+* `dashboard-data-sketch.txt`
+  A description of the output format that `get-inputs` produces.
+
+* `psm-reqs.el`, `psm_reqs.py`, `show-reqs`
+  Helper code for handling PSM reqs.
+
+* `reqs2any`
+   Parse PSM reqs from a CSV file and display them in various ways.
 
 * `non-hidden-RTM-rows.org`
   An initial export of PSM requirements to Org Mode format (done manually,
