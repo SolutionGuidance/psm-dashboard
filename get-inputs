@@ -268,8 +268,8 @@ def main():
                     # Lop the requirements parenthetical off the description.
                     description = description[:m.start()] + description[m.end():]
                     description = description.rstrip()
-                start_date = row[5] if len(row) > 5 else None
-                completed_date = row[6] if len(row) > 6 else None
+                start_date = row[8] if len(row) > 8 else None
+                completed_date = row[9] if len(row) > 9 else None
                 this_feature = PSMFeature(feature_id, description, 
                                           subfeatures,
                                           start_date, completed_date, 
@@ -278,7 +278,7 @@ def main():
             elif ((this_feature is not None)
                   and (row[0] == '')
                   and (row[1] == '')):
-                subfeature = row[2]
+                subfeature = row[5]
                 if subfeature.startswith("- "):
                     subfeature = subfeature[2:]
                 this_feature.subfeatures.append(subfeature)
