@@ -187,7 +187,7 @@
     var xAxis = d3
       .axisBottom()
       .scale(xScale)
-      .ticks(18, "%b %Y");
+      .ticks(18, "%b %y");
 
     var xAxisGroup = chartG
       .append("g")
