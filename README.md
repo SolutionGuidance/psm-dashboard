@@ -36,6 +36,24 @@ PSM's feature progress.
   practice: it's rather expensive to generate, so once we have a new
   version we like to keep it until the next time we regenerate.
 
+## Development guidelines
+
+We're pretty loose here right now.  A few things:
+
+1. Use conventional indentation (spaces not tabs; 2 spaces per level
+   for Javascript and 4 spaces for Python).
+
+2. Feel free to use branches and PRs, but it's okay to push directly
+   to master too.
+
+3. Please don't load Javascript directly from other servers; instead,
+   copy the exact version you need of an upstream library to the
+   `upstream-js/` subdirectory, including both the minified version
+   and the corresponding non-minified version, and update
+   `upstream-js/README.md` accordingly.  Everything the dashboard
+   needs should be available locally, so that if some foreign server
+   goes down our dashboard keeps working.
+
 ## What's here.
 
 * `get-inputs`
