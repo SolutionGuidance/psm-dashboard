@@ -51,7 +51,7 @@ Usage:
 used as a cheap kind of progress meter.  Just redirect stdout as in
 the above example to separate it from the noise on stderr.)
 
-Normal output is JSON formatted as per 'dashboard-data-sketch.txt'.
+Default output is JSON data as described in the dashboard README.md.
 However, if the '--featureless-reqs' option is passed, instead show a
 list of requirements (from the RTM) that are not associated with any
 high-level feature.  To just see usage, run with '-h' or '--help'.
