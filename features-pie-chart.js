@@ -32,8 +32,8 @@
     var width = 800;
     var height = 360;
     var radius = Math.min(width, height) / 2;
-
-    var color = d3.scaleOrdinal().range(["#5c2484", "#2a8424", "#99a0d5"]);
+    // purple, green, teal
+    var color = d3.scaleOrdinal().range(["#5c2484", "#2a8424", "#6ee0d9"]);
 
     var svg = d3
       .select("#features-pie-chart")
