@@ -7,11 +7,14 @@ Like the PSM itself, this dashboard is [open source](LICENSE) software.
 Much of this depends on the [PSM requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements]),
 so take a look there if you're missing context for things here.
 
+## What's here.
+
 * `get-inputs`
   Script that gathers data from various PSM project sources
   (high-level features list, requirements list, issue tracker) and
   turns it into JSON which is then used as input to the dashboard
-  display code.
+  display code.  See the "Data format" section in this document for
+  details.
 
 * `sample-input.json`
   Sample input for the dashboard display code (i.e., output from a
@@ -67,3 +70,82 @@ so take a look there if you're missing context for things here.
   ots-tools/github-tools/gh-sak, to put req labels on our issues.
   Those JSON files are still around on the PSM repository's archival
   rtm-issue-linking branch, but we haven't preserved them here.
+
+## Data format
+
+This is the JSON data input format that the dashboard expects:
+
+      "features": {
+        "psm-feature-000": {
+          "description": String,
+          "status": String ["Complete", "InProgress", "NotStarted"],
+          "startDate": String[Date] or null,
+          "completedDate": String[Date] or null,
+          "requirements": [
+            "psm-FR-8.2", 
+            "psm-FR-8.3", 
+            ...
+          ]
+        },
+        "psm-feature-001": {
+          ...
+        }
+      }
+      
+
+      "requirements": {
+        "psm-FR-8.2": {
+          "description": String,
+          "status": String ["Complete", "InProgress", "NotStarted"],
+          "startDate": String[Date] or null,
+          "completedDate": String[Date] or null,
+          "issues": [
+            123,
+            456,
+            789,
+            ...
+          ]
+        },
+        "psm-FR-8.3": {
+          ...
+        },
+        ...
+      }
+
+
+      "issues": {
+        "123": {
+          "title": String,
+          "description": String,
+          "url": String,
+          "status": String ["Complete", "InProgress", "NotStarted"],
+          "startDate": String[Date] or null,
+          "completedDate": String[Date] or null,
+        },
+        "456": {
+          ...
+        },
+        ...
+      }
+
+Fields without values (e.g. startDate, or completedDate) should be
+`null` which is JSON's way of representing absence of a value:
+
+      {
+        "startDate": null
+      }
+
+And dates should be represented as strings in ISO 8601 format
+(https://www.w3.org/TR/NOTE-datetime) which can readily be converted into JS
+Date objects if needed:
+
+      {
+        "startDate": "2018-06-11"
+      }
+
+Minimum precision for dates should be the day (as above), but hours and minutes
+can also optionally be included:
+
+      {
+        "startDate": "2018-06-11T19:20+01:00"
+      }
