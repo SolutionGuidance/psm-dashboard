@@ -184,10 +184,20 @@
       .domain([globalStartDate, globalEndDate])
       .range([0, 600]);
 
+    // TBD: Still figuring out how to control month/year formatting in
+    // the way we want for issue #3.  Some helpful web pages:
+    // 
+    //   - https://stackoverflow.com/questions/47875228/d3-show-years-on-first-month-and-on-january-and-move-ticks-to-bar-midpoints
+    //   - https://stackoverflow.com/questions/18474620/d3-js-tickformat-adding-a-sign-without-multiplying-by-100
+    //   - https://bl.ocks.org/andrew-reid/0a7f6d51a8d891a26c389f53122a1440
+    var xLabel = function(d) {
+      return d3.timeFormat("%b %y");
+    }
+
     var xAxis = d3
       .axisBottom()
-      .scale(xScale)
-      .ticks(18, "%b %Y");
+      .scale(xScale)      
+      .ticks(d3.timeMonth.every(1)).tickFormat(xLabel());
 
     var xAxisGroup = chartG
       .append("g")
