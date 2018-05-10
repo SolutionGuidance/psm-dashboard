@@ -16,9 +16,16 @@ so take a look there if you're missing context for things here.
   display code.  See the "Data format" section in this document for
   details.
 
-* `sample-input.json`
-  Sample input for the dashboard display code (i.e., output from a
-  single run of `get-inputs`).
+* `features-info.json`
+  Input data for the dashboard display code.
+
+  This is the result of a single run of `get-inputs`.  We version it
+  here because generating the data takes a while, and is currently a
+  manual process, so keeping the results of most recent run easily
+  available in the repository is helpful.  Later we may arrange for
+  the dashboard to auto-generate this data regularly; then we might
+  stop versioning the data here, or might keep it here but rename it
+  to make clear that it's just a sample and likely to be out-of-date.
 
 * `non-hidden-RTM-rows.org`
   An initial export of PSM requirements to Org Mode format (done manually,

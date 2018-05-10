@@ -45,16 +45,22 @@ Prerequisites:
 
 Usage:
 
-  $ ./get-inputs [--featureless-reqs] > sample-output.json
-
-(Note that some "DEBUG" prints will appear on stderr; they are being
-used as a cheap kind of progress meter.  Just redirect stdout as in
-the above example to separate it from the noise on stderr.)
+  $ ./get-inputs > features-info.json
 
 Default output is JSON data as described in the dashboard README.md.
-However, if the '--featureless-reqs' option is passed, instead show a
-list of requirements (from the RTM) that are not associated with any
-high-level feature.  To just see usage, run with '-h' or '--help'.
+(Note that some "DEBUG" prints will appear on stderr; they are being
+used as a cheap kind of progress meter.  Just redirect stdout as in
+the above example to separate JSON output from the noise on stderr.)
+
+Alternate usage:
+
+  $ ./get-inputs --featureless-reqs
+
+With the '--featureless-reqs' option, show instead a list of exactly
+those requirements (from the RTM) that are not associated with any
+high-level feature.
+
+To see this usage message, run with '-h' or '--help'.
 """
 
 import httplib2
