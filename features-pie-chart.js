@@ -29,11 +29,14 @@
 
   window.drawFeaturesPieChart = function(data, d3) {
     var dataset = extractData(data);
-    var width = 800;
-    var height = 360;
-    var radius = Math.min(width, height) / 2;
-    // purple, green, teal
-    var color = d3.scaleOrdinal().range(["#5c2484", "#2a8424", "#6ee0d9"]);
+    var chartEl = d3.select("#features-pie-chart");
+
+    if (!chartEl.selectAll("*").empty()) {
+      chartEl.selectAll("*").remove();
+    }
+    var width = +chartEl.style("width").replace(/(px)/g, "");
+    var height = +chartEl.style("height").replace(/(px)/g, "");
+    var radius = Math.min(width, height) / 2.5;
 
     var svg = d3
       .select("#features-pie-chart")
@@ -41,6 +44,7 @@
       .attr("width", width)
       .attr("height", height)
       .append("g")
+      .attr("class", "pie")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     var arc = d3
@@ -62,42 +66,14 @@
       .data(pie(dataset))
       .enter()
       .append("path")
-      .attr("d", arc)
-      .attr("fill", function(d) {
-        return color(d.data.label);
-      });
-
-    var legendRectSize = 18;
-    var legendSpacing = 4;
-
-    var legend = svg
-      .selectAll(".legend")
-      .data(color.domain())
-      .enter()
-      .append("g")
-      .attr("class", "legend")
-      .attr("transform", function(d, i) {
-        var height = legendRectSize + legendSpacing;
-        var offset = height * color.domain().length / 2;
-        var horz = 11 * legendRectSize;
-        var vert = i * height - offset;
-        return "translate(" + horz + "," + vert + ")";
-      });
-
-    legend
-      .append("rect")
-      .attr("width", legendRectSize)
-      .attr("height", legendRectSize)
-      .style("fill", color)
-      .style("stroke", color);
-
-    legend
-      .append("text")
-      .attr("x", legendRectSize + legendSpacing)
-      .attr("y", legendRectSize - legendSpacing)
-      .text(function(d) {
-        return d;
-      });
+      .attr("class", function(d) {
+        return {
+          "Not Started": "not-started",
+          "In Progress": "in-progress",
+          "Completed": "completed"
+        }[d.data.label];
+      })
+      .attr("d", arc);
 
     var tooltip = d3
       .select("#features-pie-chart")

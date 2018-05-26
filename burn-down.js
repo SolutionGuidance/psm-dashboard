@@ -118,33 +118,31 @@
     var todayDate = new Date();
     var todayString = todayDate.toISOString();
 
-    var rootWidth = 700;
-    var rootHeight = 750;
+    var chartEl = d3.select("#burn-down-chart");
+    if (!chartEl.selectAll("*").empty()) {
+      chartEl.selectAll("*").remove();
+    }
+    if (!d3.select(".darkBackground").empty()) {
+      d3.select(".darkBackground").remove();
+    }
+    var width = +chartEl.style("width").replace(/(px)/g, "");
+    var height = +chartEl.style("height").replace(/(px)/g, "");
     var root = d3
       .select("#burn-down-chart")
       .append("svg")
-      .attr("width", rootWidth)
-      .attr("height", rootHeight);
-
-    // Render the title.
-    var titleHeight = 50;
-    root
-      .append("text")
-      .attr("class", "title")
-      .attr("x", rootWidth / 2)
-      .attr("y", titleHeight / 2)
-      .text("PSM Features Progress");
+      .attr("width", width)
+      .attr("height", height);
 
     var yAxisWidth = 50;
     var xAxisHeight = 90;
 
     // Define the root g element.
-    var chartWidth = rootWidth - yAxisWidth;
-    var chartHeight = rootHeight - xAxisHeight - titleHeight;
+    var chartWidth = width - yAxisWidth;
+    var chartHeight = height - xAxisHeight;
     var chartG = root
       .append("g")
       .attr("class", "histo")
-      .attr("transform", "translate(" + yAxisWidth + ", " + titleHeight + ")");
+      .attr("transform", "translate(" + yAxisWidth + ", 0)");
 
     // features data in array form
     var featuresArray = Object.keys(data.features)
@@ -182,12 +180,12 @@
     var xScale = d3
       .scaleTime()
       .domain([globalStartDate, globalEndDate])
-      .range([0, 600]);
+      .range([0, width - 100]);
 
     var xAxis = d3
       .axisBottom()
       .scale(xScale)
-      .ticks(18, "%b %y");
+      .ticks(Math.floor(width / 30), "%b %y");
 
     var xAxisGroup = chartG
       .append("g")
@@ -198,6 +196,7 @@
     xAxisGroup
       .selectAll("text")
       .style("text-anchor", "end")
+      .attr("fill", "#363636")
       .attr("dx", "-0.8em")
       .attr("dy", "0.15em")
       .attr("transform", "rotate(-60)");
@@ -211,8 +210,9 @@
       .attr("text-anchor", "middle")
       .attr("y", 20)
       .attr("dy", "0.75em")
-      .attr("x", -(titleHeight + chartHeight / 2))
+      .attr("x", -(chartHeight / 2))
       .attr("transform", "rotate(-90)")
+      .attr("fill", "#363636")
       .text("Features");
 
     // Render the bars.
@@ -238,26 +238,26 @@
 
     function barClass(d) {
       var statusClass = {
-        NotStarted: " barNotStarted",
-        InProgress: " barInProgress",
-        Completed: " barCompleted"
+        NotStarted: " not-started",
+        InProgress: " in-progress",
+        Completed: " completed"
       }[d.status];
       return "bar" + (statusClass || "");
     }
 
     chartG
-      .selectAll("rect.barNotStarted")
+      .selectAll("rect.not-started")
       .data(featuresArray)
       .enter()
       .append("rect")
-      .attr("class", "bar barNotStarted")
+      .attr("class", "bar not-started")
       .attr("x", barX)
       .attr("width", barWidthNotStarted)
       .attr("y", barY)
       .attr("height", barHeight);
 
     chartG
-      .selectAll("rect.barInProgress")
+      .selectAll(["rect.in-progress", "rect.completed"])
       .data(
         featuresArray.filter(function(f) {
           return f.status !== "NotStarted";
@@ -265,7 +265,7 @@
       )
       .enter()
       .append("rect")
-      .attr("class", "bar barInProgress")
+      .attr("class", barClass)
       .attr("x", function(d) {
         return xScale(new Date(d.startDate));
       })
@@ -293,7 +293,7 @@
       .attr("x", xScaledToday)
       .attr("y", chartHeight + todayLineExtension + 15)
       .attr("font-size", "16px")
-      .attr("fill", todayLineColor)
+      .attr("fill", "#363636")
       .attr("text-anchor", "middle")
       .text("Today");
 
@@ -311,7 +311,7 @@
     }
 
     var darkBackground = d3
-      .select("#burn-down-chart")
+      .select("body")
       .append("div")
       .attr("class", "darkBackground")
       .on("click", hideDarkBackground);
@@ -332,7 +332,7 @@
         .text("Close")
         .on("click", hideDarkBackground);
 
-      overlay.append("h2").text("Feature");
+      overlay.append("h2").text("Feature: " + d.feature_id);
 
       overlay
         .append("div")
@@ -351,7 +351,7 @@
     }
 
     chartG
-      .selectAll(["rect.barInProgress", "rect.barNotStarted"])
+      .selectAll(["rect.completed", "rect.in-progress", "rect.not-started"])
       .on("mouseover", function(d) {
         tooltip.select(".tooltipDescription").html(d.description);
         tooltip.select(".tooltipRequirements").html(d.requirements.join(", "));
