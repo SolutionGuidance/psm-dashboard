@@ -13,9 +13,18 @@
     rawFile.send(null);
   }
 
-  readJsonFile("features-info.json", function(text) {
-    var data = JSON.parse(text);
+  function renderCharts(data, d3) {
     window.drawFeaturesPieChart(data, d3);
     window.drawFeaturesBurnDownChart(data, d3);
+  }
+
+  readJsonFile("features-info.json", function(text) {
+    var data = JSON.parse(text);
+    var pymChild = new pym.Child();
+    renderCharts(data, d3);
+
+    window.addEventListener("resize", function () {
+      renderCharts(data, d3);
+    });
   });
 })(window.d3);
