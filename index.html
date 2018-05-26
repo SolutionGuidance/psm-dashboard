@@ -1,28 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Pie Chart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PSM Dashboard</title>
   <style>
-    .legend {
-      font-size: 12px;
+    body {
+      /* Fonts are Bulma CSS defaults https://bulma.io/ */
+      font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+      overflow-x: hidden;
+      color: #363636;
     }
 
-    rect {
-      stroke-width: 2;
+    body > h1 {
+      text-align: center;
     }
 
-    #chart {
-      height: 360px;
+    svg {
+      background: white;
+    }
+
+    .container {
       position: relative;
-      width: 360px;
+      min-height: 650px;
+    }
+
+    .container > .chart {
+      position: absolute;
+      height: 100%;
+      top: 15px;
+      bottom: 15px;
+    }
+
+    .container > .chart:first-child {
+      left: 15px;
+      right: 35%;
+    }
+
+    .container > .chart:nth-child(2) {
+      right: 15px;
+      left: 65%;
+    }
+
+    .legend {
+      font-size: 16px;
+      margin-left: 32px;
+    }
+
+    .legend > p {
+      margin: 4px;
+    }
+
+    .color {
+      height: 16px;
+      width: 16px;
+      margin-right: 8px;
+      display: inline-block;
+    }
+
+    .not-started {
+      background: #6ee0d9;
+      fill: #6ee0d9;
+    }
+
+    .in-progress {
+      background: #2a8424;
+      fill: #2a8424;
+    }
+
+    .completed {
+      background: #5c2484;
+      fill: #5c2484;
+    }
+
+    .axis .domain, .axis .tick {
+      stroke: #000;
+      fill: none;
+    }
+
+    .bar {
+      stroke: #444;
+      cursor: pointer;
     }
 
     .tooltip {
       background: #eee;
       box-shadow: 0 0 5px #999999;
-      color: #333;
+      color: #363636;
       display: none;
       font-size: 12px;
       left: 600px;
@@ -30,136 +94,127 @@
       position: absolute;
       text-align: center;
       top: 250px;
-      width: 80px;
+      max-width: 150px;
       z-index: 10;
     }
+
+    .tooltipRequirements,
+    .tooltipPercentDone {
+      margin-top: 0.5rem;
+    }
+
+    .darkBackground {
+      position: absolute;
+      display: none;
+      background: rgba(100,100,100,50%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: absolute;
+      background: #fff;
+      box-shadow: 0 0 5px #999999;
+      color: #363636;
+      display: block;
+      font-size: 12px;
+      top: 5%;
+      left: 5%;
+      height: 84%;
+      width: 84%;
+      z-index: 20;
+      padding: 2%;
+      overflow: scroll;
+      cursor: default;
+    }
+
+    .overlayFeatureDescription {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .requirementsTable {
+      border-top: 1px solid #999;
+      border-collapse: collapse;
+    }
+
+    .requirementsTableCell {
+      border-bottom: 1px solid #999;
+      margin: 0;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    .reqIdCell,
+    .statusCell {
+      white-space: nowrap;
+    }
+
+    .issueLink {
+      text-decoration: none;
+    }
+
+    .completedIssueLink {
+      text-decoration: line-through;
+      color: #4949ef;
+    }
+
+    .overlayCloseButton {
+      border: 1px solid #999;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 10px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .legend {
+        margin-left: 8px;
+      }
+      .container > .chart:first-child,
+      .container > .chart:nth-child(2) {
+        position: relative;
+        width: 100%;
+        min-height: 500px;
+        left: inherit;
+        right: inherit;
+      }
+    }
+
   </style>
 </head>
 
 <body>
-  <div id="chart"></div>
+  <h1>PSM Features Progress</h1>
+  <div class="legend">
+    <p>
+      <span class="color not-started"></span> Not Started
+    </p>
+    <p>
+      <span class="color in-progress"></span> In Progress
+    </p>
+    <p>
+      <span class="color completed"></span> Completed
+    </p>
+  </div>
+  <div class="container">
+    <div class="chart" id="burn-down-chart"></div>
+    <div class="chart" id="features-pie-chart"></div>
+  </div>
   <script src="upstream-js/d3.v5.min.js"></script>
-  <!-- <script src="d3.v4.min.js"></script> -->
-  <script>
-  (function(d3) {
-  "use strict";
-
-  var dataset = [
-    {
-      label: "Completed",
-      count: 150
-    },
-    {
-      label: "Not Started",
-      count: 222
-    },
-    {
-      label: "In Process",
-      count: 300
-    }
-  ];
-
-  var width = 800;
-  var height = 360;
-  var radius = Math.min(width, height) / 2;
-
-  var color = d3.scaleOrdinal().range(["#5c2484", "#ddb138", "#2a8424"]);
-
-  var svg = d3
-    .select("#chart")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-  var arc = d3
-    .arc()
-    .innerRadius(0)
-    .outerRadius(radius);
-
-  var pie = d3
-    .pie()
-    .value(function(d) {
-      return d.count;
-    })
-    .sort(null);
-
-  var path = svg
-    .selectAll("path")
-    .data(pie(dataset))
-    .enter()
-    .append("path")
-    .attr("d", arc)
-    .attr("fill", function(d) {
-      return color(d.data.label);
-    });
-
-  var legendRectSize = 18;
-  var legendSpacing = 4;
-
-  var legend = svg
-    .selectAll(".legend")
-    .data(color.domain())
-    .enter()
-    .append("g")
-    .attr("class", "legend")
-    .attr("transform", function(d, i) {
-      var height = legendRectSize + legendSpacing;
-      var offset = height * color.domain().length / 2;
-      var horz = 11 * legendRectSize;
-      var vert = i * height - offset;
-      return "translate(" + horz + "," + vert + ")";
-    });
-
-  legend
-    .append("rect")
-    .attr("width", legendRectSize)
-    .attr("height", legendRectSize)
-    .style("fill", color)
-    .style("stroke", color);
-
-  legend
-    .append("text")
-    .attr("x", legendRectSize + legendSpacing)
-    .attr("y", legendRectSize - legendSpacing)
-    .text(function(d) {
-      return d;
-    });
-
-  var tooltip = d3
-    .select("#chart")
-    .append("div")
-    .attr("class", "tooltip");
-
-  tooltip.append("div").attr("class", "label");
-  tooltip.append("div").attr("class", "count");
-  tooltip.append("div").attr("class", "percent");
-
-  path.on("mouseover", function(d) {
-    var total = d3.sum(
-      dataset.map(function(d) {
-        return d.count;
-      })
-    );
-    var percent = Math.round(1000 * d.data.count / total) / 10;
-    tooltip.select(".label").html(d.data.label);
-    tooltip.select(".count").html(d.data.count);
-    tooltip.select(".percent").html(percent + "%");
-    tooltip.style("display", "block");
-  });
-
-  path.on("mouseout", function() {
-    tooltip.style("display", "none");
-  });
-  // OPTIONAL
-  path.on("mousemove", function(d) {
-    tooltip
-      .style("top", d3.event.layerY + 10 + "px")
-      .style("left", d3.event.layerX + 10 + "px");
-  });
-})(window.d3);
-</script>
+  <script src="upstream-js/pym.v1.min.js"></script>
+  <script src="burn-down.js"></script>
+  <script src="features-pie-chart.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 
 </html>
