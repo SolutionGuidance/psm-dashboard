@@ -28,9 +28,9 @@ PSM's feature progress.
 * `refresh-dashboard`
    Script to orchestrate everything: gather and combine the
    features/RTM mapping, requirements, and issue labels so as to
-   produce `dashboard-input.json`
+   produce `features-info.json`
 
-* `dashboard-input.json`
+* `features-info.json`
   The result of one run of `refresh-dashboard`.  This is a generated
   file and therefore in theory we shouldn't version it here.  But in
   practice: it's rather expensive to generate, so once we have a new
