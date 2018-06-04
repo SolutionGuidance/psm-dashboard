@@ -4,9 +4,9 @@
             "feature_id": "psm-feature-100",
             "description": "Receive and store information from provider users",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.4",
                 "psm-FR-1.6",
@@ -26,9 +26,9 @@
             "feature_id": "psm-feature-101",
             "description": "Validate/verify provider-entered information as possible.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.2",
                 "psm-FR-3.12",
@@ -44,9 +44,9 @@
             "feature_id": "psm-feature-102",
             "description": "Accept and store uploaded license information",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.20",
                 "psm-FR-2.4",
@@ -57,9 +57,9 @@
             "feature_id": "psm-feature-001",
             "description": "Send messages and support non-delivery.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha March",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.11",
                 "psm-FR-8.2",
@@ -71,9 +71,9 @@
             "feature_id": "psm-feature-004",
             "description": "Automate accessibility tests and creating enrollments; show test results",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha March",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-SQ-1.2",
                 "psm-SQ-1.4"
@@ -83,9 +83,9 @@
             "feature_id": "psm-feature-005",
             "description": "UI fixes based on QA feedback",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha March",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.1",
                 "psm-FR-7.14"
@@ -94,26 +94,10 @@
         "psm-feature-014": {
             "feature_id": "psm-feature-014",
             "description": "Check applications against federally-required databases.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-FR-3.14",
@@ -123,15 +107,10 @@
         "psm-feature-015": {
             "feature_id": "psm-feature-015",
             "description": "Verify NPI with NPPES.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-IA-3.5"
@@ -140,27 +119,19 @@
         "psm-feature-016": {
             "feature_id": "psm-feature-016",
             "description": "Offer an API to verify provider eligibility for other systems. (psm-II-4.1, psm-II-4.4, psm-FR-9.4,  psm-FR-9.5, psm-SC-4.4)",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": []
         },
         "psm-feature-009": {
             "feature_id": "psm-feature-009",
             "description": "UI: Improve UI/UX of results pages for external sources",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha June",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.3",
                 "psm-FR-7.14"
@@ -169,23 +140,10 @@
         "psm-feature-026": {
             "feature_id": "psm-feature-026",
             "description": "Provide the ability for users to make reports from simple queries, including moving from summary data to greater detail.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-1.1",
                 "psm-AD-1.3",
@@ -202,15 +160,10 @@
         "psm-feature-023": {
             "feature_id": "psm-feature-023",
             "description": "Make reporting data available as a CSV for authorized users.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-1.2",
                 "psm-AD-1.3",
@@ -222,24 +175,10 @@
         "psm-feature-027": {
             "feature_id": "psm-feature-027",
             "description": "Completion of separate, user-configurable business rules engine",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.1",
                 "psm-IU-3.1",
@@ -251,15 +190,10 @@
         "psm-feature-011": {
             "feature_id": "psm-feature-011",
             "description": "Screening: Automatically re-screen providers on configurable timescale",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "Alpha June",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-4.7",
                 "psm-FR-7.3"
@@ -268,16 +202,10 @@
         "psm-feature-018": {
             "feature_id": "psm-feature-018",
             "description": "Provider-initiated updates & re-screening: allow provider to update and/or add additional information and initiate re-screening of their enrollment.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.16",
                 "psm-FR-3.11",
@@ -290,9 +218,9 @@
             "feature_id": "psm-feature-019",
             "description": "Automate revalidation",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha June",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.11",
                 "psm-FR-4.7",
@@ -304,9 +232,9 @@
             "feature_id": "psm-feature-012",
             "description": "UI: Add interface to display results of automated re-screening",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha June",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-7.14"
             ]
@@ -315,9 +243,9 @@
             "feature_id": "psm-feature-020",
             "description": "Basic escalated screening: provide space for enhanced screening of providers in higher-risk categories",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.5",
                 "psm-FR-3.4",
@@ -328,13 +256,10 @@
         "psm-feature-021": {
             "feature_id": "psm-feature-021",
             "description": "Full-text search - Search strings examine all fields that the logged-in user has access to.",
-            "subfeatures": [
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.14",
                 "psm-FR-7.13",
@@ -345,18 +270,10 @@
         "psm-feature-022": {
             "feature_id": "psm-feature-022",
             "description": "Import / export functionality detailed in issue #236. Includes bulk enrollment of providers, via flat-file import or API.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-6.1",
                 "psm-IA-3.2"
@@ -365,17 +282,10 @@
         "psm-feature-024": {
             "feature_id": "psm-feature-024",
             "description": "Advanced escalated screening: Support background checks and site visits for higher risk providers.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.5",
                 "psm-FR-2.18",
@@ -389,16 +299,10 @@
         "psm-feature-025": {
             "feature_id": "psm-feature-025",
             "description": "Advanced risk scoring: Flag providers as high risk based on history of fraud and other risk factors.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.18",
                 "psm-FR-2.19",
@@ -413,15 +317,10 @@
         "psm-feature-028": {
             "feature_id": "psm-feature-028",
             "description": "Ensure that access to sensitive information is adequately safeguarded.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-1.4",
                 "psm-AD-5.1",
@@ -444,9 +343,9 @@
             "feature_id": "psm-feature-035",
             "description": "Enforce configurable policies for passwords and login limits.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.14",
                 "psm-AD-5.3",
@@ -456,18 +355,10 @@
         "psm-feature-030": {
             "feature_id": "psm-feature-030",
             "description": "Monitor the system and alert users when unusual conditions occur.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.6",
                 "psm-FR-3.8",
@@ -477,16 +368,10 @@
         "psm-feature-034": {
             "feature_id": "psm-feature-034",
             "description": "Record, monitor, and display performance measures.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-4.1",
                 "psm-AD-4.2",
@@ -497,20 +382,10 @@
         "psm-feature-052": {
             "feature_id": "psm-feature-052",
             "description": "Add task assignment and queuing to state reviewer workflow",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.25"
             ]
@@ -518,17 +393,10 @@
         "psm-feature-032": {
             "feature_id": "psm-feature-032",
             "description": "Log/audit provider screening actions, enrollment data, and other system activity.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.8",
                 "psm-AD-5.9",
@@ -543,14 +411,10 @@
         "psm-feature-033": {
             "feature_id": "psm-feature-033",
             "description": "Display results of audits to users.",
-            "subfeatures": [
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.9",
                 "psm-FR-6.8",
@@ -564,14 +428,10 @@
         "psm-feature-036": {
             "feature_id": "psm-feature-036",
             "description": "Write tests to demonstrate interfaces and document data entity definitions.",
-            "subfeatures": [
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-IA-2.1",
                 "psm-SC-4.5",
@@ -582,15 +442,10 @@
         "psm-feature-031": {
             "feature_id": "psm-feature-031",
             "description": "Develop standard data models, message formats, and code sets to interoperate with other modules.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.5",
                 "psm-IA-1.1",
@@ -611,9 +466,9 @@
             "feature_id": "psm-feature-037",
             "description": "Complete compliance with ADA Section 508. Add titles for easier navigation.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.1",
                 "psm-AD-2.4",
@@ -623,16 +478,10 @@
         "psm-feature-039": {
             "feature_id": "psm-feature-039",
             "description": "Research and enable cross-walks between state Medicare ID and NPI.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.3",
                 "psm-FR-3.3",
@@ -643,9 +492,9 @@
             "feature_id": "psm-feature-042",
             "description": "Research and implement the necessary fields to issue a state Medicaid ID to a newly screened provider.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-5.1"
             ]
@@ -653,19 +502,10 @@
         "psm-feature-040": {
             "feature_id": "psm-feature-040",
             "description": "Add new fields for specific requirements relating to bordering-state providers, care settings, help, etc.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.1",
                 "psm-FR-2.11",
@@ -687,17 +527,10 @@
         "psm-feature-041": {
             "feature_id": "psm-feature-041",
             "description": "Link individual providers to group practices; begin the process of handling rendering/billing providers correctly.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.12",
                 "psm-FR-2.2",
@@ -707,18 +540,10 @@
         "psm-feature-043": {
             "feature_id": "psm-feature-043",
             "description": "Research and handle required information for managed care plan screening.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.3",
                 "psm-FR-2.10",
@@ -728,18 +553,10 @@
         "psm-feature-017": {
             "feature_id": "psm-feature-017",
             "description": "Follow state rules in screening applications, including NPIs and licenses.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-FR-3.14",
@@ -752,16 +569,10 @@
         "psm-feature-044": {
             "feature_id": "psm-feature-044",
             "description": "Miscellaneous fields: Save CLIA and DEA numbers.",
-            "subfeatures": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.17",
                 "psm-FR-2.7",
@@ -772,9 +583,9 @@
             "feature_id": "psm-feature-045",
             "description": "If a draft application are not updated for a configurable period of time, mark it as stale [TBD: and require the applicant to confirm that information is still correct].",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-7.12",
                 "psm-II-4.5"
@@ -784,9 +595,9 @@
             "feature_id": "psm-feature-046",
             "description": "Add a configurable attestation, verify that required fields are present, and validate HIPAA taxonomy codes as necessary",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-10.1",
                 "psm-FR-2.7",
@@ -799,9 +610,9 @@
             "feature_id": "psm-feature-047",
             "description": "Allow providers to appeal a rejection from the PSM.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.3"
             ]
@@ -810,9 +621,9 @@
             "feature_id": "psm-feature-048",
             "description": "Send formal notices (sometimes letters) to applicants giving the status of their application.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.10",
                 "psm-FR-3.10",
@@ -826,9 +637,9 @@
             "feature_id": "psm-feature-049",
             "description": "Miscellaneous improvements: rejection reason , care settings (psm-FR-2.8, psm-FR-4.1, psm-FR-4.2), improved date validation (psm-PH-1.4)",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.1",
                 "psm-FR-5.8",
@@ -838,12 +649,10 @@
         "psm-feature-050": {
             "feature_id": "psm-feature-050",
             "description": "Add greater configurability to provider-initiated termination, including recording reasons and placing greater restrictions on certain provider types",
-            "subfeatures": [
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-5.2",
                 "psm-FR-5.3",
@@ -857,9 +666,9 @@
             "feature_id": "psm-feature-054",
             "description": "Accommodate user communication preferences",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.2",
                 "psm-SC-1.1"
@@ -869,9 +678,9 @@
             "feature_id": "psm-feature-055",
             "description": "Update external references",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-IA-2.2"
             ]
@@ -880,9 +689,9 @@
             "feature_id": "psm-feature-056",
             "description": "Allow states to set limits on provider types",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-4.6"
             ]
@@ -891,9 +700,9 @@
             "feature_id": "psm-feature-051",
             "description": "Completion of UI templating (began in MVP-Sept)",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-SQ-1.1",
                 "psm-SQ-1.5"
@@ -903,9 +712,9 @@
             "feature_id": "psm-feature-053",
             "description": "Run the project and deliver open source software",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-SQ-1.3"
             ]
@@ -914,9 +723,9 @@
             "feature_id": "psm-feature-057",
             "description": "Be a modular system independent of changes to external inputs",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.5",
                 "psm-II-4.3",
@@ -928,9 +737,9 @@
             "feature_id": "psm-feature-058",
             "description": "Follow standard technical behavior of the Medicaid Enterprise",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-4.5",
                 "psm-IA-1.2",
@@ -942,18 +751,18 @@
             "feature_id": "psm-feature-000",
             "description": "Continue state+CMS information-gathering and iterative feedback (Research for, e.g., psm-FR-1.3, psm-FR-2.10, psm-FR-2.12, psm-FR-5.1)",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha March",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": []
         },
         "psm-feature-002": {
             "feature_id": "psm-feature-002",
             "description": "Documentation updates and help-text integration",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha March",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-7.15",
                 "psm-FR-7.2"
@@ -963,9 +772,9 @@
             "feature_id": "psm-feature-003",
             "description": "Include embedded help text on fields.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "Alpha March",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-7.1"
             ]
@@ -974,9 +783,9 @@
             "feature_id": "psm-feature-029",
             "description": "Document standard data models, message formats, and code sets to interoperate with other modules.",
             "subfeatures": [],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.5",
                 "psm-IA-3.9",
@@ -994,14 +803,10 @@
         "psm-feature-038": {
             "feature_id": "psm-feature-038",
             "description": "Reduce time and and cost of screening by providing an automated system.",
-            "subfeatures": [
-                "",
-                "",
-                ""
-            ],
-            "startDate": "",
-            "completedDate": "",
-            "status": "Completed",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.15",
                 "psm-FR-3.17",
