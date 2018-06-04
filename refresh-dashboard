@@ -35,11 +35,11 @@ echo ""
 
 echo ""
 echo "Fetching and combining data (this can take a long time)..."
-./get-inputs > dashboard-input.json
+./get-inputs > features-info.json
 echo "Done."
 echo ""
 
-echo "Results placed in 'dashboard-input.json'."
+echo "Results placed in 'features-info.json'."
 
 # You could view the reqs by running this any time:
 #
