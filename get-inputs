@@ -45,7 +45,7 @@ Prerequisites:
 
 Usage:
 
-  $ ./get-inputs [--featureless-reqs] > sample-output.json
+  $ ./get-inputs [--featureless-reqs] > features-info.json
 
 (Note that some "DEBUG" prints will appear on stderr; they are being
 used as a cheap kind of progress meter.  Just redirect stdout as in
