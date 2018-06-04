@@ -29,7 +29,7 @@ RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs"
 
 echo ""
 echo "Converting requirements to CSV format..."
-/usr/bin/xlsx2csv -s 0 ${RTM_XLSX} > RTM.csv
+xlsx2csv -s 0 ${RTM_XLSX} > RTM.csv
 echo "Done."
 echo ""
 
