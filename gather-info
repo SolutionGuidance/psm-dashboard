@@ -45,7 +45,7 @@ Prerequisites:
 
 Usage:
 
-  $ ./get-inputs > features-info.json
+  $ ./gather-info > features-info.json
 
 Default output is JSON data as described in the dashboard README.md.
 (Note that some "DEBUG" prints will appear on stderr; they are being
@@ -54,7 +54,7 @@ the above example to separate JSON output from the noise on stderr.)
 
 Alternate usage:
 
-  $ ./get-inputs --featureless-reqs
+  $ ./gather-info --featureless-reqs
 
 With the '--featureless-reqs' option, show instead a list of exactly
 those requirements (from the RTM) that are not associated with any

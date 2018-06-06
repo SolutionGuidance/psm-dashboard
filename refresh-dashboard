@@ -18,24 +18,36 @@ fi
 
 if [ ! -f psm-dashboard-config.json ]; then
   echo "ERROR: You have no 'psm-dashboard-config.json' file."
-  echo "       Please copy 'psm-dashboard-config.json' to that"
-  echo "       name, make the necessary edits, and try again."
+  echo "       Please copy 'psm-dashboard-config.json.tmpl' to"
+  echo "       that name, edit as needed, and try again."
   exit 1
 fi
 
-# Bit of a hack: we "parse" the JSON config file here
-# in shell using, uh, grep and friends to get the value.
+# See issue #14.  Until that is resolved, we "parse" the JSON config
+# file here in shell, using grep and friends to get the value.
 RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs": +//g' | sed -E 's/"//g' | sed -E 's/, *$//'`
+
+if [ ! -f "${RTM_XLSX}" ]; then
+  echo "ERROR: can't find RTM.xlsx"
+  echo ""
+  echo "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'"
+  echo "to point to the requirements/RTM.xlsx spreadsheet that lives in"
+  echo "the PSM tree."
+  echo ""
+  echo "NOTE: Until https://github.com/SolutionGuidance/psm/pull/869 is"
+  echo "merged to 'master' in the PSM project, you must also make sure"
+  echo "that the PSM tree you're pointing to is on branch '799-reqs-fixup'."
+fi
 
 echo ""
 echo "Converting requirements to CSV format..."
-/usr/bin/xlsx2csv -s 0 ${RTM_XLSX} > RTM.csv
+/usr/bin/xlsx2csv -s 0 "${RTM_XLSX}" > RTM.csv
 echo "Done."
 echo ""
 
 echo ""
 echo "Fetching and combining data (this can take a long time)..."
-./get-inputs > features-info.json
+./gather-info > features-info.json
 echo "Done."
 echo ""
 

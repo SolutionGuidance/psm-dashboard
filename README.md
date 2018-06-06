@@ -16,6 +16,14 @@ tracker](https://github.com/SolutionGuidance/psm/issues/) to produce
 progress charts that show both high-level and detailed views of the
 PSM's feature progress.
 
+## Quick Start Guide: How to Refresh the Live Dashboard
+
+Run the `refresh-dashboard` script in this directory.  It will tell
+you about any config preparation you need to make, and once the
+configuration is properly set up, it will produce `features-info.json`
+(you will see a lot of progress output along the way).  Once that
+output file is ready, visit `index.html` in your browser.
+
 ## Development guidelines
 
 We're pretty loose here right now.  A few things:
@@ -50,7 +58,7 @@ We're pretty loose here right now.  A few things:
    features/RTM mapping, requirements, and issue labels so as to
    produce `refresh-dashboard.json`
 
-* `get-inputs`
+* `gather-info`
   Script that gathers data from various PSM project sources
   (high-level features list, requirements list, issue tracker) and
   turns it into JSON which is then used as input to the dashboard
