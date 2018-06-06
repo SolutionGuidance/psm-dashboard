@@ -1,0 +1,18 @@
+#!/bin/sh
+
+OUTPUT_FORMAT="${1}"
+
+if [ "${1}" != "human" -a "${1}" != "elisp" ]; then
+  echo 'Must pass "human" or "elisp" argument to indicate output format.'
+  exit 1
+fi
+
+if [ "${OUTPUT_FORMAT}" = "elisp" ]; then 
+  echo "("
+fi
+
+./reqs2any --output="${OUTPUT_FORMAT}" csv-exports/all.csv
+
+if [ "${OUTPUT_FORMAT}" = "elisp" ]; then 
+  echo ")"
+fi
