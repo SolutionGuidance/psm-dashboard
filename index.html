@@ -32,14 +32,23 @@
       bottom: 15px;
     }
 
-    .container > .chart:first-child {
+    #burn-down-chart {
       left: 15px;
       right: 35%;
     }
 
-    .container > .chart:nth-child(2) {
+    #features-pie-chart {
       right: 15px;
       left: 65%;
+    }
+
+    .show-feature-descriptions > #burn-down-chart,
+    .show-feature-descriptions > #features-pie-chart {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      left: inherit;
+      right: inherit;
     }
 
     .legend {
@@ -51,7 +60,7 @@
       margin: 4px;
     }
 
-    .color {
+    .legend > input, .color {
       height: 16px;
       width: 16px;
       margin-right: 8px;
@@ -59,18 +68,18 @@
     }
 
     .not-started {
-      background: #6ee0d9;
-      fill: #6ee0d9;
+      background: #a6cee3;
+      fill: #a6cee3;
     }
 
     .in-progress {
-      background: #2a8424;
-      fill: #2a8424;
+      background: #1f78b4;
+      fill: #1f78b4;
     }
 
     .completed {
-      background: #5c2484;
-      fill: #5c2484;
+      background: #b2df8a;
+      fill: #b2df8a;
     }
 
     .axis .domain, .axis .tick {
@@ -81,6 +90,15 @@
     .bar {
       stroke: #444;
       cursor: pointer;
+    }
+
+    text.description {
+      stroke-width: 0;
+      dominant-baseline: central;
+      alignment-baseline: middle;
+      pointer-events: none;
+      font-size: 11px;
+      fill: #000;
     }
 
     .tooltip {
@@ -104,7 +122,7 @@
     }
 
     .darkBackground {
-      position: absolute;
+      position: fixed;
       display: none;
       background: rgba(100,100,100,50%);
       height: 100%;
@@ -180,8 +198,8 @@
       .legend {
         margin-left: 8px;
       }
-      .container > .chart:first-child,
-      .container > .chart:nth-child(2) {
+      #burn-down-chart,
+      #features-pie-chart {
         position: relative;
         width: 100%;
         min-height: 500px;
@@ -205,6 +223,7 @@
     <p>
       <span class="color completed"></span> Completed
     </p>
+    <input type="checkbox" id="showFeatureDescriptions"> Show Feature Descriptions
   </div>
   <div class="container">
     <div class="chart" id="burn-down-chart"></div>

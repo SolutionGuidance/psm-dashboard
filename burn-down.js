@@ -127,6 +127,13 @@
     }
     var width = +chartEl.style("width").replace(/(px)/g, "");
     var height = +chartEl.style("height").replace(/(px)/g, "");
+
+    var showFeatureDescriptions = d3.select(".container")
+      .classed("show-feature-descriptions");
+    if (showFeatureDescriptions) {
+      height += 800;
+    }
+
     var root = d3
       .select("#burn-down-chart")
       .append("svg")
@@ -245,6 +252,12 @@
       return "bar" + (statusClass || "");
     }
 
+    var textX = 10;
+
+    function textY(datum, index) {
+      return barY(datum, index) + (barHeight / 2);
+    }
+
     chartG
       .selectAll("rect.not-started")
       .data(featuresArray)
@@ -296,6 +309,20 @@
       .attr("fill", "#363636")
       .attr("text-anchor", "middle")
       .text("Today");
+
+    // Feature descriptions when toggled
+
+    if (showFeatureDescriptions) {
+      chartG
+        .selectAll("text.description")
+        .data(featuresArray)
+        .enter()
+        .append("text")
+        .attr("class", "description")
+        .attr("x", textX)
+        .attr("y", textY)
+        .text(function (d) { return d.description; });
+    }
 
     // Tooltips.
 
