@@ -33,10 +33,6 @@ if [ ! -f "${RTM_XLSX}" ]; then
   echo "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'"
   echo "to point to the requirements/RTM.xlsx spreadsheet that lives in"
   echo "the PSM tree."
-  echo ""
-  echo "NOTE: Until https://github.com/SolutionGuidance/psm/pull/869 is"
-  echo "merged to 'master' in the PSM project, you must also make sure"
-  echo "that the PSM tree you're pointing to is on branch '799-reqs-fixup'."
 fi
 
 echo ""
