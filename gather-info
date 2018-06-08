@@ -48,7 +48,7 @@ Usage:
   $ ./gather-info > features-info.json
 
 Default output is JSON data as described in the dashboard README.md.
-(Note that some "DEBUG" prints will appear on stderr; they are being
+(Note that some "PROGESS:" prints will appear on stderr; they are being
 used as a cheap kind of progress meter.  Just redirect stdout as in
 the above example to separate JSON output from the noise on stderr.)
 
@@ -327,10 +327,6 @@ def main():
     github_repos = github_owner.get_repo(github_repos_name)
     github_issues_raw = github_repos.get_issues(state="all")  # both open and closed
     issues = {}
-    sys.stderr.write("DEBUG: Issues take a long time to fetch, so these\n")
-    sys.stderr.write("       debugging prints will be our progress meter\n")
-    sys.stderr.write("       for now.\n")
-    sys.stderr.write("\n")
     for raw_issue in github_issues_raw:
         # For development, uncomment this conditional to loop over
         # only a subset of issues, since waiting for the GitHub API's
@@ -365,7 +361,7 @@ def main():
             # Because it takes a long time to paginate through the issues,
             # we'll want some kind of progress meter.  For now, use this
             # debugging statement to know that things are moving along:
-            sys.stderr.write("DEBUG: fetched issue %d\n" % issue.number)
+            sys.stderr.write("PROGRESS: ingested issue #%d\n" % issue.number)
             issues[issue.number] = issue
 
     ###### Link issues into requirements. #####
@@ -373,12 +369,11 @@ def main():
     # Dictionary mapping req IDs to sets of issue numbers (ints).
     reqs_to_issues = {}
     for issue in issues.values():
-        sys.stderr.write("DEBUG: checking issue %d'\n" % issue.number)
+        sys.stderr.write("PROGRESS: checking issue #%d for req labels\n" % issue.number)
         for label in issue.labels:
-            sys.stderr.write("DEBUG: checking label '%s'\n" % label)
             if label.startswith("Z-REQ-PSM-"):
                 req_id = "psm-" + label[10:]
-                sys.stderr.write("DEBUG: yes -- found req '%s'\n" % req_id)
+                sys.stderr.write("PROGRESS:    found req: '%s'\n" % req_id)
                 reqs_to_issues.setdefault(req_id, set()).add(issue.number)
     for req in reqs.values():
         # Just shoehorn it on in there.  Thanks, Python.
@@ -401,12 +396,12 @@ def main():
     if list_featureless_reqs:
         # Maps req IDs to sets of feature IDs.  This tells you
         # which features are associated with a given requirement.
-        sys.stderr.write("DEBUG: Listing featureless requirements\n")
+        sys.stderr.write("PROGRESS: Listing featureless requirements\n")
         req_ids_to_features = {}
         for feature in features.values():
-            sys.stderr.write("DEBUG: probing feature '%s'\n" % feature.feature_id)
+            sys.stderr.write("PROGRESS: probing feature '%s'\n" % feature.feature_id)
             for req_id in feature.requirements:
-                sys.stderr.write("DEBUG: registering req '%s'\n" % req_id)
+                sys.stderr.write("PROGRESS: registering req '%s'\n" % req_id)
                 req_ids_to_features.setdefault(req_id, set()).add(feature.feature_id)
         # But then we don't actually use all the data we've gathered.
         # We just ask the boolean question "Does a given requirement
