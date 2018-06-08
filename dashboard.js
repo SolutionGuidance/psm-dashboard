@@ -26,5 +26,12 @@
     window.addEventListener("resize", function () {
       renderCharts(data, d3);
     });
+
+    var descToggle = document.querySelector("#showFeatureDescriptions");
+    descToggle.addEventListener("change", function () {
+      d3.select(".container")
+        .classed("show-feature-descriptions", descToggle.checked);
+      renderCharts(data, d3);
+    });
   });
 })(window.d3);
