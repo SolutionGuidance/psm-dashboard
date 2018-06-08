@@ -4,3 +4,11 @@ features-info.json
 xlsx2csv
 RTM.csv
 RTM.el
+pip-selfcheck.json
+sample-output.json
+bin/
+include/
+lib/
+share/
+psm_reqs.py
+__pycache__/

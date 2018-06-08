@@ -23,19 +23,19 @@
 
 """Make JSON input for the PSM dashboard, using data from various sources.
 
-Prerequisites:
+Start a virtualenv and install requirements.txt:
 
-  $ sudo pip3 install -U google-api-python-client
-  $ sudo pip3 install -U python-gflags
-  $ sudo pip3 install -U oauth2client
-  $ sudo pip3 install -U PyGithub
+  $ virtualenv --python=python3.5 .
+  $ source bin/activate
+  $ pip install -U -r requirements.txt
 
   ## Edit the config file as needed.  Getting some values may be
   ## a bit of work: see https://gist.github.com/burnash/6771295 and
   ## https://developers.google.com/sheets/api/quickstart/python. 
   ## Note that you will need to have a Google account, and that
   ## account must have access to the spreadsheet whose ID you're
-  ## using as your "google_sheet_id."
+  ## using as your "google_sheet_id."  For the GitHub API key, grant it
+  ## access to the `public_repos` scope. 
   $ cp psm-dashboard-config.json.tmpl psm-dashboard-config.json
   $ your-favorite-editor psm-dashboard-config.json
 
