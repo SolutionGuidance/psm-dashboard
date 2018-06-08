@@ -167,18 +167,18 @@
       .sort(function(a, b) {
         if (a.status === b.status) {
           if (a.completedDate === b.completedDate) {
-            return a.startDate > b.startDate;
+            return a.startDate > b.startDate ? 1 : -1;
           } else {
-            return a.completedDate > b.completedDate;
+            return a.completedDate > b.completedDate ? 1 : -1;
           }
         } else if (a.status === "NotStarted") {
-          return true;
+          return 1;
         } else if (b.status === "NotStarted") {
-          return false;
+          return -1;
         } else if (a.status === "InProgress") {
-          return true;
+          return 1;
         } else if (b.status === "InProgress") {
-          return false;
+          return -1;
         }
       });
 
