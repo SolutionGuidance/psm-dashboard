@@ -139,7 +139,7 @@
         },
         "psm-feature-016": {
             "feature_id": "psm-feature-016",
-            "description": "Offer an API to verify provider eligibility for other systems. (psm-II-4.1, psm-II-4.4, psm-FR-9.4,  psm-FR-9.5, psm-SC-4.4)",
+            "description": "Offer an API to verify provider eligibility for other systems.",
             "subfeatures": [
                 "Return searchable list of providers from PSM.",
                 "Update schema in order to link enrollments to providers",
@@ -152,7 +152,13 @@
             "startDate": "2018-02-01",
             "completedDate": null,
             "status": "InProgress",
-            "requirements": []
+            "requirements": [
+                "psm-FR-9.4",
+                "psm-FR-9.5",
+                "psm-II-4.1",
+                "psm-II-4.4",
+                "psm-SC-4.4"
+            ]
         },
         "psm-feature-009": {
             "feature_id": "psm-feature-009",
@@ -822,19 +828,6 @@
                 "psm-FR-8.4"
             ]
         },
-        "psm-feature-049": {
-            "feature_id": "psm-feature-049",
-            "description": "Miscellaneous improvements: rejection reason , care settings (psm-FR-2.8, psm-FR-4.1, psm-FR-4.2), improved date validation (psm-PH-1.4)",
-            "subfeatures": [],
-            "startDate": null,
-            "completedDate": null,
-            "status": "NotStarted",
-            "requirements": [
-                "psm-FR-3.1",
-                "psm-FR-5.8",
-                "psm-FR-6.4"
-            ]
-        },
         "psm-feature-050": {
             "feature_id": "psm-feature-050",
             "description": "Add greater configurability to provider-initiated termination, including recording reasons and placing greater restrictions on certain provider types",
@@ -851,6 +844,43 @@
                 "psm-FR-5.7",
                 "psm-FR-5.8",
                 "psm-II-4.5"
+            ]
+        },
+        "psm-feature-200": {
+            "feature_id": "psm-feature-200",
+            "description": "Misc improvement: rejection reason",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-FR-3.1",
+                "psm-FR-5.8",
+                "psm-FR-6.4"
+            ]
+        },
+        "psm-feature-201": {
+            "feature_id": "psm-feature-201",
+            "description": "Misc improvement: care settings",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-FR-2.8",
+                "psm-FR-4.1",
+                "psm-FR-4.2"
+            ]
+        },
+        "psm-feature-202": {
+            "feature_id": "psm-feature-202",
+            "description": "Misc improvement: improved date validation",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-PH-1.4"
             ]
         },
         "psm-feature-054": {
