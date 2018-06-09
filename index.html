@@ -51,20 +51,30 @@
       right: inherit;
     }
 
-    .legend {
+    .legend, .controls {
       font-size: 16px;
       margin-left: 32px;
     }
 
-    .legend > p {
-      margin: 4px;
+    .legend {
+      text-align: center;
+      margin-bottom: 16px;
     }
 
-    .legend > input, .color {
+    .legend > p {
+      margin: 4px;
+      display: inline-block;
+    }
+
+    .controls > input, .color {
       height: 16px;
       width: 16px;
       margin-right: 8px;
       display: inline-block;
+    }
+
+    .color {
+      vertical-align: middle;
     }
 
     .not-started {
@@ -195,7 +205,7 @@
     }
 
     @media screen and (max-width: 700px) {
-      .legend {
+      .legend, .controls {
         margin-left: 8px;
       }
       #burn-down-chart,
@@ -223,6 +233,8 @@
     <p>
       <span class="color not-started"></span> Not Started
     </p>
+  </div>
+  <div class="controls">
     <input type="checkbox" id="showFeatureDescriptions"> Show Feature Descriptions
   </div>
   <div class="container">
