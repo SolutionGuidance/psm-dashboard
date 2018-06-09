@@ -43,7 +43,8 @@ echo ""
 
 echo ""
 echo "Fetching and combining data (this can take a long time)..."
-./gather-info > features-info.json
+./gather-info > $$-features-info.json.tmp
+mv $$-features-info.json.tmp features-info.json
 echo "Done."
 echo ""
 
