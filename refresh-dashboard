@@ -37,7 +37,7 @@ fi
 
 echo ""
 echo "Converting requirements to CSV format..."
-/usr/bin/xlsx2csv -s 0 "${RTM_XLSX}" > RTM.csv
+xlsx2csv -s 0 "${RTM_XLSX}" > RTM.csv
 echo "Done."
 echo ""
 
