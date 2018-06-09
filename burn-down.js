@@ -286,6 +286,16 @@
       .attr("y", barY)
       .attr("height", barHeight);
 
+    // Render opacity mask for washed-out colors on future dates
+
+    chartG
+      .append("rect")
+      .attr("class", "future-mask")
+      .attr("x", xScale(new Date(todayString)))
+      .attr("y", 0)
+      .attr("width", xScale(new Date(globalEndDate)) - xScale(new Date(todayString)))
+      .attr("height", chartHeight);
+
     // Render today line.
 
     var todayLineColor = "orange";
