@@ -175,7 +175,7 @@ def get_reqs(csv_file):
             elif (len(row) >= 11
                   and current_family is not None
                   and row[0] != ""
-                  and _req_id_re.match(row[0])): # req row
+                  and _req_id_re.match(row[0]) is not None): # req row
                 if current_family is None:
                     warn("WARNING: got req \"%s \" while no family active"
                          % row[0])
@@ -191,12 +191,19 @@ def get_reqs(csv_file):
                         "ERROR: encountered req '%s' more than once" 
                         % req.req_id)
                 reqs[req.req_id] = req
-            elif row == ['Requirement ID Number', 'Requirement Category', 
-                         'Requirement Statement', 'Priority', 'Rank', 
-                         'Source', 'Source Document', 'Release', 
-                         'Design Reference', 'Acceptance Test Reference',
-                         'Comment']:
-                pass # skip the CSV header row
+            elif (len(row) >= 11
+                  and row[0]  == 'Requirement ID Number'
+                  and row[1]  == 'Requirement Category'
+                  and row[2]  == 'Requirement Statement'
+                  and row[3]  == 'Priority'
+                  and row[4]  == 'Rank'
+                  and row[5]  == 'Source'
+                  and row[6]  == 'Source Document'
+                  and row[7]  == 'Release'
+                  and row[8]  == 'Design Reference'
+                  and row[9]  == 'Acceptance Test Reference'
+                  and row[10] == 'Comment'):
+                pass # skip CSV header rows
             elif current_family is not None:
                 warn("WARNING: not really sure what this row is:")
                 warn("         %s" % row)
