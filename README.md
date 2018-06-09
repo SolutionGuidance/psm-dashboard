@@ -44,11 +44,8 @@ We're pretty loose here right now.  A few things:
 
 ## What's here.
 
-* `burn-down.html`, `index.html`
+* `index.html`
   Browser entry points to the dashboard.
-  TBD: It looks like `burn-down.html` is the real entry point
-       and that `index.html` is obsolete or outdated, but it
-       would be great to get confirmation or denial of that.
 
 * `burn-down.js`, `dashboard.js`, `features-pie-chart.js`
   JavaScript code used by the dashboard pages.
