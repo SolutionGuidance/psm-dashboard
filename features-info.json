@@ -344,7 +344,6 @@
             "requirements": [
                 "psm-FR-2.14",
                 "psm-FR-7.13",
-                "psm-IU-2.5",
                 "psm-IU-2.5"
             ]
         },
@@ -828,6 +827,23 @@
                 "psm-FR-8.4"
             ]
         },
+        "psm-feature-049": {
+            "feature_id": "psm-feature-049",
+            "description": "Miscellaneous improvements: rejection reason; care settings; improved date validation",
+            "subfeatures": [],
+            "startDate": null,
+            "completedDate": null,
+            "status": "NotStarted",
+            "requirements": [
+                "psm-FR-2.8",
+                "psm-FR-3.1",
+                "psm-FR-4.1",
+                "psm-FR-4.2",
+                "psm-FR-5.8",
+                "psm-FR-6.4",
+                "psm-PH-1.4"
+            ]
+        },
         "psm-feature-050": {
             "feature_id": "psm-feature-050",
             "description": "Add greater configurability to provider-initiated termination, including recording reasons and placing greater restrictions on certain provider types",
@@ -844,43 +860,6 @@
                 "psm-FR-5.7",
                 "psm-FR-5.8",
                 "psm-II-4.5"
-            ]
-        },
-        "psm-feature-200": {
-            "feature_id": "psm-feature-200",
-            "description": "Misc improvement: rejection reason",
-            "subfeatures": [],
-            "startDate": null,
-            "completedDate": null,
-            "status": "NotStarted",
-            "requirements": [
-                "psm-FR-3.1",
-                "psm-FR-5.8",
-                "psm-FR-6.4"
-            ]
-        },
-        "psm-feature-201": {
-            "feature_id": "psm-feature-201",
-            "description": "Misc improvement: care settings",
-            "subfeatures": [],
-            "startDate": null,
-            "completedDate": null,
-            "status": "NotStarted",
-            "requirements": [
-                "psm-FR-2.8",
-                "psm-FR-4.1",
-                "psm-FR-4.2"
-            ]
-        },
-        "psm-feature-202": {
-            "feature_id": "psm-feature-202",
-            "description": "Misc improvement: improved date validation",
-            "subfeatures": [],
-            "startDate": null,
-            "completedDate": null,
-            "status": "NotStarted",
-            "requirements": [
-                "psm-PH-1.4"
             ]
         },
         "psm-feature-054": {
@@ -964,13 +943,12 @@
             "requirements": [
                 "psm-FR-4.5",
                 "psm-IA-1.2",
-                "psm-IA-1.2",
                 "psm-II-3.1"
             ]
         },
         "psm-feature-000": {
             "feature_id": "psm-feature-000",
-            "description": "Continue state+CMS information-gathering and iterative feedback (Research for, e.g., psm-FR-1.3, psm-FR-2.10, psm-FR-2.12, psm-FR-5.1)",
+            "description": "",
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": null,

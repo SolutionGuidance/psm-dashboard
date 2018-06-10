@@ -257,7 +257,7 @@ def main():
         subfeatures = []
         start_date = None
         completed_date = None
-        requirements = []
+        requirements = set()
         if len(row) > 0:
             if row[0].startswith("psm-feature-"):
                 feature_id = row[0]
@@ -265,21 +265,45 @@ def main():
                     sys.stderr.write("ERROR: Found feature '%s' twice."
                                      % feature_id)
                     sys.exit(1)
+                # Overview of this case: we're going to extract the
+                # parenthesized req ID lists (however many of them
+                # there are) from the description, resulting in two
+                # things: a description that isn't cluttered up with
+                # req IDs, and a separate list representing the
+                # union of all of this feature's req IDs.
                 description = row[1]
-                m = reqs_list_re.search(description)
-                if m is not None:
-                    lst = m.group(0)
-                    lst = lst.replace("(", "").replace(")", "").replace(" ", "")
-                    requirements = sorted(lst.split(","))
-                    # Lop the requirements parenthetical off the description.
-                    description = description[:m.start()] + description[m.end():]
-                    description = description.rstrip()
+                next_desc_head = description
+                unreqqed_desc = "" # description with reqs lists removed
+                m = reqs_list_re.search(next_desc_head)
+                while m is not None:
+                    next_index = m.start(0) + len(m.group(0))
+                    reqs_list = m.group(0)
+                    reqs_list = reqs_list.replace("(", "").replace(")", "").replace(" ", "")
+                    for req_id in reqs_list.split(","):
+                        requirements.add(req_id)
+                    # Remove this reqs list from the description.
+                    if unreqqed_desc == "":
+                        unreqqed_desc = next_desc_head[0:m.start(0)]
+                    else:
+                        prefix = unreqqed_desc
+                        suffix = next_desc_head[0:m.start(0)]
+                        # Replace any original separators with our own
+                        # consistent semicolon.
+                        if unreqqed_desc.endswith(" "):
+                            prefix = prefix[0:-1]
+                        if suffix.startswith(", "):
+                            suffix = suffix[2:]
+                        unreqqed_desc = prefix + "; " + suffix
+                    next_desc_head = next_desc_head[next_index:]
+                    m = reqs_list_re.search(next_desc_head)
+                unreqqed_desc = unreqqed_desc.strip()
+                description = unreqqed_desc
                 start_date = row[8] if len(row) > 8 else None
                 completed_date = row[9] if len(row) > 9 else None
                 this_feature = PSMFeature(feature_id, description, 
                                           subfeatures,
                                           start_date, completed_date, 
-                                          requirements)
+                                          sorted(requirements))
                 features[feature_id] = this_feature
             elif ((this_feature is not None)
                   and (row[0] == '')
