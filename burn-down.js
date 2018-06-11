@@ -226,6 +226,13 @@
 
     var barHeight = chartHeight / featuresArray.length;
 
+    var featureStartDate = function(feature) {
+      if (feature.startDate === null) {
+        return globalStartDate;
+      }
+      return new Date(feature.startDate);
+    }
+
     var barWidthNotStarted = function(feature) {
       var end = xScale(new Date(feature.startDate || todayString));
       var start = xScale(globalStartDate);
@@ -234,7 +241,7 @@
 
     var barWidthInProgress = function(feature) {
       var end = xScale(new Date(feature.completedDate || todayString));
-      var start = xScale(new Date(feature.startDate));
+      var start = xScale(featureStartDate(feature));
       return end - start;
     };
 
@@ -244,11 +251,12 @@
     };
 
     function barClass(d) {
-      var statusClass = {
-        NotStarted: " not-started",
-        InProgress: " in-progress",
-        Completed: " completed"
-      }[d.status];
+      var statusClass = " not-started";
+      if (d.startDate !== null) {
+        statusClass = " in-progress";
+      } else if (d.status === "Completed") {
+        statusClass = " completed";
+      }
       return "bar" + (statusClass || "");
     }
 
@@ -271,16 +279,12 @@
 
     chartG
       .selectAll(["rect.in-progress", "rect.completed"])
-      .data(
-        featuresArray.filter(function(f) {
-          return f.status !== "NotStarted";
-        })
-      )
+      .data(featuresArray)
       .enter()
       .append("rect")
       .attr("class", barClass)
       .attr("x", function(d) {
-        return xScale(new Date(d.startDate));
+        return xScale(featureStartDate(d));
       })
       .attr("width", barWidthInProgress)
       .attr("y", barY)
@@ -309,7 +313,8 @@
       .attr("y1", 0)
       .attr("y2", chartHeight + todayLineExtension)
       .attr("stroke-width", 2)
-      .attr("stroke", todayLineColor);
+      .attr("stroke", todayLineColor)
+      .style("pointer-events", "none");
 
     chartG
       .append("text")
