@@ -32,6 +32,7 @@
       d3.select(".container")
         .classed("show-feature-descriptions", descToggle.checked);
       renderCharts(data, d3);
+      pymChild.sendHeight();
     });
   });
 })(window.d3);
