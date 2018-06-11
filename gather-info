@@ -251,13 +251,14 @@ def main():
     features = {}
     this_feature = None
     reqs_list_re = re.compile("\((psm-[A-Z][A-Z]-[0-9]+\\.[0-9]+(,\\s*)?)+\)")
+    all_requirements = set()
     for row in features_sheet_values:
         feature_id = None
         description = None
         subfeatures = []
         start_date = None
         completed_date = None
-        requirements = set()
+        this_feature_reqs = set()
         if len(row) > 0:
             if row[0].startswith("psm-feature-"):
                 feature_id = row[0]
@@ -280,7 +281,8 @@ def main():
                     reqs_list = m.group(0)
                     reqs_list = reqs_list.replace("(", "").replace(")", "").replace(" ", "")
                     for req_id in reqs_list.split(","):
-                        requirements.add(req_id)
+                        this_feature_reqs.add(req_id)
+                        all_requirements.add(req_id)
                     # Remove this reqs list from the description.
                     if unreqqed_desc == "":
                         unreqqed_desc = next_desc_head[0:m.start(0)]
@@ -303,7 +305,7 @@ def main():
                 this_feature = PSMFeature(feature_id, description, 
                                           subfeatures,
                                           start_date, completed_date, 
-                                          sorted(requirements))
+                                          sorted(this_feature_reqs))
                 features[feature_id] = this_feature
             elif ((this_feature is not None)
                   and (row[0] == '')
@@ -318,6 +320,11 @@ def main():
         else:
             # Any empty row ends this feature
             this_feature = None
+
+    sys.stderr.write("\n")
+    sys.stderr.write("PROGRESS: Found %d features (with %d reqs across them)\n" 
+                     % (len(features), len(all_requirements)))
+    sys.stderr.write("\n")
 
     ##### Get PSM requirements from the prepared CSV file. #####
     #
