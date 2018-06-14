@@ -21,11 +21,12 @@ PSM's feature progress.
 Run the `refresh-dashboard` script in this directory.  It will tell
 you about any config preparation you need to make.  Once the
 configuration is properly set up, `refresh-dashboard` will produce
-`features-info.json` (you will see a lot of progress output along the
-way).
+`features-info.json`.  You will see a lot of progress output along the
+way.  For reference, the script seems to usually take 2-3 minutes to
+run, when your machine has a good Net connection.
 
-Once that output file is ready, visit `index.html` in your browser and
-make sure everything looks right.  If it does, commit and push the
+Once `features-info.json` is ready, visit `index.html` in your browser
+and make sure everything looks right.  If it does, commit and push the
 updated `features-info.json` to the `master` branch of the origin
 repository on GitHub.
 
