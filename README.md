@@ -19,10 +19,19 @@ PSM's feature progress.
 ## Quick Start Guide: How to Refresh the Live Dashboard
 
 Run the `refresh-dashboard` script in this directory.  It will tell
-you about any config preparation you need to make, and once the
-configuration is properly set up, it will produce `features-info.json`
-(you will see a lot of progress output along the way).  Once that
-output file is ready, visit `index.html` in your browser.
+you about any config preparation you need to make.  Once the
+configuration is properly set up, `refresh-dashboard` will produce
+`features-info.json` (you will see a lot of progress output along the
+way).
+
+Once that output file is ready, visit `index.html` in your browser and
+make sure everything looks right.  If it does, commit and push the
+updated `features-info.json` to the `master` branch of the origin
+repository on GitHub.
+
+Now visit http://projectpsm.org/dashboard to check that the live site
+is refreshed.  You may need to clear your browser's cache to see the
+updated version.
 
 ## Development guidelines
 
