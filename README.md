@@ -55,7 +55,7 @@ We're pretty loose here right now.  A few things:
 ## What's here.
 
 * `index.html`
-  Browser entry points to the dashboard.
+  Browser entry point to the dashboard.
 
 * `burn-down.js`, `dashboard.js`, `features-pie-chart.js`
   JavaScript code used by the dashboard pages.
