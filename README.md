@@ -62,8 +62,8 @@ We're pretty loose here right now.  A few things:
 
 * `refresh-dashboard`
    Script to orchestrate everything: gather and combine the
-   features/RTM mapping, requirements, and issue labels so as to
-   produce `refresh-dashboard.json`
+   features/RTM mapping, the requirements, and the issue labels so as
+   to produce `refresh-dashboard.json`.
 
 * `gather-info`
   Script that gathers data from various PSM project sources
