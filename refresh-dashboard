@@ -27,12 +27,26 @@ fi
 # file here in shell, using grep and friends to get the value.
 RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs": +//g' | sed -E 's/"//g' | sed -E 's/, *$//'`
 
+RTM_XLSX_DIR=`dirname "${RTM_XLSX}"`
+SAVED_CWD=`pwd`
+cd ${RTM_XLSX_DIR}
+RTM_XLSX_DIR_BRANCH=`git branch | grep '^* ' | cut -c3-`
+cd ${SAVED_CWD}
+if [ "${RTM_XLSX_DIR_BRANCH}" != "master" ]; then
+  echo "ERROR: PSM tree is not on 'master' branch"
+  echo ""
+  echo "Your PSM repository clone must be on the 'master' branch, so"
+  echo "that we get the right version of the requirements spreadsheet."
+  exit 1
+fi
+
 if [ ! -f "${RTM_XLSX}" ]; then
   echo "ERROR: can't find RTM.xlsx"
   echo ""
   echo "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'"
   echo "to point to the requirements/RTM.xlsx spreadsheet that lives in"
   echo "the PSM tree."
+  exit 1
 fi
 
 echo ""
