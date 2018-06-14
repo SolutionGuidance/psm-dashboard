@@ -66,11 +66,12 @@ We're pretty loose here right now.  A few things:
    to produce `refresh-dashboard.json`.
 
 * `gather-info`
-  Script that gathers data from various PSM project sources
+  This is the main script that `refresh-dashboard` drives.  This
+  script gathers information from various PSM project sources
   (high-level features list, requirements list, issue tracker) and
-  turns it into JSON which is then used as input to the dashboard
+  turns it into JSON, which is then used as input to the dashboard
   display code.  See the "Data format" section in this document for
-  details.
+  details about the JSON format.
 
 * `features-info.json`
   Input data for the dashboard display code.
