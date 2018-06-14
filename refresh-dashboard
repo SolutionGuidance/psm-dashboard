@@ -1,45 +1,11 @@
 #!/bin/sh
 
-if [ "`which xlsx2csv`"x = "x" ]; then
-  echo "ERROR: You need to have xlsx2csv installed."
-  echo "       You can do 'pip3 install xlsx2csv' or get it"
-  echo "       from https://github.com/dilshod/xlsx2csv."
-  # Some other choices for XLSX-to-CSV conversion are:
-  # 
-  #   - github.com/staale/py-xlsx
-  #   - github.com/leegao/pyXLSX
-  #   - https://bitbucket.org/ericgazoni/openpyxl/ 
-  # 
-  # (For that last one, note that BitBucket now apparently requires
-  # you to log in to access even public projects, so use the clone
-  # repository at https://github.com/ericgazoni/openpyxl instead.)
-  exit 1
-fi
-
 if [ ! -f psm-dashboard-config.json ]; then
   echo "ERROR: You have no 'psm-dashboard-config.json' file."
   echo "       Please copy 'psm-dashboard-config.json.tmpl' to"
   echo "       that name, edit as needed, and try again."
   exit 1
 fi
-
-# See issue #14.  Until that is resolved, we "parse" the JSON config
-# file here in shell, using grep and friends to get the value.
-RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs": +//g' | sed -E 's/"//g' | sed -E 's/, *$//'`
-
-if [ ! -f "${RTM_XLSX}" ]; then
-  echo "ERROR: can't find RTM.xlsx"
-  echo ""
-  echo "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'"
-  echo "to point to the requirements/RTM.xlsx spreadsheet that lives in"
-  echo "the PSM tree."
-fi
-
-echo ""
-echo "Converting requirements to CSV format..."
-xlsx2csv -s 0 "${RTM_XLSX}" > RTM.csv
-echo "Done."
-echo ""
 
 echo ""
 echo "Fetching and combining data (this can take a long time)..."

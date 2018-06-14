@@ -326,22 +326,8 @@ def main():
                      % (len(features), len(all_requirements)))
     sys.stderr.write("\n")
 
-    ##### Get PSM requirements from the prepared CSV file. #####
-    #
-    # TODO: This is a bit ugly.  The refresh-dashboard script
-    # grep-parses the psm-dashboard-config.json file to find out the
-    # location of RTM.xlsx, produces RTM.csv from that, and leaves
-    # RTM.cvs in the current directory for us to pick up.  That's a
-    # lot of non-explicit interdependency.  
-    #
-    # An alternative would be for this program to read the config
-    # parameter 'psm_reqs' and run xlsx2csv on RTM.xlsx itself.  We
-    # would then be justified in knowing where the resultant CSV is
-    # because we would have created it.  But I didn't want to deal
-    # with the hassle of doing the following in Python: checking for
-    # xlsx2csv, warning if it's not present, otherwise running it.
-    # That's all a lot easier in shell.  So, we live with the kluge.
-    reqs = psm_reqs.get_reqs("RTM.csv")
+    ##### Get PSM requirements from the config XLSX file. #####
+    reqs = psm_reqs.get_reqs(config['psm_reqs'])
 
     ##### Get the issue<->req mapping from GitHub. #####
     github_owner_name = config['github_owner']
