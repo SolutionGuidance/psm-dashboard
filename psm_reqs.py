@@ -21,8 +21,11 @@
 __doc__ = """Module for working with PSM requirements."""
 
 import csv
+import os
 import re
+from io import StringIO
 from warnings import warn
+from xlsx2csv import Xlsx2csv
 
 _req_id_re = re.compile("psm-([A-Z][A-Z])-([0-9.]+)")
 
@@ -146,65 +149,77 @@ def family_from_header(hdr):
         warn("         \"%s\"" % hdr)
 
 
-def get_reqs(csv_file):
-    """Return a dictionary of PSMRequirements based on CSV_FILE.
+def get_reqs(xlsx_file):
+    """Return a dictionary of PSMRequirements based on XSLX_FILE.
     Return a dict mapping PSM req IDs to PSMRequirement instances."""
     reqs = {}
     families_seen = set()
-    with open(csv_file) as csv_fh:
-        csv_reader = csv.reader(csv_fh)
-        current_family = None # two-letter req family code, e.g, "FR", etc
-        current_category = None
-        for row in csv_reader:
-            if (len(row) == 1 
-                and row[0].startswith("-------- ")): # family row
-                current_family = family_from_header(row[0])
-                if current_family in families_seen:
-                    raise PSMRequirementFamilyException(
-                        "ERROR: encountered family '%s' more than once" 
-                        % current_family)
-                elif current_family is not None:
-                    families_seen.add(current_family)
-            elif (len(row) > 1 
-                  and row[0] == "" 
-                  and row[1] != ""): # category row
-                if current_family is not None:
-                    current_category = current_family + " " + row[1]
-                else:
-                    current_category = None
-            elif (len(row) >= 11
-                  and current_family is not None
-                  and row[0] != ""
-                  and _req_id_re.match(row[0]) is not None): # req row
-                if current_family is None:
-                    warn("WARNING: got req \"%s \" while no family active"
-                         % row[0])
-                if current_category is not None:
-                    row[1] = current_category
-                else:
-                    warn("WARNING: requirement '%s' has no category" 
-                         % (row[0]))
-                req = PSMRequirement(current_family, *row)
-                if req.req_id in reqs:
-                    # Can't happen, but let's be extra careful.
-                    raise PSMRequirementException(
-                        "ERROR: encountered req '%s' more than once" 
-                        % req.req_id)
-                reqs[req.req_id] = req
-            elif (len(row) >= 11
-                  and row[0]  == 'Requirement ID Number'
-                  and row[1]  == 'Requirement Category'
-                  and row[2]  == 'Requirement Statement'
-                  and row[3]  == 'Priority'
-                  and row[4]  == 'Rank'
-                  and row[5]  == 'Source'
-                  and row[6]  == 'Source Document'
-                  and row[7]  == 'Release'
-                  and row[8]  == 'Design Reference'
-                  and row[9]  == 'Acceptance Test Reference'
-                  and row[10] == 'Comment'):
-                pass # skip CSV header rows
+
+    if not os.path.exists(xlsx_file):
+        raise ValueError(
+            "ERROR: can't find {}\n"
+            "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json' "
+            "to point to the requirements/RTM.xlsx spreadsheet that lives in "
+            "the PSM tree.".format(xlsx_file)
+        )
+
+    csv_fh = StringIO()
+    Xlsx2csv(xlsx_file).convert(csv_fh, sheetid=0)
+    csv_fh.seek(0)
+
+    csv_reader = csv.reader(csv_fh)
+    current_family = None # two-letter req family code, e.g, "FR", etc
+    current_category = None
+    for row in csv_reader:
+        if (len(row) == 1
+            and row[0].startswith("-------- ")): # family row
+            current_family = family_from_header(row[0])
+            if current_family in families_seen:
+                raise PSMRequirementFamilyException(
+                    "ERROR: encountered family '%s' more than once" 
+                    % current_family)
             elif current_family is not None:
-                warn("WARNING: not really sure what this row is:")
-                warn("         %s" % row)
+                families_seen.add(current_family)
+        elif (len(row) > 1 
+                and row[0] == "" 
+                and row[1] != ""): # category row
+            if current_family is not None:
+                current_category = current_family + " " + row[1]
+            else:
+                current_category = None
+        elif (len(row) >= 11
+                and current_family is not None
+                and row[0] != ""
+                and _req_id_re.match(row[0]) is not None): # req row
+            if current_family is None:
+                warn("WARNING: got req \"%s \" while no family active"
+                        % row[0])
+            if current_category is not None:
+                row[1] = current_category
+            else:
+                warn("WARNING: requirement '%s' has no category" 
+                        % (row[0]))
+            req = PSMRequirement(current_family, *row)
+            if req.req_id in reqs:
+                # Can't happen, but let's be extra careful.
+                raise PSMRequirementException(
+                    "ERROR: encountered req '%s' more than once" 
+                    % req.req_id)
+            reqs[req.req_id] = req
+        elif (len(row) >= 11
+                and row[0]  == 'Requirement ID Number'
+                and row[1]  == 'Requirement Category'
+                and row[2]  == 'Requirement Statement'
+                and row[3]  == 'Priority'
+                and row[4]  == 'Rank'
+                and row[5]  == 'Source'
+                and row[6]  == 'Source Document'
+                and row[7]  == 'Release'
+                and row[8]  == 'Design Reference'
+                and row[9]  == 'Acceptance Test Reference'
+                and row[10] == 'Comment'):
+            pass # skip CSV header rows
+        elif current_family is not None:
+            warn("WARNING: not really sure what this row is:")
+            warn("         %s" % row)
     return reqs
