@@ -151,7 +151,7 @@ This is the JSON data input format that the dashboard expects:
       "features": {
         "psm-feature-000": {
           "description": String,
-          "status": String ["Complete", "InProgress", "NotStarted"],
+          "status": String ["Complete", "InProgress", "NotStarted", "Ongoing"],
           "startDate": String[Date] or null,
           "completedDate": String[Date] or null,
           "requirements": [
@@ -169,7 +169,7 @@ This is the JSON data input format that the dashboard expects:
       "requirements": {
         "psm-FR-8.2": {
           "description": String,
-          "status": String ["Complete", "InProgress", "NotStarted"],
+          "status": String ["Complete", "InProgress", "NotStarted", "Ongoing"],
           "startDate": String[Date] or null,
           "completedDate": String[Date] or null,
           "issues": [
@@ -191,7 +191,7 @@ This is the JSON data input format that the dashboard expects:
           "title": String,
           "description": String,
           "url": String,
-          "status": String ["Complete", "InProgress", "NotStarted"],
+          "status": String ["Complete", "InProgress", "NotStarted", "Ongoing"],
           "startDate": String[Date] or null,
           "completedDate": String[Date] or null,
         },
