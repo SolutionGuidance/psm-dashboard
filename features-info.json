@@ -113,7 +113,7 @@
             ],
             "startDate": "2017-06-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-FR-3.14",
@@ -134,7 +134,7 @@
             ],
             "startDate": "2018-02-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-9.4",
                 "psm-FR-9.5",
@@ -149,7 +149,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-2.3",
                 "psm-FR-7.14"
@@ -174,7 +174,7 @@
             ],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-1.1",
                 "psm-AD-1.3",
@@ -199,7 +199,7 @@
             ],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-1.2",
                 "psm-AD-1.3",
@@ -219,7 +219,7 @@
             ],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-4.7",
                 "psm-FR-7.3"
@@ -231,7 +231,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-IA-2.2"
             ]
@@ -242,7 +242,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-3.11",
                 "psm-FR-4.7",
@@ -256,7 +256,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-7.14"
             ]
@@ -273,7 +273,7 @@
             ],
             "startDate": "2018-07-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.16",
                 "psm-FR-3.11",
@@ -288,7 +288,7 @@
             "subfeatures": [],
             "startDate": "2018-07-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.14",
                 "psm-AD-5.3",
@@ -306,7 +306,7 @@
             ],
             "startDate": "2017-04-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-1.4",
                 "psm-AD-5.1",
@@ -331,7 +331,7 @@
             "subfeatures": [],
             "startDate": "2018-07-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.5",
                 "psm-FR-3.4",
@@ -352,7 +352,7 @@
             ],
             "startDate": "2018-07-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.5",
                 "psm-FR-2.18",
@@ -376,7 +376,7 @@
             ],
             "startDate": "2018-07-01",
             "completedDate": "2018-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.12",
                 "psm-FR-2.2",
@@ -397,7 +397,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-6.1",
                 "psm-IA-3.2"
@@ -414,7 +414,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-IA-3.5"
@@ -433,7 +433,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.8",
                 "psm-AD-5.9",
@@ -455,7 +455,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.9",
                 "psm-FR-6.8",
@@ -472,7 +472,7 @@
             "subfeatures": [],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-7.12",
                 "psm-II-4.5"
@@ -484,7 +484,7 @@
             "subfeatures": [],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.3"
             ]
@@ -498,7 +498,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.14",
                 "psm-FR-7.13",
@@ -517,7 +517,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.18",
                 "psm-FR-2.19",
@@ -535,7 +535,7 @@
             "subfeatures": [],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.10",
                 "psm-FR-3.10",
@@ -559,7 +559,7 @@
             ],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.6",
                 "psm-FR-3.8",
@@ -578,7 +578,7 @@
             ],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-4.1",
                 "psm-AD-4.2",
@@ -602,7 +602,7 @@
             ],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.25"
             ]
@@ -627,7 +627,7 @@
             ],
             "startDate": "2017-08-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-9.1",
                 "psm-IU-3.1",
@@ -642,7 +642,7 @@
             "subfeatures": [],
             "startDate": "2017-10-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-2.1",
                 "psm-AD-2.4",
@@ -655,7 +655,7 @@
             "subfeatures": [],
             "startDate": "2017-06-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-SQ-1.1",
                 "psm-SQ-1.5"
@@ -667,7 +667,7 @@
             "subfeatures": [],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-10.1",
                 "psm-FR-2.7",
@@ -688,7 +688,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.17",
                 "psm-FR-2.7",
@@ -701,7 +701,7 @@
             "subfeatures": [],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.8",
                 "psm-FR-3.1",
@@ -727,7 +727,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.1",
                 "psm-FR-2.11",
@@ -754,7 +754,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-5.2",
                 "psm-FR-5.3",
@@ -778,7 +778,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.3",
                 "psm-FR-2.10",
@@ -791,7 +791,7 @@
             "subfeatures": [],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.2",
                 "psm-SC-1.1"
@@ -811,7 +811,7 @@
             ],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-FR-3.14",
@@ -827,7 +827,7 @@
             "subfeatures": [],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-4.6"
             ]
@@ -844,7 +844,7 @@
             ],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.3",
                 "psm-FR-3.3",
@@ -857,7 +857,7 @@
             "subfeatures": [],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-5.1"
             ]
@@ -872,7 +872,7 @@
             ],
             "startDate": "2017-10-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-IA-2.1",
                 "psm-SC-4.5",
@@ -891,7 +891,7 @@
             ],
             "startDate": "2018-02-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-FR-9.5",
                 "psm-IA-1.1",
@@ -914,7 +914,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-SQ-1.3"
             ]
@@ -925,7 +925,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-AD-2.5",
                 "psm-II-4.3",
@@ -939,7 +939,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-FR-4.5",
                 "psm-IA-1.2",
@@ -952,7 +952,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": []
         },
         "psm-feature-002": {
@@ -961,7 +961,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-FR-7.15",
                 "psm-FR-7.2"
@@ -973,7 +973,7 @@
             "subfeatures": [],
             "startDate": "2018-01-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-FR-7.1"
             ]
@@ -984,7 +984,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-FR-9.5",
                 "psm-IA-3.9",
@@ -1009,7 +1009,7 @@
             ],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "Ongoing",
             "requirements": [
                 "psm-FR-3.15",
                 "psm-FR-3.17",
@@ -5400,6 +5400,115 @@
         }
     },
     "issues": {
+        "889": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 889,
+            "url": "https://github.com/solutionguidance/psm/issues/889",
+            "title": "Expand DMF checks to all ssns within an enrollment",
+            "description": "For organizations, there may be zero or more people with socials in the object tree, and the DMF check needs to be expanded to each one of those.\r\n\r\nThis is an extension for #759 ",
+            "status": "NotStarted",
+            "startDate": "2018-06-21",
+            "completedDate": null,
+            "labels": [
+                "next"
+            ]
+        },
+        "886": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 886,
+            "url": "https://github.com/solutionguidance/psm/issues/886",
+            "title": "Enrollment list jsps are substantially identical",
+            "description": "In admin, the following jsps have very few differences:\r\n\r\n* service_agent_enrollments_approved.jsp\r\n* service_agent_enrollments_draft.jsp\r\n* service_agent_enrollments_notes.jsp (a few more additions)\r\n* service_agent_enrollments_pending.jsp\r\n* service_agent_enrollments_rejected.jsp\r\n\r\nThis should be consolidated for all the normal DRY reasons, but also because integration tests will be similarly bloated to match if we don't consolidate.",
+            "status": "NotStarted",
+            "startDate": "2018-06-20",
+            "completedDate": null,
+            "labels": [
+                "tech-debt"
+            ]
+        },
+        "885": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 885,
+            "url": "https://github.com/solutionguidance/psm/issues/885",
+            "title": "Split External Data Sources To It's Own Repo",
+            "description": "We need external data sources to live on it's own and be its own process and stack.",
+            "status": "NotStarted",
+            "startDate": "2018-06-20",
+            "completedDate": null,
+            "labels": [
+                "next"
+            ]
+        },
+        "881": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 881,
+            "url": "https://github.com/solutionguidance/psm/issues/881",
+            "title": "FHIR API returns 404 when no value for EFT accepted",
+            "description": "The FHIR enrollment search API (at `/fhir/Task/`) is failing a 404. Examining the server log reveals a stack trace ending with a null pointer exception at [`EnrollmentAcceptsEftToFhir#isEftAccepted`](https://github.com/SolutionGuidance/psm/blob/cd6cd388a67d55a40d6c22c688de88441d12dcbe/psm-app/cms-web/src/main/java/gov/medicaid/api/transformers/EnrollmentAcceptsEftToFhir.java#L34):\r\n\r\n<details>\r\n  <summary>Stack trace</summary>\r\n\r\n```\r\n16:03:17,541 ERROR [ca.uhn.fhir.rest.server.interceptor.ExceptionHandlingInterceptor] (default task-16) Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InternalErrorException: Failed to call access method\r\n\tat ca.uhn.fhir.rest.server.method.BaseMethodBinding.invokeServerMethod(BaseMethodBinding.java:253)\r\n\tat ca.uhn.fhir.rest.server.method.SearchMethodBinding.invokeServer(SearchMethodBinding.java:263)\r\n\tat ca.uhn.fhir.rest.server.method.SearchMethodBinding.invokeServer(SearchMethodBinding.java:50)\r\n\tat ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.doInvokeServer(BaseResourceReturningMethodBinding.java:157)\r\n\tat ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:136)\r\n\tat ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:858)\r\n\tat ca.uhn.fhir.rest.server.RestfulServer.doGet(RestfulServer.java:1453)\r\n\tat ca.uhn.fhir.rest.server.RestfulServer.service(RestfulServer.java:1429)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\r\n\tat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:150)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:122)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\r\n\tat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\r\n\tat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)\r\n\tat io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)\r\n\tat io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)\r\n\tat io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)\r\n\tat io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)\r\n\tat io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)\r\n\tat io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)\r\n\tat io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)\r\n\tat io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextThreadSetupAction.lambda$create$0(SecurityContextThreadSetupAction.java:105)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)\r\n\tat io.undertow.server.Connectors.executeRootHandler(Connectors.java:326)\r\n\tat io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:812)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat ca.uhn.fhir.rest.server.method.BaseMethodBinding.invokeServerMethod(BaseMethodBinding.java:248)\r\n\t... 90 more\r\nCaused by: java.lang.NullPointerException\r\n\tat gov.medicaid.api.transformers.EnrollmentAcceptsEftToFhir.isEftAccepted(EnrollmentAcceptsEftToFhir.java:34)\r\n\tat gov.medicaid.api.transformers.EnrollmentAcceptsEftToFhir.apply(EnrollmentAcceptsEftToFhir.java:18)\r\n\tat gov.medicaid.api.transformers.EnrollmentToFhir.apply(EnrollmentToFhir.java:31)\r\n\tat gov.medicaid.api.TaskResourceProvider.enrollmentIdToTask(TaskResourceProvider.java:114)\r\n\tat gov.medicaid.api.TaskResourceProvider.lambda$search$0(TaskResourceProvider.java:70)\r\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\r\n\tat java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)\r\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)\r\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\r\n\tat java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)\r\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)\r\n\tat gov.medicaid.api.TaskResourceProvider.search(TaskResourceProvider.java:71)\r\n\t... 95 more\r\n```\r\n</details>",
+            "status": "Completed",
+            "startDate": "2018-06-18",
+            "completedDate": "2018-06-21",
+            "labels": [
+                "backend",
+                "bug"
+            ]
+        },
+        "880": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 880,
+            "url": "https://github.com/solutionguidance/psm/issues/880",
+            "title": "Add creation of gradle.properties file to INSTALL.md",
+            "description": "Section: Build and deploy the application, Step 4 creates database schema and initial data. Step 4 is missing a dependency: creation of gradle.properties file. The gradle.properties file must contain the psm postgesql credentials and jdbc database path.\r\n\r\nThe recommended addition should be located just above:\r\n~~~ \r\n> ./gradlew db:update\r\n~~~\r\nRecommended addition:\r\n\r\nCreate gradle.properties file:\r\n$ cp {/path/to/psm}/psm-app/gradle.properties.template  gradle.properties\r\n\r\nUpdate the gradle.properties file. Replace UNAME the psm database user name, PWORD with psm database user password.\r\n~~~\r\nsystemProp.databaseUser=UNAME\r\nsystemProp.databasePassword=PWORD\r\nsystemProp.databasePath=jdbc:postgresql:psm\r\n~~~",
+            "status": "Completed",
+            "startDate": "2018-06-18",
+            "completedDate": "2018-06-18",
+            "labels": []
+        },
+        "879": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 879,
+            "url": "https://github.com/solutionguidance/psm/issues/879",
+            "title": "Requirements Gathering - How should organizations be screened",
+            "description": "This came up when having a discussion about the Death Master File.  There are potentially multiple people in an organization, and we run a check on each one of them to ensure that the social used doesn't belong to the deceased.  However, this may not be in line with how the users view organizations who are applying for enrollment.\r\n\r\nSo a question needs to be put forth to our business partners as how organizations work with regard to the PSM, and what are the differing requirements for screening.",
+            "status": "NotStarted",
+            "startDate": "2018-06-18",
+            "completedDate": null,
+            "labels": [
+                "state-question"
+            ]
+        },
+        "878": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 878,
+            "url": "https://github.com/solutionguidance/psm/issues/878",
+            "title": "Integration Tests need siloed database for testing",
+            "description": "This came up in a recent conversation regarding external sources.  There may be regressions for enrollments that depend on the LEIE or DMF.  Because we may not boot these up when doing integration testing (on CI, for instance), and the overhead of adding test versions of these services may not be worth the cost, we still need a way to ensure that the application is regression proof on some of the pages depending on information that these services return.  A quick way to ensure this happens is to put the database into a state with seed data equivalent to the different response types these external services may return.\r\n\r\nHowever, as we build out test database data, it continues to pollute development databases, and may run into errors from other, older development data (and in the future, from database population from production needed to debug errors).  A solution would be to load up a secondary test database when running integration tests that can be torn down after.\r\n\r\nMost likely there is no need to have a setup/teardown mid integration tests.",
+            "status": "NotStarted",
+            "startDate": "2018-06-18",
+            "completedDate": null,
+            "labels": [
+                "tech-debt"
+            ]
+        },
+        "875": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 875,
+            "url": "https://github.com/solutionguidance/psm/issues/875",
+            "title": "Reviewer clicking \"approve\" does not always approve enrollment",
+            "description": "As a state reviewer, when I click on the \"Approve\" button on the review page for an enrollment application, I expect either an immediate error or for the enrollment application to be approved.\r\n\r\nInstead, sometimes, the enrollment is not approved, and is confusingly left in a pending state without giving any feedback.\r\n\r\n---\r\n\r\nPart of the cause of this problem is the way the Drools rules are integrated. Clicking \"approve\" causes the screening rules to be re-run, and if they all pass, the enrollment application is approved; if any of them fail, the application is silently left in a pending state.\r\n\r\nSee also issue #354, which relates to how automatic screenings are related, and issue #572, which relates to the Drools rules being run (and mentions this problem as a parenthetical).",
+            "status": "NotStarted",
+            "startDate": "2018-06-15",
+            "completedDate": null,
+            "labels": []
+        },
         "863": {
             "owner": "solutionguidance",
             "repos": "psm",
@@ -8263,9 +8372,9 @@
             "completedDate": null,
             "labels": [
                 "Z-REQ-PSM-SQ-1.3",
+                "in progress",
                 "infra",
-                "task",
-                "up-next"
+                "task"
             ]
         },
         "381": {
@@ -10180,9 +10289,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/155",
             "title": "Tell user to add \"a\" (first), not \"another\" license/certification",
             "description": "When a provider is performing a new enrollment, in step 2 (license info), the link to add a first license/certification should say \"+ Add a License/Certification\", not \"+ Add Another License/Certification\".",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-16",
-            "completedDate": null,
+            "completedDate": "2018-06-18",
             "labels": [
                 "Z-REQ-PSM-FR-7.1",
                 "Z-REQ-PSM-FR-7.14",

@@ -165,12 +165,25 @@
         return feature;
       })
       .sort(function(a, b) {
-        if (a.status === b.status) {
+        var progressStatuses = ["InProgress", "NotStarted"];
+        // InProgress and NotStarted should be compared by dates
+        // because of the projected dates in the future
+        if (
+          a.status === b.status ||
+          (
+            progressStatuses.indexOf(a.status) > -1 &&
+            progressStatuses.indexOf(b.status) > -1
+          )
+        ) {
           if (a.completedDate === b.completedDate) {
             return a.startDate > b.startDate ? 1 : -1;
           } else {
             return a.completedDate > b.completedDate ? 1 : -1;
           }
+        } else if (a.status === "Ongoing") {
+          return 1;
+        } else if (b.status === "Ongoing") {
+          return -1;
         } else if (a.status === "NotStarted") {
           return 1;
         } else if (b.status === "NotStarted") {
@@ -252,10 +265,12 @@
 
     function barClass(d) {
       var statusClass = " not-started";
-      if (d.startDate !== null) {
-        statusClass = " in-progress";
+      if (d.status === "Ongoing") {
+        statusClass = " ongoing";
       } else if (d.status === "Completed") {
         statusClass = " completed";
+      } else if (d.status === "InProgress" ||  d.startDate !== null) {
+        statusClass = " in-progress";
       }
       return "bar" + (statusClass || "");
     }
@@ -278,7 +293,7 @@
       .attr("height", barHeight);
 
     chartG
-      .selectAll(["rect.in-progress", "rect.completed"])
+      .selectAll(["rect.in-progress", "rect.completed", "rect.ongoing"])
       .data(featuresArray)
       .enter()
       .append("rect")
@@ -393,7 +408,7 @@
     }
 
     chartG
-      .selectAll(["rect.completed", "rect.in-progress", "rect.not-started"])
+      .selectAll(["rect.completed", "rect.in-progress", "rect.not-started", "rect.ongoing"])
       .on("mouseover", function(d) {
         tooltip.select(".tooltipDescription").html(d.description);
         tooltip.select(".tooltipRequirements").html(d.requirements.join(", "));
