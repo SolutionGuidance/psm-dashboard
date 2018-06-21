@@ -79,11 +79,12 @@ import github.GithubException
 class PSMFeature:
     """Class representing one PSM high-level feature."""
     def __init__(self, feature_id, description, subfeatures, 
-                 start_date, completed_date, requirements):
+                 status, start_date, completed_date, requirements):
         """Create a new feature named .
         FEATURE_ID (string): The identifying name for this feature.
         DESCRIPTION (string): Description of this feature.
         SUBFEATURES (list of strings): Subfeature descriptions.
+        STATUS (string or None): Status as specified in the source.
         START_DATE (string): ISO-8601 date (YYYY-MM-DD HH:MM:SS) or None
         COMPLETED_DATE (string): ISO-8601 date (YYYY-MM-DD HH:MM:SS) or None
         REQUIREMENTS (list of strings): List of requirement IDs."""
@@ -98,12 +99,15 @@ class PSMFeature:
         # but since the spec requests "camelCase", we do that instead.
         self.startDate = start_date
         self.completedDate = completed_date
-        self.status = "NotStarted"
-        if self.startDate is not None:
-            if self.completedDate is None:
-                self.status = "InProgress"
-            else:
-                self.status = "Completed"
+        if status is None:
+            self.status = "NotStarted"
+            if self.startDate is not None:
+                if self.completedDate is None:
+                    self.status = "InProgress"
+                else:
+                    self.status = "Completed"
+        else:
+            self.status = clean_status(status)
         self.requirements = requirements
     def __str__(self):
         return """\
@@ -111,12 +115,14 @@ class PSMFeature:
           ID:             "%s"
           Description:    "%s"
           Subfeatures:    "%s"
+          Status:         "%s"
           Start date:     "%s"
           Completed date: "%s"
           Requirements:   "%s"\n""" \
               % (self.feature_id.replace('"', '\\"'),
                  self.description.replace('"', '\\"'),
                  [sub.replace('"', '\\"') for sub in self.subfeatures],
+                 self.status,
                  self.startDate,
                  self.completedDate,
                  [req_id for req_id in self.requirements])
@@ -182,6 +188,21 @@ class PSMIssue:
 #
 # The class 'PSMRequirement' is defined in the psm_reqs.py module
 # already.  We obtain instances of it from psm_reqs.get_reqs().
+
+
+def clean_status(status):
+    """
+    Standardize status string to one of 'Completed', 'InProgress',
+    'NotStarted', 'Ongoing'
+    """
+    # Clean up one of the following values, otherwise return the
+    # current status string
+    status_map = {
+        "Complete": "Completed",
+        "In Progress": "InProgress",
+        "Not Started": "NotStarted"
+    }
+    return status_map.get(status, status)
 
 
 def to_dict(obj):
@@ -256,6 +277,7 @@ def main():
         feature_id = None
         description = None
         subfeatures = []
+        status = None
         start_date = None
         completed_date = None
         this_feature_reqs = set()
@@ -300,10 +322,11 @@ def main():
                     m = reqs_list_re.search(next_desc_head)
                 unreqqed_desc = unreqqed_desc.strip()
                 description = unreqqed_desc
+                status = row[7] if len(row) > 7 else None
                 start_date = row[8] if len(row) > 8 else None
                 completed_date = row[9] if len(row) > 9 else None
                 this_feature = PSMFeature(feature_id, description, 
-                                          subfeatures,
+                                          subfeatures, status,
                                           start_date, completed_date, 
                                           sorted(this_feature_reqs))
                 features[feature_id] = this_feature
