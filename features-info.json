@@ -948,7 +948,7 @@
         },
         "psm-feature-000": {
             "feature_id": "psm-feature-000",
-            "description": "",
+            "description": "Continue state+CMS information-gathering and iterative feedback (Research for, e.g., psm-FR-1.3, psm-FR-2.10, psm-FR-2.12, psm-FR-5.1)",
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2019-09-30",

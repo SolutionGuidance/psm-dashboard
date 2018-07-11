@@ -299,7 +299,8 @@ def main():
                     next_desc_head = next_desc_head[next_index:]
                     m = reqs_list_re.search(next_desc_head)
                 unreqqed_desc = unreqqed_desc.strip()
-                description = unreqqed_desc
+                if unreqqed_desc != "":
+                    description = unreqqed_desc
                 start_date = row[8] if len(row) > 8 else None
                 completed_date = row[9] if len(row) > 9 else None
                 this_feature = PSMFeature(feature_id, description, 
