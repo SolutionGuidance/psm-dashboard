@@ -1,59 +1,7 @@
 #!/bin/sh
 
-if [ "`which xlsx2csv`"x = "x" ]; then
-  echo "ERROR: You need to have xlsx2csv installed."
-  echo "       You can do 'pip3 install xlsx2csv' or get it"
-  echo "       from https://github.com/dilshod/xlsx2csv."
-  # Some other choices for XLSX-to-CSV conversion are:
-  # 
-  #   - github.com/staale/py-xlsx
-  #   - github.com/leegao/pyXLSX
-  #   - https://bitbucket.org/ericgazoni/openpyxl/ 
-  # 
-  # (For that last one, note that BitBucket now apparently requires
-  # you to log in to access even public projects, so use the clone
-  # repository at https://github.com/ericgazoni/openpyxl instead.)
-  exit 1
-fi
-
-if [ ! -f psm-dashboard-config.json ]; then
-  echo "ERROR: You have no 'psm-dashboard-config.json' file."
-  echo "       Please copy 'psm-dashboard-config.json.tmpl' to"
-  echo "       that name, edit as needed, and try again."
-  exit 1
-fi
-
-# See issue #14.  Until that is resolved, we "parse" the JSON config
-# file here in shell, using grep and friends to get the value.
-RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs": +//g' | sed -E 's/"//g' | sed -E 's/, *$//'`
-
-RTM_XLSX_DIR=`dirname "${RTM_XLSX}"`
-SAVED_CWD=`pwd`
-cd ${RTM_XLSX_DIR}
-RTM_XLSX_DIR_BRANCH=`git branch | grep '^* ' | cut -c3-`
-cd ${SAVED_CWD}
-if [ "${RTM_XLSX_DIR_BRANCH}" != "master" ]; then
-  echo "ERROR: PSM tree is not on 'master' branch"
-  echo ""
-  echo "Your PSM repository clone must be on the 'master' branch, so"
-  echo "that we get the right version of the requirements spreadsheet."
-  exit 1
-fi
-
-if [ ! -f "${RTM_XLSX}" ]; then
-  echo "ERROR: can't find RTM.xlsx"
-  echo ""
-  echo "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'"
-  echo "to point to the requirements/RTM.xlsx spreadsheet that lives in"
-  echo "the PSM tree."
-  exit 1
-fi
-
-echo ""
-echo "Converting requirements to CSV format..."
-xlsx2csv -s 0 "${RTM_XLSX}" > RTM.csv
-echo "Done."
-echo ""
+# ./gather-info expects to find the CSV-formatted reqs in RTM.csv.
+./reqs2csv > RTM.csv
 
 echo ""
 echo "Fetching and combining data (this can take a long time)..."
@@ -66,11 +14,11 @@ echo "Results placed in 'features-info.json'."
 
 # You could view the reqs by running this any time:
 #
-#   $ ./reqs2any --output=human RTM.csv
+#   $ ./format-reqs --output=human RTM.csv
 #
 # If you need to load them into Emacs (with `psm-load-reqs' 
 # from psm-reqs.el), then do something like this:
 #
-#   $ ./reqs2any --output=elisp RTM.csv > RTM.el
+#   $ ./format-reqs --output=elisp RTM.csv > RTM.el
 #
 # Then you can invoke `psm-load-reqs' on RTM.el.

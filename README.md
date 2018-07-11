@@ -81,11 +81,14 @@ We're pretty loose here right now.  A few things:
   practice: it's rather expensive to generate, so once we have a new
   version we like to keep it until the next time we regenerate.
 
-* `psm-reqs.el`, `psm_reqs.py`, `show-reqs`
-  Helper code for handling PSM reqs.
+* `reqs2csv`
+  Script to convert requirements from Excel (.xlsx) format to CSV.
 
-* `reqs2any`
+* `format-reqs`
    Parse PSM reqs from a CSV file and display them in various ways.
+
+* `psm-reqs.py`, `psm_reqs.el`, `show-reqs`
+  Helper code for handling PSM reqs.
 
 * `non-hidden-RTM-rows.org`
   An initial export of PSM requirements to Org Mode format (done manually,

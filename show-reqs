@@ -11,7 +11,8 @@ if [ "${OUTPUT_FORMAT}" = "elisp" ]; then
   echo "("
 fi
 
-./reqs2any --output="${OUTPUT_FORMAT}" csv-exports/all.csv
+./reqs2csv > RTM.csv
+./format-reqs --output="${OUTPUT_FORMAT}" RTM.csv
 
 if [ "${OUTPUT_FORMAT}" = "elisp" ]; then 
   echo ")"
