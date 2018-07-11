@@ -272,7 +272,7 @@
                 "Separate this into a management module"
             ],
             "startDate": "2018-07-01",
-            "completedDate": "2018-09-30",
+            "completedDate": "2018-08-31",
             "status": "Completed",
             "requirements": [
                 "psm-FR-2.16",
@@ -375,7 +375,7 @@
                 "Allow provider to assign billing rights to another provider"
             ],
             "startDate": "2018-07-01",
-            "completedDate": "2018-09-30",
+            "completedDate": "2018-08-31",
             "status": "Completed",
             "requirements": [
                 "psm-FR-2.12",
@@ -1436,7 +1436,8 @@
             "acceptance_test_ref": "",
             "comment": "Will all individual's names include generation (Jr., III, etc.) Currently we don't have a separate field for generation indication, but could use the last name field.",
             "issues": [
-                695
+                695,
+                934
             ],
             "startDate": null,
             "completedDate": null,
@@ -2153,7 +2154,8 @@
                 412,
                 416,
                 564,
-                620
+                620,
+                949
             ],
             "startDate": null,
             "completedDate": null,
@@ -2875,7 +2877,9 @@
             "design_ref": "",
             "acceptance_test_ref": "",
             "comment": "",
-            "issues": [],
+            "issues": [
+                934
+            ],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted"
@@ -4192,7 +4196,8 @@
                 496,
                 612,
                 618,
-                691
+                691,
+                934
             ],
             "startDate": null,
             "completedDate": null,
@@ -5400,6 +5405,444 @@
         }
     },
     "issues": {
+        "953": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 953,
+            "url": "https://github.com/solutionguidance/psm/issues/953",
+            "title": "Support individual providers and group practices",
+            "description": "There are three basic types of user who might submit an enrollment application:\r\n\r\n1. An individual provider who practices on their own.\r\n2. A person representing a group practice submitting an application for the group.\r\n3. A person representing an individual provider within a group practice.\r\n\r\nPSM needs to support relationships between individual providers and group practice.  In order to do this, PSM needs to updated in the following ways:\r\n\r\n- [ ] Update the schema / data representation to support the relationships and minimize redundant / denormalized data.\r\n- [ ] Update user interfaces to correctly render that data in reporting and data summary views.\r\n- [ ] Update the application flow to effectively collect information about group practices / individuals.\r\n\r\nDifferent states may have different rules for this relationship (e.g. one state may require that every member of a group practice have their own enrollment, while another state may allow practitioners to use the enrollment of the group.)",
+            "status": "NotStarted",
+            "startDate": "2018-07-11",
+            "completedDate": null,
+            "labels": []
+        },
+        "952": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 952,
+            "url": "https://github.com/solutionguidance/psm/issues/952",
+            "title": "Convey feedback from reviewers and auto-screenings to providers",
+            "description": "Feedback provided by reviewers (#950) and auto-screenings (#951) on non-approved applications should be conveyed to providers so they can edit and resubmit them (#949).  \r\n\r\nAt minimum the feedback can be a simple listing of problems or fields that need to be edited.  This could be emailed to the provider, and displayed when they view their denied application in the PSM.  It may include a free-form note from a reviewer.\r\n\r\nA more ambitious goal would be to highlight the specific fields that need editing in the UI, and guide the user through them.  This is complicated due to the branching logic in the enrollment steps. For example, a provider may make a change that removes part of the application that contained problematic data that needed to be edited.\r\n\r\nFor internal auditing purposes, keep a record of the edits a provider makes to an application.  Basically, the goal is to keep a record of what is submitted and what actions are taken on it.  The provider does not need to have access to this history of edits, but generally only sees and works with the current version of their application(s), which they edit and resubmit as needed (i.e. they don't see a separate copy for each time they edit and re-submit).\r\n\r\nRelated issues:\r\n * #949 Give providers the ability to \"edit and resubmit\" applications\r\n * #950 Let reviewers provide feedback on non-approved applications\r\n * #951 Let automatic screenings generate feedback for non-approved applications",
+            "status": "NotStarted",
+            "startDate": "2018-07-11",
+            "completedDate": null,
+            "labels": []
+        },
+        "951": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 951,
+            "url": "https://github.com/solutionguidance/psm/issues/951",
+            "title": "Let automatic screenings generate feedback for non-approved applications",
+            "description": "When an application is automatically screened and problems are found, generate feedback for providers about what needs to be fixed.  The status of the application would be set to \"denied\" (or possibly a new status like \"Changes Requested\"?) and the provider would be able to see the feedback and then edit and resubmit the application.\r\n\r\nAt minimum the feedback can be a simple listing of problems or fields that need to be edited.\r\n\r\nA more ambitious goal would be to highlight the specific fields that need editing by the provider in the UI. This is complicated due to the branching logic in the enrollment steps. For example, a provider may make a change that removes part of the application that contained problematic data that needed to be edited.\r\n\r\nFor internal auditing purposes, keep a record of the feedback generated. Basically, the goal is to keep a record of what was submitted and what actions were taken on it.\r\n\r\nCompanion issue: \r\n#950 Let reviewers provide feedback on non-approved applications",
+            "status": "NotStarted",
+            "startDate": "2018-07-11",
+            "completedDate": null,
+            "labels": []
+        },
+        "950": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 950,
+            "url": "https://github.com/solutionguidance/psm/issues/950",
+            "title": "Let reviewers provide feedback on non-approved applications",
+            "description": "When reviewers manually review an application allow them to provide feedback to providers on what's wrong and needs to be changed.  The status of the application would be set to \"denied\" (or possibly a new status like \"Changes Requested\"?) and the provider would be able to see the feedback and then edit and resubmit the application.  \r\n\r\nAt minimum the feedback can be a simple listing of problems or fields that need to be edited.  The reviewer would have the option to include a free-form note of explanation, when needed.  \r\n\r\nA more ambitious goal would be to let the reviewer highlight specific fields that need editing, that would then be highlighted for the provider to edit in the UI.  This is complicated due to the branching logic in the enrollment steps.  For example, a provider may make a change that removes part of the application that contained problematic data that needed to be edited.  We have to be careful with handling this to avoid bugs.\r\n\r\nFor internal auditing purposes, keep a record of the feedback a reviewer provides.  Basically, the goal is to keep a record of what was submitted and what actions were taken on it.\r\n\r\nCompanion issue:\r\n * #951 Let automatic screenings generate feedback for non-approved applications\r\n\r\nRelated issues:\r\n * #305 - Should service admins be able to edit all aspects of a pending enrollment?\r\n * #432 - Admin changes to contact information are lost\r\n * #875 - Reviewer clicking \"approve\" does not always approve enrollment\r\n * #925 - Allow admin users to trigger re-screening\r\n * #789 - Allow admins to override automatic screening false positives \r\n\r\nIssues related to branching in enrollment steps\r\n * #842 - Show error on personal email address\r\n * #833 - Missing contact info on switching provider types\r\n",
+            "status": "NotStarted",
+            "startDate": "2018-07-11",
+            "completedDate": null,
+            "labels": []
+        },
+        "949": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 949,
+            "url": "https://github.com/solutionguidance/psm/issues/949",
+            "title": "Give providers the ability to \"edit and resubmit\" applications",
+            "description": "Implement a provider-initiated \"edit and resubmit\" feature for pending, accepted, and denied applications.  At minimum, this can be a link in the actions column in the enrollments table(s).  Clicking the link changes the application's status to 'draft', allowing further edits, re-submission, and re-screening. For the user it appears as the same application in the UI, but now in 'draft' status (or 'pending' if immediately re-submitted after edits).  The application gets a new submission date when it is submitted.\r\n\r\n(Why would an approved provider edit and resubmit? For revalidation they need to resubmit periodically, and also if something changes that requires an update and re-screen.)\r\n\r\nAn option:  If an application was 'approved' we could keep it as 'approved' and open a new copy as 'draft'. That would avoid the situation of a provider being approved but their application not appearing as approved, but as draft.  On the other hand it is more consistent to have it work the same as with the other statuses.\r\n\r\nWe considered having an 'in review' status and/or a way to lock and prevent an application from being \"edit and resubmit\"-ted while it was under manual review.  But it seems simpler and better to just allow providers to initiate edits at any time, even if currently in review, since the changes (and re-review) would need to be done in any case.\r\n\r\nRelated issues:\r\n * #408 - Provider name change feature\r\n * #416 - Let user update license/certification or contact info for existing enrollment\r\n * #423 - Clarify workflow around draft and submitted enrollments\r\n * #424 - Clarify provider users versus members in group enrollments\r\n\r\nTangentially related issues:\r\n * #407 - Enrollment termination feature\r\n * #620 - Cannot delete additional practice location\r\n * #701 - Can only save enrollment as draft once",
+            "status": "NotStarted",
+            "startDate": "2018-07-11",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-FR-4.3"
+            ]
+        },
+        "946": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 946,
+            "url": "https://github.com/solutionguidance/psm/issues/946",
+            "title": "Remove need for gov.medicaid.domain.model.ProviderType enum",
+            "description": "Right now, this must duplicate the database (see gov.medicaid.entities.ProviderType) for use in various drools rules, as well as in places in the codebase.  Those should all be removed, either by comparing against the strings (in rules), or by moving the functionality way from explicit code blocks, such as in PresentationServiceBean, and toward that functionality being an emergent part of the data type and its definition in the database.\r\n\r\nThe end goal, as per #41, is for Provider Types to be configurable by the end admins, with the rules having similar configuration needs.  Configurable database properties don't mesh well with hard coded enums.",
+            "status": "NotStarted",
+            "startDate": "2018-07-09",
+            "completedDate": null,
+            "labels": []
+        },
+        "942": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 942,
+            "url": "https://github.com/solutionguidance/psm/issues/942",
+            "title": "Remove or generify MHCP remittance sequence",
+            "description": "This remittance sequence is not actually used for any ordering whatsoever in the codebase, so can be safely removed.  However, if we want to create rule based availability of remittance sequences, this is an opportunity to do that.\r\n\r\nFrom #74:\r\n> If you start an enrollment as an organization provider type, you get asked if you want to use a \"Recipient [MHCP](http://mhcpproviderdirectory.dhs.state.mn.us/) ID Number Order\" as your Remittance Sequence. This is Minnesota-specific.\r\n![remittance sequence](https://cloud.githubusercontent.com/assets/1494855/26742918/c78e18fe-47ad-11e7-8c72-815e3b42e497.png)",
+            "status": "NotStarted",
+            "startDate": "2018-07-08",
+            "completedDate": null,
+            "labels": []
+        },
+        "934": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 934,
+            "url": "https://github.com/solutionguidance/psm/issues/934",
+            "title": "Full-text search",
+            "description": "We need to add the ability to do full-text search in the PSM.\r\n\r\nThis comes from a few search-related requirements:\r\n\r\n> - psm-FR-2.14 The PSM shall use consistent provider naming conventions to differentiate between first names, last names, and business or corporate names and to allow flexible searches based on the provider name.\r\n> - psm-FR-7.13 The PSM shall support searching and pattern-matching based on all fields accepted as input (and based on all reasonable combinations of such fields).\r\n> - psm-IU-2.5 The PSM shall provide full-text search capability\r\n\r\nThe first is relevant to this insofar as we need to be able to search for names; the other two seem to be asking the same thing in different words.\r\n\r\nInvestigate the available full-text search solutions, consider their requirements, choose one, and integrate it.",
+            "status": "NotStarted",
+            "startDate": "2018-07-06",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-FR-2.14",
+                "Z-REQ-PSM-FR-7.13",
+                "Z-REQ-PSM-IU-2.5",
+                "enhancement"
+            ]
+        },
+        "933": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 933,
+            "url": "https://github.com/solutionguidance/psm/issues/933",
+            "title": "Improve the admin Screenings page",
+            "description": "PR #844 added a Screenings tab for service admins as an interface for monthly re-screenings (see #758 and #740).  The following are needed to bring this Screenings page up to full functionality.  Open additional issues for these items as needed, and use this issue as an overview to track overall progress.\r\n\r\n- Allow searching/filtering the screenings by:\r\n    - date range\r\n    - result status (passed, failed, error)\r\n    - most recent or not (for a given provider and screening type)\r\n    - re-screening or initial screening.  (Corresponds to application status: pending vs approved.)\r\n    - maybe other criteria?\r\n\r\n- Allow getting NPI, provider name, provider type, application ID (for e.g. use by action links), from the database.\r\n- Make the Failed, Passed, and Errors tabs functional (depends on search by result status).\r\n- When the page first loads, automatically enter and use a date range to show all screenings in the past month to date.\r\n- Format dates for better readability.\r\n- Add a \"View Application\" action link.\r\n- Make the 'result' text a link that shows details about the result.  (Same as in the 'review application' workflow.)\r\n- Implement \"Auto Screen\" and \"Manual Screen\" action links.  (To share UI with the 'review application' workflow.)\r\n- Support showing the various different screening types.\r\n- Support showing the various different reasons for screenings.\r\n- Optionally show the current number of results in the tabs:  \"Failed (13)\".\r\n- Optionally add a column for application status (pending, approved, etc.) (related to filtering for re-screening or initial screening).\r\n- Probably only show most recent screening for each application by default.\r\n\r\nTo be determined: when showing the application status, do we show the current application status, the status at the time of screening, or both?",
+            "status": "NotStarted",
+            "startDate": "2018-07-06",
+            "completedDate": null,
+            "labels": []
+        },
+        "931": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 931,
+            "url": "https://github.com/solutionguidance/psm/issues/931",
+            "title": "Remove or rework and reuse \"domain\"-specific login code ",
+            "description": "This is a follow-up on issue #911.  PR #922 removed the 'domain' selector from the login page, but left most of the code backing this feature in place.  The code should either be removed or reworked in order to provide the domain-specific login feature (at some future point when it is relevant).\r\n\r\nA quote from #911 about the feature:\r\n\r\n> The \"Domain\" is probably an authorization domain that we may not be able to determine automagically from the username -- because usernames might be unique only within a given domain (unless the PSM enforces otherwise, which is not a decision we've made). For example, some users might need to authorize against an internal MMIS authn source, others against some agency-specific or group-specific provider database, still others against a state admin LDAP source, etc.\r\n\r\n> However, the UI could do a better job of making this clear, and of guiding the user to choose the right authn source.\r\n\r\n> Furthermore, right now we're pretty sure Domain isn't being used. We could just comment out that whole block on the login page template and it'd be fine. Until we support domains, there's no reason to confuse users with them (and we'll be better able to design the UI when we have the real use case in hand).",
+            "status": "NotStarted",
+            "startDate": "2018-07-05",
+            "completedDate": null,
+            "labels": []
+        },
+        "930": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 930,
+            "url": "https://github.com/solutionguidance/psm/issues/930",
+            "title": "Eliminate the need for jbpm.sql",
+            "description": "We decided to close #254 without moving the content of jbpm.sql into the new migration format.  This is because the team is considering changes to the version of jbpm that the project uses.\r\n\r\nWe need to move jbpm to liquibase as part of any future improvements to it.",
+            "status": "NotStarted",
+            "startDate": "2018-07-05",
+            "completedDate": null,
+            "labels": []
+        },
+        "927": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 927,
+            "url": "https://github.com/solutionguidance/psm/issues/927",
+            "title": "Send notification(s) on monthly re-screening failures",
+            "description": "If a previously-approved enrollment fails its monthly rescreening (#740), who should be notified, and how? Should a notification about a NPI that is now listed in the LEIE go to the same person as a notification that a SSN is now listed in the DMF? Should the providers be notified, as well?\r\n\r\nI assume that such notifications will be via email, but that doesn't necessarily have to be the case. If it is, how much detail should be in the email? What copy should the email include?\r\n\r\n---\r\n\r\nSee also:\r\n- Issue #740 Re-screen approved providers monthly\r\n- PR #910 Re-screen approved enrollments monthly\r\n  - particularly, [discussion on #910](https://github.com/SolutionGuidance/psm/pull/910#discussion_r199346892)",
+            "status": "NotStarted",
+            "startDate": "2018-07-02",
+            "completedDate": null,
+            "labels": [
+                "backend",
+                "state-question"
+            ]
+        },
+        "926": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 926,
+            "url": "https://github.com/solutionguidance/psm/issues/926",
+            "title": "Handle monthly re-screening errors",
+            "description": "Under the initial implementation (#910) of the monthly re-screening feature (#740), we assume that the only errors that escape from the external screening class are fatal, unrecoverable errors. @frankduncan [points out](https://github.com/SolutionGuidance/psm/pull/910#discussion_r199346892) that it's useful to try to re-screen the remaining re-screen-able enrollments rather than abort on the first such error:\r\n\r\n> In production, automatic screenings are running against all approved enrollments for all time. Two years down the road, we add a new automatic screening that works for all new enrollments because data is enforced as being added (a change introduced by this new screening project in the website workflow), so the new enrollments don't lead to a 500 error during submission. However, when pushed to production, the new screening runs on all old enrollments that were screened successfully years ago, that don't have that necessary data. What do we want to have happen? Personally I think it's useful to have the process continue and finish on all the enrollments it can, just so work can continue on those enrollments while operations people look into the issue for the specific enrollments that have problems.\r\n\r\nMake sure that each re-screening-eligible enrollment is re-screened against each external data source (LEIE, DMF, ...), regardless of errors.\r\n\r\nAs part of this, we need to investigate and think about transactionality; it's no use to handle errors but then throw away all the results because the transaction manager decided that one of those errors means it needs to roll back the transaction.\r\n\r\n---\r\n\r\nSee also:\r\n- Issue #740 Re-screen approved providers monthly\r\n- PR #910 Re-screen approved enrollments monthly",
+            "status": "NotStarted",
+            "startDate": "2018-07-02",
+            "completedDate": null,
+            "labels": []
+        },
+        "925": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 925,
+            "url": "https://github.com/solutionguidance/psm/issues/925",
+            "title": "Allow admin users to trigger re-screening",
+            "description": "Sometimes, automatic screenings against external data sources may fail for reasons outside of the PSM's control. Perhaps the internet connection to the external data source may temporarily not work, or perhaps the external data source may be down for maintenance. In such conditions, the failure is recorded by the PSM.\r\n\r\nAdmin users should have the ability to manually trigger an re-screening. Create a button that queues the re-screening to run and creates relevant audit logs (#924).\r\n\r\n---\r\n\r\nSee also:\r\n- Issue #740 Re-screen approved providers monthly\r\n- Issue #758 UI for monthly re-screening of approved providers\r\n- Issue #787 Save screening results \r\n- PR #844 Add a Screenings page\r\n- Issue #924 Add audit logging to external screening\r\n",
+            "status": "NotStarted",
+            "startDate": "2018-07-02",
+            "completedDate": null,
+            "labels": []
+        },
+        "924": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 924,
+            "url": "https://github.com/solutionguidance/psm/issues/924",
+            "title": "Add audit logging to external screening",
+            "description": "While designing the schema for persisting automatic screening against external sources (starting with the LEIE) in #787, we discussed the possibility of recording the reason an external screening was triggered; the reasons we came up with then were:\r\n\r\n- the enrollment application was submitted and initial screening is needed\r\n- the enrollment application was previously approved and we want to re-screen it monthly (#740)\r\n- an admin user clicked the \"re-screen application\" button (and include which user in the recorded event)\r\n\r\nIn each of those cases, we'll want to record\r\n\r\n- why was it triggered (of the reasons above)\r\n- when was it triggered\r\n- what application was it triggered for\r\n- who triggered it (submitter / no one / admin user)\r\n\r\nAs well as link the screening result back to the trigger.\r\n\r\n---\r\n\r\nSee also:\r\n- Issue #740 Re-screen approved providers monthly\r\n- PR #787 Save screening results\r\n- PR #910 Re-screen approved enrollments monthly",
+            "status": "NotStarted",
+            "startDate": "2018-07-02",
+            "completedDate": null,
+            "labels": [
+                "backend"
+            ]
+        },
+        "923": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 923,
+            "url": "https://github.com/solutionguidance/psm/issues/923",
+            "title": "Suggestion about using jCasbin in the AuthZ interceptor",
+            "description": "Hi. I found we are adding authorization security to the RESTful API (https://github.com/SolutionGuidance/psm/issues/847) and there's also some related commit here: https://github.com/SolutionGuidance/psm/commit/aa1c15ec87595939469563592f781ea83b94d70c.\r\n\r\nIt seems that we are looking for a light-weight authorization library. Spring security is too heavy for this scenario.  To avoid re-inventing the wheel, I'd like to recommend: [jCasbin](https://github.com/casbin/jcasbin), which is an authorization library that supports models like ACL, RBAC, ABAC.\r\n\r\nRelated to RBAC, casbin has several advantages:\r\n1. roles can be cascaded, aka roles can have roles.\r\n2. support resource roles, so users have their roles and resource have their roles too. role = group here.\r\n3. the permission assignments (or policy in casbin's language) can be persisted in files or database.\r\n4. multiple models like ACL, BLP, RBAC, ABAC, RESTful are supported. For RESTful, you can use the built-in ``keyMatch`` function to match a RESTful path to a pattern like ``/books/*``, or use regex directly.\r\n\r\nAnd you can even customize your own access control model, for example, mix RBAC and ABAC together by using roles and attributes at the same time. It's very flexible.\r\n\r\nAfter a glance at your code, I think jCasbin just provides all you need to implement a RESTful interceptor and nothing else is involved. You can see our interceptor examples here: https://github.com/casbin/jcasbin#web-frameworks. In all examples, HTTP basic authentication is used as the authN way, but you can switch to any authentication as you like.\r\n\r\nI think jCasbin can be a choice. What do you think? Thanks.",
+            "status": "Completed",
+            "startDate": "2018-07-01",
+            "completedDate": "2018-07-02",
+            "labels": []
+        },
+        "915": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 915,
+            "url": "https://github.com/solutionguidance/psm/issues/915",
+            "title": "Use static analysis to find bugs",
+            "description": "There are a number of tools that are able to analyze Java source code for erroneous code; such code is likely to work unintuitively, at best, and have serious bugs at worst.\r\n\r\nSee [this list of tools](https://github.com/mre/awesome-static-analysis#java) for starters.\r\n\r\nOnce all the issues a given tool raises are either resolved or the tool is configured to ignore them, we can add the tool to our CI suite to ensure we don't add any future such code.",
+            "status": "NotStarted",
+            "startDate": "2018-06-28",
+            "completedDate": null,
+            "labels": [
+                "in progress",
+                "tech-debt"
+            ]
+        },
+        "914": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 914,
+            "url": "https://github.com/solutionguidance/psm/issues/914",
+            "title": "Filtering enrollments as admin user returns no search results",
+            "description": "When filtering by anything (npi, provider name, etc) or just hitting filter with all fields empty, no results are returned.  Quick search works with an exact NPI match.\r\n\r\nReproduce by going to the enrollments, tab, opening the filter dialog, and hitting filter.",
+            "status": "NotStarted",
+            "startDate": "2018-06-28",
+            "completedDate": null,
+            "labels": [
+                "bug"
+            ]
+        },
+        "913": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 913,
+            "url": "https://github.com/solutionguidance/psm/issues/913",
+            "title": "ProjectPSM.org should link to demo site(s).",
+            "description": "Whatever non-private demo sites we have, we should link to them from http://projectpsm.org/.\r\n\r\n@PaulMorris, assigning to you, but CC'ing @jvasile to check that he agrees with this.",
+            "status": "NotStarted",
+            "startDate": "2018-06-28",
+            "completedDate": null,
+            "labels": []
+        },
+        "912": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 912,
+            "url": "https://github.com/solutionguidance/psm/issues/912",
+            "title": "Demo site should show date last updated, and Git commit ID of code it's running.",
+            "description": "The login page of the demo site should show the date the site was updated, and the Git commit ID of the commit (presumably on `master`) that the site is running.  This can go right above or below the \"This module is open source. Contributions welcome.\" message at the bottom of the login page.\r\n\r\nIt doesn't have to be called \"Git commit ID\" -- that won't be meaningful to most users -- but instead could be called \"Development version alpha-8cd591232fa\" or something, where \"8cd591232fa\" is a length of git commit ID prefix.\r\n\r\nSo, something like this:\r\n\r\n> Provider Screening Module Demo Site: updated **28 June 2018** (development version alpha-8cd591232fa).  See [ProjectPSM.org](http://projectpsm.org/) for more information.\r\n\r\n(Obviously there will need to be a configuration flag that says whether or not a site is a demo site, so that this doesn't get displayed on production sites.)",
+            "status": "Completed",
+            "startDate": "2018-06-28",
+            "completedDate": "2018-06-28",
+            "labels": []
+        },
+        "911": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 911,
+            "url": "https://github.com/solutionguidance/psm/issues/911",
+            "title": "Login page asks confusingly about \"Domain\"; should either not ask or else ask a clearer question.",
+            "description": "The login page shows word \"Domain\" as the label for a two-item dropdown.  A provider logging in for the first time wouldn't know how to interpret that -- even I'm not positive I know how to interpret it.  My *guess* is that the two choices \"Online Portal\" and \"MN-ITS\" mean, respectively, \"provider login\" and \"state-side admin login\", but if so this is hardly a clear way to express that.\r\n\r\n![psm-demo-login-page-2018-06-28](https://user-images.githubusercontent.com/401111/42047250-67c97aca-7ac5-11e8-9126-086f5ec786fa.png)\r\n\r\nOne solution would be to have a radio button or other standard selector by which one can unambiguously know that one is being asked about one's role, and unambiguously answer.  The selector needn't mention the state's name -- its job would just be to find out if you're logging in as a provider or a state-side admin.\r\n\r\nBut in fact, do we even need a selector for this at all?  Wouldn't this just be a property of the username?  IOW, if you just create a new account via the \"Register New Account\" link, then by default that is a provider account.  When a new state-side admin account is created, it will be created by an existing state-side admin who has the appropriate superpowers to create such accounts.  IOW, why are we even asking this on the login page?  You could just log in, and the PSM would know who you are and what roles/authorizations you have.\r\n\r\nThis was originally reported as part of issue #39, but this part is basically a UI issue and can be fixed independently of the rest of issue #39.",
+            "status": "Completed",
+            "startDate": "2018-06-28",
+            "completedDate": "2018-07-05",
+            "labels": []
+        },
+        "897": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 897,
+            "url": "https://github.com/solutionguidance/psm/issues/897",
+            "title": "Mean / Median report should use hours in case lapsed time is less than a day",
+            "description": "From https://github.com/SolutionGuidance/psm/issues/794#issuecomment-390324661\r\n\r\nWhat the title says.  Currently the report just says \"0 days\" if everything is done quickly, and this could be confused with an error.",
+            "status": "Completed",
+            "startDate": "2018-06-24",
+            "completedDate": "2018-06-25",
+            "labels": []
+        },
+        "896": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 896,
+            "url": "https://github.com/solutionguidance/psm/issues/896",
+            "title": "Add detailed information to Mean/Median report",
+            "description": "From https://github.com/SolutionGuidance/psm/issues/794#issuecomment-390324661\r\n\r\nThe mean/median report is for all enrollments.  The states have requested that the tables include (perhaps expandable?) information per admin.",
+            "status": "NotStarted",
+            "startDate": "2018-06-24",
+            "completedDate": null,
+            "labels": []
+        },
+        "895": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 895,
+            "url": "https://github.com/solutionguidance/psm/issues/895",
+            "title": "Add explanation of date of application for mean/median report",
+            "description": "From https://github.com/SolutionGuidance/psm/issues/794#issuecomment-390324661\r\n\r\nWhat month an enrollment lands in for the purposes of mean/median is not immediately intuitive, so a small information box should be added to the report to aid with understanding.",
+            "status": "Completed",
+            "startDate": "2018-06-24",
+            "completedDate": "2018-06-25",
+            "labels": []
+        },
+        "894": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 894,
+            "url": "https://github.com/solutionguidance/psm/issues/894",
+            "title": "Add line graph for Mean/Median report",
+            "description": "From: https://github.com/SolutionGuidance/psm/issues/794#issuecomment-390324661",
+            "status": "Completed",
+            "startDate": "2018-06-24",
+            "completedDate": "2018-06-24",
+            "labels": []
+        },
+        "890": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 890,
+            "url": "https://github.com/solutionguidance/psm/issues/890",
+            "title": "Change Practitioner and Organization from Contained Resources to References in FHIR endpoint",
+            "description": "Currently, the FHIR API endpoint returns a list of `Task` resources with either a `Practitioner` or `Organization` resource contained within them, depending on the type of Provider Screening Application.  This effectively allows implementers to see all the information, but it may not be the best way to model the data, for two reasons:\r\n1. None of the existing FHIR profiling tools ([Forge](https://fire.ly/forge/), [Trifolia](https://trifolia.lantanagroup.com/), [shr-cli](https://github.com/standardhealth/shr-cli/wiki/CIMPL-Documentation)) support constraints on contained resources.\r\n2. Semantically, it makes sense to use `contained` when the contained resource [does not have a unique identifier in the source system](https://www.hl7.org/fhir/references.html#contained).  I could be wrong, but I think that Practitioners and Organizations have unique IDs in the PSM database.\r\n\r\nI propose that the ID for each `Practitioner` and `Organization` resource be returned instead as the [`focus`](https://www.hl7.org/fhir/task-definitions.html#Task.focus) of each `Task`.  The HAPI-FHIR documentation has information about how to [return these resources as references](http://hapifhir.io/doc_resource_references.html#References_in_Server_Code) and the FHIR search documentation has information about how to [query for Task resources in a way that returns the `Practitioner` and `Organization` resources](https://www.hl7.org/fhir/search.html#revinclude) within the bundle.",
+            "status": "NotStarted",
+            "startDate": "2018-06-22",
+            "completedDate": null,
+            "labels": []
+        },
+        "889": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 889,
+            "url": "https://github.com/solutionguidance/psm/issues/889",
+            "title": "Expand DMF checks to all ssns within an enrollment",
+            "description": "For organizations, there may be zero or more people with socials in the object tree, and the DMF check needs to be expanded to each one of those.\r\n\r\nThis is an extension for #759 ",
+            "status": "NotStarted",
+            "startDate": "2018-06-21",
+            "completedDate": null,
+            "labels": [
+                "review"
+            ]
+        },
+        "886": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 886,
+            "url": "https://github.com/solutionguidance/psm/issues/886",
+            "title": "Enrollment list jsps are substantially identical",
+            "description": "In admin, the following jsps have very few differences:\r\n\r\n* service_agent_enrollments_approved.jsp\r\n* service_agent_enrollments_draft.jsp\r\n* service_agent_enrollments_notes.jsp (a few more additions)\r\n* service_agent_enrollments_pending.jsp\r\n* service_agent_enrollments_rejected.jsp\r\n\r\nThis should be consolidated for all the normal DRY reasons, but also because integration tests will be similarly bloated to match if we don't consolidate.",
+            "status": "Completed",
+            "startDate": "2018-06-20",
+            "completedDate": "2018-07-04",
+            "labels": [
+                "tech-debt"
+            ]
+        },
+        "885": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 885,
+            "url": "https://github.com/solutionguidance/psm/issues/885",
+            "title": "Split External Data Sources To It's Own Repo",
+            "description": "We need external data sources to live on it's own and be its own process and stack.",
+            "status": "NotStarted",
+            "startDate": "2018-06-20",
+            "completedDate": null,
+            "labels": [
+                "next"
+            ]
+        },
+        "881": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 881,
+            "url": "https://github.com/solutionguidance/psm/issues/881",
+            "title": "FHIR API returns 404 when no value for EFT accepted",
+            "description": "The FHIR enrollment search API (at `/fhir/Task/`) is failing a 404. Examining the server log reveals a stack trace ending with a null pointer exception at [`EnrollmentAcceptsEftToFhir#isEftAccepted`](https://github.com/SolutionGuidance/psm/blob/cd6cd388a67d55a40d6c22c688de88441d12dcbe/psm-app/cms-web/src/main/java/gov/medicaid/api/transformers/EnrollmentAcceptsEftToFhir.java#L34):\r\n\r\n<details>\r\n  <summary>Stack trace</summary>\r\n\r\n```\r\n16:03:17,541 ERROR [ca.uhn.fhir.rest.server.interceptor.ExceptionHandlingInterceptor] (default task-16) Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InternalErrorException: Failed to call access method\r\n\tat ca.uhn.fhir.rest.server.method.BaseMethodBinding.invokeServerMethod(BaseMethodBinding.java:253)\r\n\tat ca.uhn.fhir.rest.server.method.SearchMethodBinding.invokeServer(SearchMethodBinding.java:263)\r\n\tat ca.uhn.fhir.rest.server.method.SearchMethodBinding.invokeServer(SearchMethodBinding.java:50)\r\n\tat ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.doInvokeServer(BaseResourceReturningMethodBinding.java:157)\r\n\tat ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:136)\r\n\tat ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:858)\r\n\tat ca.uhn.fhir.rest.server.RestfulServer.doGet(RestfulServer.java:1453)\r\n\tat ca.uhn.fhir.rest.server.RestfulServer.service(RestfulServer.java:1429)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\r\n\tat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:150)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:122)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\r\n\tat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\r\n\tat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)\r\n\tat io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)\r\n\tat io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)\r\n\tat io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)\r\n\tat io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)\r\n\tat io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)\r\n\tat io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)\r\n\tat io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)\r\n\tat io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextThreadSetupAction.lambda$create$0(SecurityContextThreadSetupAction.java:105)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1508)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)\r\n\tat io.undertow.server.Connectors.executeRootHandler(Connectors.java:326)\r\n\tat io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:812)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\nCaused by: java.lang.reflect.InvocationTargetException\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat ca.uhn.fhir.rest.server.method.BaseMethodBinding.invokeServerMethod(BaseMethodBinding.java:248)\r\n\t... 90 more\r\nCaused by: java.lang.NullPointerException\r\n\tat gov.medicaid.api.transformers.EnrollmentAcceptsEftToFhir.isEftAccepted(EnrollmentAcceptsEftToFhir.java:34)\r\n\tat gov.medicaid.api.transformers.EnrollmentAcceptsEftToFhir.apply(EnrollmentAcceptsEftToFhir.java:18)\r\n\tat gov.medicaid.api.transformers.EnrollmentToFhir.apply(EnrollmentToFhir.java:31)\r\n\tat gov.medicaid.api.TaskResourceProvider.enrollmentIdToTask(TaskResourceProvider.java:114)\r\n\tat gov.medicaid.api.TaskResourceProvider.lambda$search$0(TaskResourceProvider.java:70)\r\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\r\n\tat java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)\r\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)\r\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\r\n\tat java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)\r\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)\r\n\tat gov.medicaid.api.TaskResourceProvider.search(TaskResourceProvider.java:71)\r\n\t... 95 more\r\n```\r\n</details>",
+            "status": "Completed",
+            "startDate": "2018-06-18",
+            "completedDate": "2018-06-21",
+            "labels": [
+                "backend",
+                "bug"
+            ]
+        },
+        "880": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 880,
+            "url": "https://github.com/solutionguidance/psm/issues/880",
+            "title": "Add creation of gradle.properties file to INSTALL.md",
+            "description": "Section: Build and deploy the application, Step 4 creates database schema and initial data. Step 4 is missing a dependency: creation of gradle.properties file. The gradle.properties file must contain the psm postgesql credentials and jdbc database path.\r\n\r\nThe recommended addition should be located just above:\r\n~~~ \r\n> ./gradlew db:update\r\n~~~\r\nRecommended addition:\r\n\r\nCreate gradle.properties file:\r\n$ cp {/path/to/psm}/psm-app/gradle.properties.template  gradle.properties\r\n\r\nUpdate the gradle.properties file. Replace UNAME the psm database user name, PWORD with psm database user password.\r\n~~~\r\nsystemProp.databaseUser=UNAME\r\nsystemProp.databasePassword=PWORD\r\nsystemProp.databasePath=jdbc:postgresql:psm\r\n~~~",
+            "status": "Completed",
+            "startDate": "2018-06-18",
+            "completedDate": "2018-06-18",
+            "labels": []
+        },
+        "879": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 879,
+            "url": "https://github.com/solutionguidance/psm/issues/879",
+            "title": "Requirements Gathering - How should organizations be screened",
+            "description": "This came up when having a discussion about the Death Master File.  There are potentially multiple people in an organization, and we run a check on each one of them to ensure that the social used doesn't belong to the deceased.  However, this may not be in line with how the users view organizations who are applying for enrollment.\r\n\r\nSo a question needs to be put forth to our business partners as how organizations work with regard to the PSM, and what are the differing requirements for screening.",
+            "status": "NotStarted",
+            "startDate": "2018-06-18",
+            "completedDate": null,
+            "labels": [
+                "state-question"
+            ]
+        },
+        "878": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 878,
+            "url": "https://github.com/solutionguidance/psm/issues/878",
+            "title": "Integration Tests need siloed database for testing",
+            "description": "This came up in a recent conversation regarding external sources.  There may be regressions for enrollments that depend on the LEIE or DMF.  Because we may not boot these up when doing integration testing (on CI, for instance), and the overhead of adding test versions of these services may not be worth the cost, we still need a way to ensure that the application is regression proof on some of the pages depending on information that these services return.  A quick way to ensure this happens is to put the database into a state with seed data equivalent to the different response types these external services may return.\r\n\r\nHowever, as we build out test database data, it continues to pollute development databases, and may run into errors from other, older development data (and in the future, from database population from production needed to debug errors).  A solution would be to load up a secondary test database when running integration tests that can be torn down after.\r\n\r\nMost likely there is no need to have a setup/teardown mid integration tests.",
+            "status": "NotStarted",
+            "startDate": "2018-06-18",
+            "completedDate": null,
+            "labels": [
+                "tech-debt"
+            ]
+        },
+        "875": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 875,
+            "url": "https://github.com/solutionguidance/psm/issues/875",
+            "title": "Reviewer clicking \"approve\" does not always approve enrollment",
+            "description": "As a state reviewer, when I click on the \"Approve\" button on the review page for an enrollment application, I expect either an immediate error or for the enrollment application to be approved.\r\n\r\nInstead, sometimes, the enrollment is not approved, and is confusingly left in a pending state without giving any feedback.\r\n\r\n---\r\n\r\nPart of the cause of this problem is the way the Drools rules are integrated. Clicking \"approve\" causes the screening rules to be re-run, and if they all pass, the enrollment application is approved; if any of them fail, the application is silently left in a pending state.\r\n\r\nSee also issue #354, which relates to how automatic screenings are related, and issue #572, which relates to the Drools rules being run (and mentions this problem as a parenthetical).",
+            "status": "NotStarted",
+            "startDate": "2018-06-15",
+            "completedDate": null,
+            "labels": []
+        },
         "863": {
             "owner": "solutionguidance",
             "repos": "psm",
@@ -5470,13 +5913,11 @@
             "number": 847,
             "url": "https://github.com/solutionguidance/psm/issues/847",
             "title": "Add authn/authz to FHIR API",
-            "description": "I'm splitting this out from #623 so we can more easily track it.\r\n\r\nCurrently, the API is completely public.  For the first round of controlling who calls the API, we'll have three kinds of access:\r\n- [ ] no access at all -- this is a user who has no right to read or write to the API\r\n- [ ] read-only access to all information accessible via the API\r\n- [ ] read and write access to all information accessible via the API\r\n\r\nNote that currently the API only has `GET` endpoints, so there is nowhere for a user to write to.\r\n\r\n@slifty, @notpace, @kfogel, and I have begun to have some conversations about future, more complicated, authorization strategies.  These are somewhat related to the user role conversation in #10.\r\n\r\nWe expect that we will want some kind of business-limited access, where a provider has access to read and write to resources that they \"own.\"  This \"ownership\" right now would be determined (probably?) by the creator of the resource.  That is, if a provider created an application for enrollment then they'd be considered its owner and would be able to view and edit that application via the API (once the API is sophisticated enough to allow that).  Other modules in the MMIS, meanwhile, should have access to all resources, regardless of owner.",
-            "status": "NotStarted",
+            "description": "I'm splitting this out from #623 so we can more easily track it.\r\n\r\nCurrently, the API is completely public.  For the first round of controlling who calls the API, we'll have three kinds of access:\r\n- [x] no access at all -- this is a user who has no right to read or write to the API\r\n- [x] read-only access to all information accessible via the API\r\n- [x] read and write access to all information accessible via the API\r\n\r\nNote that currently the API only has `GET` endpoints, so there is nowhere for a user to write to.\r\n\r\n@slifty, @notpace, @kfogel, and I have begun to have some conversations about future, more complicated, authorization strategies.  These are somewhat related to the user role conversation in #10.\r\n\r\nWe expect that we will want some kind of business-limited access, where a provider has access to read and write to resources that they \"own.\"  This \"ownership\" right now would be determined (probably?) by the creator of the resource.  That is, if a provider created an application for enrollment then they'd be considered its owner and would be able to view and edit that application via the API (once the API is sophisticated enough to allow that).  Other modules in the MMIS, meanwhile, should have access to all resources, regardless of owner.",
+            "status": "Completed",
             "startDate": "2018-05-29",
-            "completedDate": null,
-            "labels": [
-                "up-next"
-            ]
+            "completedDate": "2018-07-05",
+            "labels": []
         },
         "846": {
             "owner": "solutionguidance",
@@ -5484,7 +5925,7 @@
             "number": 846,
             "url": "https://github.com/solutionguidance/psm/issues/846",
             "title": "Add new fields to FHIR API",
-            "description": "I'm splitting this out from #623 to allow us to more easily track our progress.\r\n\r\nThese new fields will be added as `input` elements on the FHIR Task resource:\r\n\r\n- [x] EFT acceptance indicator\r\n- [ ] provider date of birth\r\n- [ ] telecom\r\n- [ ] address\r\n\r\nTagging @slifty @mbestavros @notpace.",
+            "description": "I'm splitting this out from #623 to allow us to more easily track our progress.\r\n\r\nThese new fields will be added as `input` elements on the FHIR Task resource:\r\n\r\n- [x] EFT acceptance indicator\r\n- [x] provider date of birth\r\n- [x] telecom\r\n- [x] address\r\n\r\nTagging @slifty @mbestavros @notpace.",
             "status": "NotStarted",
             "startDate": "2018-05-29",
             "completedDate": null,
@@ -5547,12 +5988,10 @@
             "url": "https://github.com/solutionguidance/psm/issues/822",
             "title": "Reports improvement requests from states",
             "description": "Some cross-report notes from states:\r\n\r\n- Link to the full application wherever the application ID appears.\r\n- For individual applications, add columns with the provider name and provider type\r\n\r\nThere are some more specific notes for individual reports, which I will put in separate issues.\r\n",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2018-05-18",
-            "completedDate": null,
-            "labels": [
-                "in progress"
-            ]
+            "completedDate": "2018-06-25",
+            "labels": []
         },
         "821": {
             "owner": "solutionguidance",
@@ -5681,12 +6120,10 @@
             "url": "https://github.com/solutionguidance/psm/issues/794",
             "title": "Add report for mean and median time from submission to review per month",
             "description": "From #739, related to #762 \r\n\r\nMean and median time from submission to review by month. Louisiana said this would help them understand the following elements:\r\n\r\n* how long it sits in the queue\r\n* how long it takes to review (we don't currently have a way to measure this in the PSM)\r\n*  how long until decision\r\n\r\nFor us, this is all represented by the same information: time between submission and approval/rejection.\r\n\r\nEdit: this report will have a line graph.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2018-04-25",
-            "completedDate": null,
-            "labels": [
-                "next"
-            ]
+            "completedDate": "2018-06-24",
+            "labels": []
         },
         "789": {
             "owner": "solutionguidance",
@@ -5951,12 +6388,11 @@
             "url": "https://github.com/solutionguidance/psm/issues/740",
             "title": "Re-screen approved providers monthly",
             "description": ">The PSM shall support admin-configurable automated re-screening.  C.f. psm-FR-7.3.\r\n\r\nAnd possibly:\r\n>psm-FR-6.1 The PSM shall download all monitoring risk scores for each month as a CSV\r\n\r\nThe way I understand this is that the PSM will re-run automated checks on all approved applications on a monthly basis (though we should make the exact period configurable in Drools).  Right now, the only automated check is the LEIE, but by the end of June we'll have another one.\r\n\r\nThis is another item that we could use some more input about: how will users use this re-screening information?  What's an appropriate UI for this?  The CSV?  Notification emails about new exclusions sent to designated users?\r\n",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2018-03-29",
-            "completedDate": null,
+            "completedDate": "2018-07-02",
             "labels": [
-                "Z-REQ-PSM-FR-4.7",
-                "up-next"
+                "Z-REQ-PSM-FR-4.7"
             ]
         },
         "739": {
@@ -6174,7 +6610,8 @@
             "completedDate": null,
             "labels": [
                 "Z-REQ-PSM-FR-7.2",
-                "Z-REQ-PSM-SQ-1.5"
+                "Z-REQ-PSM-SQ-1.5",
+                "review"
             ]
         },
         "695": {
@@ -7875,9 +8312,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/419",
             "title": "Error when a provider submits an enrollment",
             "description": "On at least one occasion, we ran into a bug where, when a provider user filled out an enrollment and hit \"Submit,\" the enrollment was not submitted and the provider got a \"Server Error\" instead of the popup saying \"The enrollment has been successfully submitted.\"  This happened with two different provider accounts.  The *admin* account, however, was able to submit the enrollments after logging in.\r\n\r\nThis was on my local setup, which was idiosyncratic in that I had manually reset the status of the enrollments in question to \"draft\" (in a `psql` shell, by running something like `update \"enrollments\" set \"enrollment_status\" = '01';`).  I don't remember if they had already been reviewed when I reset them.  If so, that might have been the source of the problem.  I'd manually reset statuses before without this problem, but perhaps those enrollments were only \"pending.\"  I'll investigate.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-09-14",
-            "completedDate": null,
+            "completedDate": "2018-06-29",
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "backend",
@@ -8263,9 +8700,9 @@
             "completedDate": null,
             "labels": [
                 "Z-REQ-PSM-SQ-1.3",
+                "in progress",
                 "infra",
-                "task",
-                "up-next"
+                "task"
             ]
         },
         "381": {
@@ -8438,9 +8875,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/356",
             "title": "Admin interface should show source of external data",
             "description": "When we list somebody as excluded (or not), we are either hitting our own database or an external database.  State admin users would find it useful to know the ultimate source of data and we should give an indication of it.  In the LEIE context, maybe that means linking to a record on the LEIE site or pointing people at the LEIE search page.  Either way, if we exclude people, they might legitimately ask \"Why?\" and we need a better answer than \"the computer said so\".",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-08-10",
-            "completedDate": null,
+            "completedDate": "2018-06-24",
             "labels": [
                 "Z-REQ-PSM-FR-3.13",
                 "Z-REQ-PSM-FR-7.1",
@@ -8471,9 +8908,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/354",
             "title": "Redesign Enrollment Review page",
             "description": "There is a lot of information an admin needs to see on the review page, and we should consider redesigning it to better present that information. Here's an example of the current page:\r\n\r\n![screenshot 2017-08-08 14 34 56](https://user-images.githubusercontent.com/1494855/29141071-b7296bc4-7d1a-11e7-8502-043092b73ad1.png)\r\n\r\nFor each of the automatic screenings against external sources, there are several things we should be clearly communicating, which I think we are not now:\r\n- Was the automatic screening successful, or was there an error?\r\n- If the automatic screening was successful, was it positive or negative?\r\n- Does the admin need to take any action? For example, if a match was found in the LEIE, does the admin need to manually verify the provider's SSN using the official LEIE site? Contrarily, if the NPI is not in the National Plan and Provider Enumeration System (NPPES), I don't think there is anything the admin needs to or can do - the enrollment should be rejected.\r\n- If the admin needs to take an action, have they yet?\r\n\r\nRight now, we're trying to fit most of that information into a two-state checkbox and a link, which is not great.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-08-09",
-            "completedDate": null,
+            "completedDate": "2018-06-25",
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "enhancement",
@@ -9298,7 +9735,8 @@
                 "Z-REQ-PSM-SA-4.2",
                 "backend",
                 "bug",
-                "quick-fix"
+                "quick-fix",
+                "review"
             ]
         },
         "259": {
@@ -9315,7 +9753,8 @@
                 "Z-REQ-PSM-FR-2.7",
                 "Z-REQ-PSM-FR-7.14",
                 "backend",
-                "bug"
+                "bug",
+                "review"
             ]
         },
         "255": {
@@ -9340,17 +9779,16 @@
             "number": 254,
             "url": "https://github.com/solutionguidance/psm/issues/254",
             "title": "Allow database schema changes without losing data",
-            "description": "As we develop the application, we will need to continue to change the database schema. So far, those changes have been part of making the application deployable at all, with the change from Oracle to PostgreSQL (#1) and the change from WebSphere to WildFly (#2). Under those circumstances, and with only developers practically able to deploy the application, it was fine to completely drop and recreate the database on every change.\r\n\r\nNow that the application is deployable, and other people are using it, we need to start thinking about how to make these schema changes in a friendlier way. This will be particularly critical once we have production deployments, as obviously we cannot ask people to throw away their existing data! Manual deployment steps require extensive documentation and are prone to error, so we should automate the deployment as much as is possible.\r\n\r\nThis will also help us with continuous deployment (#222), as a sandbox that gets wiped multiple times per day (with every merge to master) could be frustrating to use.\r\n\r\n---\r\n\r\n- [x] Decide on migration strategy: Liquibase\r\n- [x] Allow manual migrations\r\n- [ ] Document how to run manual migrations\r\n- [ ] Convert contents of `seed.sql` and `jbpm.sql` to new migration language\r\n- [ ] Automatically run migrations in our CD environment\r\n- [ ] Announce resolution of this issue on the mailing list",
-            "status": "NotStarted",
+            "description": "As we develop the application, we will need to continue to change the database schema. So far, those changes have been part of making the application deployable at all, with the change from Oracle to PostgreSQL (#1) and the change from WebSphere to WildFly (#2). Under those circumstances, and with only developers practically able to deploy the application, it was fine to completely drop and recreate the database on every change.\r\n\r\nNow that the application is deployable, and other people are using it, we need to start thinking about how to make these schema changes in a friendlier way. This will be particularly critical once we have production deployments, as obviously we cannot ask people to throw away their existing data! Manual deployment steps require extensive documentation and are prone to error, so we should automate the deployment as much as is possible.\r\n\r\nThis will also help us with continuous deployment (#222), as a sandbox that gets wiped multiple times per day (with every merge to master) could be frustrating to use.\r\n\r\n---\r\n\r\n- [x] Decide on migration strategy: Liquibase\r\n- [x] Allow manual migrations\r\n- [x] Document how to run manual migrations\r\n- [x] Convert contents of `seed.sql` and `jbpm.sql` to new migration language\r\n- [x] Automatically run migrations in our CD environment\r\n- [x] Announce resolution of this issue on the mailing list",
+            "status": "Completed",
             "startDate": "2017-07-10",
-            "completedDate": null,
+            "completedDate": "2018-07-05",
             "labels": [
                 "Z-REQ-PSM-IA-4.2",
                 "Z-REQ-PSM-SQ-1.1",
                 "Z-REQ-PSM-SQ-1.4",
                 "backend",
-                "enhancement",
-                "in progress"
+                "enhancement"
             ]
         },
         "252": {
@@ -9477,7 +9915,8 @@
                 "Z-REQ-PSM-FR-7.14",
                 "backend",
                 "bug",
-                "quick-fix"
+                "quick-fix",
+                "review"
             ]
         },
         "229": {
@@ -9626,7 +10065,8 @@
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "backend",
-                "bug"
+                "bug",
+                "in progress"
             ]
         },
         "210": {
@@ -9987,7 +10427,8 @@
                 "Z-REQ-PSM-FR-7.6",
                 "backend",
                 "enhancement",
-                "quick-fix"
+                "quick-fix",
+                "review"
             ]
         },
         "167": {
@@ -10085,9 +10526,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/161",
             "title": "View Enrollment Details confirmation screen: contact name & email address are blank",
             "description": "After a provider's created an enrollment, on the \"View Enrollment Details\" confirmation screen, \"Contact name\" & \"Contact email address\" are blank when they should not be. (I checked the \"Same as Above\" checkbox on the \"Personal Info\" screen, while enrolling.)\r\n\r\n![view-enrollment-details](https://user-images.githubusercontent.com/842790/27238476-031b9fb6-529b-11e7-8b58-644affcab2a0.png)",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-16",
-            "completedDate": null,
+            "completedDate": "2018-06-29",
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "Z-REQ-PSM-FR-7.4",
@@ -10170,6 +10611,7 @@
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "quick-fix",
+                "review",
                 "ux"
             ]
         },
@@ -10180,9 +10622,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/155",
             "title": "Tell user to add \"a\" (first), not \"another\" license/certification",
             "description": "When a provider is performing a new enrollment, in step 2 (license info), the link to add a first license/certification should say \"+ Add a License/Certification\", not \"+ Add Another License/Certification\".",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-16",
-            "completedDate": null,
+            "completedDate": "2018-06-18",
             "labels": [
                 "Z-REQ-PSM-FR-7.1",
                 "Z-REQ-PSM-FR-7.14",
@@ -10309,6 +10751,7 @@
             "labels": [
                 "Z-REQ-PSM-SQ-1.5",
                 "backend",
+                "review",
                 "tech-debt"
             ]
         },
@@ -10333,9 +10776,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/127",
             "title": "Implement screening schedules or remove UI",
             "description": "In converting `ScreeningSchedule` to Hibernate 5 in #126, we learned that there is no functionality attached to the screening schedule: you can read and update the schedule in the admin UI, but there is nothing that ever reads the schedule or acts upon it.\r\n\r\nUI that is not backed by functionality is not good: it suggests features that are not implemented, and can lead to confusion or a loss of confidence in the software.\r\n\r\nWe should either implement screening schedules fully, or remove (or at least disable) the UI around it.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-13",
-            "completedDate": null,
+            "completedDate": "2018-07-02",
             "labels": [
                 "Z-REQ-PSM-FR-3.5",
                 "Z-REQ-PSM-FR-4.7",
@@ -10410,9 +10853,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/108",
             "title": "Remove \"Lorem Ipsum\" text wherever possible.",
             "description": "Making this a separate issue (disentangling from issue #51).\r\n\r\nBranch [51-remove-lorem-ipsum](https://github.com/opentechstrategies/psm/tree/51-remove-lorem-ipsum) has progress so far.  I think that branch is out-of-date now anyway, especially after the issue #53 changes were merged in PR #54.  So I'll make a new branch, basing its name on this new issue number, port over anything from the original branch that needs to be ported over, and create a PR from there.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-08",
-            "completedDate": null,
+            "completedDate": "2018-06-27",
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "enhancement",
@@ -10591,6 +11034,7 @@
             "completedDate": null,
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
+                "review",
                 "tech-debt",
                 "ux"
             ]
@@ -10846,6 +11290,7 @@
                 "Z-REQ-PSM-AD-5.14",
                 "Z-REQ-PSM-AD-5.4",
                 "backend",
+                "review",
                 "tech-debt"
             ]
         },
