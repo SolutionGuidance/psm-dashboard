@@ -66,6 +66,7 @@ To see this usage message, run with '-h' or '--help'.
 import httplib2
 import apiclient
 import oauth2client
+import datetime
 import getopt
 import os
 import sys
@@ -99,11 +100,35 @@ class PSMFeature:
         self.startDate = start_date
         self.completedDate = completed_date
         self.status = "NotStarted"
-        if self.startDate is not None:
-            if self.completedDate is None:
-                self.status = "InProgress"
-            else:
-                self.status = "Completed"
+        # Since we started putting projected completion dates in the
+        # spreadsheet, we can't use the mere presence of a completion
+        # date to conclude that a feature is completed.  Instead, if
+        # the completion date is in the future, then the feature is
+        # "InProgress" rather than "Completed".  So we have to compare
+        # the completion date to the current time.  
+        #
+        # We do that with a string comparison, which works because
+        # these are ISO-8601 dates at day granularity.
+        #
+        # There's some edge fuzziness here, not just because we ignore
+        # timezone, but also because we ignore running time.  That is,
+        # the now() for each PSMFeature instance we create is slightly
+        # different.  It mostly doesn't matter, since we're lopping
+        # off to day granularity anyway.  If you were to run this
+        # script across midnight *and* someone happened to complete a
+        # feature at exactly the wrong moment, then sure, you could
+        # get a status of "InProgress" when it should say "Completed".
+        now = datetime.datetime.now().isoformat()[0:10]
+        if self.startDate is None:
+            if self.completedDate is not None:
+                sys.stderr.write("WARNING: '%s' has empty startDate but a completedDate of %s\n"
+                                 % (self.feature_id, self.completedDate))
+        else:
+            if self.startDate < now:
+                if (self.completedDate is None) or (self.completedDate < now):
+                    self.status = "InProgress"
+                else:
+                    self.status = "Completed"
         self.requirements = requirements
     def __str__(self):
         return """\

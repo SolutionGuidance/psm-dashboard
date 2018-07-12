@@ -6,7 +6,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2017-09-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-1.4",
                 "psm-FR-1.6",
@@ -28,7 +28,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2017-09-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-1.2",
                 "psm-FR-3.12",
@@ -46,7 +46,7 @@
             "subfeatures": [],
             "startDate": "2017-04-01",
             "completedDate": "2017-09-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-2.20",
                 "psm-FR-2.4",
@@ -59,7 +59,7 @@
             "subfeatures": [],
             "startDate": "2018-01-01",
             "completedDate": "2018-03-31",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-3.11",
                 "psm-FR-8.2",
@@ -73,7 +73,7 @@
             "subfeatures": [],
             "startDate": "2018-01-01",
             "completedDate": "2018-03-31",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-SQ-1.2",
                 "psm-SQ-1.4"
@@ -85,7 +85,7 @@
             "subfeatures": [],
             "startDate": "2018-01-01",
             "completedDate": "2018-03-31",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-2.1",
                 "psm-FR-7.14"
@@ -149,7 +149,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-2.3",
                 "psm-FR-7.14"
@@ -174,7 +174,7 @@
             ],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-1.1",
                 "psm-AD-1.3",
@@ -199,7 +199,7 @@
             ],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-AD-1.2",
                 "psm-AD-1.3",
@@ -219,7 +219,7 @@
             ],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-4.7",
                 "psm-FR-7.3"
@@ -231,7 +231,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-IA-2.2"
             ]
@@ -242,7 +242,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-3.11",
                 "psm-FR-4.7",
@@ -256,7 +256,7 @@
             "subfeatures": [],
             "startDate": "2018-04-01",
             "completedDate": "2018-06-30",
-            "status": "Completed",
+            "status": "InProgress",
             "requirements": [
                 "psm-FR-7.14"
             ]
@@ -397,7 +397,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-6.1",
                 "psm-IA-3.2"
@@ -414,7 +414,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-IA-3.5"
@@ -433,7 +433,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.8",
                 "psm-AD-5.9",
@@ -455,7 +455,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.9",
                 "psm-FR-6.8",
@@ -472,7 +472,7 @@
             "subfeatures": [],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-7.12",
                 "psm-II-4.5"
@@ -484,7 +484,7 @@
             "subfeatures": [],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-9.3"
             ]
@@ -498,7 +498,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.14",
                 "psm-FR-7.13",
@@ -517,7 +517,7 @@
             ],
             "startDate": "2018-10-01",
             "completedDate": "2018-12-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.18",
                 "psm-FR-2.19",
@@ -535,7 +535,7 @@
             "subfeatures": [],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.10",
                 "psm-FR-3.10",
@@ -559,7 +559,7 @@
             ],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-5.6",
                 "psm-FR-3.8",
@@ -578,7 +578,7 @@
             ],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-4.1",
                 "psm-AD-4.2",
@@ -602,7 +602,7 @@
             ],
             "startDate": "2019-01-01",
             "completedDate": "2019-03-31",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.25"
             ]
@@ -667,7 +667,7 @@
             "subfeatures": [],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-10.1",
                 "psm-FR-2.7",
@@ -688,7 +688,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.17",
                 "psm-FR-2.7",
@@ -701,7 +701,7 @@
             "subfeatures": [],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.8",
                 "psm-FR-3.1",
@@ -727,7 +727,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.1",
                 "psm-FR-2.11",
@@ -754,7 +754,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-5.2",
                 "psm-FR-5.3",
@@ -778,7 +778,7 @@
             ],
             "startDate": "2019-04-01",
             "completedDate": "2019-06-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-1.3",
                 "psm-FR-2.10",
@@ -791,7 +791,7 @@
             "subfeatures": [],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-AD-2.2",
                 "psm-SC-1.1"
@@ -811,7 +811,7 @@
             ],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-3.13",
                 "psm-FR-3.14",
@@ -827,7 +827,7 @@
             "subfeatures": [],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-4.6"
             ]
@@ -844,7 +844,7 @@
             ],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-2.3",
                 "psm-FR-3.3",
@@ -857,7 +857,7 @@
             "subfeatures": [],
             "startDate": "2019-07-01",
             "completedDate": "2019-09-30",
-            "status": "Completed",
+            "status": "NotStarted",
             "requirements": [
                 "psm-FR-5.1"
             ]
@@ -1796,7 +1796,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                954
             ],
             "startDate": null,
             "completedDate": null,
@@ -5405,6 +5406,32 @@
         }
     },
     "issues": {
+        "956": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 956,
+            "url": "https://github.com/solutionguidance/psm/issues/956",
+            "title": "Server error on second 'edit and resubmit' attempt",
+            "description": "After editing and resubmitting an application that had already been approved (via provider login > my profile > edit), I tried to edit the application again in the same way (while it was in pending status).  I got this warning:\r\n```\r\nWARNING\r\nThere is a pending request for the same profile. Submission will not be allowed unless the other request is denied.\r\n```\r\nI was then still in the editing pages for that application, but when I clicked on a tab to go to a different part of the application I got the following server error.\r\n\r\nParent issue: #949 \r\n\r\n```\r\nServer Error\r\n\r\nException: org.springframework.web.HttpSessionRequiredException: Expected session attribute 'enrollment'\r\n\tat org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:115)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:805)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\r\n\tat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:122)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\r\n\tat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\r\n\tat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)\r\n\tat io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)\r\n\tat io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)\r\n\tat io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)\r\n\tat io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)\r\n\tat io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)\r\n\tat io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)\r\n\tat io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)\r\n\tat io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)\r\n\tat io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)\r\n\tat io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:805)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\n```\r\n",
+            "status": "NotStarted",
+            "startDate": "2018-07-12",
+            "completedDate": null,
+            "labels": []
+        },
+        "954": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 954,
+            "url": "https://github.com/solutionguidance/psm/issues/954",
+            "title": "Notify providers 90 days before their enrollment expires",
+            "description": "This is `psm-FR-3.11`: \"The PSM shall notify providers 90 days before their enrollment expires, so that they can go through revalidation.\"  \r\n\r\n@kfogel [writes](https://chat.opentechstrategies.com/#narrow/stream/6-Provider-Screening/subject/enrollment.20feedback.20cycle/near/46586): \"the main thing about psm-FR-3.11 is that it's not event-driven per se -- IOW, we need some sort of scheduler process to notice (on a per-enrollment basis) that it's 90 days before expiration, and send the notification based on that.\"\r\n\r\nRelated issue involving sending notifications to providers:\r\n#341 - Notify submitter & drafter via contact email when enrollment status changes\r\n\r\n\r\n",
+            "status": "NotStarted",
+            "startDate": "2018-07-11",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-FR-3.11"
+            ]
+        },
         "953": {
             "owner": "solutionguidance",
             "repos": "psm",
@@ -5415,7 +5442,9 @@
             "status": "NotStarted",
             "startDate": "2018-07-11",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "in progress"
+            ]
         },
         "952": {
             "owner": "solutionguidance",
@@ -5447,11 +5476,13 @@
             "number": 950,
             "url": "https://github.com/solutionguidance/psm/issues/950",
             "title": "Let reviewers provide feedback on non-approved applications",
-            "description": "When reviewers manually review an application allow them to provide feedback to providers on what's wrong and needs to be changed.  The status of the application would be set to \"denied\" (or possibly a new status like \"Changes Requested\"?) and the provider would be able to see the feedback and then edit and resubmit the application.  \r\n\r\nAt minimum the feedback can be a simple listing of problems or fields that need to be edited.  The reviewer would have the option to include a free-form note of explanation, when needed.  \r\n\r\nA more ambitious goal would be to let the reviewer highlight specific fields that need editing, that would then be highlighted for the provider to edit in the UI.  This is complicated due to the branching logic in the enrollment steps.  For example, a provider may make a change that removes part of the application that contained problematic data that needed to be edited.  We have to be careful with handling this to avoid bugs.\r\n\r\nFor internal auditing purposes, keep a record of the feedback a reviewer provides.  Basically, the goal is to keep a record of what was submitted and what actions were taken on it.\r\n\r\nCompanion issue:\r\n * #951 Let automatic screenings generate feedback for non-approved applications\r\n\r\nRelated issues:\r\n * #305 - Should service admins be able to edit all aspects of a pending enrollment?\r\n * #432 - Admin changes to contact information are lost\r\n * #875 - Reviewer clicking \"approve\" does not always approve enrollment\r\n * #925 - Allow admin users to trigger re-screening\r\n * #789 - Allow admins to override automatic screening false positives \r\n\r\nIssues related to branching in enrollment steps\r\n * #842 - Show error on personal email address\r\n * #833 - Missing contact info on switching provider types\r\n",
+            "description": "When reviewers manually review an application allow them to provide feedback to providers on what's wrong and needs to be changed.  The status of the application would be set to \"denied\" (or possibly a new status like \"Changes Requested\"?) and the provider would be able to see the feedback and then edit and resubmit the application.  \r\n\r\nAt minimum the feedback can be a simple listing of problems or fields that need to be edited.  The reviewer would have the option to include a free-form note of explanation, when needed.  \r\n\r\nA more ambitious goal would be to let the reviewer highlight specific fields that need editing, that would then be highlighted for the provider to edit in the UI.  This is complicated due to the branching logic in the enrollment steps.  For example, a provider may make a change that removes part of the application that contained problematic data that needed to be edited.\r\n\r\nFor internal auditing purposes, keep a record of the feedback a reviewer provides.  Basically, the goal is to keep a record of what was submitted and what actions were taken on it.\r\n\r\nCompanion issue:\r\n * #951 Let automatic screenings generate feedback for non-approved applications\r\n\r\nRelated issues:\r\n * #305 - Should service admins be able to edit all aspects of a pending enrollment?\r\n * #432 - Admin changes to contact information are lost\r\n * #875 - Reviewer clicking \"approve\" does not always approve enrollment\r\n * #925 - Allow admin users to trigger re-screening\r\n * #789 - Allow admins to override automatic screening false positives \r\n * #319 - clarify enrollment review screen\r\n\r\nIssues related to branching in enrollment steps\r\n * #842 - Show error on personal email address\r\n * #833 - Missing contact info on switching provider types\r\n",
             "status": "NotStarted",
             "startDate": "2018-07-11",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "next"
+            ]
         },
         "949": {
             "owner": "solutionguidance",
@@ -5464,7 +5495,8 @@
             "startDate": "2018-07-11",
             "completedDate": null,
             "labels": [
-                "Z-REQ-PSM-FR-4.3"
+                "Z-REQ-PSM-FR-4.3",
+                "in progress"
             ]
         },
         "946": {
@@ -5505,7 +5537,8 @@
                 "Z-REQ-PSM-FR-2.14",
                 "Z-REQ-PSM-FR-7.13",
                 "Z-REQ-PSM-IU-2.5",
-                "enhancement"
+                "enhancement",
+                "in progress"
             ]
         },
         "933": {
@@ -6053,7 +6086,9 @@
             "status": "NotStarted",
             "startDate": "2018-05-08",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "in progress"
+            ]
         },
         "804": {
             "owner": "solutionguidance",
@@ -6581,7 +6616,8 @@
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "Z-REQ-PSM-FR-7.7",
-                "bug"
+                "bug",
+                "next"
             ]
         },
         "700": {
@@ -6604,14 +6640,13 @@
             "number": 699,
             "url": "https://github.com/solutionguidance/psm/issues/699",
             "title": "Remove help topics subsystem",
-            "description": "As discussed in #396, we will handle help through the contextual helptext added in #422.  Any additional help that state users want to add will work through that system, not this one.\r\n\r\nRemoving this subsystem involves:\r\n- [ ] Removing the front end (currently visible to service admins)\r\n- [ ] Removing related database table(s) and creating the associated migration (see #254)\r\n- [ ] Removing controlling code\r\n- [ ] Removing references in documentation (ping for @jcunard)\r\n\r\nPlease note any other complications in comments on this issue.",
-            "status": "NotStarted",
+            "description": "As discussed in #396, we will handle help through the contextual helptext added in #422.  Any additional help that state users want to add will work through that system, not this one.\r\n\r\nRemoving this subsystem involves:\r\n- [x] Removing the front end (currently visible to service admins)\r\n- [x] Removing related database table(s) and creating the associated migration (see #254)\r\n- [x] Removing controlling code\r\n- [x] Removing references in documentation (ping for @jcunard)\r\n\r\nPlease note any other complications in comments on this issue.",
+            "status": "Completed",
             "startDate": "2018-03-07",
-            "completedDate": null,
+            "completedDate": "2018-07-12",
             "labels": [
                 "Z-REQ-PSM-FR-7.2",
-                "Z-REQ-PSM-SQ-1.5",
-                "review"
+                "Z-REQ-PSM-SQ-1.5"
             ]
         },
         "695": {
@@ -6922,7 +6957,7 @@
             "number": 626,
             "url": "https://github.com/solutionguidance/psm/issues/626",
             "title": "Manage JavaScript dependencies and modernize build",
-            "description": "Currently, we have several vendored JavaScript dependencies:\r\n\r\n- [ ] [jQuery](https://jquery.com/), v1.7.1 - MIT (`jquery-1.7.1.min.js`)\r\n- [ ] [Masked Input jQuery plugin](http://digitalbush.com/projects/masked-input-plugin/), v1.3.1 - MIT (`jquery.maskedinput.min.js`)\r\n- [ ] [TableSorter, v2.3.11](https://github.com/Mottie/tablesorter/releases/tag/2.3.11) - MIT or GPL (`jquery.tablesorter.min.js`, `jquery.tablesorter.widgets.js`)\r\n- [ ] [Tiny Scrollbar](http://baijs.com/tinyscrollbar/), version unknown - MIT (`jquery.tinyscrollbar.min.js`)\r\n- [ ] [jQuery UI, v1.8.14](https://api.jqueryui.com/1.8/) - MIT (`jquery.ui.core.js`, `jquery.ui.datepicker.js`, `jquery.ui.widget.js`)\r\n- [ ] [jQuery Validation Plugin, v1.10.0](https://github.com/jquery-validation/jquery-validation/releases/tag/1.10.0) - MIT or GPL (`jquery.validate.min.js`)\r\n- [ ] [Chosen, v0.9.14](https://github.com/harvesthq/chosen/releases/tag/v0.9.14) - MIT (`chosen/`)\r\n- [ ] [WYSIWYG jQuery Plugin](https://github.com/jwysiwyg/jwysiwyg), version 0.98.dev - MIT or GPL (`jwysiwyg/`)\r\n- [ ] `jquery.compare.js` - version unknown, providence unknown, license unknown\r\n\r\nWe need to\r\n1. set up a modern JavaScript build (presumably using npm or yarn?) that knows how to fetch these dependencies so that we can remove them from our repo.\r\n2. verify that we're actually using each of these\r\n3. delete what we can\r\n4. upgrade to more modern versions to address potential security issues, bugs, and improve client compatibility\r\n\r\nWhile we're doing so, we can also set up the build to produce and include minified JavaScript, and validate our JavaScript against our style guidelines (introduced in #428).\r\n\r\nThis should pave the way for letting us have a more complex but easier to navigate front-end code base, instead of three gigantic files full of duplicate code.\r\n\r\nForked off of #16, which is primary focused on our Java dependencies.",
+            "description": "Currently, we have several vendored JavaScript dependencies:\r\n\r\n- [ ] [jQuery](https://jquery.com/), v1.7.1 - MIT (`jquery-1.7.1.min.js`)\r\n- [ ] [Masked Input jQuery plugin](http://digitalbush.com/projects/masked-input-plugin/), v1.3.1 - MIT (`jquery.maskedinput.min.js`)\r\n- [ ] [TableSorter, v2.3.11](https://github.com/Mottie/tablesorter/releases/tag/2.3.11) - MIT or GPL (`jquery.tablesorter.min.js`, `jquery.tablesorter.widgets.js`)\r\n- [x] [Tiny Scrollbar](http://baijs.com/tinyscrollbar/), version unknown - MIT (`jquery.tinyscrollbar.min.js`)\r\n- [ ] [jQuery UI, v1.8.14](https://api.jqueryui.com/1.8/) - MIT (`jquery.ui.core.js`, `jquery.ui.datepicker.js`, `jquery.ui.widget.js`)\r\n- [ ] [jQuery Validation Plugin, v1.10.0](https://github.com/jquery-validation/jquery-validation/releases/tag/1.10.0) - MIT or GPL (`jquery.validate.min.js`)\r\n- [ ] [Chosen, v0.9.14](https://github.com/harvesthq/chosen/releases/tag/v0.9.14) - MIT (`chosen/`)\r\n- [ ] [WYSIWYG jQuery Plugin](https://github.com/jwysiwyg/jwysiwyg), version 0.98.dev - MIT or GPL (`jwysiwyg/`)\r\n- [ ] `jquery.compare.js` - version unknown, providence unknown, license unknown\r\n\r\nWe need to\r\n1. set up a modern JavaScript build (presumably using npm or yarn?) that knows how to fetch these dependencies so that we can remove them from our repo.\r\n2. verify that we're actually using each of these\r\n3. delete what we can\r\n4. upgrade to more modern versions to address potential security issues, bugs, and improve client compatibility\r\n\r\nWhile we're doing so, we can also set up the build to produce and include minified JavaScript, and validate our JavaScript against our style guidelines (introduced in #428).\r\n\r\nThis should pave the way for letting us have a more complex but easier to navigate front-end code base, instead of three gigantic files full of duplicate code.\r\n\r\nForked off of #16, which is primary focused on our Java dependencies.",
             "status": "NotStarted",
             "startDate": "2018-01-05",
             "completedDate": null,
@@ -7007,9 +7042,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/618",
             "title": "Enter key does not submit quick search form",
             "description": "If I log in as a provider, click on the quick search text input box, type in a search term, and hit enter, I expect the form to submit and show me the results of the search. Instead, hitting the enter key has no effect, and I have to click on the magnifying glass icon to conduct the search.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2018-01-03",
-            "completedDate": null,
+            "completedDate": "2018-07-12",
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
                 "Z-REQ-PSM-IU-2.5",
@@ -8399,6 +8434,7 @@
             "labels": [
                 "Z-REQ-PSM-FR-2.2",
                 "backend",
+                "next",
                 "question",
                 "state-question",
                 "ux"
@@ -9724,9 +9760,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/260",
             "title": "Community Mental Health Center requires assurance statement",
             "description": "There appears to be a drools rule that requires an agreement to be agreed to, but we have no data for that agreement:\r\n\r\n> You must accept the Community Mental Health Center Assurance Statement.\r\n\r\n![screenshot 2017-07-10 18 44 33](https://user-images.githubusercontent.com/1494855/28043434-da4e9364-659f-11e7-98bb-ec019e97bfec.png)\r\n\r\nWe should remove the rule or add seed data for the required statement.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-07-10",
-            "completedDate": null,
+            "completedDate": "2018-07-12",
             "labels": [
                 "Z-REQ-PSM-FR-9.1",
                 "Z-REQ-PSM-IU-3.1",
@@ -9735,8 +9771,7 @@
                 "Z-REQ-PSM-SA-4.2",
                 "backend",
                 "bug",
-                "quick-fix",
-                "review"
+                "quick-fix"
             ]
         },
         "259": {
@@ -9907,16 +9942,15 @@
             "url": "https://github.com/solutionguidance/psm/issues/233",
             "title": "cannot enroll as podiatrist",
             "description": "I attempted to create a provider enrollment with the provider type being Podiatrist, and on the licensing/certification page, got this error, even though I'd uploaded an attachment for the license/certification and marked it as a license issued by Minnesota:\r\n\r\n> Please correct the following errors:\r\n\r\n> Copy of license as a podiatrist from the MN Board of Podiatric Medicine or current state of practice is required.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-30",
-            "completedDate": null,
+            "completedDate": "2018-07-12",
             "labels": [
                 "Z-REQ-PSM-FR-2.7",
                 "Z-REQ-PSM-FR-7.14",
                 "backend",
                 "bug",
-                "quick-fix",
-                "review"
+                "quick-fix"
             ]
         },
         "229": {
@@ -10419,16 +10453,15 @@
             "url": "https://github.com/solutionguidance/psm/issues/168",
             "title": "Don't display # field or empty Specialty field in PDF export of enrollment",
             "description": "I'm logged in as a provider and I've submitted an enrollment as an acupuncturist (which does not allow me to submit a specialty). I go to view my enrollment details (on http://localhost:8080/cms/provider/enrollment/jump?page=Provider+Statement ) and export the PDF.\r\n\r\nIn the \"License Information\" section, there's a \"#\" column (value: \"1\", probably the ID number of this enrollment in the local database - unnecessary to display, in my opinion), and a \"Specialty\" column (value: blank - unnecessary to display, or we should explicitly say \"None\").",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-16",
-            "completedDate": null,
+            "completedDate": "2018-07-12",
             "labels": [
                 "Z-REQ-PSM-AD-3.3",
                 "Z-REQ-PSM-FR-7.6",
                 "backend",
                 "enhancement",
-                "quick-fix",
-                "review"
+                "quick-fix"
             ]
         },
         "167": {
@@ -11029,12 +11062,11 @@
             "url": "https://github.com/solutionguidance/psm/issues/74",
             "title": "Remove or generify MN Tax ID form field",
             "description": "When you fill out an enrollment, the form on the first page includes a field labeled \"MN Tax ID\".\r\n\r\nRemove it, or make it generic, such as \"state tax ID\". Investigate how the plumbing behind this form field works, and update it as necessary.\r\n\r\n---\r\n\r\nReproduction steps:\r\n\r\n1. Create a user with the `Provider` role\r\n2. Log in as that user\r\n3. Create a new enrollment\r\n4. Choose a provider type, such as `X-Ray Services`\r\n5. See:\r\n![mn tax id](https://cloud.githubusercontent.com/assets/1494855/26741550/c89a3062-47a7-11e7-9387-c9729943c519.png)\r\n ",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-06-02",
-            "completedDate": null,
+            "completedDate": "2018-07-12",
             "labels": [
                 "Z-REQ-PSM-FR-7.14",
-                "review",
                 "tech-debt",
                 "ux"
             ]
@@ -11121,6 +11153,7 @@
                 "Z-REQ-PSM-IA-4.2",
                 "Z-REQ-PSM-SQ-1.5",
                 "backend",
+                "next",
                 "tech-debt"
             ]
         },
@@ -11199,6 +11232,7 @@
                 "backend",
                 "bug",
                 "docs",
+                "in progress",
                 "task",
                 "tech-debt",
                 "ux"
