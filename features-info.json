@@ -1122,7 +1122,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                774
             ],
             "startDate": null,
             "completedDate": null,
@@ -1182,7 +1183,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                413
+                413,
+                953
             ],
             "startDate": null,
             "completedDate": null,
@@ -1396,7 +1398,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                953
             ],
             "startDate": null,
             "completedDate": null,
@@ -1525,7 +1528,8 @@
             "comment": "",
             "issues": [
                 9,
-                53
+                53,
+                774
             ],
             "startDate": null,
             "completedDate": null,
@@ -1546,7 +1550,8 @@
             "comment": "",
             "issues": [
                 166,
-                528
+                528,
+                774
             ],
             "startDate": null,
             "completedDate": null,
@@ -1651,7 +1656,8 @@
             "issues": [
                 9,
                 53,
-                291
+                291,
+                862
             ],
             "startDate": null,
             "completedDate": null,
@@ -1675,7 +1681,13 @@
                 127,
                 192,
                 289,
-                454
+                454,
+                725,
+                759,
+                879,
+                889,
+                925,
+                926
             ],
             "startDate": null,
             "completedDate": null,
@@ -1695,7 +1707,8 @@
             "acceptance_test_ref": "",
             "comment": "Will process to conduct FCBC include coordination with state's program that is part of National Background Check Program?  Possible but no specific requirement for this external interface currently.  How will result be communicated to State agency's Fiscal Agent? Unknown at this point.  Will be part of the integration with the other components of MMIS.",
             "issues": [
-                695
+                695,
+                765
             ],
             "startDate": null,
             "completedDate": null,
@@ -1716,7 +1729,8 @@
             "comment": "",
             "issues": [
                 9,
-                17
+                17,
+                774
             ],
             "startDate": null,
             "completedDate": null,
@@ -1845,7 +1859,12 @@
                 356,
                 416,
                 446,
-                546
+                546,
+                759,
+                879,
+                889,
+                925,
+                926
             ],
             "startDate": null,
             "completedDate": null,
@@ -1931,7 +1950,12 @@
             "design_ref": "",
             "acceptance_test_ref": "",
             "comment": "",
-            "issues": [],
+            "issues": [
+                759,
+                889,
+                925,
+                926
+            ],
             "startDate": null,
             "completedDate": null,
             "status": "NotStarted"
@@ -1950,7 +1974,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                528
+                528,
+                759,
+                889,
+                925,
+                926
             ],
             "startDate": null,
             "completedDate": null,
@@ -2131,7 +2159,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                875
             ],
             "startDate": null,
             "completedDate": null,
@@ -2156,7 +2185,11 @@
                 416,
                 564,
                 620,
-                949
+                949,
+                950,
+                951,
+                952,
+                956
             ],
             "startDate": null,
             "completedDate": null,
@@ -2239,7 +2272,14 @@
             "issues": [
                 127,
                 170,
-                740
+                740,
+                758,
+                761,
+                924,
+                925,
+                926,
+                927,
+                933
             ],
             "startDate": null,
             "completedDate": null,
@@ -2503,7 +2543,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                924
             ],
             "startDate": null,
             "completedDate": null,
@@ -2523,7 +2564,8 @@
             "acceptance_test_ref": "",
             "comment": "Does this include development of and tech support for common enrollment reports? Tech support for ad hoc reports?  Tech support report will be provided separately and not part of PSM.  Currently no reporting against database with PSM, this would be a separate requirement for ad-hoc report generation.  Question for WV:  what reports are you interested in?",
             "issues": [
-                476
+                476,
+                924
             ],
             "startDate": null,
             "completedDate": null,
@@ -2544,7 +2586,8 @@
             "comment": "",
             "issues": [
                 335,
-                355
+                355,
+                924
             ],
             "startDate": null,
             "completedDate": null,
@@ -2564,7 +2607,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                289
+                289,
+                924
             ],
             "startDate": null,
             "completedDate": null,
@@ -2584,7 +2628,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                924,
+                950,
+                951,
+                952
             ],
             "startDate": null,
             "completedDate": null,
@@ -2613,7 +2661,8 @@
                 406,
                 422,
                 424,
-                458
+                458,
+                749
             ],
             "startDate": null,
             "completedDate": null,
@@ -2670,7 +2719,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                758
             ],
             "startDate": null,
             "completedDate": null,
@@ -2776,7 +2826,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                292
+                292,
+                957
             ],
             "startDate": null,
             "completedDate": null,
@@ -2796,7 +2847,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                291
+                291,
+                957
             ],
             "startDate": null,
             "completedDate": null,
@@ -2879,6 +2931,7 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
+                914,
                 934
             ],
             "startDate": null,
@@ -2986,8 +3039,29 @@
                 692,
                 701,
                 708,
+                711,
                 722,
-                734
+                734,
+                746,
+                749,
+                758,
+                766,
+                802,
+                804,
+                815,
+                820,
+                822,
+                823,
+                833,
+                842,
+                854,
+                862,
+                875,
+                911,
+                914,
+                933,
+                957,
+                968
             ],
             "startDate": null,
             "completedDate": null,
@@ -3025,7 +3099,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                341
+                341,
+                770,
+                863,
+                927,
+                968
             ],
             "startDate": null,
             "completedDate": null,
@@ -3045,7 +3123,11 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                341
+                341,
+                770,
+                863,
+                927,
+                968
             ],
             "startDate": null,
             "completedDate": null,
@@ -3065,7 +3147,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                765
             ],
             "startDate": null,
             "completedDate": null,
@@ -3085,7 +3168,9 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                695
+                695,
+                863,
+                927
             ],
             "startDate": null,
             "completedDate": null,
@@ -3189,7 +3274,11 @@
             "comment": "",
             "issues": [
                 623,
-                641
+                641,
+                846,
+                847,
+                881,
+                890
             ],
             "startDate": null,
             "completedDate": null,
@@ -3537,7 +3626,8 @@
                 404,
                 425,
                 571,
-                655
+                655,
+                946
             ],
             "startDate": null,
             "completedDate": null,
@@ -3745,7 +3835,11 @@
                 349,
                 623,
                 641,
-                738
+                738,
+                846,
+                847,
+                881,
+                890
             ],
             "startDate": null,
             "completedDate": null,
@@ -3808,7 +3902,12 @@
                 236,
                 623,
                 641,
-                738
+                738,
+                846,
+                847,
+                881,
+                885,
+                890
             ],
             "startDate": null,
             "completedDate": null,
@@ -3967,7 +4066,11 @@
                 349,
                 623,
                 641,
-                738
+                738,
+                846,
+                847,
+                881,
+                890
             ],
             "startDate": null,
             "completedDate": null,
@@ -4016,7 +4119,9 @@
                 327,
                 432,
                 564,
-                734
+                734,
+                930,
+                953
             ],
             "startDate": null,
             "completedDate": null,
@@ -4127,7 +4232,14 @@
                 378,
                 623,
                 641,
-                738
+                738,
+                759,
+                846,
+                847,
+                881,
+                885,
+                889,
+                890
             ],
             "startDate": null,
             "completedDate": null,
@@ -4155,7 +4267,14 @@
                 349,
                 623,
                 641,
-                738
+                738,
+                759,
+                846,
+                847,
+                881,
+                885,
+                889,
+                890
             ],
             "startDate": null,
             "completedDate": null,
@@ -4198,6 +4317,8 @@
                 612,
                 618,
                 691,
+                746,
+                914,
                 934
             ],
             "startDate": null,
@@ -4225,7 +4346,8 @@
                 386,
                 546,
                 571,
-                572
+                572,
+                875
             ],
             "startDate": null,
             "completedDate": null,
@@ -4330,7 +4452,25 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4350,7 +4490,25 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4370,7 +4528,25 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4396,7 +4572,9 @@
                 523,
                 614,
                 691,
-                728
+                728,
+                775,
+                923
             ],
             "startDate": null,
             "completedDate": null,
@@ -4534,7 +4712,11 @@
             "issues": [
                 61,
                 62,
-                739
+                739,
+                753,
+                754,
+                762,
+                781
             ],
             "startDate": null,
             "completedDate": null,
@@ -4554,7 +4736,25 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4598,7 +4798,25 @@
             "comment": "",
             "issues": [
                 476,
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4618,7 +4836,25 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4638,7 +4874,25 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                739
+                739,
+                753,
+                754,
+                762,
+                781,
+                783,
+                784,
+                785,
+                786,
+                794,
+                815,
+                820,
+                821,
+                822,
+                823,
+                894,
+                895,
+                896,
+                897
             ],
             "startDate": null,
             "completedDate": null,
@@ -4703,7 +4957,9 @@
                 468,
                 476,
                 523,
-                614
+                614,
+                775,
+                923
             ],
             "startDate": null,
             "completedDate": null,
@@ -4773,7 +5029,9 @@
                 171,
                 175,
                 326,
-                398
+                398,
+                775,
+                923
             ],
             "startDate": null,
             "completedDate": null,
@@ -4874,7 +5132,8 @@
             "acceptance_test_ref": "",
             "comment": "",
             "issues": [
-                305
+                305,
+                924
             ],
             "startDate": null,
             "completedDate": null,
@@ -4941,7 +5200,9 @@
                 398,
                 523,
                 528,
-                599
+                599,
+                775,
+                923
             ],
             "startDate": null,
             "completedDate": null,
@@ -4970,7 +5231,9 @@
                 523,
                 614,
                 691,
-                728
+                728,
+                775,
+                923
             ],
             "startDate": null,
             "completedDate": null,
@@ -5127,7 +5390,18 @@
                 482,
                 559,
                 563,
-                703
+                703,
+                767,
+                797,
+                818,
+                824,
+                850,
+                880,
+                885,
+                912,
+                913,
+                931,
+                971
             ],
             "startDate": null,
             "completedDate": null,
@@ -5170,7 +5444,11 @@
                 638,
                 647,
                 687,
-                709
+                709,
+                752,
+                878,
+                912,
+                913
             ],
             "startDate": null,
             "completedDate": null,
@@ -5211,7 +5489,9 @@
                 582,
                 613,
                 616,
-                626
+                626,
+                811,
+                818
             ],
             "startDate": null,
             "completedDate": null,
@@ -5252,7 +5532,14 @@
                 458,
                 472,
                 482,
-                600
+                600,
+                752,
+                767,
+                824,
+                851,
+                878,
+                915,
+                930
             ],
             "startDate": null,
             "completedDate": null,
@@ -5295,8 +5582,15 @@
                 653,
                 655,
                 699,
+                711,
                 721,
-                799
+                799,
+                886,
+                930,
+                931,
+                942,
+                946,
+                971
             ],
             "startDate": null,
             "completedDate": null,
@@ -5406,17 +5700,96 @@
         }
     },
     "issues": {
+        "977": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 977,
+            "url": "https://github.com/solutionguidance/psm/issues/977",
+            "title": "Run migrations as part of continuous deployment",
+            "description": "We have [a CD server](http://testing.psm.solutionguidance.com:8080/cms/) that we have configured Jenkins to deploy to every time the `master` branch is updated. Currently, our deployment process does not include migrations, but it needs to.\r\n\r\nThis is complicated by the current approach we're taking: we compile the application on the Jenkins server, copy the built file to the testing server, and then deploy it. We do not expose PostgreSQL on the testing server to the internet, only to localhost. We use the Liquibase gradle plugin to execute migrations, so the migrations need to be run from a checkout of the repo.\r\n\r\nThe testing server is currently up-to-date on migrations, but of course will not remain so; that means we do not have to worry about any duplicate table definitions from a previously-run `seed.sql` script.\r\n\r\nI see a few options:\r\n\r\n- open an SSH tunnel from Jenkins to the testing server that connects PostgreSQL, and run the migrations from Jenkins\r\n- somehow update a checkout on the testing server (push/pull), and run the migrations from there\r\n\r\nFollow-up from #254 Allow database schema changes without losing data",
+            "status": "NotStarted",
+            "startDate": "2018-07-17",
+            "completedDate": null,
+            "labels": [
+                "infra"
+            ]
+        },
+        "976": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 976,
+            "url": "https://github.com/solutionguidance/psm/issues/976",
+            "title": "Upgrade to WildFly 13",
+            "description": "[WildFly 13 was released in May](http://wildfly.org/news/2018/05/30/WildFly13-Final-Released/). We should: \r\n\r\n- [ ] Start using it locally\r\n- [ ] Start using it in CI\r\n- [ ] Open and fix any issues we encounter\r\n- [ ] Update the build to use the new provided libraries\r\n- [ ] Update our docs and install scripts for the new version\r\n- [ ] Upgrade the demo server\r\n- [ ] Upgrade the CD server\r\n- [ ] Announce the new version on the mailing list\r\n\r\nThis is a follow-up to #520; we want to use it in dev and test for a bit to make sure there aren't any upgrade issues that aren't immediately apparent before upgrading the world.",
+            "status": "NotStarted",
+            "startDate": "2018-07-17",
+            "completedDate": null,
+            "labels": []
+        },
+        "971": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 971,
+            "url": "https://github.com/solutionguidance/psm/issues/971",
+            "title": "Remove jBPM",
+            "description": "We are using [jBPM](https://www.jbpm.org/), the Java Business Process Model, in the PSM. We should remove it and replace it with something simpler. (We should continue to use our rules engine, Drools.)\r\n\r\njBPM is a large, powerful, and flexible framework. It offers the ability to have many workflows, called business processes, which it manages on behalf of the application. These workflows are supposed to be easy to modify or replace, so as to custom-fit a particular deployment of the client application without a lot of custom code. jBPM also offers the capability of providing a user interface to handle steps in the business process that require user interaction.\r\n\r\nThe way the PSM uses jBPM makes it difficult for us to benefit from the features and benefits of jBPM, while still imposing the overhead and complexity of a heavyweight framework. The PSM has a single business process, and the jump between native Java code and the jBPM-specific code makes it more difficult for developers to understand how the application works. Our experience of attempting to modify that single business process has been time-consuming and required both a higher level of expertise and more custom Java code than we\u2019d hoped. The UI that jBPM offers does not look like the rest of the PSM, and so instead we have our own custom UI, written in Java and JSPs like the rest of the application. Finally, the way that the PSM integrates with jBPM makes it nearly impossible to upgrade jBPM to a more modern, supported version.\r\n\r\nThese problems have already had negative consequences in our development, in the form of seemingly simple changes requiring extensive work. We've tried three times to upgrade the version of jBPM we're using, and each time been unable to do so in the time we were willing to spend on it. Even small changes, like switching an input field from \"EFT Vendor Number\" to \"Do you accept EFT? [ ] Yes [ ] No\" radio buttons (#531), ended up taking longer and being more difficult than it sounds like it should be, due largely to the design decisions imposed upon the project by the integration with jBPM. Most notably, upgrading our external rules server (#385) is blocked until we remove jBPM.\r\n\r\nOur single business process is pretty straightforward. There are essentially two parts: 1. new enrollment application submitted -> run automatic screenings -> run screening Drools rules, and 2. enrollment application approved -> make sure screening Drools rules pass -> do approval post-processing. Each of these can be done with plain Java code.\r\n\r\nI suggest that we work backwards from the terminal nodes of the workflow, and switch those jBPM work item handlers into plain Java code, one-by-one. After switching all the work item handlers over, we can remove jBPM.\r\n\r\nAn important aspect of this plan is that the PSM remains in a working state throughout the development process. If our priorities shift, we will be able to pause development on removing jBPM, with only the cost of context-switching. Our work can be merged as we go, using our usual review process, rather than having a giant, potentially problematic switchover all at once.\r\n\r\n---\r\n\r\n*This was [originally proposed](https://groups.google.com/d/msg/psm-dev/QE56HlIeWiI/rJwn05BeAgAJ) on the [psm-dev mailing list](https://groups.google.com/forum/#!forum/psm-dev). Since then, we have learned that jBPM does not background its work (one of the few benefits we thought we were getting from it), tried a third time to upgrade Drools and jBPM, removed the unused and unimplemented steps of the business process, and learned enough about the remaining steps to believe they should be plain Java code instead of message-driven event handlers. This issue reflects those changes.*",
+            "status": "NotStarted",
+            "startDate": "2018-07-16",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.5",
+                "backend",
+                "tech-debt"
+            ]
+        },
+        "968": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 968,
+            "url": "https://github.com/solutionguidance/psm/issues/968",
+            "title": "NPE on submitting a personal care assistant enrollment application ",
+            "description": "The forms for the \"Personal Care Assistant\" provider type do not include a contact email address. When we try to send an email notification for successfully submitting an enrollment application, we get a null pointer exception.\r\n\r\nMore broadly, we should degrade more gracefully. Rather than (or at least, in addition to) updating the PCA forms to include an email address, we should check for missing email addresses before sending the notification, log a warning, and then not send an email notification. In particular, we should not show an error page instead of a success page if the enrollment has been successfully submitted but for the notification.\r\n\r\nSee also issue #341 Notify submitter & drafter via contact email when enrollment status changes",
+            "status": "NotStarted",
+            "startDate": "2018-07-16",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-FR-8.1",
+                "Z-REQ-PSM-FR-8.2",
+                "backend",
+                "bug"
+            ]
+        },
+        "957": {
+            "owner": "solutionguidance",
+            "repos": "psm",
+            "number": 957,
+            "url": "https://github.com/solutionguidance/psm/issues/957",
+            "title": "Required \"Effective Date\" field isn't required",
+            "description": "I started an Acupuncturist application and under \"Practice Info\" I said:\r\n```\r\nDo you maintain your own private practice? Yes\r\nAre you employed and/or independently contracted by a group practice? No\r\n```\r\nThe \"Effective Date\" field on that page has a red 'required' asterisk, but this was not enforced (I got no error) when I left it blank and moved on and successfully submitted my application.",
+            "status": "NotStarted",
+            "startDate": "2018-07-12",
+            "completedDate": null,
+            "labels": [
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-FR-7.8",
+                "Z-REQ-PSM-FR-7.9"
+            ]
+        },
         "956": {
             "owner": "solutionguidance",
             "repos": "psm",
             "number": 956,
             "url": "https://github.com/solutionguidance/psm/issues/956",
             "title": "Server error on second 'edit and resubmit' attempt",
-            "description": "After editing and resubmitting an application that had already been approved (via provider login > my profile > edit), I tried to edit the application again in the same way (while it was in pending status).  I got this warning:\r\n```\r\nWARNING\r\nThere is a pending request for the same profile. Submission will not be allowed unless the other request is denied.\r\n```\r\nI was then still in the editing pages for that application, but when I clicked on a tab to go to a different part of the application I got the following server error.\r\n\r\nParent issue: #949 \r\n\r\n```\r\nServer Error\r\n\r\nException: org.springframework.web.HttpSessionRequiredException: Expected session attribute 'enrollment'\r\n\tat org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:115)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:805)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\r\n\tat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:122)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\r\n\tat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\r\n\tat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)\r\n\tat io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)\r\n\tat io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)\r\n\tat io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)\r\n\tat io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)\r\n\tat io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)\r\n\tat io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)\r\n\tat io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)\r\n\tat io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)\r\n\tat io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)\r\n\tat io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:805)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\n```\r\n",
+            "description": "After editing and resubmitting an application that had already been approved (via provider login > my profile > edit), I tried to edit the application again in the same way (while it was in pending status).  I got this warning:\r\n```\r\nWARNING\r\nThere is a pending request for the same profile. Submission will not be allowed unless the other request is denied.\r\n```\r\nI was then still in the editing pages for that application, but when I clicked on a tab to go to a different part of the application I got the following server error.\r\n\r\nParent issue: #949 \r\n\r\n<details>\r\n  <summary>Server Error</summary\r\n\r\n```\r\nException: org.springframework.web.HttpSessionRequiredException: Expected session attribute 'enrollment'\r\n\tat org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:115)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:805)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\r\n\tat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)\r\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)\r\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)\r\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)\r\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:122)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\r\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\r\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\r\n\tat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\r\n\tat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\r\n\tat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\r\n\tat org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)\r\n\tat io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)\r\n\tat io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)\r\n\tat io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)\r\n\tat io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)\r\n\tat io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)\r\n\tat io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)\r\n\tat io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)\r\n\tat io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.api.LegacyThreadSetupActionWrapper$1.call(LegacyThreadSetupActionWrapper.java:44)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)\r\n\tat io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)\r\n\tat io.undertow.server.Connectors.executeRootHandler(Connectors.java:202)\r\n\tat io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:805)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\n```\r\n</details>",
             "status": "NotStarted",
             "startDate": "2018-07-12",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.3"
+            ]
         },
         "954": {
             "owner": "solutionguidance",
@@ -5443,6 +5816,9 @@
             "startDate": "2018-07-11",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-2.12",
+                "Z-REQ-PSM-FR-2.2",
+                "Z-REQ-PSM-IA-4.2",
                 "in progress"
             ]
         },
@@ -5456,7 +5832,10 @@
             "status": "NotStarted",
             "startDate": "2018-07-11",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.3",
+                "Z-REQ-PSM-FR-6.8"
+            ]
         },
         "951": {
             "owner": "solutionguidance",
@@ -5468,7 +5847,10 @@
             "status": "NotStarted",
             "startDate": "2018-07-11",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.3",
+                "Z-REQ-PSM-FR-6.8"
+            ]
         },
         "950": {
             "owner": "solutionguidance",
@@ -5481,6 +5863,8 @@
             "startDate": "2018-07-11",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-4.3",
+                "Z-REQ-PSM-FR-6.8",
                 "next"
             ]
         },
@@ -5509,7 +5893,10 @@
             "status": "NotStarted",
             "startDate": "2018-07-09",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-II-4.5",
+                "Z-REQ-PSM-SQ-1.5"
+            ]
         },
         "942": {
             "owner": "solutionguidance",
@@ -5521,7 +5908,9 @@
             "status": "NotStarted",
             "startDate": "2018-07-08",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.5"
+            ]
         },
         "934": {
             "owner": "solutionguidance",
@@ -5551,7 +5940,10 @@
             "status": "NotStarted",
             "startDate": "2018-07-06",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.7",
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "931": {
             "owner": "solutionguidance",
@@ -5563,7 +5955,10 @@
             "status": "NotStarted",
             "startDate": "2018-07-05",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.5"
+            ]
         },
         "930": {
             "owner": "solutionguidance",
@@ -5575,7 +5970,11 @@
             "status": "NotStarted",
             "startDate": "2018-07-05",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-IA-4.2",
+                "Z-REQ-PSM-SQ-1.4",
+                "Z-REQ-PSM-SQ-1.5"
+            ]
         },
         "927": {
             "owner": "solutionguidance",
@@ -5588,6 +5987,10 @@
             "startDate": "2018-07-02",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-4.7",
+                "Z-REQ-PSM-FR-8.1",
+                "Z-REQ-PSM-FR-8.2",
+                "Z-REQ-PSM-FR-8.4",
                 "backend",
                 "state-question"
             ]
@@ -5602,7 +6005,13 @@
             "status": "NotStarted",
             "startDate": "2018-07-02",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-3.13",
+                "Z-REQ-PSM-FR-3.17",
+                "Z-REQ-PSM-FR-3.18",
+                "Z-REQ-PSM-FR-3.5",
+                "Z-REQ-PSM-FR-4.7"
+            ]
         },
         "925": {
             "owner": "solutionguidance",
@@ -5614,7 +6023,13 @@
             "status": "NotStarted",
             "startDate": "2018-07-02",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-3.13",
+                "Z-REQ-PSM-FR-3.17",
+                "Z-REQ-PSM-FR-3.18",
+                "Z-REQ-PSM-FR-3.5",
+                "Z-REQ-PSM-FR-4.7"
+            ]
         },
         "924": {
             "owner": "solutionguidance",
@@ -5627,6 +6042,13 @@
             "startDate": "2018-07-02",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-AD-5.9",
+                "Z-REQ-PSM-FR-4.7",
+                "Z-REQ-PSM-FR-6.4",
+                "Z-REQ-PSM-FR-6.5",
+                "Z-REQ-PSM-FR-6.6",
+                "Z-REQ-PSM-FR-6.7",
+                "Z-REQ-PSM-FR-6.8",
                 "backend"
             ]
         },
@@ -5640,7 +6062,13 @@
             "status": "Completed",
             "startDate": "2018-07-01",
             "completedDate": "2018-07-02",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.4",
+                "Z-REQ-PSM-AD-5.1",
+                "Z-REQ-PSM-AD-5.12",
+                "Z-REQ-PSM-AD-5.13",
+                "Z-REQ-PSM-AD-5.4"
+            ]
         },
         "915": {
             "owner": "solutionguidance",
@@ -5653,6 +6081,7 @@
             "startDate": "2018-06-28",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-SQ-1.4",
                 "in progress",
                 "tech-debt"
             ]
@@ -5668,6 +6097,9 @@
             "startDate": "2018-06-28",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-7.13",
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-IU-2.5",
                 "bug"
             ]
         },
@@ -5681,7 +6113,10 @@
             "status": "NotStarted",
             "startDate": "2018-06-28",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.2"
+            ]
         },
         "912": {
             "owner": "solutionguidance",
@@ -5693,7 +6128,10 @@
             "status": "Completed",
             "startDate": "2018-06-28",
             "completedDate": "2018-06-28",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.2"
+            ]
         },
         "911": {
             "owner": "solutionguidance",
@@ -5705,7 +6143,9 @@
             "status": "Completed",
             "startDate": "2018-06-28",
             "completedDate": "2018-07-05",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "897": {
             "owner": "solutionguidance",
@@ -5717,7 +6157,15 @@
             "status": "Completed",
             "startDate": "2018-06-24",
             "completedDate": "2018-06-25",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "896": {
             "owner": "solutionguidance",
@@ -5729,7 +6177,15 @@
             "status": "NotStarted",
             "startDate": "2018-06-24",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "895": {
             "owner": "solutionguidance",
@@ -5741,7 +6197,15 @@
             "status": "Completed",
             "startDate": "2018-06-24",
             "completedDate": "2018-06-25",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "894": {
             "owner": "solutionguidance",
@@ -5753,7 +6217,15 @@
             "status": "Completed",
             "startDate": "2018-06-24",
             "completedDate": "2018-06-24",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "890": {
             "owner": "solutionguidance",
@@ -5765,7 +6237,14 @@
             "status": "NotStarted",
             "startDate": "2018-06-22",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-9.4",
+                "Z-REQ-PSM-IA-1.2",
+                "Z-REQ-PSM-IA-3.1",
+                "Z-REQ-PSM-IA-3.9",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3"
+            ]
         },
         "889": {
             "owner": "solutionguidance",
@@ -5778,6 +6257,12 @@
             "startDate": "2018-06-21",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-3.13",
+                "Z-REQ-PSM-FR-3.17",
+                "Z-REQ-PSM-FR-3.18",
+                "Z-REQ-PSM-FR-3.5",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3",
                 "review"
             ]
         },
@@ -5792,6 +6277,7 @@
             "startDate": "2018-06-20",
             "completedDate": "2018-07-04",
             "labels": [
+                "Z-REQ-PSM-SQ-1.5",
                 "tech-debt"
             ]
         },
@@ -5806,6 +6292,11 @@
             "startDate": "2018-06-20",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-IA-3.1",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3",
+                "Z-REQ-PSM-SA-3.1",
+                "Z-REQ-PSM-SQ-1.1",
                 "next"
             ]
         },
@@ -5820,6 +6311,12 @@
             "startDate": "2018-06-18",
             "completedDate": "2018-06-21",
             "labels": [
+                "Z-REQ-PSM-FR-9.4",
+                "Z-REQ-PSM-IA-1.2",
+                "Z-REQ-PSM-IA-3.1",
+                "Z-REQ-PSM-IA-3.9",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3",
                 "backend",
                 "bug"
             ]
@@ -5834,7 +6331,9 @@
             "status": "Completed",
             "startDate": "2018-06-18",
             "completedDate": "2018-06-18",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1"
+            ]
         },
         "879": {
             "owner": "solutionguidance",
@@ -5847,6 +6346,8 @@
             "startDate": "2018-06-18",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-3.13",
+                "Z-REQ-PSM-FR-3.5",
                 "state-question"
             ]
         },
@@ -5861,6 +6362,9 @@
             "startDate": "2018-06-18",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-SA-4.5",
+                "Z-REQ-PSM-SQ-1.2",
+                "Z-REQ-PSM-SQ-1.4",
                 "tech-debt"
             ]
         },
@@ -5874,7 +6378,12 @@
             "status": "NotStarted",
             "startDate": "2018-06-15",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.2",
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-IU-3.1",
+                "Z-REQ-PSM-SA-4.0"
+            ]
         },
         "863": {
             "owner": "solutionguidance",
@@ -5887,6 +6396,9 @@
             "startDate": "2018-06-04",
             "completedDate": "2018-06-13",
             "labels": [
+                "Z-REQ-PSM-FR-8.1",
+                "Z-REQ-PSM-FR-8.2",
+                "Z-REQ-PSM-FR-8.4",
                 "bug"
             ]
         },
@@ -5900,7 +6412,10 @@
             "status": "NotStarted",
             "startDate": "2018-06-04",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-3.4",
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "854": {
             "owner": "solutionguidance",
@@ -5912,7 +6427,9 @@
             "status": "NotStarted",
             "startDate": "2018-05-31",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "851": {
             "owner": "solutionguidance",
@@ -5920,11 +6437,12 @@
             "number": 851,
             "url": "https://github.com/solutionguidance/psm/issues/851",
             "title": "Add debug mode",
-            "description": "There are some features that would be helpful to have for debugging, but which production deployments should not have. Some examples:\r\n\r\n- Show the full stack trace of an exception in debug mode, and a generic error in prod mode (#831)\r\n- Show the source JSP file names in the rendered HTML in debug mode, but not in prod mode (#557)\r\n- Bundle the `axe-core` JavaScript into the app in debug mode, but not in prod mode (#648) (maybe? maybe this should be in prod mode, too, so that we can do accessibility tests against the \"real thing\"!)\r\n- (please edit this comment to add more as we discover or think of them!)\r\n\r\nThis might be a flag in `cms.properties`, or it might be an alternate build (`./gradlew cms-portal-services:debugBuild`, for example?), or it might be an environment variable, or a setting in the application server, or it might be something else entirely.",
+            "description": "There are some features that would be helpful to have for debugging, but which production deployments should not have. Some examples:\r\n\r\n- Show the full stack trace of an exception in debug mode, and a generic error in prod mode (#831)\r\n- Show the source JSP file names in the rendered HTML in debug mode, but not in prod mode (#557)\r\n- Bundle the `axe-core` JavaScript into the app in debug mode, but not in prod mode (#648) (maybe? maybe this should be in prod mode, too, so that we can do accessibility tests against the \"real thing\"!)\r\n- Show the commit version and date on the login page on the demo site (#250)\r\n- (please edit this comment to add more as we discover or think of them!)\r\n\r\nThis might be a flag in `cms.properties`, or it might be an alternate build (`./gradlew cms-portal-services:debugBuild`, for example?), or it might be an environment variable, or a setting in the application server, or it might be something else entirely.",
             "status": "NotStarted",
             "startDate": "2018-05-31",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-SQ-1.4",
                 "enhancement"
             ]
         },
@@ -5938,7 +6456,9 @@
             "status": "NotStarted",
             "startDate": "2018-05-30",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1"
+            ]
         },
         "847": {
             "owner": "solutionguidance",
@@ -5950,7 +6470,14 @@
             "status": "Completed",
             "startDate": "2018-05-29",
             "completedDate": "2018-07-05",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-9.4",
+                "Z-REQ-PSM-IA-1.2",
+                "Z-REQ-PSM-IA-3.1",
+                "Z-REQ-PSM-IA-3.9",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3"
+            ]
         },
         "846": {
             "owner": "solutionguidance",
@@ -5963,6 +6490,12 @@
             "startDate": "2018-05-29",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-9.4",
+                "Z-REQ-PSM-IA-1.2",
+                "Z-REQ-PSM-IA-3.1",
+                "Z-REQ-PSM-IA-3.9",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3",
                 "in progress"
             ]
         },
@@ -5976,7 +6509,9 @@
             "status": "NotStarted",
             "startDate": "2018-05-29",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "833": {
             "owner": "solutionguidance",
@@ -5988,7 +6523,9 @@
             "status": "NotStarted",
             "startDate": "2018-05-23",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "824": {
             "owner": "solutionguidance",
@@ -6000,7 +6537,10 @@
             "status": "NotStarted",
             "startDate": "2018-05-21",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.4"
+            ]
         },
         "823": {
             "owner": "solutionguidance",
@@ -6012,7 +6552,16 @@
             "status": "NotStarted",
             "startDate": "2018-05-18",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6",
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "822": {
             "owner": "solutionguidance",
@@ -6024,7 +6573,16 @@
             "status": "Completed",
             "startDate": "2018-05-18",
             "completedDate": "2018-06-25",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6",
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "821": {
             "owner": "solutionguidance",
@@ -6036,7 +6594,15 @@
             "status": "NotStarted",
             "startDate": "2018-05-17",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "820": {
             "owner": "solutionguidance",
@@ -6048,7 +6614,16 @@
             "status": "NotStarted",
             "startDate": "2018-05-16",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6",
+                "Z-REQ-PSM-FR-7.14"
+            ]
         },
         "818": {
             "owner": "solutionguidance",
@@ -6060,7 +6635,10 @@
             "status": "Completed",
             "startDate": "2018-05-14",
             "completedDate": "2018-05-14",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.3"
+            ]
         },
         "815": {
             "owner": "solutionguidance",
@@ -6073,6 +6651,14 @@
             "startDate": "2018-05-11",
             "completedDate": "2018-05-31",
             "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6",
+                "Z-REQ-PSM-FR-7.14",
                 "bug"
             ]
         },
@@ -6087,6 +6673,7 @@
             "startDate": "2018-05-08",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-SQ-1.3",
                 "in progress"
             ]
         },
@@ -6101,6 +6688,7 @@
             "startDate": "2018-05-03",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-7.14",
                 "bug",
                 "ux"
             ]
@@ -6116,6 +6704,7 @@
             "startDate": "2018-05-01",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-7.14",
                 "backend",
                 "tech-debt",
                 "ux"
@@ -6146,7 +6735,9 @@
             "status": "Completed",
             "startDate": "2018-04-25",
             "completedDate": "2018-04-25",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1"
+            ]
         },
         "794": {
             "owner": "solutionguidance",
@@ -6158,7 +6749,15 @@
             "status": "Completed",
             "startDate": "2018-04-25",
             "completedDate": "2018-06-24",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "789": {
             "owner": "solutionguidance",
@@ -6182,7 +6781,15 @@
             "status": "Completed",
             "startDate": "2018-04-23",
             "completedDate": "2018-06-05",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "785": {
             "owner": "solutionguidance",
@@ -6194,7 +6801,15 @@
             "status": "Completed",
             "startDate": "2018-04-23",
             "completedDate": "2018-05-31",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "784": {
             "owner": "solutionguidance",
@@ -6206,7 +6821,15 @@
             "status": "Completed",
             "startDate": "2018-04-23",
             "completedDate": "2018-05-31",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "783": {
             "owner": "solutionguidance",
@@ -6218,7 +6841,15 @@
             "status": "Completed",
             "startDate": "2018-04-23",
             "completedDate": "2018-05-21",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "781": {
             "owner": "solutionguidance",
@@ -6230,7 +6861,16 @@
             "status": "Completed",
             "startDate": "2018-04-23",
             "completedDate": "2018-05-18",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.1",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "775": {
             "owner": "solutionguidance",
@@ -6242,7 +6882,13 @@
             "status": "Completed",
             "startDate": "2018-04-19",
             "completedDate": "2018-04-23",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.4",
+                "Z-REQ-PSM-AD-5.1",
+                "Z-REQ-PSM-AD-5.12",
+                "Z-REQ-PSM-AD-5.13",
+                "Z-REQ-PSM-AD-5.4"
+            ]
         },
         "774": {
             "owner": "solutionguidance",
@@ -6254,7 +6900,12 @@
             "status": "Completed",
             "startDate": "2018-04-18",
             "completedDate": "2018-05-07",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-1.5",
+                "Z-REQ-PSM-FR-2.18",
+                "Z-REQ-PSM-FR-2.19",
+                "Z-REQ-PSM-FR-3.7"
+            ]
         },
         "770": {
             "owner": "solutionguidance",
@@ -6266,7 +6917,10 @@
             "status": "Completed",
             "startDate": "2018-04-17",
             "completedDate": "2018-06-13",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-8.1",
+                "Z-REQ-PSM-FR-8.2"
+            ]
         },
         "767": {
             "owner": "solutionguidance",
@@ -6278,7 +6932,10 @@
             "status": "NotStarted",
             "startDate": "2018-04-16",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.1",
+                "Z-REQ-PSM-SQ-1.4"
+            ]
         },
         "766": {
             "owner": "solutionguidance",
@@ -6291,6 +6948,7 @@
             "startDate": "2018-04-16",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-7.14",
                 "ux"
             ]
         },
@@ -6304,7 +6962,10 @@
             "status": "NotStarted",
             "startDate": "2018-04-16",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-3.6",
+                "Z-REQ-PSM-FR-8.3"
+            ]
         },
         "762": {
             "owner": "solutionguidance",
@@ -6316,7 +6977,16 @@
             "status": "Completed",
             "startDate": "2018-04-11",
             "completedDate": "2018-06-05",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.1",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "761": {
             "owner": "solutionguidance",
@@ -6328,7 +6998,9 @@
             "status": "Completed",
             "startDate": "2018-04-11",
             "completedDate": "2018-05-24",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.7"
+            ]
         },
         "759": {
             "owner": "solutionguidance",
@@ -6341,7 +7013,13 @@
             "startDate": "2018-04-11",
             "completedDate": null,
             "labels": [
-                "up-next"
+                "Z-REQ-PSM-FR-3.13",
+                "Z-REQ-PSM-FR-3.17",
+                "Z-REQ-PSM-FR-3.18",
+                "Z-REQ-PSM-FR-3.5",
+                "Z-REQ-PSM-IU-2.2",
+                "Z-REQ-PSM-IU-2.3",
+                "in progress"
             ]
         },
         "758": {
@@ -6354,7 +7032,11 @@
             "status": "Completed",
             "startDate": "2018-04-11",
             "completedDate": "2018-06-05",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-4.7",
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-FR-7.3"
+            ]
         },
         "754": {
             "owner": "solutionguidance",
@@ -6366,7 +7048,16 @@
             "status": "NotStarted",
             "startDate": "2018-04-04",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.1",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "753": {
             "owner": "solutionguidance",
@@ -6378,7 +7069,16 @@
             "status": "Completed",
             "startDate": "2018-04-03",
             "completedDate": "2018-04-25",
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-AD-1.1",
+                "Z-REQ-PSM-AD-1.2",
+                "Z-REQ-PSM-AD-1.3",
+                "Z-REQ-PSM-AD-3.1",
+                "Z-REQ-PSM-AD-3.2",
+                "Z-REQ-PSM-AD-3.4",
+                "Z-REQ-PSM-AD-3.5",
+                "Z-REQ-PSM-AD-3.6"
+            ]
         },
         "752": {
             "owner": "solutionguidance",
@@ -6390,7 +7090,10 @@
             "status": "NotStarted",
             "startDate": "2018-04-03",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-SQ-1.2",
+                "Z-REQ-PSM-SQ-1.4"
+            ]
         },
         "749": {
             "owner": "solutionguidance",
@@ -6402,7 +7105,11 @@
             "status": "NotStarted",
             "startDate": "2018-04-02",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.1",
+                "Z-REQ-PSM-FR-7.14",
+                "in progress"
+            ]
         },
         "746": {
             "owner": "solutionguidance",
@@ -6414,7 +7121,10 @@
             "status": "NotStarted",
             "startDate": "2018-04-02",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-IU-2.5"
+            ]
         },
         "740": {
             "owner": "solutionguidance",
@@ -6513,6 +7223,7 @@
             "startDate": "2018-03-19",
             "completedDate": null,
             "labels": [
+                "Z-REQ-PSM-FR-3.5",
                 "backend",
                 "enhancement",
                 "state-question"
@@ -6556,7 +7267,10 @@
             "status": "NotStarted",
             "startDate": "2018-03-13",
             "completedDate": null,
-            "labels": []
+            "labels": [
+                "Z-REQ-PSM-FR-7.14",
+                "Z-REQ-PSM-SQ-1.5"
+            ]
         },
         "709": {
             "owner": "solutionguidance",
@@ -7548,6 +8262,7 @@
             "completedDate": null,
             "labels": [
                 "Z-REQ-PSM-SQ-1.3",
+                "in progress",
                 "infra",
                 "task"
             ]
@@ -8088,9 +8803,9 @@
             "url": "https://github.com/solutionguidance/psm/issues/454",
             "title": "License renewal end date grayed out for PCA",
             "description": "On the License screen for Personal Care Assistants, the \"Renewal End Date\" is marked as required with a red star, but the field is grayed out.  It isn't really required (users can continue the enrollment without filling it in), so we should either allow users to enter information or remove the field.  \r\n\r\n![screenshot from 2017-09-27 12-00-00](https://user-images.githubusercontent.com/1497818/30926838-0ff1bba8-a37c-11e7-95cd-3f55014105d6.png)\r\n",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-09-27",
-            "completedDate": null,
+            "completedDate": "2018-07-17",
             "labels": [
                 "Z-REQ-PSM-FR-2.20",
                 "Z-REQ-PSM-FR-3.22",
@@ -8428,13 +9143,12 @@
             "url": "https://github.com/solutionguidance/psm/issues/413",
             "title": "Allow providers to have multiple locations?",
             "description": "We allow individual providers to be associated with multiple groups at different locations.  Do we allow group providers to have multiple locations?\r\n\r\n@brainwane has pointed out:\r\n\r\n>I'm looking at the organizational enrollment workflow. In step 1, Organization Info: \"Do not list additional practice location addresses here. If there are multiple clinic locations, each one must be enrolled separately\"\r\n\r\nSo, we have some conflicting requirements around this (we have a requirement that just says \"The PSM shall allow multiple locations for the provider.\").  @brainwane and I had talked in IRC about possibly linking different locations together by state Medicaid ID (#347).\r\n\r\nI'll tag this as a question for states.",
-            "status": "NotStarted",
+            "status": "Completed",
             "startDate": "2017-09-12",
-            "completedDate": null,
+            "completedDate": "2018-07-16",
             "labels": [
                 "Z-REQ-PSM-FR-2.2",
                 "backend",
-                "next",
                 "question",
                 "state-question",
                 "ux"
@@ -10833,6 +11547,7 @@
             "labels": [
                 "Z-REQ-PSM-SQ-1.5",
                 "backend",
+                "in progress",
                 "tech-debt"
             ]
         },
@@ -11153,7 +11868,7 @@
                 "Z-REQ-PSM-IA-4.2",
                 "Z-REQ-PSM-SQ-1.5",
                 "backend",
-                "next",
+                "in progress",
                 "tech-debt"
             ]
         },
