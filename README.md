@@ -25,6 +25,9 @@ configuration is properly set up, `refresh-dashboard` will produce
 way.  For reference, the script seems to usually take 2-3 minutes to
 run, when your machine has a good Net connection.
 
+(For details on Python module dependencies and using a virtual
+environment see the comments at the top of the `gather-info` script.)
+
 Once `features-info.json` is ready, visit `index.html` in your browser
 and make sure everything looks right.  If it does, commit and push the
 updated `features-info.json` to the `master` branch of the origin
