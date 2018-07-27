@@ -22,6 +22,7 @@
     var data = JSON.parse(text);
     var pymChild = new pym.Child();
     renderCharts(data, d3);
+    pymChild.sendHeight()
 
     window.addEventListener("resize", function () {
       renderCharts(data, d3);
