@@ -38,11 +38,23 @@
     var height = +chartEl.style("height").replace(/(px)/g, "");
     var radius = Math.min(width, height) / 2.5;
 
+    var totalFeatures = d3.sum(
+      dataset.map(function(d) {
+        return d.count;
+      })
+    );
+
+    function midAngle(d) {
+      return d.startAngle + (d.endAngle - d.startAngle) / 2;
+    }
+
     var svg = d3
       .select("#features-pie-chart")
       .append("svg")
       .attr("width", width)
       .attr("height", height)
+
+    var pieGroup = svg
       .append("g")
       .attr("class", "pie")
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
@@ -50,7 +62,13 @@
     var arc = d3
       .arc()
       .innerRadius(0)
-      .outerRadius(radius);
+      .outerRadius(radius * 0.7);
+
+    /* Used for labels and label lines. */
+    var outerArc = d3
+      .arc()
+      .innerRadius(radius * 0.8)
+      .outerRadius(radius * 0.8);
 
     // Passing null to .sort and .sortValues puts pie slices in input order.
     var pie = d3
@@ -61,7 +79,7 @@
       .sort(null)
       .sortValues(null);
 
-    var path = svg
+    var path = pieGroup
       .selectAll("path")
       .data(pie(dataset))
       .enter()
@@ -74,6 +92,60 @@
         }[d.data.label];
       })
       .attr("d", arc);
+
+    /* ------- TEXT LABELS -------*/
+
+    pieGroup.append("g")
+      .attr("class", "labels");
+
+    var labels = pieGroup.select(".labels").selectAll("text")
+      .data(pie(dataset));
+
+    var texts = labels.enter()
+      .append("text")
+      .attr("dy", "0.35em")
+      .attr("transform", function(d) {
+        var pos = outerArc.centroid(d);
+        pos[0] = radius * (midAngle(d) < Math.PI ? 1 : -1);
+        return "translate(" + pos + ")";
+      })
+      .attr("text-anchor", function(d) {
+        return midAngle(d) < Math.PI ? "start" : "end";
+      });
+
+    texts
+      .append("tspan")
+      .text(function(d) {
+        return d.data.label;
+      });
+
+    texts
+      .append("tspan")
+      .attr("x", "0")
+      .attr("dy", "1.5em")
+      .style("font-size", "smaller")
+      .style("fill", "#555")
+      .text(function(d) {
+        var percent = Math.round(1000 * d.data.count / totalFeatures) / 10;
+        return d.data.count + " Features (" + percent + "%)";
+      });
+
+    /* ------- LINES TO TEXT LABELS -------*/
+
+    pieGroup.append("g")
+      .attr("class", "lines");
+
+    var polyline = pieGroup.select(".lines").selectAll("polyline")
+      .data(pie(dataset));
+
+    polyline.enter()
+      .append("polyline")
+      .attr("class", "pie-label-line")
+      .attr("points", function(d) {
+        var pos = outerArc.centroid(d);
+        pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
+        return [arc.centroid(d), outerArc.centroid(d), pos];
+      });
 
     var tooltip = d3
       .select("#features-pie-chart")
