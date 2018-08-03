@@ -146,37 +146,5 @@
         pos[0] = radius * 0.95 * (midAngle(d) < Math.PI ? 1 : -1);
         return [arc.centroid(d), outerArc.centroid(d), pos];
       });
-
-    var tooltip = d3
-      .select("#features-pie-chart")
-      .append("div")
-      .attr("class", "tooltip");
-
-    tooltip.append("div").attr("class", "label");
-    tooltip.append("div").attr("class", "count");
-    tooltip.append("div").attr("class", "percent");
-
-    path.on("mouseover", function(d) {
-      var total = d3.sum(
-        dataset.map(function(d) {
-          return d.count;
-        })
-      );
-      var percent = Math.round(1000 * d.data.count / total) / 10;
-      tooltip.select(".label").html(d.data.label);
-      tooltip.select(".count").html(d.data.count);
-      tooltip.select(".percent").html(percent + "%");
-      tooltip.style("display", "block");
-    });
-
-    path.on("mouseout", function() {
-      tooltip.style("display", "none");
-    });
-    // OPTIONAL
-    path.on("mousemove", function(d) {
-      tooltip
-        .style("top", d3.event.layerY + 10 + "px")
-        .style("left", d3.event.layerX + 10 + "px");
-    });
   };
 })();
