@@ -36,7 +36,7 @@
     }
     var width = +chartEl.style("width").replace(/(px)/g, "");
     var height = +chartEl.style("height").replace(/(px)/g, "");
-    var radius = Math.min(width, height) / 2.5;
+    var radius = Math.min(width * 0.6, height) / 2.5;
 
     var totalFeatures = d3.sum(
       dataset.map(function(d) {
@@ -113,8 +113,12 @@
         return midAngle(d) < Math.PI ? "start" : "end";
       });
 
+    var fontSize = Math.min(width, height) / 30;
+    var smallerFontSize = fontSize * 0.8;
+
     texts
       .append("tspan")
+      .attr("font-size", fontSize)
       .text(function(d) {
         return d.data.label;
       });
@@ -123,7 +127,7 @@
       .append("tspan")
       .attr("x", "0")
       .attr("dy", "1.5em")
-      .style("font-size", "smaller")
+      .attr("font-size", smallerFontSize)
       .style("fill", "#555")
       .text(function(d) {
         var percent = Math.round(1000 * d.data.count / totalFeatures) / 10;

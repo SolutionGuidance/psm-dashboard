@@ -34,21 +34,27 @@
 
     #burn-down-chart {
       left: 15px;
-      right: 35%;
+      right: 45%;
     }
 
     #features-pie-chart {
       right: 15px;
-      left: 65%;
+      left: 55%;
+      max-height: 350px;
     }
 
     .show-feature-descriptions > #burn-down-chart,
     .show-feature-descriptions > #features-pie-chart {
       position: relative;
       width: 100%;
-      min-height: 500px;
       left: inherit;
       right: inherit;
+    }
+    .show-feature-descriptions > #burn-down-chart {
+      min-height: 500px;
+    }
+    .show-feature-descriptions > #features-pie-chart {
+      min-height: 400px;
     }
 
     .legend, .controls {
@@ -225,10 +231,15 @@
       #features-pie-chart {
         position: relative;
         width: 100%;
-        min-height: 500px;
         left: inherit;
         right: inherit;
       }
+    }
+    #burn-down-chart {
+      min-height: 500px;
+    }
+    #features-pie-chart {
+      min-height: 400px;
     }
 
   </style>
