@@ -54,10 +54,13 @@
       .attr("width", width)
       .attr("height", height)
 
+    // For better spacing, with labels that descend below the pie.
+    var pieVertTrans = height / 2.5;
+
     var pieGroup = svg
       .append("g")
       .attr("class", "pie")
-      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+      .attr("transform", "translate(" + width / 2 + "," + pieVertTrans + ")");
 
     var arc = d3
       .arc()
