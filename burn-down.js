@@ -143,11 +143,12 @@
       .attr("height", height);
 
     var yAxisWidth = 50;
-    var xAxisHeight = 90;
+    var xAxisTopHeight = 65;
+    var xAxisBottomHeight = 90;
 
     // Define the root g element.
     var chartWidth = width - yAxisWidth;
-    var chartHeight = height - xAxisHeight;
+    var chartHeight = height - xAxisTopHeight - xAxisBottomHeight;
     var chartG = root
       .append("g")
       .attr("class", "histo")
@@ -168,25 +169,46 @@
       })
       .sort(sortFeatures);
 
-    // Render the X axis.
+    // Render the top X axis
 
     var xScale = d3
       .scaleTime()
       .domain([globalStartDate, globalEndDate])
       .range([0, width - 100]);
 
-    var xAxis = d3
+    var xAxisTop = d3
+      .axisTop()
+      .scale(xScale)
+      .ticks(Math.floor(width / 30), "%b %y");
+
+    var xAxisTopGroup = chartG
+      .append("g")
+      .attr("class", "x-axis-top")
+      .attr("transform", "translate(0, " + (xAxisTopHeight - 15) + ")")
+      .call(xAxisTop)
+
+    xAxisTopGroup
+      .selectAll("text")
+      .style("text-anchor", "start")
+      .attr("fill", "#363636")
+      .attr("dx", "0.8em")
+      .attr("dy", "0.8em")
+      .attr("transform", "rotate(-60)");
+
+    // Render the bottom X axis
+
+    var xAxisBottom = d3
       .axisBottom()
       .scale(xScale)
       .ticks(Math.floor(width / 30), "%b %y");
 
-    var xAxisGroup = chartG
+    var xAxisBottomGroup = chartG
       .append("g")
       .attr("class", "x-axis")
-      .attr("transform", "translate(0, " + chartHeight + ")")
-      .call(xAxis);
+      .attr("transform", "translate(0, " + (chartHeight + xAxisTopHeight) + ")")
+      .call(xAxisBottom);
 
-    xAxisGroup
+    xAxisBottomGroup
       .selectAll("text")
       .style("text-anchor", "end")
       .attr("fill", "#363636")
@@ -252,7 +274,12 @@
       return barY(datum, index) + (barHeight / 2);
     }
 
-    chartG
+    var rowsGroup = chartG
+      .append("g")
+      .attr("class", "rows-group")
+      .attr("transform", "translate(0, " + xAxisTopHeight + ")")
+
+    rowsGroup
       .selectAll("rect.not-started")
       .data(featuresArray)
       .enter()
@@ -263,7 +290,7 @@
       .attr("y", barY)
       .attr("height", barHeight);
 
-    chartG
+    rowsGroup
       .selectAll(["rect.in-progress", "rect.completed"])
       .data(featuresArray)
       .enter()
@@ -284,7 +311,8 @@
       .attr("x", xScale(new Date(todayString)))
       .attr("y", 0)
       .attr("width", xScale(new Date(globalEndDate)) - xScale(new Date(todayString)))
-      .attr("height", chartHeight);
+      .attr("height", chartHeight)
+      .attr("transform", "translate(0, " + xAxisTopHeight + ")");
 
     // Render today line.
 
@@ -297,7 +325,7 @@
       .attr("x1", xScaledToday)
       .attr("x2", xScaledToday)
       .attr("y1", 0)
-      .attr("y2", chartHeight + todayLineExtension)
+      .attr("y2", xAxisTopHeight + chartHeight + todayLineExtension)
       .attr("stroke-width", 2)
       .attr("stroke", todayLineColor)
       .style("pointer-events", "none");
@@ -305,14 +333,14 @@
     chartG
       .append("text")
       .attr("x", xScaledToday)
-      .attr("y", chartHeight + todayLineExtension + 15)
+      .attr("y", xAxisTopHeight + chartHeight + todayLineExtension + 15)
       .attr("font-size", "16px")
       .attr("fill", "#363636")
       .attr("text-anchor", "middle")
       .text("Today");
 
     // Feature descriptions
-    chartG
+    rowsGroup
       .selectAll("text.description")
       .data(featuresArray)
       .enter()
