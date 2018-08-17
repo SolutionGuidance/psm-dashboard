@@ -68,7 +68,7 @@
     .controls > input, .color {
       height: 16px;
       width: 16px;
-      margin-right: 8px;
+      margin-right: 2px;
       display: inline-block;
     }
 
@@ -234,25 +234,22 @@
 
 <body>
   <h1>Provider Screening Module: Features Progress</h1>
-  <div class="legend">
-    <p>
-      <span class="color not-started"></span> Not Started
-    </p>
-    <p>
-      <span class="color in-progress"></span> In Progress
-    </p>
-    <p>
-      <span class="color completed"></span> Completed
-    </p>
-  </div>
   <div class="container">
     <div class="chart" id="features-pie-chart"></div>
       <h2>
         Progress to Completion by Feature
       </h2>
-      <p class="heading-sub-caption">
-        Click a Row for Details
-      </p>
+      <div class="legend">
+        <p>
+          <span class="color not-started"></span> Not Started
+        </p>
+        <p>
+          <span class="color in-progress"></span> In Progress
+        </p>
+        <p>
+          (Click a row for details.)
+        </p>
+      </div>
     <div class="chart" id="burn-down-chart"></div>
   </div>
   <script src="upstream-js/d3.v5.min.js"></script>
