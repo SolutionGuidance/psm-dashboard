@@ -12,7 +12,9 @@
       color: #363636;
     }
 
-    body > h1 {
+    body > h1,
+    h2,
+    .heading-sub-caption {
       text-align: center;
     }
 
@@ -245,6 +247,12 @@
   </div>
   <div class="container">
     <div class="chart" id="features-pie-chart"></div>
+      <h2>
+        Progress to Completion by Feature
+      </h2>
+      <p class="heading-sub-caption">
+        Click a Row for Details
+      </p>
     <div class="chart" id="burn-down-chart"></div>
   </div>
   <script src="upstream-js/d3.v5.min.js"></script>
