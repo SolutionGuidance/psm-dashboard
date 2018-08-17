@@ -142,7 +142,7 @@
       .attr("width", width)
       .attr("height", height);
 
-    var yAxisWidth = 50;
+    var yAxisWidth = 15;
     var xAxisTopHeight = 65;
     var xAxisBottomHeight = 90;
 
@@ -174,7 +174,7 @@
     var xScale = d3
       .scaleTime()
       .domain([globalStartDate, globalEndDate])
-      .range([0, width - 100]);
+      .range([0, width - yAxisWidth * 2]);
 
     var xAxisTop = d3
       .axisTop()
@@ -215,20 +215,6 @@
       .attr("dx", "-0.8em")
       .attr("dy", "0.15em")
       .attr("transform", "rotate(-60)");
-
-    // Render the Y axis. Due to the 90 degree rotation, the x and y attributes
-    // have the opposite effect from what you'd expect.
-    root
-      .append("text")
-      .attr("class", "y-axis-label")
-      .attr("font-size", "20px")
-      .attr("text-anchor", "middle")
-      .attr("y", 20)
-      .attr("dy", "0.75em")
-      .attr("x", -(chartHeight / 2))
-      .attr("transform", "rotate(-90)")
-      .attr("fill", "#363636")
-      .text("Features");
 
     // Render the bars.
 
