@@ -12,9 +12,13 @@ Map](https://docs.google.com/spreadsheets/d/1avMeCIiayaCcx8fDzldo3KEiRHyM2qjjBuC
 spreadsheet, the [PSM
 requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements]),
 and the [PSM issue
-tracker](https://github.com/SolutionGuidance/psm/issues/) to produce
-progress charts that show both high-level and detailed views of the
-PSM's feature progress.
+tracker](https://github.com/SolutionGuidance/psm/issues/) to produce JSON data
+that is then used to generate progress charts that show both high-level and
+detailed views of the PSM's feature progress.
+
+The JS, CSS, and HTML files that generate the charts from the JSON data live in
+the main `psm` repo, in the `gh-pages` branch, which is the source code for the
+`projectpsm.org` website.
 
 ## Quick Start Guide: How to Refresh the Live Dashboard
 
@@ -28,10 +32,12 @@ run, when your machine has a good Net connection.
 (For details on Python module dependencies and using a virtual
 environment see the comments at the top of the `gather-info` script.)
 
-Once `features-info.json` is ready, visit `index.html` in your browser
-and make sure everything looks right.  If it does, commit and push the
-updated `features-info.json` to the `master` branch of the origin
-repository on GitHub.
+Once `features-info.json` is ready, copy the new version of it into the
+`dashboard` directory in the `gh-pages` branch of the main `psm` repo,
+replacing the previous version.  Then follow the README.md in that branch to
+view the site and make sure everything looks right.  If it does, commit and
+push the updated `features-info.json` to the origin `gh-pages` branch of
+the main `psm` repo.
 
 Now visit http://projectpsm.org/dashboard to check that the live site
 is refreshed.  You may need to clear your browser's cache to see the
@@ -41,27 +47,13 @@ updated version.
 
 We're pretty loose here right now.  A few things:
 
-1. Use conventional indentation (spaces not tabs; 2 spaces per level
-   for Javascript and 4 spaces for Python).
+1. Use conventional indentation (spaces not tabs; 4 spaces per level for
+   Python).
 
 2. Feel free to use branches and PRs, but it's okay to push directly
    to master too.
 
-3. Please don't load Javascript directly from other servers; instead,
-   copy the exact version you need of an upstream library to the
-   `upstream-js/` subdirectory, including both the minified version
-   and the corresponding non-minified version, and update
-   `upstream-js/README.md` accordingly.  Everything the dashboard
-   needs should be available locally, so that if some foreign server
-   goes down our dashboard keeps working.
-
 ## What's here.
-
-* `index.html`
-  Browser entry point to the dashboard.
-
-* `burn-down.js`, `dashboard.js`, `features-pie-chart.js`
-  JavaScript code used by the dashboard pages.
 
 * `refresh-dashboard`
    Script to orchestrate everything: gather and combine the
@@ -75,14 +67,6 @@ We're pretty loose here right now.  A few things:
   turns it into JSON, which is then used as input to the dashboard
   display code.  See the "Data format" section in this document for
   details about the JSON format.
-
-* `features-info.json`
-  Input data for the dashboard display code.
-
-  The result of one run of `refresh-dashboard`.  This is a generated
-  file and therefore in theory we shouldn't version it here.  But in
-  practice: it's rather expensive to generate, so once we have a new
-  version we like to keep it until the next time we regenerate.
 
 * `reqs2csv`
   Script to convert requirements from Excel (.xlsx) format to CSV.
@@ -171,8 +155,8 @@ This is the JSON data input format that the dashboard expects:
           "startDate": String[Date] or null,
           "completedDate": String[Date] or null,
           "requirements": [
-            "psm-FR-8.2", 
-            "psm-FR-8.3", 
+            "psm-FR-8.2",
+            "psm-FR-8.3",
             ...
           ]
         },
@@ -180,7 +164,7 @@ This is the JSON data input format that the dashboard expects:
           ...
         }
       }
-      
+
 
       "requirements": {
         "psm-FR-8.2": {
