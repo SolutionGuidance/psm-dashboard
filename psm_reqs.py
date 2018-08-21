@@ -25,23 +25,20 @@ import os
 import re
 from io import StringIO
 from warnings import warn
-try:
-    from xlsx2csv import Xlsx2csv
-except ImportError as e:
-    # You need xlsx2csv.  Do 'pip3 install xlsx2csv' or get it
-    # from https://github.com/dilshod/xlsx2csv. 
-    #
-    # Just for reference, some other possibilities for XLSX-to-CSV
-    # conversion were:
-    # 
-    #   - github.com/staale/py-xlsx
-    #   - github.com/leegao/pyXLSX
-    #   - https://bitbucket.org/ericgazoni/openpyxl/ 
-    # 
-    # (For that last one, note that BitBucket now apparently requires
-    # you to log in to access even public projects, so use the clone
-    # repository at https://github.com/ericgazoni/openpyxl instead.)
-    raise e
+from xlsx2csv import Xlsx2csv
+# We should have xlsx2csv via requirements.txt; you can also get it
+# via https://github.com/dilshod/xlsx2csv or 'pip3 install xlsx2csv'.
+#
+# Just for reference, some other possibilities for XLSX-to-CSV
+# conversion were:
+# 
+#   - github.com/staale/py-xlsx
+#   - github.com/leegao/pyXLSX
+#   - https://bitbucket.org/ericgazoni/openpyxl/ 
+# 
+# (For that last one, note that BitBucket now apparently requires
+# you to log in to access even public projects, so use the clone
+# repository at https://github.com/ericgazoni/openpyxl instead.)
 
 _req_id_re = re.compile("psm-([A-Z][A-Z])-([0-9.]+)")
 
