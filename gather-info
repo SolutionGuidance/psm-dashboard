@@ -353,7 +353,15 @@ def main():
     sys.stderr.write("\n")
 
     ##### Get PSM requirements from the config XLSX file. #####
-    reqs = psm_reqs.get_reqs(config['psm_reqs'])
+    try:
+        reqs = psm_reqs.get_reqs(config['psm_reqs'])
+    except KeyError as e:
+        sys.stderr.write("ERROR: Can't find RTM.xlsx.\n")
+        sys.stderr.write("       You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'\n")
+        sys.stderr.write("       to point to the requirements/RTM.xlsx spreadsheet that lives in\n")
+        sys.stderr.write("       the PSM tree.\n")
+        sys.stderr.write("       \n")
+        raise e
 
     ##### Get the issue<->req mapping from GitHub. #####
     github_owner_name = config['github_owner']

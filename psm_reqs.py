@@ -173,10 +173,7 @@ def get_reqs(xlsx_file):
 
     if not os.path.exists(xlsx_file):
         raise ValueError(
-            "ERROR: can't find {}\n"
-            "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json' "
-            "to point to the requirements/RTM.xlsx spreadsheet that lives in "
-            "the PSM tree.".format(xlsx_file)
+            "ERROR: can't find requirements spreadsheet {}\n".format(xlsx_file)
         )
 
     csv_fh = StringIO()
