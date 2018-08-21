@@ -3,17 +3,17 @@
 # Collect input data from various sources and hand it to the PSM dashboard.
 #
 # Copyright 2018 Open Tech Strategies, LLC
-# 
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
 # by the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU Affero General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -31,11 +31,11 @@ Start a virtualenv and install requirements.txt:
 
   ## Edit the config file as needed.  Getting some values may be
   ## a bit of work: see https://gist.github.com/burnash/6771295 and
-  ## https://developers.google.com/sheets/api/quickstart/python. 
+  ## https://developers.google.com/sheets/api/quickstart/python.
   ## Note that you will need to have a Google account, and that
   ## account must have access to the spreadsheet whose ID you're
   ## using as your "google_sheet_id."  For the GitHub API key, grant it
-  ## access to the `public_repos` scope. 
+  ## access to the `public_repos` scope.
   $ cp psm-dashboard-config.json.tmpl psm-dashboard-config.json
   $ your-favorite-editor psm-dashboard-config.json
 
@@ -79,7 +79,7 @@ import github.GithubException
 
 class PSMFeature:
     """Class representing one PSM high-level feature."""
-    def __init__(self, feature_id, description, subfeatures, 
+    def __init__(self, feature_id, description, subfeatures,
                  start_date, completed_date, requirements):
         """Create a new feature named .
         FEATURE_ID (string): The identifying name for this feature.
@@ -105,7 +105,7 @@ class PSMFeature:
         # date to conclude that a feature is completed.  Instead, if
         # the completion date is in the future, then the feature is
         # "InProgress" rather than "Completed".  So we have to compare
-        # the completion date to the current time.  
+        # the completion date to the current time.
         #
         # We do that with a string comparison, which works because
         # these are ISO-8601 dates at day granularity.
@@ -149,7 +149,7 @@ class PSMFeature:
 
 class PSMIssue:
     """Class representing one PSM non-PR GitHub issue ticket."""
-    def __init__(self, owner, repos, number, title, description, 
+    def __init__(self, owner, repos, number, title, description,
                  status, start_date, completed_date, labels):
         """
         OWNER (string): The repository owner (GitHub user or organization).
@@ -214,7 +214,7 @@ def to_dict(obj):
     d = {}
     for key, value in obj.__dict__.items():
         d[key] = value
-    return d       
+    return d
 
 
 def main():
@@ -222,7 +222,7 @@ def main():
 
     try:
         (opts, args) = getopt.getopt(
-            sys.argv[1:], "h?", 
+            sys.argv[1:], "h?",
             ["help", "usage", "featureless-reqs",])
     except getopt.GetoptError as err:
         sys.stderr.write(str(err))
@@ -235,18 +235,18 @@ def main():
             sys.exit(0)
         elif opt in ("--featureless-reqs",):
             list_featureless_reqs = True
-        
+
     # TODO: It would be nice to check access perms on the file
     # here and warn if they're too open.
     config = json.load(open('psm-dashboard-config.json'))
-    
+
     ##### Get PSM features from the Google spreadsheet. #####
     # Grant read-only access
     google_api_scopes = 'https://www.googleapis.com/auth/spreadsheets.readonly'
-    
+
     # TODO: Warn if this file is readable by anyone other than the user.
     google_creds_store = oauth2client.file.Storage('google-credentials.json')
-    
+
     google_creds = google_creds_store.get()
     if not google_creds or google_creds.invalid:
         # Interactively prompt for access creds in the browser.
@@ -256,12 +256,12 @@ def main():
             scope=google_api_scopes,
             redirect_uri='TBD')
         google_creds = oauth2client.tools.run_flow(flow, google_creds_store)
-    
+
     google_service = apiclient.discovery.build('sheets', 'v4', http=google_creds.authorize(httplib2.Http()))
-    
+
     # Point Sheets API at the specified sheet.
     google_sheet_id = config['google_sheet_id']
-    
+
     # Range must be given in "A1" notation, which is described in
     # https://developers.google.com/sheets/api/guides/concepts.
     google_sheet_range = config['google_sheet_range']
@@ -269,7 +269,7 @@ def main():
                                                  range=google_sheet_range).execute()
     features_sheet_values = google_sheet_result.get('values', None)
     if features_sheet_values is None:
-        sys.stderr.write("ERROR: Nothing found in Google Sheet '%s'." 
+        sys.stderr.write("ERROR: Nothing found in Google Sheet '%s'."
                          % google_sheet_id)
         sys.exit(1)
 
@@ -328,9 +328,9 @@ def main():
                     description = unreqqed_desc
                 start_date = row[8] if len(row) > 8 else None
                 completed_date = row[9] if len(row) > 9 else None
-                this_feature = PSMFeature(feature_id, description, 
+                this_feature = PSMFeature(feature_id, description,
                                           subfeatures,
-                                          start_date, completed_date, 
+                                          start_date, completed_date,
                                           sorted(this_feature_reqs))
                 features[feature_id] = this_feature
             elif ((this_feature is not None)
@@ -348,7 +348,7 @@ def main():
             this_feature = None
 
     sys.stderr.write("\n")
-    sys.stderr.write("PROGRESS: Found %d features (with %d reqs across them)\n" 
+    sys.stderr.write("PROGRESS: Found %d features (with %d reqs across them)\n"
                      % (len(features), len(all_requirements)))
     sys.stderr.write("\n")
 
@@ -386,7 +386,7 @@ def main():
         # if raw_issue.number < 700 or raw_issue.number > 740:
         #     continue
         if raw_issue.number in issues:
-            sys.stderr.write("ERROR: Found issue %d twice." 
+            sys.stderr.write("ERROR: Found issue %d twice."
                              % raw_issue.number)
             sys.exit(1)
         if raw_issue.pull_request is None:
