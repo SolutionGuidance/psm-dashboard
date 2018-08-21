@@ -1,7 +1,11 @@
 #!/bin/sh
 
-# ./gather-info expects to find the CSV-formatted reqs in RTM.csv.
-./reqs2csv > RTM.csv
+if [ ! -f psm-dashboard-config.json ]; then
+  echo "ERROR: You have no 'psm-dashboard-config.json' file."
+  echo "       Please copy 'psm-dashboard-config.json.tmpl' to"
+  echo "       that name, edit as needed, and try again."
+  exit 1
+fi
 
 echo ""
 echo "Fetching and combining data (this can take a long time)..."
