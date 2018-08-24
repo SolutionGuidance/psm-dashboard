@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ ! -f psm-dashboard-config.json ]; then
-  echo "ERROR: You have no 'psm-dashboard-config.json' file."
-  echo "       Please copy 'psm-dashboard-config.json.tmpl' to"
-  echo "       that name, edit as needed, and try again."
+  echo "ERROR: You have no 'psm-dashboard-config.json' file." >&2
+  echo "       Please copy 'psm-dashboard-config.json.tmpl' to" >&2
+  echo "       that name, edit as needed, and try again." >&2
   exit 1
 fi
 

@@ -3,14 +3,14 @@
 OUTPUT_FORMAT="${1}"
 
 if [ "${1}" != "human" -a "${1}" != "elisp" ]; then
-  echo 'Must pass "human" or "elisp" argument to indicate output format.'
-  echo ''
-  echo 'If "human", consider using in conjuction with dmgrep (see'
-  echo 'https://github.com/OpenTechStrategies/ots-tools/blob/master/dmgrep)'
-  echo 'to find requirements that match particular words or patterns.  E.g.:'
-  echo ''
-  echo './show-reqs human | dmgrep -d "===================================" configur'
-  echo ''
+  echo 'Must pass "human" or "elisp" argument to indicate output format.' >&2
+  echo '' >&2
+  echo 'If "human", consider using in conjuction with dmgrep (see' >&2
+  echo 'https://github.com/OpenTechStrategies/ots-tools/blob/master/dmgrep)' >&2
+  echo 'to find requirements that match particular words or patterns.  E.g.:' >&2
+  echo '' >&2
+  echo './show-reqs human | dmgrep -d "===================================" configur' >&2
+  echo '' >&2
   exit 1
 fi
 
