@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Ingest PSM requirements from CSV files and make them available in Python.
+# Ingest PSM requirements and make reqs available in Python.
 #
 # Copyright (C) 2018 Open Tech Strategies, LLC
 #
@@ -165,6 +165,8 @@ def family_from_header(hdr):
 def get_reqs(xlsx_file):
     """Return a dictionary of PSMRequirements based on XSLX_FILE.
     Return a dict mapping PSM req IDs to PSMRequirement instances."""
+    # This works by converting the requirements spreadsheet to CSV,
+    # using xlsx2csv, and then using Python's built-in CSV reader.
     reqs = {}
     families_seen = set()
 

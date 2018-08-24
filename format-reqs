@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Print out PSM reqs (obtained from CSV) in a specified format.
+# Print out PSM requirements in a specified format.
 #
 # Copyright (C) 2018 Open Tech Strategies, LLC
 #
@@ -19,7 +19,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 __doc__ = """\
-Convert a single CSV file of requirements to OUTPUT_FORMAT.  The two
+Convert the PSM requirements spreadsheet to OUTPUT_FORMAT.  The two
 supported output formats so far are "human" (the default) and "elisp".
 
 Note: This requires the psm_reqs.py module to be available in the
@@ -41,21 +41,20 @@ def parse_args():
         dest='output_format'
     )
     parser.add_argument(
-        'csv_file',
-        help="""A CSV file containing all the PSM requirements.
-        (Should be the result of running xlsx2csv on RTM.xlsx.)""",
+        'reqs_file',
+        help="""A spreadsheet containing all the PSM requirements.
+        (Normally, requirements/RTM.xlsx on the PSM tree master branch.)""",
     )
     return parser.parse_args()
 
 
 def main():
-    """Create wiki pages from a supplied CSV."""
     args = parse_args()
 
-    reqs = psm_reqs.get_reqs(args.csv_file)
+    reqs = psm_reqs.get_reqs(args.reqs_file)
     # Note that we'll print the requirements in whatever order we
-    # received them via CSV files, because iteration over dicts
-    # in Python will now (or will soon) preserve insertion order:
+    # received them, because iteration over dicts in Python will now
+    # (or will soon) preserve insertion order.  See this thread:
     # https://mail.python.org/pipermail/python-dev/2017-December/151283.html
     #
     # We could also print them out sorted lexically by req ID, with:

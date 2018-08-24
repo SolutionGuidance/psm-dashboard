@@ -18,11 +18,11 @@ echo "Results placed in 'features-info.json'."
 
 # You could view the reqs by running this any time:
 #
-#   $ ./format-reqs --output=human RTM.csv
+#   $ ./show-reqs human
 #
 # If you need to load them into Emacs (with `psm-load-reqs' 
 # from psm-reqs.el), then do something like this:
 #
-#   $ ./format-reqs --output=elisp RTM.csv > RTM.el
+#   $ ./show-reqs elisp > RTM.el
 #
 # Then you can invoke `psm-load-reqs' on RTM.el.

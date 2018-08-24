@@ -14,12 +14,60 @@ if [ "${1}" != "human" -a "${1}" != "elisp" ]; then
   exit 1
 fi
 
+if [ "`which xlsx2csv`"x = "x" ]; then
+  echo "ERROR: You need to have xlsx2csv installed." >&2
+  echo "       You can do 'pip3 install xlsx2csv' or get it" >&2
+  echo "       from https://github.com/dilshod/xlsx2csv." >&2
+  # Some other choices for XLSX-to-CSV conversion are:
+  # 
+  #   - github.com/staale/py-xlsx
+  #   - github.com/leegao/pyXLSX
+  #   - https://bitbucket.org/ericgazoni/openpyxl/ 
+  # 
+  # (For that last one, note that BitBucket now apparently requires
+  # you to log in to access even public projects, so use the clone
+  # repository at https://github.com/ericgazoni/openpyxl instead.)
+  exit 1
+fi
+
+if [ ! -f psm-dashboard-config.json ]; then
+  echo "ERROR: You have no 'psm-dashboard-config.json' file." >&2
+  echo "       Please copy 'psm-dashboard-config.json.tmpl' to" >&2
+  echo "       that name, edit as needed, and try again." >&2
+  exit 1
+fi
+
+# See issue #14.  Until that is resolved, we "parse" the JSON config
+# file here in shell, using grep and friends to get the value.
+RTM_XLSX=`grep '"psm_reqs":' psm-dashboard-config.json | sed -E 's/^ +"psm_reqs": +//g' | sed -E 's/"//g' | sed -E 's/, *$//'`
+
+RTM_XLSX_DIR=`dirname "${RTM_XLSX}"`
+SAVED_CWD=`pwd`
+cd ${RTM_XLSX_DIR}
+RTM_XLSX_DIR_BRANCH=`git branch | grep '^* ' | cut -c3-`
+cd ${SAVED_CWD}
+if [ "${RTM_XLSX_DIR_BRANCH}" != "master" ]; then
+  echo "ERROR: PSM tree is not on 'master' branch" >&2
+  echo "" >&2
+  echo "Your PSM repository clone must be on the 'master' branch, so" >&2
+  echo "that we get the right version of the requirements spreadsheet." >&2
+  exit 1
+fi
+
+if [ ! -f "${RTM_XLSX}" ]; then
+  echo "ERROR: can't find RTM.xlsx" >&2
+  echo "" >&2
+  echo "You must set the 'psm_reqs' parameter in 'psm-dashboard-config.json'" >&2
+  echo "to point to the requirements/RTM.xlsx spreadsheet that lives in" >&2
+  echo "the PSM tree." >&2
+  exit 1
+fi
+
 if [ "${OUTPUT_FORMAT}" = "elisp" ]; then 
   echo "("
 fi
 
-./reqs2csv > RTM.csv
-./format-reqs --output="${OUTPUT_FORMAT}" RTM.csv
+./format-reqs --output="${OUTPUT_FORMAT}" "${RTM_XLSX}"
 
 if [ "${OUTPUT_FORMAT}" = "elisp" ]; then 
   echo ")"
