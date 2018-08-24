@@ -11,6 +11,10 @@
   Use `psm-load-reqs' to initialize this."
   nil)
 
+(defvar psm-req-display-buffer-settings
+  '(display-buffer-at-bottom . ((window-height . fit-window-to-buffer)))
+  "*The ACTION argument to `display-buffer' when displaying PSM reqs.")
+
 (defun psm-load-reqs (file)
   "Load PSM requirements from a FILE generated with 'show-reqs elisp'.
 E.g., run './show-reqs elisp > reqs.eld' at a shell prompt, and then
@@ -24,6 +28,31 @@ prompted for a file name."
       (goto-char (point-min))
       (setq psm-reqs (read (current-buffer)))
       (kill-buffer (current-buffer)))))
+
+(defun psm-search-reqs (re)
+  "Display all reqs matching regular expression RE."
+  (interactive "sShow reqs matching regexp: ")
+  (let ((results ())
+        (case-fold-search nil))
+    (save-match-data
+      (dolist (req psm-reqs)
+        (when (or (string-match re (psm-req-get req 'description))
+                  (let ((comment-if-any (psm-req-get req 'comment)))
+                    (when comment-if-any
+                      (string-match re comment-if-any))))
+          (setq results (cons req results)))))
+    (if (> (length results) 0)
+        (let ((results-buf (get-buffer-create "*Matching PSM Reqs*")))
+          (save-excursion
+            (set-buffer results-buf)
+            (delete-region (point-min) (point-max))
+            (dolist (result results)
+              (insert (format "* %s\n\n" (psm-req-get result 'id)))
+              (insert "  ")
+              (psm-insert-req-summary (cadr (assoc 'id result)))
+              (insert "\n\n")))
+          (display-buffer results-buf psm-req-display-buffer-settings))
+      (message "No reqs matching \"%s\"." re))))
 
 (defun psm-get-req (req-name)
   "Return the req object for req identifier REQ-NAME, else nil.
@@ -169,7 +198,4 @@ the requirement (e.g., source, release, etc)."
       ;; Put point at the top, lest the displayed window default to
       ;; the wrong part of the text.
       (goto-char (point-min)) (end-of-line)
-      (display-buffer buf
-                      '(display-buffer-at-bottom
-                        . ((window-height
-                            . fit-window-to-buffer)))))))
+      (display-buffer buf psm-req-display-buffer-settings))))
