@@ -66,7 +66,7 @@ class PSMRequirement():
         family, for example "FR", "IA", etc.  Every other parameter
         corresponds self-explanatorily to a CSV field."""
         self.family              = family
-        self.req_id              = req_id
+        self.req_id              = req_id.strip()
         self.category            = category
         self.description         = description
         self.priority            = priority
