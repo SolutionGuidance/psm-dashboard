@@ -10,7 +10,7 @@ have yet to be started.
 The code here combines information in the [PSM Features - RTM
 Map](https://docs.google.com/spreadsheets/d/1avMeCIiayaCcx8fDzldo3KEiRHyM2qjjBuCXWKRwyao/edit?usp=sharing)
 spreadsheet, the [PSM
-requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements]),
+requirements](https://github.com/SolutionGuidance/psm/tree/master/requirements),
 and the [PSM issue
 tracker](https://github.com/SolutionGuidance/psm/issues/) to produce JSON data
 that is then used to generate progress charts that show both high-level and
